@@ -63,17 +63,16 @@ def nb_model(fp='{}/data/sample-sentiment.csv'.format(
 
     # bag of words: with 'english' stopwords
     count_vect = CountVectorizer(stop_words='english')
-    bow = count_vect(X_train)
+    bow = count_vect.fit_transform(X_train)
 
     # tfidf weighting
-    tfidf = TfidfVectorizer()
-    tfidf = transformer.fit_transform(bow)
+    tfidf_transformer = TfidfTransformer()
+    X_train_tfidf = tfidf_transformer.fit_transform(bow)
 
     # fit model
-    clf = MultinomialNB().fit(tfidf, y_train)
+    clf = MultinomialNB().fit(X_train_tfidf, y_train)
 
     # predict
-    print(clf.predict(count_vect.transform(X_test[0])))
 
     # fit model
     return({
