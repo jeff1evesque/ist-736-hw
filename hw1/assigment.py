@@ -5,6 +5,7 @@
 #
 #     pip install nltk
 #     pip install -U scikit-learn
+#     pip install scikit-plot
 #
 
 import time
@@ -18,6 +19,8 @@ from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.naive_bayes import MultinomialNB
+import matplotlib.pyplot as plt
+import scikitplot as skplt
 download('vader_lexicon')
 
 
@@ -73,10 +76,18 @@ def nb_model(fp='{}/data/sample-sentiment.csv'.format(
     clf = MultinomialNB().fit(X_train_tfidf, y_train)
 
     # predict
+    predictions = []
+    for item in list(X_test):
+        prediction = count_vect.transform([item])
+        predictions.append(
+            clf.predict(tfidf_transformer.fit_transform(prediction))
+        )
 
     # fit model
     return({
-        'model': clf
+        'model': clf,
+        'actual': y_test,
+        'predicted': predictions
     })
 
 def time_df(fp='{}/data/sample-sentiment.csv'.format(
@@ -119,4 +130,9 @@ if __name__ == '__main__':
     [print('{}\n{}\n\n'.format(x, va['result'][i])) for i,x in enumerate(va['sent'])]
 
     # naive bayes prediction
-    nb_model()
+    model = nb_model()
+    skplt.metrics.plot_confusion_matrix(
+        model['actual'],
+        model['predicted']
+    )
+    plt.show()
