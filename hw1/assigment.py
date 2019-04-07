@@ -15,6 +15,9 @@ import pandas as pd
 from nltk import tokenize, download
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 from sklearn.model_selection import train_test_split
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.feature_extraction.text import TfidfTransformer
+from sklearn.naive_bayes import MultinomialNB
 download('vader_lexicon')
 
 
@@ -42,12 +45,12 @@ def vader_analysis(fp='{}/data/sample-sentiment.csv'.format(
 
     return({'sent': sentences, 'result': result})
 
-def custom_analysis(fp='{}/data/sample-sentiment.csv'.format(
+def nb_model(fp='{}/data/sample-sentiment.csv'.format(
     Path(__file__).resolve().parents[1]
 )):
     '''
 
-    use sklearn and nltk packages to perform classification analysis.
+    use sklearn and nltk packages to create naive bayes model.
 
     '''
 
@@ -60,7 +63,7 @@ def custom_analysis(fp='{}/data/sample-sentiment.csv'.format(
 
     # bag of words: with 'english' stopwords
     count_vect = CountVectorizer(stop_words='english')
-    bow = count_vect(train_text)
+    bow = count_vect(X_train)
 
     # tfidf weighting
     tfidf = TfidfVectorizer()
@@ -68,6 +71,14 @@ def custom_analysis(fp='{}/data/sample-sentiment.csv'.format(
 
     # fit model
     clf = MultinomialNB().fit(tfidf, y_train)
+
+    # predict
+    print(clf.predict(count_vect.transform(X_test[0])))
+
+    # fit model
+    return({
+        'model': clf
+    })
 
 def time_df(fp='{}/data/sample-sentiment.csv'.format(
     Path(__file__).resolve().parents[1]
@@ -99,9 +110,14 @@ def time_df(fp='{}/data/sample-sentiment.csv'.format(
     })
 
 if __name__ == '__main__':
+    # dataframe benchmark
     tdf = time_df()
     print('panda upload time: {}'.format(tdf['pd_time']))
     print('numpy upload time: {}'.format(tdf['np_time']))
 
+    # vader analysis
     va = vader_analysis()
     [print('{}\n{}\n\n'.format(x, va['result'][i])) for i,x in enumerate(va['sent'])]
+
+    # naive bayes prediction
+    nb_model()
