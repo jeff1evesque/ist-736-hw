@@ -4,6 +4,7 @@
 # this files requires nltk to be installed:
 #
 #     pip install nltk
+#     pip install -U scikit-learn
 #
 
 import time
@@ -13,12 +14,19 @@ from pathlib import Path
 import pandas as pd
 from nltk import tokenize, download
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
+from sklearn.model_selection import train_test_split
 download('vader_lexicon')
 
 
-def vador_analysis(fp='{}/data/sample-sentiment.csv'.format(
+def vader_analysis(fp='{}/data/sample-sentiment.csv'.format(
     Path(__file__).resolve().parents[1]
 )):
+    '''
+
+    use vader to perform sentiment analyis.
+
+    '''
+
     sentences = pd.read_csv(fp)['SentimentText']
     sid = SentimentIntensityAnalyzer()
 
@@ -33,6 +41,33 @@ def vador_analysis(fp='{}/data/sample-sentiment.csv'.format(
         result.append({i: scores})
 
     return({'sent': sentences, 'result': result})
+
+def custom_analysis(fp='{}/data/sample-sentiment.csv'.format(
+    Path(__file__).resolve().parents[1]
+)):
+    '''
+
+    use sklearn and nltk packages to perform classification analysis.
+
+    '''
+
+    data = pd.read_csv(fp)
+    X_train, X_test, y_train, y_test = train_test_split(
+        data['SentimentText'],
+        data['Sentiment'],
+        test_size=0.25
+    )
+
+    # bag of words: with 'english' stopwords
+    count_vect = CountVectorizer(stop_words='english')
+    bow = count_vect(train_text)
+
+    # tfidf weighting
+    tfidf = TfidfVectorizer()
+    tfidf = transformer.fit_transform(bow)
+
+    # fit model
+    clf = MultinomialNB().fit(tfidf, y_train)
 
 def time_df(fp='{}/data/sample-sentiment.csv'.format(
     Path(__file__).resolve().parents[1]
@@ -68,5 +103,5 @@ if __name__ == '__main__':
     print('panda upload time: {}'.format(tdf['pd_time']))
     print('numpy upload time: {}'.format(tdf['np_time']))
 
-    va = vador_analysis()
+    va = vader_analysis()
     [print('{}\n{}\n\n'.format(x, va['result'][i])) for i,x in enumerate(va['sent'])]
