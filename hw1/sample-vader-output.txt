@@ -1,0 +1,154 @@
+Join us in San Francisco April 23-25 at the largest event for the Apache Spark and AI community. Use code T200 to save $200!
+{1: [{'compound': 0.7644}, {'neg': 0.0}, {'neu': 0.734}, {'pos': 0.266}]}
+
+
+The UK is recognised worldwide for its creativity and innovation in #music. Studios like AbbeyRoad are leading the way in sound with the use of #AI in recording.
+{2: [{'compound': 0.7717}, {'neg': 0.0}, {'neu': 0.765}, {'pos': 0.235}]}
+
+
+If you're a human from any part of the world please retweet this so I can #follow you and hopefully your human friends. I'm not sure what it's called but I'm developing quite the phobia of AI and bots. CAUTION: I'm and incredibly obnoxious and opinionated. #sorrynotsorry
+{3: [{'compound': -0.7342}, {'neg': 0.179}, {'neu': 0.718}, {'pos': 0.102}]}
+
+
+Mark my words A.I. is far more dangerous than nukes
+{4: [{'compound': -0.5256}, {'neg': 0.274}, {'neu': 0.726}, {'pos': 0.0}]}
+
+
+New AI fake text generator too dangerous to release, say creators #openAI
+{5: [{'compound': -0.7351}, {'neg': 0.383}, {'neu': 0.617}, {'pos': 0.0}]}
+
+
+#AI is helping to make dirty, dangerous, and difficult work safer. Find out how from Forbes
+{6: [{'compound': -0.5423}, {'neg': 0.347}, {'neu': 0.449}, {'pos': 0.204}]}
+
+
+Sad and dangerous. Petty politics means Google AI continues without independent ethics board.
+{7: [{'compound': -0.7906}, {'neg': 0.444}, {'neu': 0.556}, {'pos': 0.0}]}
+
+
+As General Practice is being decimated & @Conservatives replacing it w dangerous 'AI solutions' peddled by Ex-banker & chief of failed Hinchingbrooke Hospital privatisation, Ali Parsa.
+{8: [{'compound': -0.6908}, {'neg': 0.228}, {'neu': 0.712}, {'pos': 0.06}]}
+
+
+Artificial intelligence has the potential to be a downloadable weapon of mass destruction. That's why it's so dangerous
+{9: [{'compound': -0.7777}, {'neg': 0.381}, {'neu': 0.5}, {'pos': 0.119}]}
+
+
+Technology is awesome and can help us solve many problems, including climate change. But stuff like AI can also be misused with very dangerous consequences. Klemen is making this his priority for the #EUelections2019.
+{10: [{'compound': 0.6133}, {'neg': 0.135}, {'neu': 0.62}, {'pos': 0.246}]}
+
+
+Scientists have raised some red flags by developing an advanced AI they say is too dangerous to be released
+{11: [{'compound': -0.2732}, {'neg': 0.14}, {'neu': 0.769}, {'pos': 0.09}]}
+
+
+Elon Musk-funded AI text generator was too dangerous for the public
+{12: [{'compound': -0.4767}, {'neg': 0.237}, {'neu': 0.763}, {'pos': 0.0}]}
+
+
+Image-net is mentioned all the time in ML/AI and it contains harmful, racist data.
+{13: [{'compound': -0.6124}, {'neg': 0.235}, {'neu': 0.765}, {'pos': 0.0}]}
+
+
+The US government has spent billions performing an unintentional clinical trial in radiology, which shows us that our current methods of testing and approving #medical #AI systems are inadequate and dangerous.
+{14: [{'compound': -0.7003}, {'neg': 0.167}, {'neu': 0.833}, {'pos': 0.0}]}
+
+
+AI isn't dangerous, but human bias is
+{15: [{'compound': 0.0457}, {'neg': 0.191}, {'neu': 0.597}, {'pos': 0.212}]}
+
+
+This is my same reservation w Machine Learning in medicine: If your source data is biased, your AI is dangerous.
+{16: [{'compound': -0.6369}, {'neg': 0.234}, {'neu': 0.766}, {'pos': 0.0}]}
+
+
+I normally enjoy @FareedZakaria's technology segments. But intv today on Chinese AI/data economy was enormously skewed & dangerous. Heralding China as "the future" while failing to raise the dystopian "social credit" system being used to rank Chinese citizens is irresponsible
+{17: [{'compound': -0.5829}, {'neg': 0.198}, {'neu': 0.682}, {'pos': 0.12}]}
+
+
+How we can prepare now for catastrophically dangerous AI and why we can't wait
+{18: [{'compound': -0.4767}, {'neg': 0.193}, {'neu': 0.807}, {'pos': 0.0}]}
+
+
+This continual "AI will save us from bad content" line is soooo dangerous.
+{19: [{'compound': -0.5267}, {'neg': 0.333}, {'neu': 0.505}, {'pos': 0.162}]}
+
+
+YouTube's AI recommendation system tends to recommend extremist videos because they are stickier! ... yet another piece of evidence why having closed-source shareholder-value-driven AI adaptively shape our environment is a bad/dangerous thing ...
+{20: [{'compound': 0.4199}, {'neg': 0.0}, {'neu': 0.917}, {'pos': 0.083}]}
+
+
+Elon: AI is dangerous we need regulations or this could get bad
+{21: [{'compound': -0.765}, {'neg': 0.398}, {'neu': 0.602}, {'pos': 0.0}]}
+
+
+This is the wrong approach. AI cannot police content effectively and human moderators do not scale. The result will be platforms limiting all but curated speech. Not good. Each of us has a duty to think critically, and then to avoid contributing to hate.
+{22: [{'compound': -0.9289}, {'neg': 0.279}, {'neu': 0.721}, {'pos': 0.0}]}
+
+
+Humans should be very careful to prevent future AI from developing anti-social & harmful behavior
+{23: [{'compound': 0.3086}, {'neg': 0.0}, {'neu': 0.787}, {'pos': 0.213}]}
+
+
+Would you rather: be killed by Robots on purpose (humans as harmful to AI goals) or by acccident (humans irrelevant to AI goals)?
+{24: [{'compound': -0.6705}, {'neg': 0.17}, {'neu': 0.83}, {'pos': 0.0}]}
+
+
+Experts warn of potential harmful effects of artificial intelligence - Valley News: Experts warn of potential harmful effects of artificial intelligence Valley News Artificial intelligence will unleash changes humanity▒
+{25: [{'compound': 0.8176}, {'neg': 0.08}, {'neu': 0.655}, {'pos': 0.265}]}
+
+
+Agree re #AI, #robotics and #disruption. But the term 4th industrial rev is harmful, underestimates the impact. THIS revolution will ultimately prove every tenet of industrialization obsolete. This is why matters like #UBI are more than socialist bs. They▒re a matter of survival.
+{26: [{'compound': 0.2263}, {'neg': 0.091}, {'neu': 0.758}, {'pos': 0.152}]}
+
+
+Want to sneak fake, extremeist content into my mindspace because your AI thinks that will keep me engaged? Want to remove dissenting voices becasue you think they're "harmful"? Fuck off with that creepy shit. That's evil.
+{27: [{'compound': -0.9129}, {'neg': 0.304}, {'neu': 0.589}, {'pos': 0.108}]}
+
+
+AI raises $13 million to train AI models efficiently
+{28: [{'compound': 0.4019}, {'neg': 0.0}, {'neu': 0.748}, {'pos': 0.252}]}
+
+
+I can't tell what's weirder about this clip the fact the AI couldn't tell it was a home run, the fact that the Detroit left fielder can teleport or that I'm playing for Baltimore still.
+{29: [{'compound': 0.2892}, {'neg': 0.0}, {'neu': 0.907}, {'pos': 0.093}]}
+
+
+Microsoft CEO Nadella meets with top execs every week to review AI projects
+{30: [{'compound': 0.2023}, {'neg': 0.0}, {'neu': 0.87}, {'pos': 0.13}]}
+
+
+It's proprietary so we can't explain how our AI works. e.g., it's bullshit.
+{31: [{'compound': -0.5859}, {'neg': 0.241}, {'neu': 0.759}, {'pos': 0.0}]}
+
+
+AI robots could assist soldiers in future
+{32: [{'compound': 0.0}, {'neg': 0.0}, {'neu': 1.0}, {'pos': 0.0}]}
+
+
+The market for #DeepLearning chipsets will increase from $5.1 to $72.6 billion in 2025
+{33: [{'compound': 0.3182}, {'neg': 0.0}, {'neu': 0.85}, {'pos': 0.15}]}
+
+
+Slovenia to Set Up International AI Research Centre with UNESCO
+{34: [{'compound': 0.0}, {'neg': 0.0}, {'neu': 1.0}, {'pos': 0.0}]}
+
+
+EasyEmail uses AI to autosuggest sentences as you write replies in Gmail
+{35: [{'compound': 0.0516}, {'neg': 0.0}, {'neu': 0.902}, {'pos': 0.098}]}
+
+
+This Company is Going to Use AI to Market Their Flag
+{36: [{'compound': 0.0}, {'neg': 0.0}, {'neu': 1.0}, {'pos': 0.0}]}
+
+
+Want to ride along with Robocar? Make sure to turn your sound on for the full experience!
+{37: [{'compound': 0.4389}, {'neg': 0.0}, {'neu': 0.794}, {'pos': 0.206}]}
+
+
+#Volvo has pioneered the autonomous garbage truck!
+{38: [{'compound': 0.0}, {'neg': 0.0}, {'neu': 1.0}, {'pos': 0.0}]}
+
+
+This #Robot rides a bike like a #Human
+{39: [{'compound': 0.3612}, {'neg': 0.0}, {'neu': 0.667}, {'pos': 0.333}]}
