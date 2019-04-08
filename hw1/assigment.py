@@ -125,6 +125,14 @@ if __name__ == '__main__':
     print('panda upload time: {}'.format(tdf['pd_time']))
     print('numpy upload time: {}'.format(tdf['np_time']))
 
+    objects = ('panda', 'numpy')
+    y_pos = np.arange(len(objects))
+    performance = [tdf['pd_time'], tdf['np_time']]
+    plt.bar(y_pos, performance, align='center', alpha=0.5)
+    plt.xticks(y_pos, objects)
+    plt.ylabel('Performance')
+    plt.show()
+
     # vader analysis
     va = vader_analysis()
     [print('{}\n{}\n\n'.format(x, va['result'][i])) for i,x in enumerate(va['sent'])]
