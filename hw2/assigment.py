@@ -45,7 +45,7 @@ class Ensemble():
         self.key_text = key_text
         self.key_class = key_class
 
-        # instantiate
+        # vectorize data
         self.split()
         self.vectorize()
 
@@ -67,6 +67,20 @@ class Ensemble():
             self.data[self.key_class],
             test_size=test_size
         )
+
+    def get_split(self):
+        '''
+
+        return previous train and test split.
+
+        '''
+
+        return({
+            'X_train': self.X_train,
+            'X_test': self.X_test,
+            'y_train': self.y_train,
+            'y_test': self.y_test,
+        })
 
     def get_pos(self, l):
         '''
@@ -92,38 +106,64 @@ class Ensemble():
         self.tfidf_transformer = TfidfTransformer()
         self.X_train_tfidf = self.tfidf_transformer.fit_transform(bow)
 
-    def nb_model(self):
+    def get_tfidf(self):
         '''
 
-        use sklearn and nltk packages to create naive bayes model.
+        get current X_train tfidf.
+
+        '''
+
+        return(self.X_train_tfidf)
+
+    def nb_model(self, X, y, validate=False):
+        '''
+
+        create naive bayes model.
+
+        @validate, must have tuple shape (X_test, y_test)
 
         '''
 
         # fit model
-        self.clf = MultinomialNB().fit(self.X_train_tfidf, self.y_train)
+        self.clf = MultinomialNB().fit(X, y)
 
-        # predict
-        predictions = []
-        for item in list(self.X_test):
-            prediction = self.count_vect.transform([item])
-            predictions.append(
-                self.clf.predict(self.tfidf_transformer.fit_transform(prediction))
-            )
+        # validate
+        if validate and len(validate) == 2:
+            predictions = []
+            for item in list(validate[0]):
+                prediction = self.count_vect.transform([item])
+                predictions.append(
+                    self.clf.predict(self.tfidf_transformer.fit_transform(prediction))
+                )
 
-        # fit model
+            return({
+                'model': self.clf,
+                'actual': validate[1],
+                'predicted': predictions
+            })
+
         return({
             'model': self.clf,
-            'actual': self.y_test,
-            'predicted': predictions
+            'actual': None,
+            'predicted': None
         })
 
 if __name__ == '__main__':
     model = Ensemble()
 
     # naive bayes prediction
-    model = model.nb_model()
+    model_params = model.get_split()
+    vectorized = model.get_tfidf()
+
+    # classifiers
+    nb_unigram = model.nb_model(
+        vectorized,
+        model_params['y_train'],
+        validate=(model_params['X_test'], model_params['y_test'])
+    )
+
     skplt.metrics.plot_confusion_matrix(
-        model['actual'],
-        model['predicted']
+        nb_unigram['actual'],
+        nb_unigram['predicted']
     )
     plt.show()
