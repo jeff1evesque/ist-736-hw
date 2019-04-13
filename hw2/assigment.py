@@ -51,7 +51,9 @@ class Ensemble():
 
         # pos dataframe
         self.pos = self.data
-        self.pos[self.key_text] = self.get_pos(self.data[self.key_text])
+        self.pos[self.key_text] = self.get_pos(
+            self.data[self.key_text].apply(lambda x: x.split())
+        )
 
     def split(self, test_size=0.25):
         '''
