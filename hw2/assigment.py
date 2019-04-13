@@ -24,16 +24,23 @@ import scikitplot as skplt
 download('vader_lexicon')
 
 
-class Ensemble():
+class Model():
     '''
 
     train classifier model using provided dataset.
 
     '''
 
-    def __init__(self, fp='{}/data/sample-sentiment.csv'.format(
-        Path(__file__).resolve().parents[1]
-    ), key_text='SentimentText', key_class='Sentiment'):
+    def __init__(
+        self,
+        df=None,
+        vectorize=True,
+        key_text='SentimentText',
+        key_class='Sentiment',
+        fp='{}/data/sample-sentiment.csv'.format(
+            Path(__file__).resolve().parents[1]
+        )
+    ):
         '''
 
         define clasas variables.
@@ -41,19 +48,17 @@ class Ensemble():
         '''
 
         # class variables
-        self.data = pd.read_csv(fp)
+        if data:
+            self.df = df
+        else:
+            self.df = pd.read_csv(fp)
         self.key_text = key_text
         self.key_class = key_class
 
         # vectorize data
         self.split()
-        self.vectorize()
-
-        # pos dataframe
-        self.pos = self.data
-        self.pos[self.key_text] = self.get_pos(
-            self.data[self.key_text].apply(lambda x: x.split())
-        )
+        if vectorize:
+            self.vectorize()
 
     def split(self, test_size=0.25):
         '''
@@ -63,8 +68,8 @@ class Ensemble():
         '''
 
         self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(
-            self.data[self.key_text],
-            self.data[self.key_class],
+            self.df[self.key_text],
+            self.df[self.key_class],
             test_size=test_size
         )
 
@@ -85,7 +90,7 @@ class Ensemble():
     def get_pos(self, l):
         '''
 
-        apply stanford pos tagger to supplied list.
+        apply pos tagger to supplied list.
 
         '''
 
@@ -115,7 +120,16 @@ class Ensemble():
 
         return(self.X_train_tfidf)
 
-    def nb_model(self, X, y, validate=False):
+    def get_df(self):
+        '''
+
+        get original dataframe.
+
+        '''
+
+        return(self.df)
+
+    def model(self, X, y, validate=False):
         '''
 
         create naive bayes model.
@@ -149,21 +163,51 @@ class Ensemble():
         })
 
 if __name__ == '__main__':
-    model = Ensemble()
+    #
+    # unigram: perform unigram analysis.
+    #
+    unigram = Model()
 
-    # naive bayes prediction
-    model_params = model.get_split()
-    vectorized = model.get_tfidf()
+    # unigram vectorize
+    unigram_params = unigram.get_split()
+    unigram_vectorized = unigram.get_tfidf()
 
-    # classifiers
-    nb_unigram = model.nb_model(
+    # unigram classifier
+    model_unigram = unigram.model(
         vectorized,
-        model_params['y_train'],
-        validate=(model_params['X_test'], model_params['y_test'])
+        unigram_params['y_train'],
+        validate=(unigram_params['X_test'], unigram_params['y_test'])
     )
 
+    # plot unigram
     skplt.metrics.plot_confusion_matrix(
-        nb_unigram['actual'],
-        nb_unigram['predicted']
+        model_unigram['actual'],
+        model_unigram['predicted']
+    )
+    plt.show()
+
+    # determine pos
+    df_pos = unigram.get_df()
+    df_pos['SentimentText'] = self.get_pos(
+        df_pos['SentimentText'].apply(lambda x: x.split())
+    )
+
+    #
+    # pos: perform part of speech analysis.
+    #
+    pos = Model(df_pos vectorize=False)
+    pos_params = pos.get_split()
+
+    # pos classifier
+    model_pos = pos.model(
+        df_pos['SentimentText'],
+        pos_params['y_train'],
+        validate=(pos_params['X_test'], pos_params['y_test'])
+    )
+
+    # plot pos
+    skplt.metrics.plot_confusion_matrix(
+        model_pos['actual'],
+        model_pos['predicted']
     )
     plt.show()
