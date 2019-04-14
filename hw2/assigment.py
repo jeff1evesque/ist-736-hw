@@ -48,7 +48,7 @@ class Model():
         '''
 
         # class variables
-        if df:
+        if df is not None:
             self.df = df
         else:
             self.df = pd.read_csv(fp)
@@ -195,7 +195,7 @@ if __name__ == '__main__':
     #
     # pos: perform part of speech analysis.
     #
-    pos = Model(df_pos, vectorize=False)
+    pos = Model(df=df_pos, vectorize=False)
     pos_params = pos.get_split()
 
     # pos classifier
