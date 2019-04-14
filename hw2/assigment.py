@@ -21,6 +21,7 @@ from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.naive_bayes import MultinomialNB
 import matplotlib.pyplot as plt
 import scikitplot as skplt
+from penn_treebank import penn_scale
 download('vader_lexicon')
 
 
@@ -94,7 +95,9 @@ class Model():
 
         '''
 
-        return([pos_tag(x) for x in l])
+        pos = [pos_tag(x) for x in l]
+#        return([(x[0], penn_scale[x[1]]) for x in pos])
+        [print(x[1]) for x in pos]
 
     def vectorize(self):
         '''
@@ -198,12 +201,13 @@ if __name__ == '__main__':
     pos = Model(df=df_pos, vectorize=False)
     pos_params = pos.get_split()
 
+    print(type(df_pos))
     # pos classifier
-    model_pos = pos.model(
-        df_pos['SentimentText'],
-        pos_params['y_train'],
-        validate=(pos_params['X_test'], pos_params['y_test'])
-    )
+#    model_pos = pos.model(
+#        df_pos['SentimentText'],
+#        pos_params['y_train'],
+#        validate=(pos_params['X_test'], pos_params['y_test'])
+#    )
 
     # plot pos
     skplt.metrics.plot_confusion_matrix(
