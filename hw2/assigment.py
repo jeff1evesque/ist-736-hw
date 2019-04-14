@@ -13,6 +13,7 @@ import csv
 import numpy as np
 from pathlib import Path
 import pandas as pd
+from nltk.corpus import stopwords
 from nltk import tokenize, download, pos_tag
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 from sklearn.model_selection import train_test_split
@@ -22,6 +23,7 @@ from sklearn.naive_bayes import MultinomialNB
 import matplotlib.pyplot as plt
 import scikitplot as skplt
 from penn_treebank import penn_scale
+stop_words = set(stopwords.words('english'))
 download('vader_lexicon')
 
 
@@ -95,11 +97,18 @@ class Model():
 
         '''
 
+        result_word = []
+        result_pos = []
         pos = [pos_tag(x) for x in l]
-#        return([(x[0], penn_scale[x[1]]) for x in pos])
-        [print(x[1]) for x in pos]
+        for y in pos:
+            result_word.append([x[0] for x in y if x[0] not in stop_words])
+            result_pos.append(
+                [penn_scale[x[1]] if x[1] in penn_scale and x[0] not in stop_words else 1 for x in y]
+            )
 
-    def vectorize(self):
+        return(result_word, result_pos)
+
+    def vectorize(self, stop_words='english'):
         '''
 
         vectorize provided data.
@@ -107,7 +116,7 @@ class Model():
         '''
 
         # bag of words: with 'english' stopwords
-        self.count_vect = CountVectorizer(stop_words='english')
+        self.count_vect = CountVectorizer(stop_words=stop_words)
         bow = self.count_vect.fit_transform(self.X_train)
 
         # tfidf weighting
@@ -191,17 +200,18 @@ if __name__ == '__main__':
 
     # determine pos
     df_pos = unigram.get_df()
-    df_pos['SentimentText'] = unigram.get_pos(
+    df_pos['pos'] = unigram.get_pos(
         df_pos['SentimentText'].apply(lambda x: x.split())
-    )
+    )[1]
+
+    print(df_pos)
 
     #
     # pos: perform part of speech analysis.
     #
-    pos = Model(df=df_pos, vectorize=False)
+    pos = Model(df=df_pos)
     pos_params = pos.get_split()
 
-    print(type(df_pos))
     # pos classifier
 #    model_pos = pos.model(
 #        df_pos['SentimentText'],
@@ -210,8 +220,8 @@ if __name__ == '__main__':
 #    )
 
     # plot pos
-    skplt.metrics.plot_confusion_matrix(
-        model_pos['actual'],
-        model_pos['predicted']
-    )
-    plt.show()
+#    skplt.metrics.plot_confusion_matrix(
+#        model_pos['actual'],
+#        model_pos['predicted']
+#    )
+#    plt.show()
