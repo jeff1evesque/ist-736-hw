@@ -10,12 +10,12 @@
 
 import time
 import csv
+import re
 import numpy as np
 from pathlib import Path
 import pandas as pd
 from nltk.corpus import stopwords
 from nltk import tokenize, download, pos_tag
-from nltk.sentiment.vader import SentimentIntensityAnalyzer
 from nltk.stem.porter import PorterStemmer
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import CountVectorizer
@@ -60,11 +60,11 @@ class Model():
         self.key_class = key_class
 
         # vectorize data
-        self.split()
         if vectorize:
+            self.split()
             self.vectorize()
 
-    def split(self, test_size=0.20, stem=True):
+    def split(self, test_size=0.20, stem=True, pos_split=False):
         '''
 
         split data into train and test.
@@ -72,14 +72,32 @@ class Model():
         '''
 
         # clean
-        self.df[self.key_text] = [x.strip('#') for x in self.df[self.key_text]]
+        self.df[self.key_text] = [re.sub('[#@]', '', x) for x in self.df[self.key_text]]
 
         # stem
         if stem:
             porter = PorterStemmer()
             self.df[self.key_text] = [porter.stem(word) for word in self.df[self.key_text]]
 
+        print(self.df[self.key_text])
+
         # split
+        if pos_split:
+            for i, row in self.df.iterrows():
+                # max length
+                max_length = len(self.df[self.key_text].iloc[i].split())
+                pos = self.df[['pos']].iloc[i]
+
+                # rebuild 'key-text' with pos suffix
+                combined = ''
+                for j in range(max_length):
+                    combined = '{combined} {word}-{pos}'.format(
+                        combined=combined,
+                        word=self.df[self.key_text][i].split()[j],
+                        pos=pos[0][j]
+                    )
+                self.df[self.key_text].iloc[[i]] = combined
+
         self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(
             self.df[self.key_text],
             self.df[self.key_class],
@@ -100,10 +118,12 @@ class Model():
             'y_test': self.y_test,
         })
 
-    def get_pos(self, l, pos_length=40):
+    def get_pos(self, l, pos_length=280):
         '''
 
         apply pos tagger to supplied list.
+
+        @pos_length, maximum number of words in tweets.
 
         '''
 
@@ -200,6 +220,7 @@ if __name__ == '__main__':
     unigram = Model()
 
     # unigram vectorize
+    unigram.split()
     unigram_params = unigram.get_split()
     unigram_vectorized = unigram.get_tfidf()
 
@@ -217,9 +238,38 @@ if __name__ == '__main__':
     )
     plt.show()
 
-    # determine pos
+    #
+    # perform pos analysis
+    #
     df_pos = unigram.get_df()
+
+    # define pos
     df_pos['pos'] = unigram.get_pos(
         df_pos['SentimentText'].apply(lambda x: x.split())
     )[1]
-    print(df_pos)
+
+    #
+    # new dataframe
+    #
+    # @pos_split, appends pos to word before vectorization and tfidf.
+    #
+    pos = Model(df_pos)
+    pos.split(pos_split=True)
+
+    # pos vectorize
+    pos_params = pos.get_split()
+    pos_vectorized = pos.get_tfidf()
+
+    # pos classifier
+    model_pos = pos.model(
+        pos_vectorized,
+        pos_params['y_train'],
+        validate=(unigram_params['X_test'], unigram_params['y_test'])
+    )
+
+    # plot unigram
+    skplt.metrics.plot_confusion_matrix(
+        model_pos['actual'],
+        model_pos['predicted']
+    )
+    plt.show()
