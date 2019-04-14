@@ -16,6 +16,7 @@ import pandas as pd
 from nltk.corpus import stopwords
 from nltk import tokenize, download, pos_tag
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
+from nltk.stem.porter import PorterStemmer
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfTransformer
@@ -63,13 +64,22 @@ class Model():
         if vectorize:
             self.vectorize()
 
-    def split(self, test_size=0.25):
+    def split(self, test_size=0.20, stem=True):
         '''
 
         split data into train and test.
 
         '''
 
+        # clean
+        self.df[self.key_text] = [x.strip('#') for x in self.df[self.key_text]]
+
+        # stem
+        if stem:
+            porter = PorterStemmer()
+            self.df[self.key_text] = [porter.stem(word) for word in self.df[self.key_text]]
+
+        # split
         self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(
             self.df[self.key_text],
             self.df[self.key_class],
@@ -203,25 +213,4 @@ if __name__ == '__main__':
     df_pos['pos'] = unigram.get_pos(
         df_pos['SentimentText'].apply(lambda x: x.split())
     )[1]
-
     print(df_pos)
-
-    #
-    # pos: perform part of speech analysis.
-    #
-    pos = Model(df=df_pos)
-    pos_params = pos.get_split()
-
-    # pos classifier
-#    model_pos = pos.model(
-#        df_pos['SentimentText'],
-#        pos_params['y_train'],
-#        validate=(pos_params['X_test'], pos_params['y_test'])
-#    )
-
-    # plot pos
-#    skplt.metrics.plot_confusion_matrix(
-#        model_pos['actual'],
-#        model_pos['predicted']
-#    )
-#    plt.show()
