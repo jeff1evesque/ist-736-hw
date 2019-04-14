@@ -79,8 +79,6 @@ class Model():
             porter = PorterStemmer()
             self.df[self.key_text] = [porter.stem(word) for word in self.df[self.key_text]]
 
-        print(self.df[self.key_text])
-
         # split
         if pos_split:
             for i, row in self.df.iterrows():
@@ -272,4 +270,11 @@ if __name__ == '__main__':
         model_pos['actual'],
         model_pos['predicted']
     )
+    plt.show()
+
+    # ensembled scored
+    actual = np.add(model_unigram['actual'], model_pos['actual']) / 2
+    predicted = np.around(np.add(model_unigram['predicted'], model_pos['predicted']) / 2)
+
+    skplt.metrics.plot_confusion_matrix(actual, predicted)
     plt.show()
