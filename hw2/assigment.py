@@ -48,7 +48,7 @@ class Model():
         '''
 
         # class variables
-        if data:
+        if df:
             self.df = df
         else:
             self.df = pd.read_csv(fp)
@@ -174,7 +174,7 @@ if __name__ == '__main__':
 
     # unigram classifier
     model_unigram = unigram.model(
-        vectorized,
+        unigram_vectorized,
         unigram_params['y_train'],
         validate=(unigram_params['X_test'], unigram_params['y_test'])
     )
@@ -188,14 +188,14 @@ if __name__ == '__main__':
 
     # determine pos
     df_pos = unigram.get_df()
-    df_pos['SentimentText'] = self.get_pos(
+    df_pos['SentimentText'] = unigram.get_pos(
         df_pos['SentimentText'].apply(lambda x: x.split())
     )
 
     #
     # pos: perform part of speech analysis.
     #
-    pos = Model(df_pos vectorize=False)
+    pos = Model(df_pos, vectorize=False)
     pos_params = pos.get_split()
 
     # pos classifier
