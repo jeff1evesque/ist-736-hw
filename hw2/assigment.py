@@ -18,6 +18,7 @@ from nltk.corpus import stopwords
 from nltk import tokenize, download, pos_tag
 from nltk.stem.porter import PorterStemmer
 from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.naive_bayes import MultinomialNB
@@ -47,7 +48,7 @@ class Model():
     ):
         '''
 
-        define clasas variables.
+        define class variables.
 
         '''
 
@@ -273,8 +274,21 @@ if __name__ == '__main__':
     plt.show()
 
     # ensembled scored
-    actual = np.add(model_unigram['actual'], model_pos['actual']) / 2
-    predicted = np.around(np.add(model_unigram['predicted'], model_pos['predicted']) / 2)
+    score_unigram = accuracy_score(
+        model_unigram['actual'],
+        model_unigram['predicted']
+    )
+    score_pos = accuracy_score(
+        model_pos['actual'],
+        model_pos['predicted']
+    )
+    score_good = (score_unigram + score_pos) / 2
+    score_bad = 1 - score_good
 
-    skplt.metrics.plot_confusion_matrix(actual, predicted)
+    objects = ('unigram', 'pos', 'overall')
+    y_pos = np.arange(len(objects))
+    performance = [score_unigram, score_pos, score_good]
+    plt.bar(y_pos, performance, align='center', alpha=0.5)
+    plt.xticks(y_pos, objects)
+    plt.ylabel('Performance')
     plt.show()
