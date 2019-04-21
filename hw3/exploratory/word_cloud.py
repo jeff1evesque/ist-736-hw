@@ -9,7 +9,8 @@ def word_cloud(
     filename='plot.png',
     width=2000,
     height=1250,
-    background_color='black'
+    background_color='black',
+    stopwords=[]
 ):
     '''
 
@@ -17,12 +18,16 @@ def word_cloud(
 
     '''
 
+    # extend stopwords
+    stopwords = stopwords.extend(STOPWORDS)
+
+    # generate wordcloud
     text = df.values
     wordcloud = WordCloud(
         width = width,
         height = height,
         background_color = background_color,
-        stopwords = STOPWORDS
+        stopwords = stopwords
     ).generate(str(text))
 
     fig = plt.figure(
