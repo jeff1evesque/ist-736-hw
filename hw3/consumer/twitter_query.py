@@ -31,7 +31,8 @@ class TwitterQuery():
             d = d.get(k, None)
             if d is None:
                 return(None)
-        return(d)
+
+        return(d.encode('utf-8'))
 
     def get_dict_path(self, d):
         '''
