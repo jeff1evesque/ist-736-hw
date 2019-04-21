@@ -144,4 +144,5 @@ performance = [score_unigram, score_pos, score_good]
 plt.bar(y_pos, performance, align='center', alpha=0.5)
 plt.xticks(y_pos, objects)
 plt.ylabel('Performance')
+plt.savefig('viz/accuracy_overall.png')
 plt.show()
