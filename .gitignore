@@ -2,4 +2,5 @@
 /**/config.py
 
 ## ignore directories
-/**/__pycache__
+/**/__pycache__/
+/**/viz/

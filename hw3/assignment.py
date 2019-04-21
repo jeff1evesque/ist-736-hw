@@ -6,9 +6,11 @@
 #   pip install Twython
 #
 
+import os
 import sys
 sys.path.append('..')
 from consumer.twitter_query import TwitterQuery
+from exploratory.word_cloud import word_cloud
 from config import twitter_api as creds
 from pathlib import Path
 import pandas as pd
@@ -35,4 +37,9 @@ else:
 # combine dataframes
 df = df_cnn.append(df_foxnews)
 
-print(df.head())
+# generate wordcloud
+if not os.path.exists('viz'):
+    os.makedirs('viz')
+word_cloud(df_cnn, filename='viz/wc_cnn.png')
+word_cloud(df_foxnews, filename='viz/wc_foxnews.png')
+word_cloud(df, filename='viz/wc_cnn_foxnews.png')
