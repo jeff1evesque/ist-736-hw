@@ -28,7 +28,7 @@ class Sentiment():
         '''
 
         # local variables
-        self.data = data
+        self.df = data
         self.column_name = column_name
 
     def vader_analysis(self):
@@ -49,7 +49,7 @@ class Sentiment():
         }
 
         # sentiment analysis
-        for i, s in enumerate(self.data[self.column_name]):
+        for i, s in enumerate(self.df[self.column_name]):
             ss = sid.polarity_scores(s)
 
             for k in sorted(ss):
@@ -63,13 +63,13 @@ class Sentiment():
                     result['positive'].append(ss[k])
 
         # append results
-        self.data['compound'] = result['compound']
-        self.data['negative'] = result['negative']
-        self.data['neutral'] = result['neutral']
-        self.data['positive'] = result['positive']
+        self.df['compound'] = result['compound']
+        self.df['negative'] = result['negative']
+        self.df['neutral'] = result['neutral']
+        self.df['positive'] = result['positive']
 
         # return scores
-        return(self.data)
+        return(self.df)
 
     def plot_ts(self, title='Sentiment Analysis', filename='sentiment.png'):
         '''
@@ -81,9 +81,9 @@ class Sentiment():
         # generate plot
         plt.figure()
         with pd.plotting.plot_params.use('x_compat', True):
-            self.data.negative.plot(color='r', legend=True)
-            self.data.positive.plot(color='g', legend=True)
-            self.data.neutral.plot(color='b', legend=True)
+            self.df.negative.plot(color='r', legend=True)
+            self.df.positive.plot(color='g', legend=True)
+            self.df.neutral.plot(color='b', legend=True)
         plt.title(title)
 
         # save plot
