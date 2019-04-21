@@ -14,6 +14,7 @@ from exploratory.word_cloud import word_cloud
 from config import twitter_api as creds
 from pathlib import Path
 import pandas as pd
+from exploratory.sentiment import Sentiment
 
 # local variables
 csv_cnn = '../data/tweets_cnn.csv'
@@ -53,3 +54,16 @@ if not os.path.exists('viz'):
 word_cloud(df_cnn['text'], filename='viz/wc_cnn.png')
 word_cloud(df_foxnews['text'], filename='viz/wc_foxnews.png')
 word_cloud(df['text'], filename='viz/wc_cnn_foxnews.png')
+
+# sentiment analysis
+df_cnn = Sentiment(df_cnn, 'text')
+df_foxnews = Sentiment(df_foxnews, 'text')
+df_overall = Sentiment(df, 'text')
+
+df_cnn.vader_analysis()
+df_foxnews.vader_analysis()
+df_overall.vader_analysis()
+
+df_cnn.plot_ts(title='CNN Sentiment', filename='viz/sentiment_cnn.png')
+df_foxnews.plot_ts(title='FoxNews Sentiment', filename='viz/sentiment_foxnews.png')
+df_overall.plot_ts(title='Overall Sentiment', filename='viz/sentiment_overall.png')
