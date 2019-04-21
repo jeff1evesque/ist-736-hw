@@ -8,6 +8,7 @@
 
 import os
 import sys
+import numpy as np
 sys.path.append('..')
 from consumer.twitter_query import TwitterQuery
 from exploratory.word_cloud import word_cloud
@@ -15,6 +16,8 @@ from config import twitter_api as creds
 from pathlib import Path
 import pandas as pd
 from exploratory.sentiment import Sentiment
+from model.naive_bayes import Model as nb
+import matplotlib.pyplot as plt
 
 # local variables
 csv_cnn = '../data/tweets_cnn.csv'
@@ -48,22 +51,98 @@ else:
 # combine dataframes
 df = df_cnn.append(df_foxnews)
 
+#
 # generate wordcloud
+#
 if not os.path.exists('viz'):
     os.makedirs('viz')
 word_cloud(df_cnn['text'], filename='viz/wc_cnn.png')
 word_cloud(df_foxnews['text'], filename='viz/wc_foxnews.png')
 word_cloud(df['text'], filename='viz/wc_cnn_foxnews.png')
 
+#
 # sentiment analysis
-df_cnn = Sentiment(df_cnn, 'text')
-df_foxnews = Sentiment(df_foxnews, 'text')
-df_overall = Sentiment(df, 'text')
+#
+sent_cnn = Sentiment(df_cnn, 'text')
+sent_foxnews = Sentiment(df_foxnews, 'text')
+sent_overall = Sentiment(df, 'text')
 
-df_cnn.vader_analysis()
-df_foxnews.vader_analysis()
-df_overall.vader_analysis()
+df_cnn = sent_cnn.vader_analysis()
+df_foxnews = sent_foxnews.vader_analysis()
+df_overall = sent_overall.vader_analysis()
 
-df_cnn.plot_ts(title='CNN Sentiment', filename='viz/sentiment_cnn.png')
-df_foxnews.plot_ts(title='FoxNews Sentiment', filename='viz/sentiment_foxnews.png')
-df_overall.plot_ts(title='Overall Sentiment', filename='viz/sentiment_overall.png')
+# vectorize 'screen_name'
+df_overall = df_overall.replace({'screen_name': {'CNN': 0, 'FoxNews': 1}})
+
+sent_cnn.plot_ts(title='CNN Sentiment', filename='viz/sentiment_cnn.png')
+sent_foxnews.plot_ts(title='FoxNews Sentiment', filename='viz/sentiment_foxnews.png')
+sent_overall.plot_ts(title='Overall Sentiment', filename='viz/sentiment_overall.png')
+
+#
+# classifier: use naive bayes to predict cnn and foxnews tweets.
+#
+
+# unigram: perform unigram analysis.
+unigram = nb(df=df_overall, key_text='text', key_class='screen_name')
+
+# unigram vectorize
+unigram.split()
+unigram_params = unigram.get_split()
+unigram_vectorized = unigram.get_tfidf()
+
+# unigram classifier
+model_unigram = unigram.model(
+    unigram_vectorized,
+    unigram_params['y_train'],
+    validate=(unigram_params['X_test'], unigram_params['y_test'])
+)
+
+# plot unigram
+unigram.plot_cm(filename='viz/cm_unigram.png')
+
+#
+# perform pos analysis
+#
+df_pos = unigram.get_df()
+
+# define pos
+df_pos['pos'] = unigram.get_pos(
+    df_pos['text'].apply(lambda x: x.split())
+)[1]
+
+#
+# new dataframe
+#
+# @pos_split, appends pos to word before vectorization and tfidf.
+#
+pos = nb(df_pos, key_text='text', key_class='screen_name')
+pos.split(pos_split=True)
+
+# pos vectorize
+pos_params = pos.get_split()
+pos_vectorized = pos.get_tfidf()
+
+# pos classifier
+model_pos = pos.model(
+    pos_vectorized,
+    pos_params['y_train'],
+    validate=(unigram_params['X_test'], unigram_params['y_test'])
+)
+
+# plot pos
+pos.plot_cm(filename='viz/cm_pos.png')
+
+# ensembled scored
+score_unigram = unigram.get_accuracy()
+score_pos = pos.get_accuracy()
+score_good = (score_unigram + score_pos) / 2
+score_bad = 1 - score_good
+
+objects = ('unigram', 'pos', 'overall')
+y_pos = np.arange(len(objects))
+performance = [score_unigram, score_pos, score_good]
+plt.bar(y_pos, performance, align='center', alpha=0.5)
+plt.xticks(y_pos, objects)
+plt.ylabel('Performance')
+plt.savefig('viz/accuracy_overall.png')
+plt.show()
