@@ -1,201 +1,220 @@
 ,screen_name,created_at,text
-0,b'FoxNews',b'Thu Nov 08 19:18:44 +0000 2018',b'BREAKING: Federal appeals court rules against Trump administration on DACA https://t.co/KHnrNvEKAM'
-1,b'FoxNews',b'Thu Nov 08 17:02:25 +0000 2018',"b'Breaking News: Grand jury indicts captain of Missouri duck boat that sank in severe weather, killing 17 people https://t.co/ffOOgzRwdo'"
-2,b'FoxNews',b'Thu Nov 08 15:14:45 +0000 2018',"b'JUST IN: Police identify gunman who opened fire inside California bar, killing 12 https://t.co/PvITYr54AX'"
-3,b'FoxNews',b'Thu Nov 08 14:22:51 +0000 2018',b'JUST IN: Supreme Court Justice Ruth Bader Ginsburg fractures 3 ribs in fall https://t.co/9UM9hKTz4m'
-4,b'FoxNews',b'Thu Nov 08 13:43:25 +0000 2018',"b'Sgt. Ron Helus was fatally shot when he responded to the mass shooting on Nov. 7 at a bar in Thousand Oaks, Califor\xe2\x80\xa6 https://t.co/vOH3OWPN5S'"
-5,b'FoxNews',b'Thu Nov 08 13:35:03 +0000 2018',b'Tom Homan: \xe2\x80\x9cIt\xe2\x80\x99s a tragedy each and every time.\xe2\x80\x9d https://t.co/dMV68Hfdz0 https://t.co/hrq51VJg7x'
-6,b'FoxNews',b'Thu Nov 08 13:22:27 +0000 2018',"b'People walk away from the scene in Thousand Oaks, Calif. where a gunman opened fire Wednesday.\xe2\x80\xa6 https://t.co/O3Oo2iLL8O'"
-7,b'FoxNews',b'Thu Nov 08 12:56:20 +0000 2018',b'Teylor Whittler describes what she witnessed at California bar shooting https://t.co/dMV68Hfdz0 https://t.co/YznTZgQoYY'
-8,b'FoxNews',b'Thu Nov 08 12:37:05 +0000 2018',"b'An FBI agent talks to a potential witness as they stand near the scene in Thousand Oaks, Calif. where a gunman open\xe2\x80\xa6 https://t.co/7QOmXNTYM0'"
-9,b'FoxNews',b'Thu Nov 08 12:25:14 +0000 2018',b'Ventura County Fire Department Captain Stan Ziegler: \xe2\x80\x9cHundreds of first responders responded initially to the scene\xe2\x80\xa6 https://t.co/o4gArhmy4e'
-10,b'FoxNews',b'Thu Nov 08 12:06:14 +0000 2018',"b'People comfort each other as they stand near the scene in Thousand Oaks, Calif. where a gunman opened fire during a\xe2\x80\xa6 https://t.co/wPI4XSpirC'"
-11,b'FoxNews',b'Thu Nov 08 11:54:22 +0000 2018',"b""California bar shooting leaves 12 dead, including sheriff's sergeant, police say https://t.co/dMV68Hfdz0 https://t.co/WvjarPpwPV"""
-12,b'FoxNews',b'Thu Nov 08 11:38:17 +0000 2018',"b""California bar shooting leaves 12 dead, including sheriff's sergeant, police say https://t.co/GqI77wMuYZ"""
-13,b'FoxNews',b'Thu Nov 08 11:32:26 +0000 2018',"b""Sheriff's deputies speak to potential witnesses as they stand near the scene in Thousand Oaks, Calif., where a gunm\xe2\x80\xa6 https://t.co/jPE8k9oQHr"""
-14,b'FoxNews',b'Thu Nov 08 11:26:46 +0000 2018',b'13 dead in country music bar including gunman https://t.co/PvITYr54AX https://t.co/UURBIatqte'
-15,b'FoxNews',b'Thu Nov 08 11:18:08 +0000 2018',"b'12 dead in shooting at Thousand Oaks nightclub, police say https://t.co/PvITYr54AX https://t.co/o8Nf8WuJcZ'"
-16,b'FoxNews',b'Thu Nov 08 11:13:32 +0000 2018',"b'Breaking News: At least 12 dead in shooting at Thousand Oaks nightclub, police say https://t.co/u6sVxdzHq5'"
-17,b'FoxNews',b'Thu Nov 08 11:12:14 +0000 2018',b'.@CarleyShimkus is live with the \xe2\x80\x98Fox News Update\xe2\x80\x99 on Facebook Watch: https://t.co/hNrB8xzepH https://t.co/cQ9uxkjUIK'
-18,b'FoxNews',b'Thu Nov 08 10:53:33 +0000 2018',"b'Authorities deliver an update on the shooting in Thousand Oaks, California. (Courtesy: KABC) https://t.co/BtGxxIfNx5'"
-19,b'FoxNews',b'Thu Nov 08 10:36:12 +0000 2018',b'Pastor Dimas Salaberrios on California shooting: \xe2\x80\x9cMy immediate thoughts go out to the families. Because what\xe2\x80\x99s happ\xe2\x80\xa6 https://t.co/iowf5VOL2l'
-20,b'FoxNews',b'Thu Nov 08 10:30:40 +0000 2018',"b'Las Vegas shooting survivors were inside Thousand Oaks bar, friends say https://t.co/nW9TLTON9n'"
-21,b'FoxNews',b'Thu Nov 08 10:24:08 +0000 2018',"b'UPDATE: At least 11 wounded in shooting at California bar, gunman dead, police say https://t.co/awRowfbeRy'"
-22,b'FoxNews',b'Thu Nov 08 10:16:43 +0000 2018',b'Authorities confirm gunman is dead @FoxFriendsFirst https://t.co/PvITYr54AX https://t.co/a2EIH1EWmA'
-23,b'FoxNews',b'Thu Nov 08 10:10:46 +0000 2018',b'Ventura County Sheriff\xe2\x80\x99s Office Captain Garo Kuredjian: \xe2\x80\x9cI don\xe2\x80\x99t know what the condition of any of the victims are\xe2\x80\xa6 https://t.co/96mT27WHZv'
-24,b'FoxNews',b'Thu Nov 08 10:03:44 +0000 2018',"b'At least 11 shot, including sheriff\xe2\x80\x99s deputy \xe2\x80\x94 Jonathan Hunt has the latest from the scene of the California shooti\xe2\x80\xa6 https://t.co/sLzLyMsrn5'"
-25,b'FoxNews',b'Thu Nov 08 09:54:50 +0000 2018',b'Witnesses describe chaotic scene during Thousand Oaks shooting https://t.co/qE8RqKGjz3'
-26,b'FoxNews',b'Thu Nov 08 09:46:19 +0000 2018',b'UPDATE: At least 11 people hurt in California shooting @FoxFriendsFirst https://t.co/PvITYr54AX https://t.co/RGWIkaxF4f'
-27,b'FoxNews',b'Thu Nov 08 09:40:57 +0000 2018',"b'Daniel Hoffman on California shooting: \xe2\x80\x9cThis still an active shooter scene, and the focus is on dealing with that a\xe2\x80\xa6 https://t.co/PiwHhe5HuX'"
-28,b'FoxNews',b'Thu Nov 08 09:31:36 +0000 2018',"b'Former Las Vegas Metro Police Lt. Randy Sutton: \xe2\x80\x9cThose who respond to this show incredible bravery, because they ar\xe2\x80\xa6 https://t.co/idcJJuVRMP'"
-29,b'FoxNews',b'Thu Nov 08 09:25:02 +0000 2018',"b'Authorities deliver a briefing on a shooting in Thousand Oaks, California. (Courtesy: KCBS) https://t.co/5VGZz3rDIL'"
-30,b'FoxNews',b'Thu Nov 08 09:18:00 +0000 2018',"b'Mass shooting at California bar, @HeatherChilders &amp; @JackieibanezFNC have the latest @FoxFriendsFirst\xe2\x80\xa6 https://t.co/8c8H5LUFCu'"
-31,b'FoxNews',b'Thu Nov 08 09:10:00 +0000 2018',b'Tesla names Robyn Denholm as Chairman to replace Elon Musk (via @FoxBusiness) https://t.co/SKjBXxUdOD'
-32,b'FoxNews',b'Thu Nov 08 09:01:00 +0000 2018',b'@marcthiessen: \xe2\x80\x9cThe president today made very clear that he wants to cut deals with the Democrats. And quite frankl\xe2\x80\xa6 https://t.co/3eA2dn4vQh'
-33,b'FoxNews',b'Thu Nov 08 09:00:00 +0000 2018',"b'.@TuckerCarlson: ""While everyone else obsessed over dossiers and FISA warrants, Sessions worried about the mission\xe2\x80\xa6 https://t.co/LSvnOqZMsq'"
-34,b'FoxNews',b'Thu Nov 08 08:51:00 +0000 2018',"b""Wife's dying wish was for him to clean up bloody crime scene, suspect claims: reports https://t.co/7Wxd39jDEB"""
-35,b'FoxNews',b'Thu Nov 08 08:41:00 +0000 2018',b'DEVELOPING: Massive police response after reports of shooting at California nightclub https://t.co/awRowfsPJ6'
-36,b'FoxNews',b'Thu Nov 08 08:31:00 +0000 2018',"b'.@senatemajldr Mitch McConnell said Wednesday that Democrats and Republicans will have to address health care ""on a\xe2\x80\xa6 https://t.co/XxmktKMZ7F'"
-37,b'FoxNews',b'Thu Nov 08 08:21:00 +0000 2018',"b'Joseph diGenova on who could replace AG Sessions: ""@ChrisChristie would have the full confidence of @POTUS, which i\xe2\x80\xa6 https://t.co/lt485btkXG'"
-38,b'FoxNews',b'Thu Nov 08 08:06:00 +0000 2018',"b""Dem @GavinNewsom's wild victory party in LA features controversial rapper @common https://t.co/V9SSpxOUH7"""
-39,b'FoxNews',b'Thu Nov 08 08:01:00 +0000 2018',"b'.@jasoninthehouse: \xe2\x80\x9cAttorney General @jeffsessions is a patriot. He was a good Republican, and I applaud him for hi\xe2\x80\xa6 https://t.co/MRia8l8dOM'"
-40,b'FoxNews',b'Thu Nov 08 07:51:00 +0000 2018',"b'Devotees lit earthen lamps in Ayodhya, India as part of Diwali celebrations, also known as a festival of lights, on\xe2\x80\xa6 https://t.co/uWGZnrkvqD'"
-41,b'FoxNews',b'Thu Nov 08 07:41:00 +0000 2018',"b'.@TGowdySC on Jeff Sessions resigning: ""It was going to happen...He\'s been a proverbial dead man walking for severa\xe2\x80\xa6 https://t.co/ojKL4KMFTz'"
-42,b'FoxNews',b'Thu Nov 08 07:31:00 +0000 2018',b'Mob chants threats outside @TuckerCarlson\xe2\x80\x99s DC home https://t.co/IJE8m5gjWi'
-43,b'FoxNews',b'Thu Nov 08 07:21:00 +0000 2018',"b'.@TuckerCarlson: ""Supporting marriage and children is the best, maybe the only way, for Republicans or any of us to\xe2\x80\xa6 https://t.co/fqPwC8XTaY'"
-44,b'FoxNews',b'Thu Nov 08 07:16:00 +0000 2018',b'.@KennedyNation: Dems in 2020 better without Nancy https://t.co/54vTCiffG4'
-45,b'FoxNews',b'Thu Nov 08 07:11:00 +0000 2018',b'Battleground-state Dems who opposed Kavanaugh all defeated https://t.co/guqMSVjd74'
-46,b'FoxNews',b'Thu Nov 08 07:01:00 +0000 2018',"b'.@Jim_Jordan on his run for House GOP leader: \xe2\x80\x9cWe have to match [@POTUS\xe2\x80\x99s] intensity, that\xe2\x80\x99s what I want to do. If\xe2\x80\xa6 https://t.co/2VOW1ykCsI'"
-47,b'FoxNews',b'Thu Nov 08 06:51:00 +0000 2018',"b"".@senatemajldr: Dem Votes Against Kavanaugh Were a 'Godsend' to GOP in Midterms https://t.co/ietr8sP4EQ"""
-48,b'FoxNews',b'Thu Nov 08 06:41:00 +0000 2018',b'.@marcthiessen: \xe2\x80\x9cThere\xe2\x80\x99s lots of things that Democrats could take a stand on that they find inherently unacceptable\xe2\x80\xa6 https://t.co/c7UFDzFd60'
-49,b'FoxNews',b'Thu Nov 08 06:36:00 +0000 2018',"b'.@DarrellIssa on the Mueller probe: ""Two years is a long time to look for a crime you can\'t prove.""\xe2\x80\xa6 https://t.co/plX9kxpSXy'"
-50,b'FoxNews',b'Thu Nov 08 06:31:00 +0000 2018',"b""Second teen dies of gunshot wound after Oklahoma mom's rampage, authorities say https://t.co/VUQxsa3mq3"""
-51,b'FoxNews',b'Thu Nov 08 06:21:00 +0000 2018',b'.@marcthiessen: \xe2\x80\x9cThe president today made very clear that he wants to cut deals with the Democrats. And quite frank\xe2\x80\xa6 https://t.co/MGVdJQVfUt'
-52,b'FoxNews',b'Thu Nov 08 06:11:00 +0000 2018',"b'Florida Highway Patrol cruiser hits 142 mph in pursuit, catches on fire https://t.co/GqWKI45AAm'"
-53,b'FoxNews',b'Thu Nov 08 06:01:00 +0000 2018',b'Democratic strategist @LeslieMarshall: \xe2\x80\x9cWhat we need is not a wall \xe2\x80\x94 and not a wall that we can\xe2\x80\x99t afford \xe2\x80\x94 but comp\xe2\x80\xa6 https://t.co/TzRWVJQeVv'
-54,b'FoxNews',b'Thu Nov 08 05:51:00 +0000 2018',"b'Sex offender gets 22 years after missing boy, 14, found in his room at halfway house, authorities say https://t.co/sDd0VQzob4'"
-55,b'FoxNews',b'Thu Nov 08 05:41:00 +0000 2018',"b'.@POTUS touts Senate gains, @LelandVittert breaks down the results @foxnewsnight https://t.co/VMzif8sgHH'"
-56,b'FoxNews',b'Thu Nov 08 05:31:00 +0000 2018',b'Former Kavanaugh colleague among group being considered to replace Sessions as AG: reports https://t.co/HxAlDZx2Mg'
-57,b'FoxNews',b'Thu Nov 08 05:26:00 +0000 2018',"b'Too close to call: Meticulous vote count transpiring in Arizona Senate race, @aacuna1 reports @foxnewsnight https://t.co/DV6EX4Ogxe'"
-58,b'FoxNews',b'Thu Nov 08 05:21:01 +0000 2018',"b""Former SEAL Mocked by 'SNL' Wins TX House Seat, Calls for More Vets in Congress https://t.co/T0PAhopphH\xe2\x80\xa6 https://t.co/qhS5BVOE2U"""
-59,b'FoxNews',b'Thu Nov 08 05:11:00 +0000 2018',"b""South Carolina voter told to remove 'Trump' shirt in order to vote: report https://t.co/xWY2EdSpDF"""
-60,b'FoxNews',b'Thu Nov 08 05:01:00 +0000 2018',b'.@POTUS: \xe2\x80\x9cHopefully we can all work together next year to continue delivering for the American people.\xe2\x80\x9d\xe2\x80\xa6 https://t.co/FdLczQZN4g'
-61,b'FoxNews',b'Thu Nov 08 04:55:00 +0000 2018',b'Former US Attorney Harry Litman on Whitaker &amp; Mueller probe: \xe2\x80\x9cI think most people think it\xe2\x80\x99s unlikely that he would\xe2\x80\xa6 https://t.co/6W1eHbZ7zZ'
-62,b'FoxNews',b'Thu Nov 08 04:50:00 +0000 2018',"b""Pete Davidson's 'SNL' castmate Kenan Thompson talks Dan Crenshaw joke: 'They are figuring out a way to right that w\xe2\x80\xa6 https://t.co/MlIJF907FK"""
-63,b'FoxNews',b'Thu Nov 08 04:45:00 +0000 2018',"b'.@jasoninthehouse: \xe2\x80\x9cAttorney General @jeffsessions is a patriot. He was a good Republican, and I applaud him for hi\xe2\x80\xa6 https://t.co/lqmOqmHcJZ'"
-64,b'FoxNews',b'Thu Nov 08 04:35:00 +0000 2018',"b'Tom Dupree on Acting Attorney General Matthew Whitaker: \xe2\x80\x9cCalls for him to recuse from Russia, I think, are meritles\xe2\x80\xa6 https://t.co/74TWeQngjg'"
-65,b'FoxNews',b'Thu Nov 08 04:25:00 +0000 2018',"b'Cabinet shakeup expected after @jeffsessions pushed out, @edhenry reports @foxnewsnight https://t.co/6UTwyCpZRV https://t.co/MY7kH6s4T7'"
-66,b'FoxNews',b'Thu Nov 08 04:14:15 +0000 2018',"b'New reactions to Sessions resignation, Catherine Herridge has the story @foxnewsnight https://t.co/6UTwyCHBgv https://t.co/FaiATyMSgC'"
-67,b'FoxNews',b'Thu Nov 08 04:05:00 +0000 2018',b'MLB star @Bharper3407 rejects $300M offer from Nationals: Reports (via @FoxBusiness) https://t.co/Bgfoyi7fNH'
-68,b'FoxNews',b'Thu Nov 08 03:55:00 +0000 2018',b'Doug Schoen: Trump shouldn\xe2\x80\x99t have fired Jeff Sessions \xe2\x80\x93 here\xe2\x80\x99s why https://t.co/0ITTpZyqyx'
-69,b'FoxNews',b'Thu Nov 08 03:52:26 +0000 2018',"b'Joseph diGenova on who could replace AG Sessions: ""@ChrisChristie would have the full confidence of @POTUS, which i\xe2\x80\xa6 https://t.co/3eoxyIurd3'"
-70,b'FoxNews',b'Thu Nov 08 03:48:00 +0000 2018',b'\xe2\x80\x98Brady Bunch\xe2\x80\x99 cast to take part in TV home\xe2\x80\x99s renovation: report https://t.co/rebtV4qkql'
-71,b'FoxNews',b'Thu Nov 08 03:42:00 +0000 2018',"b"".@TuckerCarlson: Dems' Election Message Was All 'Trump', No Substance https://t.co/CscvHQkfAX"""
-72,b'FoxNews',b'Thu Nov 08 03:35:00 +0000 2018',"b'11-year-old in North Carolina charged with putting needles in Halloween candy, police say https://t.co/Dm3F07wpIt'"
-73,b'FoxNews',b'Thu Nov 08 03:29:00 +0000 2018',b'Rhino rescue? Scientists may hold key to saving northern white rhinoceros from extinction  https://t.co/VUifTtCbTk'
-74,b'FoxNews',b'Thu Nov 08 03:23:02 +0000 2018',"b'RT @FoxBusiness: Rick Scott: ""Socialism will not happen in our nation, and it\'s not going to happen under my watch."" https://t.co/CLNOuNnGNo'"
-75,b'FoxNews',b'Thu Nov 08 03:23:00 +0000 2018',"b""Democrat Colin Allred, who unseated Rep. Pete Sessions, won't say if he'll back Pelosi https://t.co/mNox8bKgiA"""
-76,b'FoxNews',b'Thu Nov 08 03:16:01 +0000 2018',b'Surveillance video shows Michigan woman reportedly reversing car into store https://t.co/tJr2cUsZ8a'
-77,b'FoxNews',b'Thu Nov 08 03:11:00 +0000 2018',"b'.@senatemajldr Mitch McConnell said Wednesday that Democrats and Republicans will have to address health care ""on a\xe2\x80\xa6 https://t.co/xF54bEhvOA'"
-78,b'FoxNews',b'Thu Nov 08 03:04:00 +0000 2018',"b""Woman finds her diamond before proposal and 'ring shames' herself https://t.co/uoLHUxHeBD"""
-79,b'FoxNews',b'Thu Nov 08 03:01:47 +0000 2018',"b""McDonald's customers\xe2\x80\x99 $5M lawsuit over unwanted Quarter Pounder cheese dismissed by judge https://t.co/yBEvL4cAFK"""
-80,b'FoxNews',b'Thu Nov 08 02:46:10 +0000 2018',b'Trump neuters ObamaCare birth control coverage mandate with limits on plans covering abortion https://t.co/ZXX1uDaqXl'
-81,b'FoxNews',b'Thu Nov 08 02:38:00 +0000 2018',b'The New York Police Department gathered about 20 saluting officers and held an aviation flyover to honor an Emergen\xe2\x80\xa6 https://t.co/AUnS1mBlzM'
-82,b'FoxNews',b'Thu Nov 08 02:33:06 +0000 2018',"b'RT @FoxBusiness: .@KellyannePolls: ""Many people want to work in @POTUS\' administration."" https://t.co/to6mCzFkA7'"
-83,b'FoxNews',b'Thu Nov 08 02:21:04 +0000 2018',"b'A trooper took this beautiful photo of a double rainbow over a New York State Police squad car, Tuesday. https://t.co/j9V1h3Ja5p'"
-84,b'FoxNews',b'Thu Nov 08 02:16:29 +0000 2018',"b""Jeff Sessions' departure leads to questions about Russia probe's future https://t.co/5iWsDcmrYO"""
-85,b'FoxNews',b'Thu Nov 08 02:07:37 +0000 2018',"b'.@TuckerCarlson: ""While everyone else obsessed over dossiers and FISA warrants, Sessions worried about the mission\xe2\x80\xa6 https://t.co/9Kv1DtfGKv'"
-86,b'FoxNews',b'Thu Nov 08 02:04:34 +0000 2018',"b""South Carolina voter told to remove 'Trump' shirt in order to vote: report https://t.co/HXoKJGWYxV"""
-87,b'FoxNews',b'Thu Nov 08 02:00:56 +0000 2018',b'Virginia drug-dealing mom gets 10-day jail sentence after providing marijuana to three children https://t.co/PiU3CthxVx'
-88,b'FoxNews',b'Thu Nov 08 01:42:53 +0000 2018',"b'.@TuckerCarlson: ""Supporting marriage and children is the best, maybe the only way, for Republicans or any of us to\xe2\x80\xa6 https://t.co/WrELn434wB'"
-89,b'FoxNews',b'Thu Nov 08 01:39:30 +0000 2018',b'Fox News Channel tops all broadcast and cable news networks in total viewers for midterm election coverage.\xe2\x80\xa6 https://t.co/H418QSswpI'
-90,b'FoxNews',b'Thu Nov 08 01:37:28 +0000 2018',"b""Sacha Baron Cohen revives 'Borat' character to talk politics, midterm election https://t.co/taa4Z5RCj1"""
-91,b'FoxNews',b'Thu Nov 08 01:25:49 +0000 2018',"b'Violinist claims Southwest Airlines forced him to leave flight after he refused to check $80,000 instrument https://t.co/S5TxSoH3uu'"
-92,b'FoxNews',b'Thu Nov 08 01:13:00 +0000 2018',"b""'Take Their Word For It': Jim Jordan Warns of Congressional Investigations By Nadler, Waters, Schiff https://t.co/ZXsUPobdbG"""
-93,b'FoxNews',b'Thu Nov 08 01:05:46 +0000 2018',"b'Former Governor John Sununu: ""What really made a big difference in the House races around the country last night is\xe2\x80\xa6 https://t.co/HYFtiI57mO'"
-94,b'FoxNews',b'Thu Nov 08 01:01:04 +0000 2018',"b'Georgia posts private information of 300,000 absentee voters (via @keiperjourno) https://t.co/5H4ETZthYC'"
-95,b'FoxNews',b'Thu Nov 08 00:58:26 +0000 2018',"b""CNN's Jim Acosta press pass suspended by White House, Sarah Sanders announces https://t.co/5iiXWRUrCI"""
-96,b'FoxNews',b'Thu Nov 08 00:53:56 +0000 2018',"b""BREAKING: CNN's Jim Acosta press pass suspended by White House, Sarah Sanders announces https://t.co/eBITlnvfUj"""
-97,b'FoxNews',b'Thu Nov 08 00:50:10 +0000 2018',"b'.@GovChrisSununu: ""I don\'t think last night was a referendum on the president. I think last night was really a refe\xe2\x80\xa6 https://t.co/lsznjxEPqK'"
-98,b'FoxNews',b'Thu Nov 08 00:32:49 +0000 2018',"b""Dershowitz on Sessions' Departure: Not All GOP Senators Will Allow Trump to Demand 'Loyalty' From New AG https://t.co/lrq24Ih7lc"""
-99,b'FoxNews',b'Thu Nov 08 00:29:01 +0000 2018',b'RT @MikeEmanuelFox: Democrats gear up for 2020 presidential race - from #SpecialReport tonight: \n\nhttps://t.co/2rYNfdShiO'
-100,b'FoxNews',b'Thu Nov 08 00:20:43 +0000 2018',"b'.@Jim_Jordan on his run for House GOP leader: \xe2\x80\x9cWe have to match [@POTUS\xe2\x80\x99s] intensity, that\xe2\x80\x99s what I want to do. If\xe2\x80\xa6 https://t.co/PDtB3OQCW6'"
-101,b'FoxNews',b'Thu Nov 08 00:14:42 +0000 2018',"b'.@Jim_Jordan on Jeff Sessions\' resignation: ""I think it was appropriate, the action that was taken today by [@POTUS\xe2\x80\xa6 https://t.co/oLG8pIW6Dr'"
-102,b'FoxNews',b'Thu Nov 08 00:09:58 +0000 2018',b'Attorney General Jeff Sessions resigns in the wake of midterm elections. @edhenry reports. #TheStory\xe2\x80\xa6 https://t.co/2FTTAq0LDF'
-103,b'FoxNews',b'Thu Nov 08 00:00:17 +0000 2018',"b'.@MaraLiasson on #MIDTERMS2018: ""Overall I think that Democrats had a great night. They had to win the House back a\xe2\x80\xa6 https://t.co/GbOt3JC7tJ'"
-104,b'FoxNews',b'Wed Nov 07 23:54:03 +0000 2018',"b'.@marcthiessen on Sessions resigning at @POTUS\' request: ""The president is learning from his mistakes. If he had do\xe2\x80\xa6 https://t.co/GLQoSVWA71'"
-105,b'FoxNews',b'Wed Nov 07 23:45:40 +0000 2018',b'Staff Sgt. Kyle Snodgrass meets his son Griffin for the first time at MacDill Air Force Base in Florida on Tuesday.\xe2\x80\xa6 https://t.co/xsJf7Hg05h'
-106,b'FoxNews',b'Wed Nov 07 23:36:32 +0000 2018',b'California man charged with attempted kidnapping after hopping on bus full of schoolchildren https://t.co/ig6HOzFt3s'
-107,b'FoxNews',b'Wed Nov 07 23:21:00 +0000 2018',"b""Jeff Sessions' departure leads to questions about Russia probe's future https://t.co/qDuCuO5fLX"""
-108,b'FoxNews',b'Wed Nov 07 23:15:48 +0000 2018',"b'.@TGowdySC on the Muller probe: ""I don\'t think anything is going to happen to Rod [Rosenstein] until after Mueller\xe2\x80\xa6 https://t.co/lknZ4bgSjE'"
-109,b'FoxNews',b'Wed Nov 07 23:11:33 +0000 2018',"b'.@TGowdySC on Jeff Sessions resigning: ""It was going to happen...He\'s been a proverbial dead man walking for severa\xe2\x80\xa6 https://t.co/99nfr9bJ8i'"
-110,b'FoxNews',b'Wed Nov 07 23:01:25 +0000 2018',"b'Suspect in Trump Walk of Fame vandalism pleaded no contest, officials say https://t.co/UtqbFj28ev'"
-111,b'FoxNews',b'Wed Nov 07 22:55:12 +0000 2018',"b""'The Justice Department Needs Stability': Starr Says He's 'Concerned' Following Sessions Resignation https://t.co/Ks0YmUjs0L"""
-112,b'FoxNews',b'Wed Nov 07 22:42:15 +0000 2018',"b'During a post-Election Day press conference on Wednesday, House Minority Leader @NancyPelosi said House Democrats w\xe2\x80\xa6 https://t.co/FW7ObtOGmr'"
-113,b'FoxNews',b'Wed Nov 07 22:34:40 +0000 2018',"b""Former Attorney General Jeff Sessions departs the Justice Department hours after he resigned at President Trump's r\xe2\x80\xa6 https://t.co/6RXHsKWL84"""
-114,b'FoxNews',b'Wed Nov 07 22:24:46 +0000 2018',"b""Maxine Waters on continuing Trump finance probe: 'We will deal with that' https://t.co/F0d27WZM2k"""
-115,b'FoxNews',b'Wed Nov 07 22:19:07 +0000 2018',"b'American flag mural at pizza shop vandalized, protested in small town https://t.co/cAcnfLtGuf'"
-116,b'FoxNews',b'Wed Nov 07 22:11:58 +0000 2018',"b""RT @FoxBusiness: Florida sports gambling measure passes despite NFL's Dolphins plea to voters https://t.co/gVroP7eFOj"""
-117,b'FoxNews',b'Wed Nov 07 22:04:53 +0000 2018',b'Democratic presidential hopefuls already jockeying for 2020 https://t.co/Naw7ySEuNB'
-118,b'FoxNews',b'Wed Nov 07 21:59:57 +0000 2018',"b'Mark Penn: Trump needs to be a UNIFIER now to succeed, move on to successful re-election https://t.co/tqjL4qFOB8'"
-119,b'FoxNews',b'Wed Nov 07 21:54:26 +0000 2018',"b'.@DarrellIssa on the Mueller probe: ""Two years is a long time to look for a crime you can\'t prove."" @TeamCavuto\xe2\x80\xa6 https://t.co/B9SeAwibY0'"
-120,b'FoxNews',b'Wed Nov 07 21:45:47 +0000 2018',b'Funerals scheduled for 3 Wisconsin Girl Scouts and mother killed in hit-and-run https://t.co/D1kHaAPTu8'
-121,b'FoxNews',b'Wed Nov 07 21:11:48 +0000 2018',"b""McConnell: Dem Votes Against Kavanaugh Were a 'Godsend' to GOP in Midterms https://t.co/HeI7clSOgM"""
-122,b'FoxNews',b'Wed Nov 07 21:05:19 +0000 2018',b'.@ShepNewsTeam is live with the \xe2\x80\x98Fox News Update\xe2\x80\x99 on Facebook Watch: https://t.co/hNrB8xzepH https://t.co/lGYpg0sZAZ'
-123,b'FoxNews',b'Wed Nov 07 21:03:31 +0000 2018',b'RT @FoxNewsResearch: Trump\xe2\x80\x99s Biggest Beefs w/ Jeff Sessions:\n\xe2\x80\xa2Russia probe recusal \n\xe2\x80\xa2Not investigating Ds \n\xe2\x80\xa2Not probing \xe2\x80\x9cClinton ties to Ru\xe2\x80\xa6'
-124,b'FoxNews',b'Wed Nov 07 21:03:28 +0000 2018',"b""RT @FoxNewsResearch: Trump's Recent Attacks on Sessions:\n8/11: Scared stiff, MIA\n8/23: Never took control of DOJ\n8/25: Doesn\xe2\x80\x99t understand w\xe2\x80\xa6"""
-125,b'FoxNews',b'Wed Nov 07 21:02:17 +0000 2018',"b'President @realDonaldTrump tweeted earlier today that Matthew Whitaker, who was serving as chief of staff to the at\xe2\x80\xa6 https://t.co/7RAnms7Myy'"
-126,b'FoxNews',b'Wed Nov 07 21:01:16 +0000 2018',"b'""We will protect the rule of law.""\n\n@RepAdamSchiff tweets a statement after Jeff Sessions resigns as attorney gener\xe2\x80\xa6 https://t.co/aJc6owFLZq'"
-127,b'FoxNews',b'Wed Nov 07 20:57:34 +0000 2018',b'Deputy AG Rosenstein heading to @WhiteHouse for previously scheduled 4 p.m. meeting https://t.co/SfA26v0ock https://t.co/tRYj2L876E'
-128,b'FoxNews',b'Wed Nov 07 20:54:16 +0000 2018',"b""Senator @MarkWarner on Jeff Sessions' resignation as attorney general https://t.co/SfA26v0ock https://t.co/RHSfPaOjRx"""
-129,b'FoxNews',b'Wed Nov 07 20:48:51 +0000 2018',b'Catherine Herridge reports on acting attorney general Matthew Whitaker @ShepNewsTeam https://t.co/SfA26v0ock https://t.co/H9kTj0p2hs'
-130,b'FoxNews',b'Wed Nov 07 20:41:25 +0000 2018',b'.@SenSchumer calls on acting AG Whitaker to recuse himself from Mueller investigation https://t.co/SfA26v0ock https://t.co/TVhVNHxzet'
-131,b'FoxNews',b'Wed Nov 07 20:35:29 +0000 2018',b'Scott Walker concedes to Democrat Tony Evers in Wisconsin gubernatorial race https://t.co/cNYiUbMQ9q'
-132,b'FoxNews',b'Wed Nov 07 20:32:21 +0000 2018',b'JUST IN: Acting AG Whitaker sworn in https://t.co/SfA26v0ock https://t.co/lRztd6D6N2'
-133,b'FoxNews',b'Wed Nov 07 20:28:03 +0000 2018',"b"".@senatemajldr releases a statement following AG Jeff Sessions' resignation https://t.co/SfA26v0ock https://t.co/e8BPukvmHN"""
-134,b'FoxNews',b'Wed Nov 07 20:23:54 +0000 2018',"b""A timeline of events leading up to Jeff Sessions' resignation as attorney general @ShepNewsTeam\xe2\x80\xa6 https://t.co/Ct61blQaFm"""
-135,b'FoxNews',b'Wed Nov 07 20:16:57 +0000 2018',"b'""We do know that the @POTUS, this morning, asked for the resignation of Jeff Sessions.""\n\n@johnrobertsFox reports li\xe2\x80\xa6 https://t.co/vNdGMbY6zB'"
-136,b'FoxNews',b'Wed Nov 07 20:14:50 +0000 2018',b'READ: Attorney General Jeff Sessions\xe2\x80\x99 resignation letter https://t.co/tRPKlqjP2r'
-137,b'FoxNews',b'Wed Nov 07 20:11:44 +0000 2018',b'Former #Trump administration officials: A list of notable departures https://t.co/aF7OE87iFA'
-138,b'FoxNews',b'Wed Nov 07 20:03:27 +0000 2018',"b'.@ChrisStirewalt: ""Sessions was a fearless and relentless, in many ways, prosecutor of the president\'s agenda.""\xe2\x80\xa6 https://t.co/yomuyofWQs'"
-139,b'FoxNews',b'Wed Nov 07 19:57:47 +0000 2018',"b'""At your request, I am submitting my resignation.""\n\nWATCH: Catherine Herridge reads Attorney General Jeff Sessions\'\xe2\x80\xa6 https://t.co/uwvNalAMwY'"
-140,b'FoxNews',b'Wed Nov 07 19:51:41 +0000 2018',b'BREAKING NEWS: Attorney General Jeff Sessions resigns; Chief of Staff Matthew G. Whitaker becomes acting AG https://t.co/SfA26v0ock'
-141,b'FoxNews',b'Wed Nov 07 19:50:35 +0000 2018',b'BREAKING NEWS: Attorney General Jeff Sessions resigns; Chief of Staff Matthew G. Whitaker becomes acting AG https://t.co/qs2Wgqf2WE'
-142,b'FoxNews',b'Wed Nov 07 19:43:22 +0000 2018',"b""OPINION: Yes, Democrats have won the House but behind Pelosi's soaring rhetoric is THIS harsh political reality https://t.co/ZpofOYXQS5"""
-143,b'FoxNews',b'Wed Nov 07 19:42:33 +0000 2018',b'.@SenSchumer holds a press conference to discuss the results of the 2018 midterm elections. https://t.co/bmoL8OCN8h'
-144,b'FoxNews',b'Wed Nov 07 19:35:39 +0000 2018',b'At least 77 military veterans elected to Congress #Midterms2018 https://t.co/uNgXxswzmG'
-145,b'FoxNews',b'Wed Nov 07 19:31:57 +0000 2018',b'NYPD salutes K-9 as she loses battle with cancer https://t.co/uG0w9Vaj0H'
-146,b'FoxNews',b'Wed Nov 07 19:27:42 +0000 2018',"b'.@senatemajldr: ""I do think voting against Kavanaugh was a mistake."" @dailybriefing https://t.co/zGxqpx1nfa'"
-147,b'FoxNews',b'Wed Nov 07 19:20:56 +0000 2018',"b'.@senatemajldr: ""Now [Democrats] have part of the responsibility for governing\xe2\x80\x94 let\'s get together and figure out h\xe2\x80\xa6 https://t.co/p4EbS4kMoZ'"
-148,b'FoxNews',b'Wed Nov 07 19:15:50 +0000 2018',"b'.@senatemajldr: ""We have to work together. We need to improve the health care system in American because it\'s not w\xe2\x80\xa6 https://t.co/byy0WDf5FD'"
-149,b'FoxNews',b'Wed Nov 07 19:09:37 +0000 2018',"b'.@MarshaBlackburn: ""Individuals want to see Washington, D.C. work in a way that is going to lead us to a government\xe2\x80\xa6 https://t.co/DVfRLSsLoP'"
-150,b'FoxNews',b'Wed Nov 07 18:58:41 +0000 2018',b'.@NancyPelosi on how she can work together with @POTUS https://t.co/lDBMXgcCa5'
-151,b'FoxNews',b'Wed Nov 07 18:52:36 +0000 2018',"b'.@NancyPelosi: ""We believe that we have a responsibility to seek common ground where we can. Where we cannot, we mu\xe2\x80\xa6 https://t.co/BnhcwOG3QA'"
-152,b'FoxNews',b'Wed Nov 07 18:47:21 +0000 2018',"b'.@NancyPelosi: ""Yesterday\'s election was not only a vote to protect America\'s health care, it was a vote to restore\xe2\x80\xa6 https://t.co/UePnJqxT2C'"
-153,b'FoxNews',b'Wed Nov 07 18:41:44 +0000 2018',"b'.@IvankaTrump shared a message on #Midterms2018, tweeting that ""the real winner was America.""\xe2\x80\xa6 https://t.co/EFQArxZG5f'"
-154,b'FoxNews',b'Wed Nov 07 18:37:53 +0000 2018',"b'.@NancyPelosi: ""Women led the way to victory, with at least 30 new women coming to the Congress."" #Midterms2018\xe2\x80\xa6 https://t.co/GPZ1GQz6fY'"
-155,b'FoxNews',b'Wed Nov 07 18:35:33 +0000 2018',"b'.@NancyPelosi: ""The biggest winner yesterday was the health care for American people, for our seniors and hard-work\xe2\x80\xa6 https://t.co/F8Px1fumbK'"
-156,b'FoxNews',b'Wed Nov 07 18:30:24 +0000 2018',b'TODAY: @DanaPerino talks to @senatemajldr about #Midterms2018 and President @realDonaldTrump\xe2\x80\x99s post-Election Day pr\xe2\x80\xa6 https://t.co/vln1WJKnV2'
-157,b'FoxNews',b'Wed Nov 07 18:27:14 +0000 2018',b'House Democratic Leader @NancyPelosi holds a news conference after the midterms.  https://t.co/JuTuSSbj8J'
-158,b'FoxNews',b'Wed Nov 07 18:11:22 +0000 2018',b'JUST IN: Jon Tester projected to defeat Matt Rosendale in Montana Senate race https://t.co/CMbrSngFZc https://t.co/6UaJbCQoQd'
-159,b'FoxNews',b'Wed Nov 07 17:22:36 +0000 2018',b'.@POTUS: \xe2\x80\x9cI would like to see bipartisanship. I\xe2\x80\x99d like to see unity\xe2\x80\xa6 I think we have a very good chance of seeing t\xe2\x80\xa6 https://t.co/LQVr5VDOUR'
-160,b'FoxNews',b'Wed Nov 07 17:19:41 +0000 2018',"b'.@POTUS: \xe2\x80\x9cNow is the time for members of both parties to join together, put partisanship aside and keep the America\xe2\x80\xa6 https://t.co/VJmuFX7moj'"
-161,b'FoxNews',b'Wed Nov 07 17:14:30 +0000 2018',b'.@POTUS: \xe2\x80\x9cHopefully we can all work together next year to continue delivering for the American people.\xe2\x80\x9d\xe2\x80\xa6 https://t.co/vTHRYnrT3X'
-162,b'FoxNews',b'Wed Nov 07 17:08:47 +0000 2018',"b'.@POTUS: \xe2\x80\x9cBy expanding our Senate majority, the voters have also clearly rebuked the Senate Democrats for their han\xe2\x80\xa6 https://t.co/lAFzmjGOZQ'"
-163,b'FoxNews',b'Wed Nov 07 17:02:03 +0000 2018',b'.@POTUS: \xe2\x80\x9cWe saw the candidates that I supported achieve tremendous success last night.\xe2\x80\x9d https://t.co/YEwZGue71Z https://t.co/JRD1t3JiFt'
-164,b'FoxNews',b'Wed Nov 07 16:57:28 +0000 2018',b'.@POTUS holds a news conference following #Midterms2018 https://t.co/mmfuGw28DO'
-165,b'FoxNews',b'Wed Nov 07 16:52:44 +0000 2018',"b'In a statement on #Midterms2018, former President @BarackObama congratulated \xe2\x80\x9ceverybody who showed up and participa\xe2\x80\xa6 https://t.co/ElTghkIQpo'"
-166,b'FoxNews',b'Wed Nov 07 16:49:44 +0000 2018',b'.@wjmcgurn: \xe2\x80\x9cThe clear loser last night was Chuck Schumer.\xe2\x80\x9d https://t.co/M6d4uW3Rab'
-167,b'FoxNews',b'Wed Nov 07 16:42:52 +0000 2018',b'Bryan Steil: \xe2\x80\x9cI\xe2\x80\x99m optimistic that we can keep delivering results in Washington under the leadership of President Tr\xe2\x80\xa6 https://t.co/u5N7xJ9Foj'
-168,b'FoxNews',b'Wed Nov 07 16:35:24 +0000 2018',b'LIVE BLOG: @realDonaldTrump holds post-Election Day press conference https://t.co/YEwZGue71Z'
-169,b'FoxNews',b'Wed Nov 07 16:26:41 +0000 2018',"b'.@ByronYork: All that talk about a blue wave, all the talk about the American people rising up as one to repudiate\xe2\x80\xa6 https://t.co/8aoGxPCpIj'"
-170,b'FoxNews',b'Wed Nov 07 16:17:25 +0000 2018',"b'Abrams, Walker among key candidates in midterm races refusing to concede https://t.co/LlWFtz6ek4'"
-171,b'FoxNews',b'Wed Nov 07 16:12:01 +0000 2018',"b""Man shamed for proposing at New York City Marathon as girlfriend runs by: 'He couldn't propose to her at the finish\xe2\x80\xa6 https://t.co/DZJeuuCxPg"""
-172,b'FoxNews',b'Wed Nov 07 16:04:41 +0000 2018',b'Several former NFL players win midterm races https://t.co/fCM7L2gvMl'
-173,b'FoxNews',b'Wed Nov 07 15:55:00 +0000 2018',b'.@seanspicer reacts to #Midterms2018 on @AmericaNewsroom https://t.co/L3nSZ1WwJD'
-174,b'FoxNews',b'Wed Nov 07 15:51:08 +0000 2018',"b'.@senatemajldr: ""There are serious problems with ObamaCare, and I think we\'re going to have to obviously now try to\xe2\x80\xa6 https://t.co/iidBMQzJQl'"
-175,b'FoxNews',b'Wed Nov 07 15:50:00 +0000 2018',"b""Harley-Davidson's electric LiveWire debuts in Italy https://t.co/7sUPFs5QgX"""
-176,b'FoxNews',b'Wed Nov 07 15:45:00 +0000 2018',b'Pompeo\xe2\x80\x99s meeting with North Korean official delayed amid denuclearization deadlock https://t.co/IeBDczRSDC'
-177,b'FoxNews',b'Wed Nov 07 15:43:30 +0000 2018',b'.@senatemajldr: \xe2\x80\x9cWe\xe2\x80\x99re certainly going to try to help the president achieve what he\xe2\x80\x99d like to do with regard to the\xe2\x80\xa6 https://t.co/ypzhlR3Kw2'
-178,b'FoxNews',b'Wed Nov 07 15:39:05 +0000 2018',b'.@senatemajldr on speaking with @NancyPelosi: \xe2\x80\x9cWe discussed ways we might be able to find a way forward.\xe2\x80\x9d https://t.co/1R00x9gA1R'
-179,b'FoxNews',b'Wed Nov 07 15:38:00 +0000 2018',"b""Former SEAL Mocked by 'SNL' Wins TX House Seat, Calls for More Vets in Congress https://t.co/T0PAho7Oq9 https://t.co/tnyBsy8yEV"""
-180,b'FoxNews',b'Wed Nov 07 15:35:01 +0000 2018',b'.@senatemajldr: \xe2\x80\x9cIt is indeed a good morning for Senate Republicans.\xe2\x80\x9d https://t.co/NARYDkhqQw'
-181,b'FoxNews',b'Wed Nov 07 15:33:48 +0000 2018',b'.@senatemajldr holds a news conference following #Midterms2018 https://t.co/fdej3Nq0lD'
-182,b'FoxNews',b'Wed Nov 07 15:30:00 +0000 2018',b'Lawyers for migrant caravan members give them stark advice: \xe2\x80\x98It\xe2\x80\x99s going to be difficult\xe2\x80\x99 https://t.co/28LbFyxAu2'
-183,b'FoxNews',b'Wed Nov 07 15:28:11 +0000 2018',b'SOON: @senatemajldr to hold post-election news conference https://t.co/DAyQRgVE9O'
-184,b'FoxNews',b'Wed Nov 07 15:22:00 +0000 2018',b'.@RepJeffries reacts to #Midterms 2018 on @AmericaNewsroom https://t.co/zwqzSBgilk'
-185,b'FoxNews',b'Wed Nov 07 15:15:00 +0000 2018',b'.@HotlineJosh: \xe2\x80\x9cI think the results show you can\xe2\x80\x99t have someone too far to the left. You have to find someone who c\xe2\x80\xa6 https://t.co/Vtja9Penrr'
-186,b'FoxNews',b'Wed Nov 07 15:08:00 +0000 2018',"b""Trump backs Pelosi for House speaker after Dems' midterm takeover, relishing looming rivalry (via @RyanGaydos) https://t.co/HmOwyfTTtl"""
-187,b'FoxNews',b'Wed Nov 07 14:45:00 +0000 2018',b'.@KellyannePolls reacts to the midterms on @foxandfriends https://t.co/vgsjTekOnB'
-188,b'FoxNews',b'Wed Nov 07 14:42:52 +0000 2018',b'Stock markets open following midterms @AmericaNewsroom https://t.co/bFOw88J6mY'
-189,b'FoxNews',b'Wed Nov 07 14:40:00 +0000 2018',b'Republicans win Missouri Senate race; @KristinFisher reports @AmericaNewsroom https://t.co/iSPHQoeCYR https://t.co/ALH7sVKcdN'
-190,b'FoxNews',b'Wed Nov 07 14:30:00 +0000 2018',b'Midterm result is best-case scenario for investors (via @FoxBusiness) https://t.co/t7RD51Y4O4'
-191,b'FoxNews',b'Wed Nov 07 14:25:00 +0000 2018',"b'.@MarshaBlackburn: \xe2\x80\x9cIf Nancy Pelosi really is interested in bipartisanship, my hope would be that she would work wi\xe2\x80\xa6 https://t.co/3tfrWdmapW'"
-192,b'FoxNews',b'Wed Nov 07 14:15:01 +0000 2018',"b""Republican Ron DeSantis narrowly defeated Democrat Andrew Gillum in Florida's race for governor. Read more in today\xe2\x80\xa6 https://t.co/ES0n93uF39"""
-193,b'FoxNews',b'Wed Nov 07 14:13:49 +0000 2018',"b""RT @FoxBusiness: 2018 midterm election: US enters 'longest business cycle' ever, analyst says https://t.co/0M5fucswbV"""
-194,b'FoxNews',b'Wed Nov 07 14:13:34 +0000 2018',b'RT @FoxNewsResearch: #Midterms2018 \n- Female Firsts\n\xe2\x80\xa2100+ women in the House\n\xe2\x80\xa2TN: First female Senator (Blackburn)\n\xe2\x80\xa21st Muslim women electe\xe2\x80\xa6'
-195,b'FoxNews',b'Wed Nov 07 14:05:00 +0000 2018',b'.@MarshaBlackburn: \xe2\x80\x9cWe were committed to our message.\xe2\x80\x9d @foxandfriends https://t.co/iSPHQowenr https://t.co/j0JKPUeiWr'
-196,b'FoxNews',b'Wed Nov 07 14:00:02 +0000 2018',"b""Rare Ernest Hemingway letter documenting '500-pound Marlin' catch surfaces https://t.co/KOEnKCiFot"""
-197,b'FoxNews',b'Wed Nov 07 13:50:00 +0000 2018',b'Oregon votes to keep sanctuary status @foxandfriends https://t.co/xwDzEu0qEP'
-198,b'FoxNews',b'Wed Nov 07 13:43:50 +0000 2018',b'RT @FoxBusiness: Duncan Hines cake mixes recalled over Salmonella fears\nhttps://t.co/2GWFEWSd8s'
-199,b'FoxNews',b'Wed Nov 07 13:42:06 +0000 2018',"b'RT @FoxBusiness: .@DanCrenshawTX: ""Immigration was still an enormous issue, especially border security so that\'ll be important for me."" htt\xe2\x80\xa6'"
+0,FoxNews,Thu Nov 08 19:18:44 +0000 2018,BREAKING: Federal appeals court rules against Trump administration on DACA https://t.co/KHnrNvEKAM
+1,FoxNews,Thu Nov 08 17:02:25 +0000 2018,"Breaking News: Grand jury indicts captain of Missouri duck boat that sank in severe weather, killing 17 people https://t.co/ffOOgzRwdo"
+2,FoxNews,Thu Nov 08 15:14:45 +0000 2018,"JUST IN: Police identify gunman who opened fire inside California bar, killing 12 https://t.co/PvITYr54AX"
+3,FoxNews,Thu Nov 08 14:22:51 +0000 2018,JUST IN: Supreme Court Justice Ruth Bader Ginsburg fractures 3 ribs in fall https://t.co/9UM9hKTz4m
+4,FoxNews,Thu Nov 08 13:43:25 +0000 2018,"Sgt. Ron Helus was fatally shot when he responded to the mass shooting on Nov. 7 at a bar in Thousand Oaks, Califor… https://t.co/vOH3OWPN5S"
+5,FoxNews,Thu Nov 08 13:35:03 +0000 2018,Tom Homan: “It’s a tragedy each and every time.” https://t.co/dMV68Hfdz0 https://t.co/hrq51VJg7x
+6,FoxNews,Thu Nov 08 13:22:27 +0000 2018,"People walk away from the scene in Thousand Oaks, Calif. where a gunman opened fire Wednesday.… https://t.co/O3Oo2iLL8O"
+7,FoxNews,Thu Nov 08 12:56:20 +0000 2018,Teylor Whittler describes what she witnessed at California bar shooting https://t.co/dMV68Hfdz0 https://t.co/YznTZgQoYY
+8,FoxNews,Thu Nov 08 12:37:05 +0000 2018,"An FBI agent talks to a potential witness as they stand near the scene in Thousand Oaks, Calif. where a gunman open… https://t.co/7QOmXNTYM0"
+9,FoxNews,Thu Nov 08 12:25:14 +0000 2018,Ventura County Fire Department Captain Stan Ziegler: “Hundreds of first responders responded initially to the scene… https://t.co/o4gArhmy4e
+10,FoxNews,Thu Nov 08 12:06:14 +0000 2018,"People comfort each other as they stand near the scene in Thousand Oaks, Calif. where a gunman opened fire during a… https://t.co/wPI4XSpirC"
+11,FoxNews,Thu Nov 08 11:54:22 +0000 2018,"California bar shooting leaves 12 dead, including sheriff's sergeant, police say https://t.co/dMV68Hfdz0 https://t.co/WvjarPpwPV"
+12,FoxNews,Thu Nov 08 11:38:17 +0000 2018,"California bar shooting leaves 12 dead, including sheriff's sergeant, police say https://t.co/GqI77wMuYZ"
+13,FoxNews,Thu Nov 08 11:32:26 +0000 2018,"Sheriff's deputies speak to potential witnesses as they stand near the scene in Thousand Oaks, Calif., where a gunm… https://t.co/jPE8k9oQHr"
+14,FoxNews,Thu Nov 08 11:26:46 +0000 2018,13 dead in country music bar including gunman https://t.co/PvITYr54AX https://t.co/UURBIatqte
+15,FoxNews,Thu Nov 08 11:18:08 +0000 2018,"12 dead in shooting at Thousand Oaks nightclub, police say https://t.co/PvITYr54AX https://t.co/o8Nf8WuJcZ"
+16,FoxNews,Thu Nov 08 11:13:32 +0000 2018,"Breaking News: At least 12 dead in shooting at Thousand Oaks nightclub, police say https://t.co/u6sVxdzHq5"
+17,FoxNews,Thu Nov 08 11:12:14 +0000 2018,.@CarleyShimkus is live with the ‘Fox News Update’ on Facebook Watch: https://t.co/hNrB8xzepH https://t.co/cQ9uxkjUIK
+18,FoxNews,Thu Nov 08 10:53:33 +0000 2018,"Authorities deliver an update on the shooting in Thousand Oaks, California. (Courtesy: KABC) https://t.co/BtGxxIfNx5"
+19,FoxNews,Thu Nov 08 10:36:12 +0000 2018,Pastor Dimas Salaberrios on California shooting: “My immediate thoughts go out to the families. Because what’s happ… https://t.co/iowf5VOL2l
+20,FoxNews,Thu Nov 08 10:30:40 +0000 2018,"Las Vegas shooting survivors were inside Thousand Oaks bar, friends say https://t.co/nW9TLTON9n"
+21,FoxNews,Thu Nov 08 10:24:08 +0000 2018,"UPDATE: At least 11 wounded in shooting at California bar, gunman dead, police say https://t.co/awRowfbeRy"
+22,FoxNews,Thu Nov 08 10:16:43 +0000 2018,Authorities confirm gunman is dead @FoxFriendsFirst https://t.co/PvITYr54AX https://t.co/a2EIH1EWmA
+23,FoxNews,Thu Nov 08 10:10:46 +0000 2018,Ventura County Sheriff’s Office Captain Garo Kuredjian: “I don’t know what the condition of any of the victims are… https://t.co/96mT27WHZv
+24,FoxNews,Thu Nov 08 10:03:44 +0000 2018,"At least 11 shot, including sheriff’s deputy — Jonathan Hunt has the latest from the scene of the California shooti… https://t.co/sLzLyMsrn5"
+25,FoxNews,Thu Nov 08 09:54:50 +0000 2018,Witnesses describe chaotic scene during Thousand Oaks shooting https://t.co/qE8RqKGjz3
+26,FoxNews,Thu Nov 08 09:46:19 +0000 2018,UPDATE: At least 11 people hurt in California shooting @FoxFriendsFirst https://t.co/PvITYr54AX https://t.co/RGWIkaxF4f
+27,FoxNews,Thu Nov 08 09:40:57 +0000 2018,"Daniel Hoffman on California shooting: “This still an active shooter scene, and the focus is on dealing with that a… https://t.co/PiwHhe5HuX"
+28,FoxNews,Thu Nov 08 09:31:36 +0000 2018,"Former Las Vegas Metro Police Lt. Randy Sutton: “Those who respond to this show incredible bravery, because they ar… https://t.co/idcJJuVRMP"
+29,FoxNews,Thu Nov 08 09:25:02 +0000 2018,"Authorities deliver a briefing on a shooting in Thousand Oaks, California. (Courtesy: KCBS) https://t.co/5VGZz3rDIL"
+30,FoxNews,Thu Nov 08 09:18:00 +0000 2018,"Mass shooting at California bar, @HeatherChilders &amp; @JackieibanezFNC have the latest @FoxFriendsFirst… https://t.co/8c8H5LUFCu"
+31,FoxNews,Thu Nov 08 09:10:00 +0000 2018,Tesla names Robyn Denholm as Chairman to replace Elon Musk (via @FoxBusiness) https://t.co/SKjBXxUdOD
+32,FoxNews,Thu Nov 08 09:01:00 +0000 2018,@marcthiessen: “The president today made very clear that he wants to cut deals with the Democrats. And quite frankl… https://t.co/3eA2dn4vQh
+33,FoxNews,Thu Nov 08 09:00:00 +0000 2018,".@TuckerCarlson: ""While everyone else obsessed over dossiers and FISA warrants, Sessions worried about the mission… https://t.co/LSvnOqZMsq"
+34,FoxNews,Thu Nov 08 08:51:00 +0000 2018,"Wife's dying wish was for him to clean up bloody crime scene, suspect claims: reports https://t.co/7Wxd39jDEB"
+35,FoxNews,Thu Nov 08 08:41:00 +0000 2018,DEVELOPING: Massive police response after reports of shooting at California nightclub https://t.co/awRowfsPJ6
+36,FoxNews,Thu Nov 08 08:31:00 +0000 2018,".@senatemajldr Mitch McConnell said Wednesday that Democrats and Republicans will have to address health care ""on a… https://t.co/XxmktKMZ7F"
+37,FoxNews,Thu Nov 08 08:21:00 +0000 2018,"Joseph diGenova on who could replace AG Sessions: ""@ChrisChristie would have the full confidence of @POTUS, which i… https://t.co/lt485btkXG"
+38,FoxNews,Thu Nov 08 08:06:00 +0000 2018,Dem @GavinNewsom's wild victory party in LA features controversial rapper @common https://t.co/V9SSpxOUH7
+39,FoxNews,Thu Nov 08 08:01:00 +0000 2018,".@jasoninthehouse: “Attorney General @jeffsessions is a patriot. He was a good Republican, and I applaud him for hi… https://t.co/MRia8l8dOM"
+40,FoxNews,Thu Nov 08 07:51:00 +0000 2018,"Devotees lit earthen lamps in Ayodhya, India as part of Diwali celebrations, also known as a festival of lights, on… https://t.co/uWGZnrkvqD"
+41,FoxNews,Thu Nov 08 07:41:00 +0000 2018,".@TGowdySC on Jeff Sessions resigning: ""It was going to happen...He's been a proverbial dead man walking for severa… https://t.co/ojKL4KMFTz"
+42,FoxNews,Thu Nov 08 07:31:00 +0000 2018,Mob chants threats outside @TuckerCarlson’s DC home https://t.co/IJE8m5gjWi
+43,FoxNews,Thu Nov 08 07:21:00 +0000 2018,".@TuckerCarlson: ""Supporting marriage and children is the best, maybe the only way, for Republicans or any of us to… https://t.co/fqPwC8XTaY"
+44,FoxNews,Thu Nov 08 07:16:00 +0000 2018,.@KennedyNation: Dems in 2020 better without Nancy https://t.co/54vTCiffG4
+45,FoxNews,Thu Nov 08 07:11:00 +0000 2018,Battleground-state Dems who opposed Kavanaugh all defeated https://t.co/guqMSVjd74
+46,FoxNews,Thu Nov 08 07:01:00 +0000 2018,".@Jim_Jordan on his run for House GOP leader: “We have to match [@POTUS’s] intensity, that’s what I want to do. If… https://t.co/2VOW1ykCsI"
+47,FoxNews,Thu Nov 08 06:51:00 +0000 2018,.@senatemajldr: Dem Votes Against Kavanaugh Were a 'Godsend' to GOP in Midterms https://t.co/ietr8sP4EQ
+48,FoxNews,Thu Nov 08 06:41:00 +0000 2018,.@marcthiessen: “There’s lots of things that Democrats could take a stand on that they find inherently unacceptable… https://t.co/c7UFDzFd60
+49,FoxNews,Thu Nov 08 06:36:00 +0000 2018,".@DarrellIssa on the Mueller probe: ""Two years is a long time to look for a crime you can't prove.""… https://t.co/plX9kxpSXy"
+50,FoxNews,Thu Nov 08 06:31:00 +0000 2018,"Second teen dies of gunshot wound after Oklahoma mom's rampage, authorities say https://t.co/VUQxsa3mq3"
+51,FoxNews,Thu Nov 08 06:21:00 +0000 2018,.@marcthiessen: “The president today made very clear that he wants to cut deals with the Democrats. And quite frank… https://t.co/MGVdJQVfUt
+52,FoxNews,Thu Nov 08 06:11:00 +0000 2018,"Florida Highway Patrol cruiser hits 142 mph in pursuit, catches on fire https://t.co/GqWKI45AAm"
+53,FoxNews,Thu Nov 08 06:01:00 +0000 2018,Democratic strategist @LeslieMarshall: “What we need is not a wall — and not a wall that we can’t afford — but comp… https://t.co/TzRWVJQeVv
+54,FoxNews,Thu Nov 08 05:51:00 +0000 2018,"Sex offender gets 22 years after missing boy, 14, found in his room at halfway house, authorities say https://t.co/sDd0VQzob4"
+55,FoxNews,Thu Nov 08 05:41:00 +0000 2018,".@POTUS touts Senate gains, @LelandVittert breaks down the results @foxnewsnight https://t.co/VMzif8sgHH"
+56,FoxNews,Thu Nov 08 05:31:00 +0000 2018,Former Kavanaugh colleague among group being considered to replace Sessions as AG: reports https://t.co/HxAlDZx2Mg
+57,FoxNews,Thu Nov 08 05:26:00 +0000 2018,"Too close to call: Meticulous vote count transpiring in Arizona Senate race, @aacuna1 reports @foxnewsnight https://t.co/DV6EX4Ogxe"
+58,FoxNews,Thu Nov 08 05:21:01 +0000 2018,"Former SEAL Mocked by 'SNL' Wins TX House Seat, Calls for More Vets in Congress https://t.co/T0PAhopphH… https://t.co/qhS5BVOE2U"
+59,FoxNews,Thu Nov 08 05:11:00 +0000 2018,South Carolina voter told to remove 'Trump' shirt in order to vote: report https://t.co/xWY2EdSpDF
+60,FoxNews,Thu Nov 08 05:01:00 +0000 2018,.@POTUS: “Hopefully we can all work together next year to continue delivering for the American people.”… https://t.co/FdLczQZN4g
+61,FoxNews,Thu Nov 08 04:55:00 +0000 2018,Former US Attorney Harry Litman on Whitaker &amp; Mueller probe: “I think most people think it’s unlikely that he would… https://t.co/6W1eHbZ7zZ
+62,FoxNews,Thu Nov 08 04:50:00 +0000 2018,Pete Davidson's 'SNL' castmate Kenan Thompson talks Dan Crenshaw joke: 'They are figuring out a way to right that w… https://t.co/MlIJF907FK
+63,FoxNews,Thu Nov 08 04:45:00 +0000 2018,".@jasoninthehouse: “Attorney General @jeffsessions is a patriot. He was a good Republican, and I applaud him for hi… https://t.co/lqmOqmHcJZ"
+64,FoxNews,Thu Nov 08 04:35:00 +0000 2018,"Tom Dupree on Acting Attorney General Matthew Whitaker: “Calls for him to recuse from Russia, I think, are meritles… https://t.co/74TWeQngjg"
+65,FoxNews,Thu Nov 08 04:25:00 +0000 2018,"Cabinet shakeup expected after @jeffsessions pushed out, @edhenry reports @foxnewsnight https://t.co/6UTwyCpZRV https://t.co/MY7kH6s4T7"
+66,FoxNews,Thu Nov 08 04:14:15 +0000 2018,"New reactions to Sessions resignation, Catherine Herridge has the story @foxnewsnight https://t.co/6UTwyCHBgv https://t.co/FaiATyMSgC"
+67,FoxNews,Thu Nov 08 04:05:00 +0000 2018,MLB star @Bharper3407 rejects $300M offer from Nationals: Reports (via @FoxBusiness) https://t.co/Bgfoyi7fNH
+68,FoxNews,Thu Nov 08 03:55:00 +0000 2018,Doug Schoen: Trump shouldn’t have fired Jeff Sessions – here’s why https://t.co/0ITTpZyqyx
+69,FoxNews,Thu Nov 08 03:52:26 +0000 2018,"Joseph diGenova on who could replace AG Sessions: ""@ChrisChristie would have the full confidence of @POTUS, which i… https://t.co/3eoxyIurd3"
+70,FoxNews,Thu Nov 08 03:48:00 +0000 2018,‘Brady Bunch’ cast to take part in TV home’s renovation: report https://t.co/rebtV4qkql
+71,FoxNews,Thu Nov 08 03:42:00 +0000 2018,".@TuckerCarlson: Dems' Election Message Was All 'Trump', No Substance https://t.co/CscvHQkfAX"
+72,FoxNews,Thu Nov 08 03:35:00 +0000 2018,"11-year-old in North Carolina charged with putting needles in Halloween candy, police say https://t.co/Dm3F07wpIt"
+73,FoxNews,Thu Nov 08 03:29:00 +0000 2018,Rhino rescue? Scientists may hold key to saving northern white rhinoceros from extinction  https://t.co/VUifTtCbTk
+74,FoxNews,Thu Nov 08 03:23:02 +0000 2018,"RT @FoxBusiness: Rick Scott: ""Socialism will not happen in our nation, and it's not going to happen under my watch."" https://t.co/CLNOuNnGNo"
+75,FoxNews,Thu Nov 08 03:23:00 +0000 2018,"Democrat Colin Allred, who unseated Rep. Pete Sessions, won't say if he'll back Pelosi https://t.co/mNox8bKgiA"
+76,FoxNews,Thu Nov 08 03:16:01 +0000 2018,Surveillance video shows Michigan woman reportedly reversing car into store https://t.co/tJr2cUsZ8a
+77,FoxNews,Thu Nov 08 03:11:00 +0000 2018,".@senatemajldr Mitch McConnell said Wednesday that Democrats and Republicans will have to address health care ""on a… https://t.co/xF54bEhvOA"
+78,FoxNews,Thu Nov 08 03:04:00 +0000 2018,Woman finds her diamond before proposal and 'ring shames' herself https://t.co/uoLHUxHeBD
+79,FoxNews,Thu Nov 08 03:01:47 +0000 2018,McDonald's customers’ $5M lawsuit over unwanted Quarter Pounder cheese dismissed by judge https://t.co/yBEvL4cAFK
+80,FoxNews,Thu Nov 08 02:46:10 +0000 2018,Trump neuters ObamaCare birth control coverage mandate with limits on plans covering abortion https://t.co/ZXX1uDaqXl
+81,FoxNews,Thu Nov 08 02:38:00 +0000 2018,The New York Police Department gathered about 20 saluting officers and held an aviation flyover to honor an Emergen… https://t.co/AUnS1mBlzM
+82,FoxNews,Thu Nov 08 02:33:06 +0000 2018,"RT @FoxBusiness: .@KellyannePolls: ""Many people want to work in @POTUS' administration."" https://t.co/to6mCzFkA7"
+83,FoxNews,Thu Nov 08 02:21:04 +0000 2018,"A trooper took this beautiful photo of a double rainbow over a New York State Police squad car, Tuesday. https://t.co/j9V1h3Ja5p"
+84,FoxNews,Thu Nov 08 02:16:29 +0000 2018,Jeff Sessions' departure leads to questions about Russia probe's future https://t.co/5iWsDcmrYO
+85,FoxNews,Thu Nov 08 02:07:37 +0000 2018,".@TuckerCarlson: ""While everyone else obsessed over dossiers and FISA warrants, Sessions worried about the mission… https://t.co/9Kv1DtfGKv"
+86,FoxNews,Thu Nov 08 02:04:34 +0000 2018,South Carolina voter told to remove 'Trump' shirt in order to vote: report https://t.co/HXoKJGWYxV
+87,FoxNews,Thu Nov 08 02:00:56 +0000 2018,Virginia drug-dealing mom gets 10-day jail sentence after providing marijuana to three children https://t.co/PiU3CthxVx
+88,FoxNews,Thu Nov 08 01:42:53 +0000 2018,".@TuckerCarlson: ""Supporting marriage and children is the best, maybe the only way, for Republicans or any of us to… https://t.co/WrELn434wB"
+89,FoxNews,Thu Nov 08 01:39:30 +0000 2018,Fox News Channel tops all broadcast and cable news networks in total viewers for midterm election coverage.… https://t.co/H418QSswpI
+90,FoxNews,Thu Nov 08 01:37:28 +0000 2018,"Sacha Baron Cohen revives 'Borat' character to talk politics, midterm election https://t.co/taa4Z5RCj1"
+91,FoxNews,Thu Nov 08 01:25:49 +0000 2018,"Violinist claims Southwest Airlines forced him to leave flight after he refused to check $80,000 instrument https://t.co/S5TxSoH3uu"
+92,FoxNews,Thu Nov 08 01:13:00 +0000 2018,"'Take Their Word For It': Jim Jordan Warns of Congressional Investigations By Nadler, Waters, Schiff https://t.co/ZXsUPobdbG"
+93,FoxNews,Thu Nov 08 01:05:46 +0000 2018,"Former Governor John Sununu: ""What really made a big difference in the House races around the country last night is… https://t.co/HYFtiI57mO"
+94,FoxNews,Thu Nov 08 01:01:04 +0000 2018,"Georgia posts private information of 300,000 absentee voters (via @keiperjourno) https://t.co/5H4ETZthYC"
+95,FoxNews,Thu Nov 08 00:58:26 +0000 2018,"CNN's Jim Acosta press pass suspended by White House, Sarah Sanders announces https://t.co/5iiXWRUrCI"
+96,FoxNews,Thu Nov 08 00:53:56 +0000 2018,"BREAKING: CNN's Jim Acosta press pass suspended by White House, Sarah Sanders announces https://t.co/eBITlnvfUj"
+97,FoxNews,Thu Nov 08 00:50:10 +0000 2018,".@GovChrisSununu: ""I don't think last night was a referendum on the president. I think last night was really a refe… https://t.co/lsznjxEPqK"
+98,FoxNews,Thu Nov 08 00:32:49 +0000 2018,Dershowitz on Sessions' Departure: Not All GOP Senators Will Allow Trump to Demand 'Loyalty' From New AG https://t.co/lrq24Ih7lc
+99,FoxNews,Thu Nov 08 00:29:01 +0000 2018,"RT @MikeEmanuelFox: Democrats gear up for 2020 presidential race - from #SpecialReport tonight: 
+
+https://t.co/2rYNfdShiO"
+100,FoxNews,Thu Nov 08 00:20:43 +0000 2018,".@Jim_Jordan on his run for House GOP leader: “We have to match [@POTUS’s] intensity, that’s what I want to do. If… https://t.co/PDtB3OQCW6"
+101,FoxNews,Thu Nov 08 00:14:42 +0000 2018,".@Jim_Jordan on Jeff Sessions' resignation: ""I think it was appropriate, the action that was taken today by [@POTUS… https://t.co/oLG8pIW6Dr"
+102,FoxNews,Thu Nov 08 00:09:58 +0000 2018,Attorney General Jeff Sessions resigns in the wake of midterm elections. @edhenry reports. #TheStory… https://t.co/2FTTAq0LDF
+103,FoxNews,Thu Nov 08 00:00:17 +0000 2018,".@MaraLiasson on #MIDTERMS2018: ""Overall I think that Democrats had a great night. They had to win the House back a… https://t.co/GbOt3JC7tJ"
+104,FoxNews,Wed Nov 07 23:54:03 +0000 2018,".@marcthiessen on Sessions resigning at @POTUS' request: ""The president is learning from his mistakes. If he had do… https://t.co/GLQoSVWA71"
+105,FoxNews,Wed Nov 07 23:45:40 +0000 2018,Staff Sgt. Kyle Snodgrass meets his son Griffin for the first time at MacDill Air Force Base in Florida on Tuesday.… https://t.co/xsJf7Hg05h
+106,FoxNews,Wed Nov 07 23:36:32 +0000 2018,California man charged with attempted kidnapping after hopping on bus full of schoolchildren https://t.co/ig6HOzFt3s
+107,FoxNews,Wed Nov 07 23:21:00 +0000 2018,Jeff Sessions' departure leads to questions about Russia probe's future https://t.co/qDuCuO5fLX
+108,FoxNews,Wed Nov 07 23:15:48 +0000 2018,".@TGowdySC on the Muller probe: ""I don't think anything is going to happen to Rod [Rosenstein] until after Mueller… https://t.co/lknZ4bgSjE"
+109,FoxNews,Wed Nov 07 23:11:33 +0000 2018,".@TGowdySC on Jeff Sessions resigning: ""It was going to happen...He's been a proverbial dead man walking for severa… https://t.co/99nfr9bJ8i"
+110,FoxNews,Wed Nov 07 23:01:25 +0000 2018,"Suspect in Trump Walk of Fame vandalism pleaded no contest, officials say https://t.co/UtqbFj28ev"
+111,FoxNews,Wed Nov 07 22:55:12 +0000 2018,'The Justice Department Needs Stability': Starr Says He's 'Concerned' Following Sessions Resignation https://t.co/Ks0YmUjs0L
+112,FoxNews,Wed Nov 07 22:42:15 +0000 2018,"During a post-Election Day press conference on Wednesday, House Minority Leader @NancyPelosi said House Democrats w… https://t.co/FW7ObtOGmr"
+113,FoxNews,Wed Nov 07 22:34:40 +0000 2018,Former Attorney General Jeff Sessions departs the Justice Department hours after he resigned at President Trump's r… https://t.co/6RXHsKWL84
+114,FoxNews,Wed Nov 07 22:24:46 +0000 2018,Maxine Waters on continuing Trump finance probe: 'We will deal with that' https://t.co/F0d27WZM2k
+115,FoxNews,Wed Nov 07 22:19:07 +0000 2018,"American flag mural at pizza shop vandalized, protested in small town https://t.co/cAcnfLtGuf"
+116,FoxNews,Wed Nov 07 22:11:58 +0000 2018,RT @FoxBusiness: Florida sports gambling measure passes despite NFL's Dolphins plea to voters https://t.co/gVroP7eFOj
+117,FoxNews,Wed Nov 07 22:04:53 +0000 2018,Democratic presidential hopefuls already jockeying for 2020 https://t.co/Naw7ySEuNB
+118,FoxNews,Wed Nov 07 21:59:57 +0000 2018,"Mark Penn: Trump needs to be a UNIFIER now to succeed, move on to successful re-election https://t.co/tqjL4qFOB8"
+119,FoxNews,Wed Nov 07 21:54:26 +0000 2018,".@DarrellIssa on the Mueller probe: ""Two years is a long time to look for a crime you can't prove."" @TeamCavuto… https://t.co/B9SeAwibY0"
+120,FoxNews,Wed Nov 07 21:45:47 +0000 2018,Funerals scheduled for 3 Wisconsin Girl Scouts and mother killed in hit-and-run https://t.co/D1kHaAPTu8
+121,FoxNews,Wed Nov 07 21:11:48 +0000 2018,McConnell: Dem Votes Against Kavanaugh Were a 'Godsend' to GOP in Midterms https://t.co/HeI7clSOgM
+122,FoxNews,Wed Nov 07 21:05:19 +0000 2018,.@ShepNewsTeam is live with the ‘Fox News Update’ on Facebook Watch: https://t.co/hNrB8xzepH https://t.co/lGYpg0sZAZ
+123,FoxNews,Wed Nov 07 21:03:31 +0000 2018,"RT @FoxNewsResearch: Trump’s Biggest Beefs w/ Jeff Sessions:
+•Russia probe recusal 
+•Not investigating Ds 
+•Not probing “Clinton ties to Ru…"
+124,FoxNews,Wed Nov 07 21:03:28 +0000 2018,"RT @FoxNewsResearch: Trump's Recent Attacks on Sessions:
+8/11: Scared stiff, MIA
+8/23: Never took control of DOJ
+8/25: Doesn’t understand w…"
+125,FoxNews,Wed Nov 07 21:02:17 +0000 2018,"President @realDonaldTrump tweeted earlier today that Matthew Whitaker, who was serving as chief of staff to the at… https://t.co/7RAnms7Myy"
+126,FoxNews,Wed Nov 07 21:01:16 +0000 2018,"""We will protect the rule of law.""
+
+@RepAdamSchiff tweets a statement after Jeff Sessions resigns as attorney gener… https://t.co/aJc6owFLZq"
+127,FoxNews,Wed Nov 07 20:57:34 +0000 2018,Deputy AG Rosenstein heading to @WhiteHouse for previously scheduled 4 p.m. meeting https://t.co/SfA26v0ock https://t.co/tRYj2L876E
+128,FoxNews,Wed Nov 07 20:54:16 +0000 2018,Senator @MarkWarner on Jeff Sessions' resignation as attorney general https://t.co/SfA26v0ock https://t.co/RHSfPaOjRx
+129,FoxNews,Wed Nov 07 20:48:51 +0000 2018,Catherine Herridge reports on acting attorney general Matthew Whitaker @ShepNewsTeam https://t.co/SfA26v0ock https://t.co/H9kTj0p2hs
+130,FoxNews,Wed Nov 07 20:41:25 +0000 2018,.@SenSchumer calls on acting AG Whitaker to recuse himself from Mueller investigation https://t.co/SfA26v0ock https://t.co/TVhVNHxzet
+131,FoxNews,Wed Nov 07 20:35:29 +0000 2018,Scott Walker concedes to Democrat Tony Evers in Wisconsin gubernatorial race https://t.co/cNYiUbMQ9q
+132,FoxNews,Wed Nov 07 20:32:21 +0000 2018,JUST IN: Acting AG Whitaker sworn in https://t.co/SfA26v0ock https://t.co/lRztd6D6N2
+133,FoxNews,Wed Nov 07 20:28:03 +0000 2018,.@senatemajldr releases a statement following AG Jeff Sessions' resignation https://t.co/SfA26v0ock https://t.co/e8BPukvmHN
+134,FoxNews,Wed Nov 07 20:23:54 +0000 2018,A timeline of events leading up to Jeff Sessions' resignation as attorney general @ShepNewsTeam… https://t.co/Ct61blQaFm
+135,FoxNews,Wed Nov 07 20:16:57 +0000 2018,"""We do know that the @POTUS, this morning, asked for the resignation of Jeff Sessions.""
+
+@johnrobertsFox reports li… https://t.co/vNdGMbY6zB"
+136,FoxNews,Wed Nov 07 20:14:50 +0000 2018,READ: Attorney General Jeff Sessions’ resignation letter https://t.co/tRPKlqjP2r
+137,FoxNews,Wed Nov 07 20:11:44 +0000 2018,Former #Trump administration officials: A list of notable departures https://t.co/aF7OE87iFA
+138,FoxNews,Wed Nov 07 20:03:27 +0000 2018,".@ChrisStirewalt: ""Sessions was a fearless and relentless, in many ways, prosecutor of the president's agenda.""… https://t.co/yomuyofWQs"
+139,FoxNews,Wed Nov 07 19:57:47 +0000 2018,"""At your request, I am submitting my resignation.""
+
+WATCH: Catherine Herridge reads Attorney General Jeff Sessions'… https://t.co/uwvNalAMwY"
+140,FoxNews,Wed Nov 07 19:51:41 +0000 2018,BREAKING NEWS: Attorney General Jeff Sessions resigns; Chief of Staff Matthew G. Whitaker becomes acting AG https://t.co/SfA26v0ock
+141,FoxNews,Wed Nov 07 19:50:35 +0000 2018,BREAKING NEWS: Attorney General Jeff Sessions resigns; Chief of Staff Matthew G. Whitaker becomes acting AG https://t.co/qs2Wgqf2WE
+142,FoxNews,Wed Nov 07 19:43:22 +0000 2018,"OPINION: Yes, Democrats have won the House but behind Pelosi's soaring rhetoric is THIS harsh political reality https://t.co/ZpofOYXQS5"
+143,FoxNews,Wed Nov 07 19:42:33 +0000 2018,.@SenSchumer holds a press conference to discuss the results of the 2018 midterm elections. https://t.co/bmoL8OCN8h
+144,FoxNews,Wed Nov 07 19:35:39 +0000 2018,At least 77 military veterans elected to Congress #Midterms2018 https://t.co/uNgXxswzmG
+145,FoxNews,Wed Nov 07 19:31:57 +0000 2018,NYPD salutes K-9 as she loses battle with cancer https://t.co/uG0w9Vaj0H
+146,FoxNews,Wed Nov 07 19:27:42 +0000 2018,".@senatemajldr: ""I do think voting against Kavanaugh was a mistake."" @dailybriefing https://t.co/zGxqpx1nfa"
+147,FoxNews,Wed Nov 07 19:20:56 +0000 2018,".@senatemajldr: ""Now [Democrats] have part of the responsibility for governing— let's get together and figure out h… https://t.co/p4EbS4kMoZ"
+148,FoxNews,Wed Nov 07 19:15:50 +0000 2018,".@senatemajldr: ""We have to work together. We need to improve the health care system in American because it's not w… https://t.co/byy0WDf5FD"
+149,FoxNews,Wed Nov 07 19:09:37 +0000 2018,".@MarshaBlackburn: ""Individuals want to see Washington, D.C. work in a way that is going to lead us to a government… https://t.co/DVfRLSsLoP"
+150,FoxNews,Wed Nov 07 18:58:41 +0000 2018,.@NancyPelosi on how she can work together with @POTUS https://t.co/lDBMXgcCa5
+151,FoxNews,Wed Nov 07 18:52:36 +0000 2018,".@NancyPelosi: ""We believe that we have a responsibility to seek common ground where we can. Where we cannot, we mu… https://t.co/BnhcwOG3QA"
+152,FoxNews,Wed Nov 07 18:47:21 +0000 2018,".@NancyPelosi: ""Yesterday's election was not only a vote to protect America's health care, it was a vote to restore… https://t.co/UePnJqxT2C"
+153,FoxNews,Wed Nov 07 18:41:44 +0000 2018,".@IvankaTrump shared a message on #Midterms2018, tweeting that ""the real winner was America.""… https://t.co/EFQArxZG5f"
+154,FoxNews,Wed Nov 07 18:37:53 +0000 2018,".@NancyPelosi: ""Women led the way to victory, with at least 30 new women coming to the Congress."" #Midterms2018… https://t.co/GPZ1GQz6fY"
+155,FoxNews,Wed Nov 07 18:35:33 +0000 2018,".@NancyPelosi: ""The biggest winner yesterday was the health care for American people, for our seniors and hard-work… https://t.co/F8Px1fumbK"
+156,FoxNews,Wed Nov 07 18:30:24 +0000 2018,TODAY: @DanaPerino talks to @senatemajldr about #Midterms2018 and President @realDonaldTrump’s post-Election Day pr… https://t.co/vln1WJKnV2
+157,FoxNews,Wed Nov 07 18:27:14 +0000 2018,House Democratic Leader @NancyPelosi holds a news conference after the midterms.  https://t.co/JuTuSSbj8J
+158,FoxNews,Wed Nov 07 18:11:22 +0000 2018,JUST IN: Jon Tester projected to defeat Matt Rosendale in Montana Senate race https://t.co/CMbrSngFZc https://t.co/6UaJbCQoQd
+159,FoxNews,Wed Nov 07 17:22:36 +0000 2018,.@POTUS: “I would like to see bipartisanship. I’d like to see unity… I think we have a very good chance of seeing t… https://t.co/LQVr5VDOUR
+160,FoxNews,Wed Nov 07 17:19:41 +0000 2018,".@POTUS: “Now is the time for members of both parties to join together, put partisanship aside and keep the America… https://t.co/VJmuFX7moj"
+161,FoxNews,Wed Nov 07 17:14:30 +0000 2018,.@POTUS: “Hopefully we can all work together next year to continue delivering for the American people.”… https://t.co/vTHRYnrT3X
+162,FoxNews,Wed Nov 07 17:08:47 +0000 2018,".@POTUS: “By expanding our Senate majority, the voters have also clearly rebuked the Senate Democrats for their han… https://t.co/lAFzmjGOZQ"
+163,FoxNews,Wed Nov 07 17:02:03 +0000 2018,.@POTUS: “We saw the candidates that I supported achieve tremendous success last night.” https://t.co/YEwZGue71Z https://t.co/JRD1t3JiFt
+164,FoxNews,Wed Nov 07 16:57:28 +0000 2018,.@POTUS holds a news conference following #Midterms2018 https://t.co/mmfuGw28DO
+165,FoxNews,Wed Nov 07 16:52:44 +0000 2018,"In a statement on #Midterms2018, former President @BarackObama congratulated “everybody who showed up and participa… https://t.co/ElTghkIQpo"
+166,FoxNews,Wed Nov 07 16:49:44 +0000 2018,.@wjmcgurn: “The clear loser last night was Chuck Schumer.” https://t.co/M6d4uW3Rab
+167,FoxNews,Wed Nov 07 16:42:52 +0000 2018,Bryan Steil: “I’m optimistic that we can keep delivering results in Washington under the leadership of President Tr… https://t.co/u5N7xJ9Foj
+168,FoxNews,Wed Nov 07 16:35:24 +0000 2018,LIVE BLOG: @realDonaldTrump holds post-Election Day press conference https://t.co/YEwZGue71Z
+169,FoxNews,Wed Nov 07 16:26:41 +0000 2018,".@ByronYork: All that talk about a blue wave, all the talk about the American people rising up as one to repudiate… https://t.co/8aoGxPCpIj"
+170,FoxNews,Wed Nov 07 16:17:25 +0000 2018,"Abrams, Walker among key candidates in midterm races refusing to concede https://t.co/LlWFtz6ek4"
+171,FoxNews,Wed Nov 07 16:12:01 +0000 2018,Man shamed for proposing at New York City Marathon as girlfriend runs by: 'He couldn't propose to her at the finish… https://t.co/DZJeuuCxPg
+172,FoxNews,Wed Nov 07 16:04:41 +0000 2018,Several former NFL players win midterm races https://t.co/fCM7L2gvMl
+173,FoxNews,Wed Nov 07 15:55:00 +0000 2018,.@seanspicer reacts to #Midterms2018 on @AmericaNewsroom https://t.co/L3nSZ1WwJD
+174,FoxNews,Wed Nov 07 15:51:08 +0000 2018,".@senatemajldr: ""There are serious problems with ObamaCare, and I think we're going to have to obviously now try to… https://t.co/iidBMQzJQl"
+175,FoxNews,Wed Nov 07 15:50:00 +0000 2018,Harley-Davidson's electric LiveWire debuts in Italy https://t.co/7sUPFs5QgX
+176,FoxNews,Wed Nov 07 15:45:00 +0000 2018,Pompeo’s meeting with North Korean official delayed amid denuclearization deadlock https://t.co/IeBDczRSDC
+177,FoxNews,Wed Nov 07 15:43:30 +0000 2018,.@senatemajldr: “We’re certainly going to try to help the president achieve what he’d like to do with regard to the… https://t.co/ypzhlR3Kw2
+178,FoxNews,Wed Nov 07 15:39:05 +0000 2018,.@senatemajldr on speaking with @NancyPelosi: “We discussed ways we might be able to find a way forward.” https://t.co/1R00x9gA1R
+179,FoxNews,Wed Nov 07 15:38:00 +0000 2018,"Former SEAL Mocked by 'SNL' Wins TX House Seat, Calls for More Vets in Congress https://t.co/T0PAho7Oq9 https://t.co/tnyBsy8yEV"
+180,FoxNews,Wed Nov 07 15:35:01 +0000 2018,.@senatemajldr: “It is indeed a good morning for Senate Republicans.” https://t.co/NARYDkhqQw
+181,FoxNews,Wed Nov 07 15:33:48 +0000 2018,.@senatemajldr holds a news conference following #Midterms2018 https://t.co/fdej3Nq0lD
+182,FoxNews,Wed Nov 07 15:30:00 +0000 2018,Lawyers for migrant caravan members give them stark advice: ‘It’s going to be difficult’ https://t.co/28LbFyxAu2
+183,FoxNews,Wed Nov 07 15:28:11 +0000 2018,SOON: @senatemajldr to hold post-election news conference https://t.co/DAyQRgVE9O
+184,FoxNews,Wed Nov 07 15:22:00 +0000 2018,.@RepJeffries reacts to #Midterms 2018 on @AmericaNewsroom https://t.co/zwqzSBgilk
+185,FoxNews,Wed Nov 07 15:15:00 +0000 2018,.@HotlineJosh: “I think the results show you can’t have someone too far to the left. You have to find someone who c… https://t.co/Vtja9Penrr
+186,FoxNews,Wed Nov 07 15:08:00 +0000 2018,"Trump backs Pelosi for House speaker after Dems' midterm takeover, relishing looming rivalry (via @RyanGaydos) https://t.co/HmOwyfTTtl"
+187,FoxNews,Wed Nov 07 14:45:00 +0000 2018,.@KellyannePolls reacts to the midterms on @foxandfriends https://t.co/vgsjTekOnB
+188,FoxNews,Wed Nov 07 14:42:52 +0000 2018,Stock markets open following midterms @AmericaNewsroom https://t.co/bFOw88J6mY
+189,FoxNews,Wed Nov 07 14:40:00 +0000 2018,Republicans win Missouri Senate race; @KristinFisher reports @AmericaNewsroom https://t.co/iSPHQoeCYR https://t.co/ALH7sVKcdN
+190,FoxNews,Wed Nov 07 14:30:00 +0000 2018,Midterm result is best-case scenario for investors (via @FoxBusiness) https://t.co/t7RD51Y4O4
+191,FoxNews,Wed Nov 07 14:25:00 +0000 2018,".@MarshaBlackburn: “If Nancy Pelosi really is interested in bipartisanship, my hope would be that she would work wi… https://t.co/3tfrWdmapW"
+192,FoxNews,Wed Nov 07 14:15:01 +0000 2018,Republican Ron DeSantis narrowly defeated Democrat Andrew Gillum in Florida's race for governor. Read more in today… https://t.co/ES0n93uF39
+193,FoxNews,Wed Nov 07 14:13:49 +0000 2018,"RT @FoxBusiness: 2018 midterm election: US enters 'longest business cycle' ever, analyst says https://t.co/0M5fucswbV"
+194,FoxNews,Wed Nov 07 14:13:34 +0000 2018,"RT @FoxNewsResearch: #Midterms2018 
+- Female Firsts
+•100+ women in the House
+•TN: First female Senator (Blackburn)
+•1st Muslim women electe…"
+195,FoxNews,Wed Nov 07 14:05:00 +0000 2018,.@MarshaBlackburn: “We were committed to our message.” @foxandfriends https://t.co/iSPHQowenr https://t.co/j0JKPUeiWr
+196,FoxNews,Wed Nov 07 14:00:02 +0000 2018,Rare Ernest Hemingway letter documenting '500-pound Marlin' catch surfaces https://t.co/KOEnKCiFot
+197,FoxNews,Wed Nov 07 13:50:00 +0000 2018,Oregon votes to keep sanctuary status @foxandfriends https://t.co/xwDzEu0qEP
+198,FoxNews,Wed Nov 07 13:43:50 +0000 2018,"RT @FoxBusiness: Duncan Hines cake mixes recalled over Salmonella fears
+https://t.co/2GWFEWSd8s"
+199,FoxNews,Wed Nov 07 13:42:06 +0000 2018,"RT @FoxBusiness: .@DanCrenshawTX: ""Immigration was still an enormous issue, especially border security so that'll be important for me."" htt…"
