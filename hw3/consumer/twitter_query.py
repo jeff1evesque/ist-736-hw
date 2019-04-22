@@ -7,7 +7,7 @@ import pandas as pd
 class TwitterQuery():     
     '''
 
-    requires instance of TwitterStream.
+    query twitter api using Twython.
 
     '''
 
