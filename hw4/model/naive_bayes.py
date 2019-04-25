@@ -200,9 +200,7 @@ class Model():
         '''
 
         # conditionally select model
-        avg_length = sum([len(w) for w in X])/len(X)
-
-        if avg_length <= max_length:
+        if all(len(sent) <= max_length for sent in self.X_train):
             self.clf = BernoulliNB()
         else:
             self.clf = MultinomialNB()
