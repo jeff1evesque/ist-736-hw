@@ -8,6 +8,7 @@
 
 import os
 import sys
+import re
 import numpy as np
 sys.path.append('..')
 from consumer.twitter_query import TwitterQuery
@@ -110,12 +111,15 @@ df_pos['pos'] = unigram.get_pos(
     df_pos['text'].apply(lambda x: x.split())
 )[1]
 
+# reduce to ascii
+df_pos['pos'] = [re.sub(r'[^\x00-\x7f]', r' ', s) for s in df_overall['text']]
+
 #
 # new dataframe
 #
 # @pos_split, appends pos to word before vectorization and tfidf.
 #
-pos = nb(df_pos, key_text='text', key_class='screen_name')
+pos = nb(df_pos, key_text='pos', key_class='screen_name')
 pos.split(pos_split=True)
 
 # pos vectorize
