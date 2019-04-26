@@ -83,7 +83,7 @@ sent_overall.plot_ts(title='Overall Sentiment', filename='viz/sentiment_overall.
 #
 
 # unigram: perform unigram analysis.
-unigram = nb(df=df_overall, key_text='text', key_class='screen_name')
+unigram = nb(df=df, key_text='text', key_class='screen_name')
 
 # unigram vectorize
 unigram.split()
