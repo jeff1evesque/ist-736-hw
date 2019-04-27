@@ -41,6 +41,7 @@ if not Path(adjusted_csv).is_file():
 else:
     df_adjusted = pd.read_csv(adjusted_csv)
 
+# instantiate models
 lie = model(
     df=df_adjusted,
     key_text='review',
