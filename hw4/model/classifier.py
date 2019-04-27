@@ -1,12 +1,13 @@
 #!/usr/bin/python
 
+from pathlib import Path
 from algorithm.text_classifier import Model as alg
 
 def model(
     df=None,
     fp='{}/data/sample-sentiment.csv'.format(
         Path(__file__).resolve().parents[1]
-    )
+    ),
     model_type='multinomial',
     key_text='text',
     key_class='screen_name'
