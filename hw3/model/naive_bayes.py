@@ -143,12 +143,10 @@ class Model():
             'y_test': self.y_test,
         })
 
-    def get_pos(self, l, pos_length=280):
+    def get_pos(self, l):
         '''
 
         apply pos tagger to supplied list.
-
-        @pos_length, maximum number of words in tweets.
 
         '''
 
