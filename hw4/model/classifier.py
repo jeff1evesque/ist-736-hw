@@ -19,7 +19,7 @@ def model(
     '''
 
     # initialize classifier
-    model = alg(df=df, key_text=key_text, key_class=key_class, model_type=model_type)
+    model = alg(df=df, key_text=key_text, key_class=key_class)
 
     # vectorize data
     model.split()
@@ -31,7 +31,7 @@ def model(
         model.train(
             vectorized,
             params['y_train'],
-            validate=(params['X_test'], params['y_test'])
+            model_type=model_type
         )
    )
 
