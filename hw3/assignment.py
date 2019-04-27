@@ -101,18 +101,15 @@ model_unigram = unigram.model(
 # plot unigram
 unigram.plot_cm(filename='viz/cm_unigram.png')
 
-#
 # perform pos analysis
-#
 df_pos = unigram.get_df()
 
-# define pos
-df_pos['pos'] = unigram.get_pos(
-    df_pos['text'].apply(lambda x: x.split())
-)[1]
-
 # reduce to ascii
-df_pos['pos'] = [re.sub(r'[^\x00-\x7f]', r' ', s) for s in df_overall['text']]
+regex = r'[^\x00-\x7f]'
+df_pos['pos'] = [re.sub(regex, r' ', sent).split() for sent in df_pos['text']]
+
+# suffix pos
+df_pos['pos'] = [unigram.get_pos(x) for x in df_pos['pos']]
 
 #
 # new dataframe
