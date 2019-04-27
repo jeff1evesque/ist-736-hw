@@ -11,6 +11,7 @@
 import time
 import csv
 import re
+import string
 import numpy as np
 from pathlib import Path
 import pandas as pd
@@ -40,6 +41,8 @@ class Model():
         self,
         df=None,
         vectorize=True,
+        stem=True,
+        lowercase=True,
         key_text='SentimentText',
         key_class='Sentiment',
         fp='{}/data/sample-sentiment.csv'.format(
@@ -63,6 +66,26 @@ class Model():
         self.actual = None
         self.predicted = None
 
+        #
+        # clean: remove twitter account, punctuations and urls, lowercase,
+        #        stem each word.
+        #
+        # @string.punctuation, '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~'
+        #
+        pattern_twitter_act = '@[a-zA-Z0-9_]{0,15}'
+        pattern_url = 'https?://[A-Za-z0-9./]+'
+        pattern_punctuation = '[{p}]'.format(p=string.punctuation)
+        pattern = '|'.join((pattern_twitter_act, pattern_url, pattern_punctuation))
+
+        self.df[self.key_text] = [re.sub(pattern, '', w) for w in self.df[self.key_text]]
+
+        if lowercase:
+            self.df[self.key_text] = [w.lower() for w in self.df[self.key_text]]
+
+        if stem:
+            porter = PorterStemmer()
+            self.df[self.key_text] = [porter.stem(w) for w in self.df[self.key_text]]
+
         # vectorize data
         if vectorize:
             self.split()
@@ -74,14 +97,6 @@ class Model():
         split data into train and test.
 
         '''
-
-        # clean
-        self.df[self.key_text] = [re.sub('[#@]', '', x) for x in self.df[self.key_text]]
-
-        # stem
-        if stem:
-            porter = PorterStemmer()
-            self.df[self.key_text] = [porter.stem(word) for word in self.df[self.key_text]]
 
         # split
         if pos_split:
@@ -137,25 +152,15 @@ class Model():
 
         '''
 
-        result_word = []
-        result_pos = []
-        pos = [pos_tag(x) for x in l]
-        for y in pos:
-            result_word.append([x[0] for x in y if x[0] not in stop_words])
-            result_pos.append(
-                [penn_scale[x[1]] if x[1] in penn_scale and x[0] not in stop_words else 1 for x in y]
-            )
-
-        # consistent length
-        for i,x in enumerate(result_pos):
-            if len(x) < pos_length:
-                difference = pos_length - len(x)
-                result_pos[i].extend([1] * difference)
-            else:
-                difference = len(x) - pos_length
-                result_pos[i] = result_pos[i][:len(result_pos[i]) - difference]
-
-        return(result_word, result_pos)
+        pos = pos_tag(l)
+        result = ' '.join(['{word}-{pos}'.format(
+            word=l[i],
+            pos=penn_scale[x[1]]
+        ) if x[1] in penn_scale else '{word}-{pos}'.format(
+            word=l[i],
+            pos=1
+        ) for i,x in enumerate(pos)])
+        return(result)
 
     def vectorize(self, stop_words='english'):
         '''
