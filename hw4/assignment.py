@@ -12,6 +12,10 @@ from view.classifier import plot_cm, plot_bar
 # local variables
 adjusted_csv = 'adjusted_data.csv'
 
+# ensure directory
+if not os.path.exists('viz'):
+    os.makedirs('viz')
+
 if not Path(adjusted_csv).is_file():
     # load unbalanced data
     df = standardize_df('{}/data/deception_data_converted_final.csv'.format(
@@ -48,7 +52,7 @@ df_adjusted = df_adjusted.replace({
 #
 
 # multinomial naive bayes
-m_mnb = m_model(key_class='lie', key_text='review')
+m_mnb = m_model(df_adjusted, key_class='lie', key_text='review')
 m_mnb_accuracy = m_mnb.get_accuracy()
 plot_cm(m_mnb, key_class='lie', key_text='review', file_suffix='lie')
 
@@ -57,7 +61,7 @@ m_mnb_pos_accuracy = m_mnb_pos.get_accuracy()
 plot_cm(m_mnb_pos, key_class='lie', key_text='review', file_suffix='lie_pos')
 
 # bernoulli naive bayes
-m_bnb = m_model(model_type='bernoulli', key_class='lie', key_text='review')
+m_bnb = m_model(df_adjusted, model_type='bernoulli', key_class='lie', key_text='review')
 m_bnb_accuracy = m_bnb.get_accuracy()
 plot_cm(m_mnb, model_type='bernoulli', key_class='lie', key_text='review', file_suffix='lie')
 
@@ -66,7 +70,7 @@ m_bnb_pos_accuracy = m_bnb_pos.get_accuracy()
 plot_cm(m_mnb_pos, model_type='bernoulli', key_class='lie', key_text='review', file_suffix='lie_pos')
 
 # support vector machine
-m_svm = m_model(model_type='svm', key_class='lie', key_text='review')
+m_svm = m_model(df_adjusted, model_type='svm', key_class='lie', key_text='review')
 m_svm_accuracy = m_svm.get_accuracy()
 plot_cm(m_svm, model_type='svm', key_class='lie', key_text='review', file_suffix='lie')
 
