@@ -2,7 +2,7 @@
 
 import pandas as pd
 
-def standardize_df(fp):
+def standardize_df(fp, delimiter=','):
     '''
 
     generate dataframe from csv containing unbalanced columns.
@@ -10,7 +10,6 @@ def standardize_df(fp):
     '''
 
     # local variables
-    delimiter = ','
     largest_column_count = 0
 
     # determine max column
@@ -28,4 +27,11 @@ def standardize_df(fp):
 
     # temporary dataframe: allows uneven columns
     column_names = ['col-{}'.format(i) for i in range(largest_column_count)]
-    return(pd.read_csv(fp, header=None, delimiter=delimiter, names=column_names))
+
+    #
+    # remove first row: will generally have the following form:
+    #
+    #     0,column-1,column-2,column-n nan nan nan nan nan nan nan
+    #
+    df = pd.read_csv(fp, header=None, delimiter=delimiter, names=column_names)
+    return(df.iloc[1:])
