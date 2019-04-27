@@ -27,14 +27,13 @@ def model(
     vectorized = model.get_tfidf()
 
     # train classifier
-    return(
-        model.train(
-            vectorized,
-            params['y_train'],
-            model_type=model_type
-        )
-   )
+    model.train(
+        vectorized,
+        params['y_train'],
+        model_type=model_type
+    )
 
+    return(model)
 
 def model_pos(
     m,
