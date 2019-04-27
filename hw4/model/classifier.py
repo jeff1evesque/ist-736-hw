@@ -5,9 +5,6 @@ from algorithm.text_classifier import Model as alg
 
 def model(
     df=None,
-    fp='{}/data/sample-sentiment.csv'.format(
-        Path(__file__).resolve().parents[1]
-    ),
     model_type='multinomial',
     key_text='text',
     key_class='screen_name'
@@ -19,7 +16,10 @@ def model(
     '''
 
     # initialize classifier
-    model = alg(df=df, key_text=key_text, key_class=key_class)
+    if df is not None:
+        model = alg(df=df, key_text=key_text, key_class=key_class)
+    else:
+        model = alg(key_text=key_text, key_class=key_class)
 
     # vectorize data
     model.split()
