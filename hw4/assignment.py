@@ -2,14 +2,10 @@
 
 import os
 import sys
-import math
 sys.path.append('..')
 import pandas as pd
 from pathlib import Path
-from utility.dataframe import standardize_df
-from model.classifier import model as m_model
-from model.classifier import model_pos as mp_model
-from view.classifier import plot_cm, plot_bar
+from controller.classifier import classify
 
 # local variables
 adjusted_csv = 'adjusted_data.csv'
@@ -52,89 +48,9 @@ df_adjusted = df_adjusted.replace({
 #
 # unigram lie detection
 #
-
-# multinomial naive bayes
-m_mnb = m_model(
-    df=df_adjusted,
-    key_class='lie',
-    key_text='review',
-    max_length=math.inf
-)
-m_mnb_accuracy = m_mnb.get_accuracy()
-plot_cm(m_mnb, file_suffix='lie')
-
-m_mnb_pos = mp_model(
-    m_mnb,
-    key_class='lie',
-    key_text='review',
-    max_length=math.inf
-)
-m_mnb_pos_accuracy = m_mnb_pos.get_accuracy()
-plot_cm(m_mnb_pos, file_suffix='lie_pos')
-
-# bernoulli naive bayes
-m_bnb = m_model(
-    df=df_adjusted,
-    model_type='bernoulli',
-    key_class='lie',
-    key_text='review',
-    max_length=0
-)
-m_bnb_accuracy = m_bnb.get_accuracy()
-plot_cm(m_mnb, model_type='bernoulli', file_suffix='lie')
-
-m_bnb_pos = mp_model(
-    m_bnb,
-    model_type='bernoulli',
-    key_class='lie',
-    key_text='review',
-    max_length=0
-)
-m_bnb_pos_accuracy = m_bnb_pos.get_accuracy()
-plot_cm(m_mnb_pos, model_type='bernoulli', file_suffix='lie_pos')
-
-# support vector machine
-m_svm = m_model(
-    df=df_adjusted,
-    model_type='svm',
-    key_class='lie',
-    key_text='review'
-)
-m_svm_accuracy = m_svm.get_accuracy()
-plot_cm(m_svm, model_type='svm', file_suffix='lie')
-
-m_svm_pos = mp_model(
-    m_svm,
-    model_type='svm',
-    key_class='lie',
-    key_text='review'
-)
-m_svm_pos_accuracy = m_svm_pos.get_accuracy()
-plot_cm(m_svm_pos, model_type='svm', file_suffix='lie_pos')
-
-# ensembled score
-score_good = (\
-    m_mnb_accuracy + \
-    m_mnb_pos_accuracy + \
-    m_bnb_accuracy + \
-    m_bnb_pos_accuracy + \
-    m_svm_accuracy + \
-    m_svm_pos_accuracy\
-) / 6
-score_bad = 1 - score_good
-plot_bar(
-    labels=('mnb', 'mnb pos', 'bnb', 'bnb pos', 'svm', 'svm pos', 'overall'),
-    performance=(
-        m_mnb_accuracy,
-        m_mnb_pos_accuracy,
-        m_bnb_accuracy,
-        m_bnb_pos_accuracy,
-        m_svm_accuracy,
-        m_svm_pos_accuracy,
-        score_good
-    )
-)
+classify(df_adjusted, key_class='lie', key_text='review')
 
 #
 # unigram sentiment analysis
 #
+classify(df_adjusted, key_class='sentiment', key_text='review')

@@ -23,7 +23,7 @@ def plot_bar(
     labels,
     performance,
     model_type='multinomial',
-    file_suffix='text',
+    filename='text'
 ):
     '''
 
@@ -35,5 +35,5 @@ def plot_bar(
     plt.bar(y_pos, performance, align='center', alpha=0.5)
     plt.xticks(y_pos, labels)
     plt.ylabel('Performance')
-    plt.savefig('viz/accuracy_overall.png')
+    plt.savefig('viz/{f}'.format(f=filename))
     plt.show()
