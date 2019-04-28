@@ -5,7 +5,7 @@ from model.classifier import model as m_model
 from model.classifier import model_pos as mp_model
 from view.classifier import plot_cm, plot_bar
 
-def classifier(
+def classify(
     df,
     key_class='screen_name',
     key_text='text',

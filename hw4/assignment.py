@@ -5,6 +5,7 @@ import sys
 sys.path.append('..')
 import pandas as pd
 from pathlib import Path
+from controller.classifier import classify
 
 # local variables
 adjusted_csv = 'adjusted_data.csv'
