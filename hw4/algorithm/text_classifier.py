@@ -222,12 +222,36 @@ class Model():
         # conditionally select model
         if (model_type == 'svm'):
             if multiclass:
-                clf = svm.SVC(gamma='scale', kernel='linear', decision_function_shape='ovo')
+                self.clf = svm.SVC(gamma='scale', kernel='linear', decision_function_shape='ovo')
             else:
-                clf = svm.SVC(gamma='scale', kernel='linear')
+                self.clf = svm.SVC(gamma='scale', kernel='linear')
 
-            tfidf_transformer = TfidfTransformer()
-            data = self.tfidf_transformer.fit_transform(self.bow)
+            self.clf.fit(X, y)
+
+            # validate
+            if validate and len(validate) == 2:
+                predictions = []
+
+                for item in list(validate[0]):
+                    prediction = self.count_vect.transform([item])
+                    predictions.append(
+                        self.clf.predict(prediction)
+                    )
+
+                self.actual = validate[1]
+                self.predicted = predictions
+
+                return({
+                    'model': self.clf,
+                    'actual': validate[1],
+                    'predicted': predictions
+                })
+
+            return({
+                'model': self.clf,
+                'actual': None,
+                'predicted': None
+            })
 
         elif (
             (model_type == 'bernoulli') or
