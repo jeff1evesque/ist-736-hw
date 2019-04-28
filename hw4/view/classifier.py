@@ -35,5 +35,5 @@ def plot_bar(
     plt.bar(y_pos, performance, align='center', alpha=0.5)
     plt.xticks(y_pos, labels)
     plt.ylabel('Performance')
-    plt.savefig('viz/{f}'.format(f=filename)
+    plt.savefig('viz/{f}'.format(f=filename))
     plt.show()
