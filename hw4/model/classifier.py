@@ -8,7 +8,8 @@ def model(
     df=None,
     model_type='multinomial',
     key_text='text',
-    key_class='screen_name'
+    key_class='screen_name',
+    max_length=280
 ):
     '''
 
@@ -32,7 +33,8 @@ def model(
         vectorized,
         params['y_train'],
         model_type=model_type,
-        validate=(params['X_test'], params['y_test'])
+        validate=(params['X_test'], params['y_test']),
+        max_length=max_length
     )
 
     return(model)
@@ -41,7 +43,8 @@ def model_pos(
     m,
     model_type='multinomial',
     key_text='SentimentText',
-    key_class='Sentiment'
+    key_class='Sentiment',
+    max_length=280
 ):
     '''
 
@@ -67,7 +70,8 @@ def model_pos(
         vectorized,
         params['y_train'],
         model_type=model_type,
-        validate=(params['X_test'], params['y_test'])
+        validate=(params['X_test'], params['y_test']),
+        max_length=max_length
     )
 
     return(model)
