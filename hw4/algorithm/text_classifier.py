@@ -26,7 +26,7 @@ from sklearn.naive_bayes import BernoulliNB, MultinomialNB
 from sklearn.model_selection import cross_val_predict, train_test_split
 import matplotlib.pyplot as plt
 import scikitplot as skplt
-from model.penn_treebank import penn_scale
+from algorithm.penn_treebank import penn_scale
 stop_words = set(stopwords.words('english'))
 download('vader_lexicon')
 
@@ -195,13 +195,21 @@ class Model():
 
         return(self.df)
 
-    def model(self, X, y, validate=False, max_length=280, model_choice=None, multiclass=False):
+    def train(
+        self,
+        X,
+        y,
+        validate=False,
+        max_length=280,
+        model_type=None,
+        multiclass=False
+    ):
         '''
 
-        create classifier model.
+        train classifier model.
 
         @validate, must have tuple shape (X_test, y_test)
-        @model_choice, override default behavior with defined model.
+        @model_type, override default behavior with defined model.
 
             - bernoulli
             - multinomial (default)
@@ -212,18 +220,42 @@ class Model():
         '''
 
         # conditionally select model
-        if (model_choice == 'svm'):
+        if (model_type == 'svm'):
             if multiclass:
-                clf = svm.SVC(gamma='scale', kernel='linear', decision_function_shape='ovo')
+                self.clf = svm.SVC(gamma='scale', kernel='linear', decision_function_shape='ovo')
             else:
-                clf = svm.SVC(gamma='scale', kernel='linear')
+                self.clf = svm.SVC(gamma='scale', kernel='linear')
 
-            tfidf_transformer = TfidfTransformer()
-            data = self.tfidf_transformer.fit_transform(bow)
+            self.clf.fit(X, y)
+
+            # validate
+            if validate and len(validate) == 2:
+                predictions = []
+
+                for item in list(validate[0]):
+                    prediction = self.count_vect.transform([item])
+                    predictions.append(
+                        self.clf.predict(prediction)
+                    )
+
+                self.actual = validate[1]
+                self.predicted = predictions
+
+                return({
+                    'model': self.clf,
+                    'actual': validate[1],
+                    'predicted': predictions
+                })
+
+            return({
+                'model': self.clf,
+                'actual': None,
+                'predicted': None
+            })
 
         elif (
-            (model_choice == 'bernoulli') or
-            (not model_choice and all(len(sent) <= max_length for sent in self.X_train))
+            (model_type == 'bernoulli') or
+            (not model_type and all(len(sent) <= max_length for sent in self.X_train))
         ):
             self.clf = BernoulliNB()
             self.clf.fit(X, y)
@@ -327,7 +359,7 @@ class Model():
         stop_words='english',
         max_length=280,
         shuffle=True,
-        model_choice=None,
+        model_type=None,
         multiclass=False
     ):
         '''
@@ -336,7 +368,7 @@ class Model():
         an indication that either the algorithm is unable to learn,
         or the data may require additional cleaning and preprocessing.
 
-        @model_choice, override default behavior with defined model.
+        @model_type, override default behavior with defined model.
 
             - bernoulli
             - multinomial (default)
@@ -353,7 +385,7 @@ class Model():
         bow = self.count_vect.fit_transform(self.df[self.key_text])
 
         # conditionally select model
-        if (model_choice == 'svm'):
+        if (model_type == 'svm'):
             if multiclass:
                 clf = svm.SVC(gamma='scale', kernel='linear', decision_function_shape='ovo')
             else:
@@ -363,8 +395,8 @@ class Model():
             data = self.tfidf_transformer.fit_transform(bow)
 
         elif (
-            (model_choice == 'bernoulli') or
-            (not model_choice and all(len(sent) <= max_length for sent in self.X_train))
+            (model_type == 'bernoulli') or
+            (not model_type and all(len(sent) <= max_length for sent in self.X_train))
         ):
             clf = BernoulliNB()
             data = bow
