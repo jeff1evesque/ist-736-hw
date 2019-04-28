@@ -1,5 +1,6 @@
 #!/usr/bin/python
 
+import re
 from pathlib import Path
 from algorithm.text_classifier import Model as alg
 
