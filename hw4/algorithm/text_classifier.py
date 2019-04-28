@@ -227,7 +227,7 @@ class Model():
                 clf = svm.SVC(gamma='scale', kernel='linear')
 
             tfidf_transformer = TfidfTransformer()
-            data = self.tfidf_transformer.fit_transform(bow)
+            data = self.tfidf_transformer.fit_transform(self.bow)
 
         elif (
             (model_type == 'bernoulli') or
