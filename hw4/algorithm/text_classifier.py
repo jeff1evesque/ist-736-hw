@@ -24,7 +24,7 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn import svm
 from sklearn.naive_bayes import BernoulliNB, MultinomialNB
-from sklearn.model_selection import cross_val_predict, train_test_split
+from sklearn.model_selection import cross_val_score, train_test_split
 import matplotlib.pyplot as plt
 import scikitplot as skplt
 from algorithm.penn_treebank import penn_scale
@@ -406,9 +406,10 @@ class Model():
             data = self.tfidf_transformer.fit_transform(bow)
 
         return(
-            cross_val_predict(
+            cross_val_score(
                 clf,
                 data,
-                y=self.df[self.key_class]
+                y=self.df[self.key_class],
+                cv=n_splits
             )
         )
