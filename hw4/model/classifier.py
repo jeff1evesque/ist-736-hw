@@ -50,7 +50,7 @@ def model_pos(
     # reduce to ascii
     regex = r'[^\x00-\x7f]'
     df_m = m.get_df()
-    df_m['pos'] = [re.sub(regex, r' ', sent).split() for sent in df_m['text']]
+    df_m['pos'] = [re.sub(regex, r' ', sent).split() for sent in df_m[key_text]]
 	
     # suffix pos
     df_m['pos'] = [m.get_pos(x) for x in df_m['pos']]
