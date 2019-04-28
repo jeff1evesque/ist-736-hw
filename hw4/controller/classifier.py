@@ -36,7 +36,7 @@ def classify(
         if plot:
             plot_cm(mnb, file_suffix=key_class)
 
-    if flag_mnb_pos
+    if flag_mnb_pos:
         mnb_pos = mp_model(
             mnb,
             key_class=key_class,
