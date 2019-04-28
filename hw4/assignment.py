@@ -6,6 +6,7 @@ sys.path.append('..')
 import pandas as pd
 from pathlib import Path
 from controller.classifier import classify
+from view.exploratory import explore
 
 # local variables
 adjusted_csv = 'adjusted_data.csv'
@@ -44,6 +45,11 @@ df_adjusted = df_adjusted.replace({
     'lie': {'f': 0, 't': 1},
     'sentiment': {'n': 0, 'p': 1}
 })
+
+#
+# exploratory
+#
+explore(df_adjusted)
 
 #
 # unigram lie detection
