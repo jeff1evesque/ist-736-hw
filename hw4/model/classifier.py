@@ -55,6 +55,19 @@ def model_pos(
 	
     # suffix pos
     df_m['pos'] = [m.get_pos(x) for x in df_m['pos']]
-    m_pos = alg(df=df_m, key_class=key_class, key_text=key_text)
+    model = alg(df=df_m, key_class=key_class, key_text=key_text)
 
-    return(m_pos)
+    # vectorize data
+    model.split()
+    params = model.get_split()
+    vectorized = model.get_tfidf()
+
+    # train classifier
+    model.train(
+        vectorized,
+        params['y_train'],
+        model_type=model_type,
+        validate=(params['X_test'], params['y_test'])
+    )
+
+    return(model)
