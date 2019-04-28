@@ -19,6 +19,7 @@ from nltk.corpus import stopwords
 from nltk import tokenize, download, pos_tag
 from nltk.stem.porter import PorterStemmer
 from sklearn.metrics import accuracy_score
+from sklearn.model_selection import KFold
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn import svm
@@ -355,7 +356,7 @@ class Model():
 
     def get_kfold_scores(
         self,
-        kfold,
+        n_splits=2,
         stop_words='english',
         max_length=280,
         shuffle=True,
@@ -377,8 +378,6 @@ class Model():
         @multiclass, svm indicator of greater than binary classification.
 
         '''
-
-        kf = KFold(self.df, n_folds=size, shuffle=shuffle)
 
         # bag of words: with 'english' stopwords
         count_vect = CountVectorizer(stop_words=stop_words)
@@ -410,7 +409,6 @@ class Model():
             cross_val_predict(
                 clf,
                 data,
-                y=self.df[self.key_class],
-                cv=kfold
+                y=self.df[self.key_class]
             )
         )
