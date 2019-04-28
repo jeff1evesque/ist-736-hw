@@ -9,6 +9,8 @@ def classify(
     df,
     key_class='screen_name',
     key_text='text',
+    kfold=True,
+    n_splits=5,
     flag_mnb=True,
     flag_mnb_pos=True,
     flag_bnb=True,
@@ -23,6 +25,10 @@ def classify(
 
     '''
 
+    # local variables
+    kfold_scores = {}
+    model_scores = {}
+
     # multinomial naive bayes
     if flag_mnb:
         mnb = m_model(
@@ -31,10 +37,14 @@ def classify(
             key_text=key_text,
             max_length=math.inf
         )
-        mnb_accuracy = mnb.get_accuracy()
+        model_scores['mnb'] = mnb.get_accuracy()
 
         if plot:
             plot_cm(mnb, file_suffix=key_class)
+
+        if kfold:
+            kmnb = mnb.get_kfold_scores(model_type='multinomial', n_splits=n_splits)
+            kfold_scores['mnb'] = kmnb
 
     if flag_mnb_pos:
         mnb_pos = mp_model(
@@ -43,10 +53,14 @@ def classify(
             key_text=key_text,
             max_length=math.inf
         )
-        mnb_pos_accuracy = mnb_pos.get_accuracy()
+        model_scores['mnb_pos'] = mnb_pos.get_accuracy()
 
         if plot:
             plot_cm(mnb_pos, file_suffix='{}_pos'.format(key_class))
+
+        if kfold:
+            kmnb_pos = mnb_pos.get_kfold_scores(model_type='multinomial', n_splits=n_splits)
+            kfold_scores['mnb_pos'] = kmnb_pos
 
     # bernoulli naive bayes
     if flag_bnb:
@@ -57,10 +71,14 @@ def classify(
             key_text=key_text,
             max_length=0
         )
-        bnb_accuracy = bnb.get_accuracy()
+        model_scores['bnb'] = bnb.get_accuracy()
 
         if plot:
             plot_cm(bnb, model_type='bernoulli', file_suffix=key_class)
+
+        if kfold:
+            kbnb = bnb.get_kfold_scores(model_type='bernoulli', n_splits=n_splits)
+            kfold_scores['bnb'] = kbnb
 
     if flag_bnb_pos:
         bnb_pos = mp_model(
@@ -70,7 +88,7 @@ def classify(
             key_text=key_text,
             max_length=0
         )
-        bnb_pos_accuracy = bnb_pos.get_accuracy()
+        model_scores['bnb_pos'] = bnb_pos.get_accuracy()
 
         if plot:
             plot_cm(
@@ -78,6 +96,10 @@ def classify(
                 model_type='bernoulli',
                 file_suffix='{}_pos'.format(key_class)
             )
+
+        if kfold:
+            kbnb_pos = bnb_pos.get_kfold_scores(model_type='bernoulli', n_splits=n_splits)
+            kfold_scores['bnb_pos'] = kbnb_pos
 
     # support vector machine
     if flag_svm:
@@ -87,10 +109,14 @@ def classify(
             key_class=key_class,
             key_text=key_text
         )
-        svm_accuracy =  svm.get_accuracy()
+        model_scores['svm'] = svm.get_accuracy()
 
         if plot:
             plot_cm(svm, model_type='svm', file_suffix=key_class)
+
+        if kfold:
+            ksvm = svm.get_kfold_scores(model_type='svm', n_splits=n_splits)
+            kfold_scores['svm'] = ksvm
 
     if flag_svm_pos:
         svm_pos = mp_model(
@@ -99,7 +125,7 @@ def classify(
             key_class=key_class,
             key_text=key_text
         )
-        svm_pos_accuracy = svm_pos.get_accuracy()
+        model_scores['svm_pos'] = svm_pos.get_accuracy()
 
         if plot:
             plot_cm(
@@ -108,30 +134,19 @@ def classify(
                 file_suffix='{}_pos'.format(key_class)
             )
 
+        if kfold:
+            ksvm_pos = svm_pos.get_kfold_scores(model_type='svm', n_splits=n_splits)
+            kfold_scores['svm_pos'] = ksvm_pos
+
     # ensembled score
-    score_good = (\
-        mnb_accuracy + \
-        mnb_pos_accuracy + \
-        bnb_accuracy + \
-        bnb_pos_accuracy + \
-        svm_accuracy + \
-        svm_pos_accuracy\
-    ) / 6
+    score_good = sum(model_scores.values()) / len(model_scores)
 
     if plot:
         plot_bar(
-            labels=('mnb', 'mnb pos', 'bnb', 'bnb pos', 'svm', 'svm pos', 'overall'),
-            performance=(
-                mnb_accuracy,
-                mnb_pos_accuracy,
-                bnb_accuracy,
-                bnb_pos_accuracy,
-                svm_accuracy,
-                svm_pos_accuracy,
-                score_good
-            ),
+            labels=[*model_scores],
+            performance=[x for x in model_scores.values()].append(score_good),
             filename='overall_accuracy_{}'.format(key_class)
         )
 
     # return score
-    return(score_good)
+    return(score_good, kfold_scores)
