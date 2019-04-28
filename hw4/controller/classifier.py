@@ -46,7 +46,7 @@ def classify(
         mnb_pos_accuracy = mnb_pos.get_accuracy()
 
         if plot:
-            plot_cm(lie_mnb_pos, file_suffix='{}_pos'.format(key_class))
+            plot_cm(mnb_pos, file_suffix='{}_pos'.format(key_class))
 
     # bernoulli naive bayes
     if flag_bnb:
