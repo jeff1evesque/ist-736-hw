@@ -30,7 +30,8 @@ def model(
     model.train(
         vectorized,
         params['y_train'],
-        model_type=model_type
+        model_type=model_type,
+        validate=(params['X_test'], params['y_test'])
     )
 
     return(model)
