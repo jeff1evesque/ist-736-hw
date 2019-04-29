@@ -20,8 +20,7 @@ from nltk import tokenize, download, pos_tag
 from nltk.stem.porter import PorterStemmer
 from sklearn.metrics import accuracy_score
 from sklearn.model_selection import KFold
-from sklearn.feature_extraction.text import CountVectorizer
-from sklearn.feature_extraction.text import TfidfTransformer
+from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
 from sklearn import svm
 from sklearn.naive_bayes import BernoulliNB, MultinomialNB
 from sklearn.model_selection import cross_val_score, train_test_split
@@ -182,8 +181,8 @@ class Model():
             bow = count_vect.fit_transform(data)
 
             # tfidf weighting
-            tfidf_transformer = TfidfTransformer()
-            tfidf = tfidf_transformer.fit_transform(bow)
+            tfidf_vectorizer = TfidfVectorizer()
+            tfidf = tfidf_vectorizer.fit_transform(bow)
 
             return(bow, tfidf)
 
@@ -193,8 +192,8 @@ class Model():
             self.bow = self.count_vect.fit_transform(self.df[self.key_text])
 
             # tfidf weighting
-            self.tfidf_transformer = TfidfTransformer()
-            self.tfidf = self.tfidf_transformer.fit_transform(self.bow)
+            self.tfidf_vectorizer = TfidfVectorizer(stop_words=stop_words)
+            self.tfidf = self.tfidf_vectorizer.fit_transform(self.df[self.key_text])
 
     def get_tfidf(self):
         '''
@@ -253,7 +252,7 @@ class Model():
 
                 for item in list(validate[0]):
                     predictions.append(
-                        self.clf.predict(self.tfidf_transformer.fit_transform(item))
+                        self.clf.predict(item)
                     )
 
                 self.actual = validate[1]
@@ -284,7 +283,7 @@ class Model():
 
                 for item in list(validate[0]):
                     predictions.append(
-                        self.clf.predict(self.tfidf_transformer.fit_transform(item))
+                        self.clf.predict(item)
                     )
 
                 self.actual = validate[1]
@@ -309,9 +308,10 @@ class Model():
             # validate
             if validate and len(validate) == 2:
                 predictions = []
+
                 for item in list(validate[0]):
                     predictions.append(
-                        self.clf.predict(self.tfidf_transformer.fit_transform(item))
+                        self.clf.predict(item)
                     )
 
                 self.actual = validate[1]
@@ -405,8 +405,7 @@ class Model():
             else:
                 clf = svm.SVC(gamma='scale', kernel='linear')
 
-            tfidf_transformer = TfidfTransformer()
-            data = self.tfidf_transformer.fit_transform(bow)
+            data = self.tfidf_vectorizer.fit_transform(self.df[self.key_text])
 
         elif (
             (model_type == 'bernoulli') or
@@ -417,8 +416,7 @@ class Model():
 
         else:
             clf = MultinomialNB()
-            tfidf_transformer = TfidfTransformer()
-            data = self.tfidf_transformer.fit_transform(bow)
+            data = self.tfidf_vectorizer.fit_transform(self.df[self.key_text])
 
         return(
             cross_val_score(
