@@ -19,11 +19,11 @@ from nltk.corpus import stopwords
 from nltk import tokenize, download, pos_tag
 from nltk.stem.porter import PorterStemmer
 from sklearn.metrics import accuracy_score
-from sklearn.feature_extraction.text import CountVectorizer
-from sklearn.feature_extraction.text import TfidfTransformer
+from sklearn.model_selection import KFold
+from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
 from sklearn import svm
 from sklearn.naive_bayes import BernoulliNB, MultinomialNB
-from sklearn.model_selection import cross_val_predict, train_test_split
+from sklearn.model_selection import cross_val_score, train_test_split
 import matplotlib.pyplot as plt
 import scikitplot as skplt
 from algorithm.penn_treebank import penn_scale
@@ -89,8 +89,8 @@ class Model():
 
         # vectorize data
         if vectorize:
-            self.split()
             self.vectorize()
+            self.split()
 
     def split(self, size=0.20, pos_split=False):
         '''
@@ -124,12 +124,18 @@ class Model():
                     )
                 self.df[self.key_text].iloc[[i]] = combined
 
-        # split data
-        self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(
-            self.df[self.key_text],
-            self.df[self.key_class],
-            test_size=size
-        )
+            self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(
+                self.vectorize(self.df[self.key_text]),
+                self.df[self.key_class],
+                test_size=size
+            )
+
+        else:
+            self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(
+                self.tfidf,
+                self.df[self.key_class],
+                test_size=size
+            )
 
     def get_split(self):
         '''
@@ -162,20 +168,32 @@ class Model():
         ) for i,x in enumerate(pos)])
         return(result)
 
-    def vectorize(self, stop_words='english'):
+    def vectorize(self, data=None, stop_words='english'):
         '''
 
         vectorize provided data.
 
         '''
 
-        # bag of words: with 'english' stopwords
-        self.count_vect = CountVectorizer(stop_words=stop_words)
-        self.bow = self.count_vect.fit_transform(self.X_train)
+        if data is not None:
+            # bag of words: with 'english' stopwords
+            count_vect = CountVectorizer(stop_words=stop_words)
+            bow = count_vect.fit_transform(data)
 
-        # tfidf weighting
-        self.tfidf_transformer = TfidfTransformer()
-        self.X_train_tfidf = self.tfidf_transformer.fit_transform(self.bow)
+            # tfidf weighting
+            tfidf_vectorizer = TfidfVectorizer()
+            tfidf = tfidf_vectorizer.fit_transform(bow)
+
+            return(bow, tfidf)
+
+        else:
+            # bag of words: with 'english' stopwords
+            self.count_vect = CountVectorizer(stop_words=stop_words)
+            self.bow = self.count_vect.fit_transform(self.df[self.key_text])
+
+            # tfidf weighting
+            self.tfidf_vectorizer = TfidfVectorizer(stop_words=stop_words)
+            self.tfidf = self.tfidf_vectorizer.fit_transform(self.df[self.key_text])
 
     def get_tfidf(self):
         '''
@@ -184,7 +202,7 @@ class Model():
 
         '''
 
-        return(self.X_train_tfidf)
+        return(self.tfidf)
 
     def get_df(self):
         '''
@@ -233,9 +251,8 @@ class Model():
                 predictions = []
 
                 for item in list(validate[0]):
-                    prediction = self.count_vect.transform([item])
                     predictions.append(
-                        self.clf.predict(prediction)
+                        self.clf.predict(item)
                     )
 
                 self.actual = validate[1]
@@ -265,9 +282,8 @@ class Model():
                 predictions = []
 
                 for item in list(validate[0]):
-                    prediction = self.count_vect.transform([item])
                     predictions.append(
-                        self.clf.predict(prediction)
+                        self.clf.predict(item)
                     )
 
                 self.actual = validate[1]
@@ -292,10 +308,10 @@ class Model():
             # validate
             if validate and len(validate) == 2:
                 predictions = []
+
                 for item in list(validate[0]):
-                    prediction = self.count_vect.transform([item])
                     predictions.append(
-                        self.clf.predict(self.tfidf_transformer.fit_transform(prediction))
+                        self.clf.predict(item)
                     )
 
                 self.actual = validate[1]
@@ -355,7 +371,7 @@ class Model():
 
     def get_kfold_scores(
         self,
-        kfold,
+        n_splits=2,
         stop_words='english',
         max_length=280,
         shuffle=True,
@@ -378,8 +394,6 @@ class Model():
 
         '''
 
-        kf = KFold(self.df, n_folds=size, shuffle=shuffle)
-
         # bag of words: with 'english' stopwords
         count_vect = CountVectorizer(stop_words=stop_words)
         bow = self.count_vect.fit_transform(self.df[self.key_text])
@@ -391,8 +405,7 @@ class Model():
             else:
                 clf = svm.SVC(gamma='scale', kernel='linear')
 
-            tfidf_transformer = TfidfTransformer()
-            data = self.tfidf_transformer.fit_transform(bow)
+            data = self.tfidf_vectorizer.fit_transform(self.df[self.key_text])
 
         elif (
             (model_type == 'bernoulli') or
@@ -403,14 +416,13 @@ class Model():
 
         else:
             clf = MultinomialNB()
-            tfidf_transformer = TfidfTransformer()
-            data = self.tfidf_transformer.fit_transform(bow)
+            data = self.tfidf_vectorizer.fit_transform(self.df[self.key_text])
 
         return(
-            cross_val_predict(
+            cross_val_score(
                 clf,
                 data,
                 y=self.df[self.key_class],
-                cv=kfold
+                cv=n_splits
             )
         )

@@ -7,6 +7,7 @@ import pandas as pd
 from pathlib import Path
 from controller.classifier import classify
 from view.exploratory import explore
+from view.classifier import plot_bar
 
 # local variables
 adjusted_csv = 'adjusted_data.csv'
@@ -49,14 +50,22 @@ df_adjusted = df_adjusted.replace({
 #
 # exploratory
 #
-explore(df_adjusted)
+#explore(df_adjusted)
 
 #
 # unigram lie detection
 #
-classify(df_adjusted, key_class='lie', key_text='review')
+c_lie = classify(df_adjusted, key_class='lie', key_text='review', plot=False)
+
+[plot_bar(range(len(v)),v,'bargraph_kfold_{model}_lie'.format(
+    model=k
+)) for k,v in c_lie[1].items()]
 
 #
 # unigram sentiment analysis
 #
-classify(df_adjusted, key_class='sentiment', key_text='review')
+c_sentiment = classify(df_adjusted, key_class='sentiment', key_text='review', plot=False)
+
+[plot_bar(range(len(v)),v,'bargraph-kfold-{model}_sentiment'.format(
+    model=k
+)) for k,v in c_sentiment[1].items()]
