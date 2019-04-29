@@ -142,9 +142,15 @@ def classify(
     score_good = sum(model_scores.values()) / len(model_scores)
 
     if plot:
+        performance = [x for x in model_scores.values()]
+        performance.append(score_good)
+
+        labels = [*model_scores]
+        labels.append('overall')
+
         plot_bar(
-            labels=[*model_scores],
-            performance=[x for x in model_scores.values()].append(score_good),
+            labels=labels,
+            performance=performance,
             filename='overall_accuracy_{}'.format(key_class)
         )
 
