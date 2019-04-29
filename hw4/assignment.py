@@ -55,7 +55,7 @@ df_adjusted = df_adjusted.replace({
 #
 # unigram lie detection
 #
-c_lie = classify(df_adjusted, key_class='lie', key_text='review', plot=False)
+c_lie = classify(df_adjusted, key_class='lie', key_text='review')
 
 [plot_bar(range(len(v)),v,'bargraph_kfold_{model}_lie'.format(
     model=k
@@ -64,7 +64,7 @@ c_lie = classify(df_adjusted, key_class='lie', key_text='review', plot=False)
 #
 # unigram sentiment analysis
 #
-c_sentiment = classify(df_adjusted, key_class='sentiment', key_text='review', plot=False)
+c_sentiment = classify(df_adjusted, key_class='sentiment', key_text='review')
 
 [plot_bar(range(len(v)),v,'bargraph-kfold-{model}_sentiment'.format(
     model=k
