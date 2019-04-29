@@ -90,8 +90,8 @@ class Model():
 
         # vectorize data
         if vectorize:
-            self.split()
             self.vectorize()
+            self.split()
 
     def split(self, size=0.20, pos_split=False):
         '''
@@ -125,12 +125,18 @@ class Model():
                     )
                 self.df[self.key_text].iloc[[i]] = combined
 
-        # split data
-        self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(
-            self.df[self.key_text],
-            self.df[self.key_class],
-            test_size=size
-        )
+            self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(
+                self.vectorize(self.df[self.key_text]),
+                self.df[self.key_class],
+                test_size=size
+            )
+
+        else:
+            self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(
+                self.tfidf,
+                self.df[self.key_class],
+                test_size=size
+            )
 
     def get_split(self):
         '''
@@ -163,20 +169,32 @@ class Model():
         ) for i,x in enumerate(pos)])
         return(result)
 
-    def vectorize(self, stop_words='english'):
+    def vectorize(self, data=None, stop_words='english'):
         '''
 
         vectorize provided data.
 
         '''
 
-        # bag of words: with 'english' stopwords
-        self.count_vect = CountVectorizer(stop_words=stop_words)
-        self.bow = self.count_vect.fit_transform(self.X_train)
+        if data is not None:
+            # bag of words: with 'english' stopwords
+            count_vect = CountVectorizer(stop_words=stop_words)
+            bow = count_vect.fit_transform(data)
 
-        # tfidf weighting
-        self.tfidf_transformer = TfidfTransformer()
-        self.X_train_tfidf = self.tfidf_transformer.fit_transform(self.bow)
+            # tfidf weighting
+            tfidf_transformer = TfidfTransformer()
+            tfidf = tfidf_transformer.fit_transform(bow)
+
+            return(bow, tfidf)
+
+        else:
+            # bag of words: with 'english' stopwords
+            self.count_vect = CountVectorizer(stop_words=stop_words)
+            self.bow = self.count_vect.fit_transform(self.df[self.key_text])
+
+            # tfidf weighting
+            self.tfidf_transformer = TfidfTransformer()
+            self.tfidf = self.tfidf_transformer.fit_transform(self.bow)
 
     def get_tfidf(self):
         '''
@@ -185,7 +203,7 @@ class Model():
 
         '''
 
-        return(self.X_train_tfidf)
+        return(self.tfidf)
 
     def get_df(self):
         '''
@@ -234,9 +252,8 @@ class Model():
                 predictions = []
 
                 for item in list(validate[0]):
-                    prediction = self.count_vect.transform([item])
                     predictions.append(
-                        self.clf.predict(prediction)
+                        self.clf.predict(self.tfidf_transformer.fit_transform(item))
                     )
 
                 self.actual = validate[1]
@@ -266,9 +283,8 @@ class Model():
                 predictions = []
 
                 for item in list(validate[0]):
-                    prediction = self.count_vect.transform([item])
                     predictions.append(
-                        self.clf.predict(prediction)
+                        self.clf.predict(self.tfidf_transformer.fit_transform(item))
                     )
 
                 self.actual = validate[1]
@@ -294,9 +310,8 @@ class Model():
             if validate and len(validate) == 2:
                 predictions = []
                 for item in list(validate[0]):
-                    prediction = self.count_vect.transform([item])
                     predictions.append(
-                        self.clf.predict(self.tfidf_transformer.fit_transform(prediction))
+                        self.clf.predict(self.tfidf_transformer.fit_transform(item))
                     )
 
                 self.actual = validate[1]

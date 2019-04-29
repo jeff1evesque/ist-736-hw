@@ -24,13 +24,13 @@ def model(
         model = alg(key_text=key_text, key_class=key_class)
 
     # vectorize data
+    vectorized = model.get_tfidf()
     model.split()
     params = model.get_split()
-    vectorized = model.get_tfidf()
 
     # train classifier
     model.train(
-        vectorized,
+        params['X_train'],
         params['y_train'],
         model_type=model_type,
         validate=(params['X_test'], params['y_test']),
@@ -61,13 +61,13 @@ def model_pos(
     model = alg(df=df_m, key_class=key_class, key_text=key_text)
 
     # vectorize data
+    vectorized = model.get_tfidf()
     model.split()
     params = model.get_split()
-    vectorized = model.get_tfidf()
 
     # train classifier
     model.train(
-        vectorized,
+        params['X_train'],
         params['y_train'],
         model_type=model_type,
         validate=(params['X_test'], params['y_test']),
