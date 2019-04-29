@@ -50,7 +50,7 @@ df_adjusted = df_adjusted.replace({
 #
 # exploratory
 #
-#explore(df_adjusted)
+explore(df_adjusted)
 
 #
 # unigram lie detection
