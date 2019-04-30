@@ -22,7 +22,6 @@ def plot_cm(
 def plot_bar(
     labels,
     performance,
-    model_type='multinomial',
     filename='text'
 ):
     '''
