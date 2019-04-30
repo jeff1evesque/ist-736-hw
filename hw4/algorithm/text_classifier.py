@@ -84,8 +84,10 @@ class Model():
             self.df[self.key_text] = [w.lower() for w in self.df[self.key_text]]
 
         if stem:
-            porter = PorterStemmer()
-            self.df[self.key_text] = [porter.stem(w) for w in self.df[self.key_text]]
+            p = PorterStemmer()
+            self.df[self.key_text] = self.df[self.key_text].apply(
+                lambda x: [' '.join([p.stem(w) for w in x.split(' ')])][0]
+            )
 
         # vectorize data
         if vectorize:
