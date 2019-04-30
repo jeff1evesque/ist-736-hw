@@ -181,7 +181,7 @@ class Model():
             bow = count_vect.fit_transform(data)
 
             # tfidf weighting
-            tfidf_vectorizer = TfidfVectorizer()
+            tfidf_vectorizer = TfidfVectorizer(stop_words=stop_words)
             tfidf = tfidf_vectorizer.fit_transform(bow)
 
             return(bow, tfidf)
