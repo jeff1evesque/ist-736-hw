@@ -20,8 +20,7 @@ from nltk import tokenize, download, pos_tag
 from nltk.stem.porter import PorterStemmer
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
-from sklearn.feature_extraction.text import CountVectorizer
-from sklearn.feature_extraction.text import TfidfTransformer
+from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
 from sklearn.naive_bayes import MultinomialNB
 import matplotlib.pyplot as plt
 import scikitplot as skplt
@@ -83,15 +82,17 @@ class Model():
             self.df[self.key_text] = [w.lower() for w in self.df[self.key_text]]
 
         if stem:
-            porter = PorterStemmer()
-            self.df[self.key_text] = [porter.stem(w) for w in self.df[self.key_text]]
+            p = PorterStemmer()
+            self.df[self.key_text] = self.df[self.key_text].apply(
+                lambda x: [' '.join([p.stem(w) for w in x.split(' ')])][0]
+            )
 
         # vectorize data
         if vectorize:
-            self.split()
             self.vectorize()
+            self.split()
 
-    def split(self, test_size=0.20, stem=True, pos_split=False):
+    def split(self, test_size=0.20, pos_split=False):
         '''
 
         split data into train and test.
@@ -123,11 +124,18 @@ class Model():
                     )
                 self.df[self.key_text].iloc[[i]] = combined
 
-        self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(
-            self.df[self.key_text],
-            self.df[self.key_class],
-            test_size=test_size
-        )
+            self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(
+                self.vectorize(self.df[self.key_text]),
+                self.df[self.key_class],
+                test_size=size
+            )
+
+        else:
+            self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(
+                self.tfidf,
+                self.df[self.key_class],
+                test_size=test_size
+            )
 
     def get_split(self):
         '''
@@ -160,20 +168,32 @@ class Model():
         ) for i,x in enumerate(pos)])
         return(result)
 
-    def vectorize(self, stop_words='english'):
+    def vectorize(self, data=None, stop_words='english'):
         '''
 
         vectorize provided data.
 
         '''
 
-        # bag of words: with 'english' stopwords
-        self.count_vect = CountVectorizer(stop_words=stop_words)
-        bow = self.count_vect.fit_transform(self.X_train)
+        if data is not None:
+            # bag of words: with 'english' stopwords
+            count_vect = CountVectorizer(stop_words=stop_words)
+            bow = count_vect.fit_transform(data)
 
-        # tfidf weighting
-        self.tfidf_transformer = TfidfTransformer()
-        self.X_train_tfidf = self.tfidf_transformer.fit_transform(bow)
+            # tfidf weighting
+            tfidf_vectorizer = TfidfVectorizer(stop_words=stop_words)
+            tfidf = tfidf_vectorizer.fit_transform(bow)
+
+            return(bow, tfidf)
+
+        else:
+            # bag of words: with 'english' stopwords
+            self.count_vect = CountVectorizer(stop_words=stop_words)
+            self.bow = self.count_vect.fit_transform(self.df[self.key_text])
+
+            # tfidf weighting
+            self.tfidf_vectorizer = TfidfVectorizer(stop_words=stop_words)
+            self.tfidf = self.tfidf_vectorizer.fit_transform(self.df[self.key_text])
 
     def get_tfidf(self):
         '''
@@ -182,7 +202,7 @@ class Model():
 
         '''
 
-        return(self.X_train_tfidf)
+        return(self.tfidf)
 
     def get_df(self):
         '''
@@ -202,16 +222,16 @@ class Model():
 
         '''
 
-        # fit model
-        self.clf = MultinomialNB().fit(X, y)
+        self.clf = MultinomialNB()
+        self.clf.fit(X, y)
 
         # validate
         if validate and len(validate) == 2:
             predictions = []
+
             for item in list(validate[0]):
-                prediction = self.count_vect.transform([item])
                 predictions.append(
-                    self.clf.predict(self.tfidf_transformer.fit_transform(prediction))
+                    self.clf.predict(item)
                 )
 
             self.actual = validate[1]
