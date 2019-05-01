@@ -51,6 +51,7 @@ def model_pos(
     return initialized model using pos.
 
     '''
+
     # reduce to ascii
     regex = r'[^\x00-\x7f]'
     df_m = m.get_df()
