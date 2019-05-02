@@ -8,6 +8,7 @@
 #     pip install scikit-plot
 #
 
+import os
 import time
 import csv
 import re
@@ -289,6 +290,10 @@ class Model():
         return(accuracy_score(actual, predicted))
 
 if __name__ == '__main__':
+    # create viz directory
+    if not os.path.exists('viz'):
+        os.makedirs('viz')
+
     #
     # unigram: perform unigram analysis.
     #
@@ -311,6 +316,7 @@ if __name__ == '__main__':
         model_unigram['actual'],
         model_unigram['predicted']
     )
+    plt.savefig('viz/cm_unigram.png')
     plt.show()
 
     #
@@ -349,6 +355,7 @@ if __name__ == '__main__':
         model_pos['actual'],
         model_pos['predicted']
     )
+    plt.savefig('viz/cm_pos.png')
     plt.show()
 
     # ensembled scored
@@ -369,4 +376,5 @@ if __name__ == '__main__':
     plt.bar(y_pos, performance, align='center', alpha=0.5)
     plt.xticks(y_pos, objects)
     plt.ylabel('Performance')
+    plt.savefig('viz/accuracy_overall.png')
     plt.show()
