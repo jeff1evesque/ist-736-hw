@@ -184,7 +184,7 @@ class Model():
 
             # tfidf weighting
             tfidf_vectorizer = TfidfVectorizer(stop_words=stop_words)
-            tfidf = tfidf_vectorizer.fit_transform(bow)
+            tfidf = tfidf_vectorizer.fit_transform(data)
 
             return(bow, tfidf)
 

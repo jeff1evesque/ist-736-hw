@@ -8,9 +8,11 @@
 #     pip install scikit-plot
 #
 
+import os
 import time
 import csv
 import re
+import string
 import numpy as np
 from pathlib import Path
 import pandas as pd
@@ -19,8 +21,7 @@ from nltk import tokenize, download, pos_tag
 from nltk.stem.porter import PorterStemmer
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
-from sklearn.feature_extraction.text import CountVectorizer
-from sklearn.feature_extraction.text import TfidfTransformer
+from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
 from sklearn.naive_bayes import MultinomialNB
 import matplotlib.pyplot as plt
 import scikitplot as skplt
@@ -40,6 +41,8 @@ class Model():
         self,
         df=None,
         vectorize=True,
+        stem=True,
+        lowercase=True,
         key_text='SentimentText',
         key_class='Sentiment',
         fp='{}/data/sample-sentiment.csv'.format(
@@ -57,51 +60,83 @@ class Model():
             self.df = df
         else:
             self.df = pd.read_csv(fp)
+
         self.key_text = key_text
         self.key_class = key_class
+        self.actual = None
+        self.predicted = None
+
+        #
+        # clean: remove twitter account, punctuations and urls, lowercase,
+        #        stem each word.
+        #
+        # @string.punctuation, '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~'
+        #
+        pattern_twitter_act = '@[a-zA-Z0-9_]{0,15}'
+        pattern_url = 'https?://[A-Za-z0-9./]+'
+        pattern_punctuation = '[{p}]'.format(p=string.punctuation)
+        pattern = '|'.join((pattern_twitter_act, pattern_url, pattern_punctuation))
+
+        self.df[self.key_text] = [re.sub(pattern, '', w) for w in self.df[self.key_text]]
+
+        if lowercase:
+            self.df[self.key_text] = [w.lower() for w in self.df[self.key_text]]
+
+        if stem:
+            p = PorterStemmer()
+            self.df[self.key_text] = self.df[self.key_text].apply(
+                lambda x: [' '.join([p.stem(w) for w in x.split(' ')])][0]
+            )
 
         # vectorize data
         if vectorize:
-            self.split()
             self.vectorize()
+            self.split()
 
-    def split(self, test_size=0.20, stem=True, pos_split=False):
+    def split(self, test_size=0.20, pos_split=False):
         '''
 
         split data into train and test.
 
         '''
 
-        # clean
-        self.df[self.key_text] = [re.sub('[#@]', '', x) for x in self.df[self.key_text]]
-
-        # stem
-        if stem:
-            porter = PorterStemmer()
-            self.df[self.key_text] = [porter.stem(word) for word in self.df[self.key_text]]
-
         # split
         if pos_split:
             for i, row in self.df.iterrows():
                 # max length
-                max_length = len(self.df[self.key_text].iloc[i].split())
+                if isinstance(self.df[self.key_text].iloc[i], str):
+                    max_length = len(self.df[self.key_text].iloc[i].split())
+                else:
+                    max_length = len(self.df[self.key_text].iloc[i].str.split())
                 pos = self.df[['pos']].iloc[i]
 
                 # rebuild 'key-text' with pos suffix
                 combined = ''
                 for j in range(max_length):
+                    if isinstance(self.df[self.key_text][i], str):
+                        word = self.df[self.key_text][i].split()[j]
+                    else:
+                        word = self.df[self.key_text].iloc[i].split()[j]
+
                     combined = '{combined} {word}-{pos}'.format(
                         combined=combined,
-                        word=self.df[self.key_text][i].split()[j],
+                        word=word,
                         pos=pos[0][j]
                     )
                 self.df[self.key_text].iloc[[i]] = combined
 
-        self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(
-            self.df[self.key_text],
-            self.df[self.key_class],
-            test_size=test_size
-        )
+            self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(
+                self.vectorize(self.df[self.key_text])[1],
+                self.df[self.key_class],
+                test_size=test_size
+            )
+
+        else:
+            self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(
+                self.tfidf,
+                self.df[self.key_class],
+                test_size=test_size
+            )
 
     def get_split(self):
         '''
@@ -117,49 +152,49 @@ class Model():
             'y_test': self.y_test,
         })
 
-    def get_pos(self, l, pos_length=280):
+    def get_pos(self, l):
         '''
 
         apply pos tagger to supplied list.
 
-        @pos_length, maximum number of words in tweets.
-
         '''
 
-        result_word = []
-        result_pos = []
-        pos = [pos_tag(x) for x in l]
-        for y in pos:
-            result_word.append([x[0] for x in y if x[0] not in stop_words])
-            result_pos.append(
-                [penn_scale[x[1]] if x[1] in penn_scale and x[0] not in stop_words else 1 for x in y]
-            )
+        pos = pos_tag(l)
+        result = ' '.join(['{word}-{pos}'.format(
+            word=l[i],
+            pos=penn_scale[x[1]]
+        ) if x[1] in penn_scale else '{word}-{pos}'.format(
+            word=l[i],
+            pos=1
+        ) for i,x in enumerate(pos)])
+        return(result)
 
-        # consistent length
-        for i,x in enumerate(result_pos):
-            if len(x) < pos_length:
-                difference = pos_length - len(x)
-                result_pos[i].extend([1] * difference)
-            else:
-                difference = len(x) - pos_length
-                result_pos[i] = result_pos[i][:len(result_pos[i]) - difference]
-
-        return(result_word, result_pos)
-
-    def vectorize(self, stop_words='english'):
+    def vectorize(self, data=None, stop_words='english'):
         '''
 
         vectorize provided data.
 
         '''
 
-        # bag of words: with 'english' stopwords
-        self.count_vect = CountVectorizer(stop_words=stop_words)
-        bow = self.count_vect.fit_transform(self.X_train)
+        if data is not None:
+            # bag of words: with 'english' stopwords
+            count_vect = CountVectorizer(stop_words=stop_words)
+            bow = count_vect.fit_transform(data)
 
-        # tfidf weighting
-        self.tfidf_transformer = TfidfTransformer()
-        self.X_train_tfidf = self.tfidf_transformer.fit_transform(bow)
+            # tfidf weighting
+            tfidf_vectorizer = TfidfVectorizer(stop_words=stop_words)
+            tfidf = tfidf_vectorizer.fit_transform(data)
+
+            return(bow, tfidf)
+
+        else:
+            # bag of words: with 'english' stopwords
+            self.count_vect = CountVectorizer(stop_words=stop_words)
+            self.bow = self.count_vect.fit_transform(self.df[self.key_text])
+
+            # tfidf weighting
+            self.tfidf_vectorizer = TfidfVectorizer(stop_words=stop_words)
+            self.tfidf = self.tfidf_vectorizer.fit_transform(self.df[self.key_text])
 
     def get_tfidf(self):
         '''
@@ -168,7 +203,7 @@ class Model():
 
         '''
 
-        return(self.X_train_tfidf)
+        return(self.tfidf)
 
     def get_df(self):
         '''
@@ -188,17 +223,20 @@ class Model():
 
         '''
 
-        # fit model
-        self.clf = MultinomialNB().fit(X, y)
+        self.clf = MultinomialNB()
+        self.clf.fit(X, y)
 
         # validate
         if validate and len(validate) == 2:
             predictions = []
+
             for item in list(validate[0]):
-                prediction = self.count_vect.transform([item])
                 predictions.append(
-                    self.clf.predict(self.tfidf_transformer.fit_transform(prediction))
+                    self.clf.predict(item)
                 )
+
+            self.actual = validate[1]
+            self.predicted = predictions
 
             return({
                 'model': self.clf,
@@ -212,7 +250,50 @@ class Model():
             'predicted': None
         })
 
+    def plot_cm(
+        self,
+        actual=None,
+        predicted=None,
+        filename='confusion_matrix.png'
+    ):
+        '''
+
+        plot sentiment generated from 'vader_analysis'.
+
+        '''
+
+        if not actual:
+            actual = self.actual
+        if not predicted:
+            predicted = self.predicted
+
+        # generate plot
+        plt.figure()
+        skplt.metrics.plot_confusion_matrix(actual, predicted)
+
+        # save plot
+        plt.savefig(filename)
+        plt.show()
+
+    def get_accuracy(self, actual=None, predicted=None):
+        '''
+
+        return accuracy for prediction.
+
+        '''
+
+        if not actual:
+            actual = self.actual
+        if not predicted:
+            predicted = self.predicted
+
+        return(accuracy_score(actual, predicted))
+
 if __name__ == '__main__':
+    # create viz directory
+    if not os.path.exists('viz'):
+        os.makedirs('viz')
+
     #
     # unigram: perform unigram analysis.
     #
@@ -225,7 +306,7 @@ if __name__ == '__main__':
 
     # unigram classifier
     model_unigram = unigram.model(
-        unigram_vectorized,
+        unigram_params['X_train'],
         unigram_params['y_train'],
         validate=(unigram_params['X_test'], unigram_params['y_test'])
     )
@@ -235,6 +316,7 @@ if __name__ == '__main__':
         model_unigram['actual'],
         model_unigram['predicted']
     )
+    plt.savefig('viz/cm_unigram.png')
     plt.show()
 
     #
@@ -242,28 +324,30 @@ if __name__ == '__main__':
     #
     df_pos = unigram.get_df()
 
-    # define pos
-    df_pos['pos'] = unigram.get_pos(
-        df_pos['SentimentText'].apply(lambda x: x.split())
-    )[1]
+    # reduce to ascii
+    regex = r'[^\x00-\x7f]'
+    df_pos['pos'] = [re.sub(regex, r' ', sent).split() for sent in df_pos['SentimentText']]
+
+    # suffix pos
+    df_pos['pos'] = [unigram.get_pos(x) for x in df_pos['pos']]
 
     #
     # new dataframe
     #
     # @pos_split, appends pos to word before vectorization and tfidf.
     #
-    pos = Model(df_pos)
-    pos.split(pos_split=True)
+    pos = Model(df_pos, lowercase=False)
 
     # pos vectorize
-    pos_params = pos.get_split()
     pos_vectorized = pos.get_tfidf()
+    pos.split(pos_split=True)
+    pos_params = pos.get_split()
 
     # pos classifier
     model_pos = pos.model(
-        pos_vectorized,
+        pos_params['X_train'],
         pos_params['y_train'],
-        validate=(unigram_params['X_test'], unigram_params['y_test'])
+        validate=(pos_params['X_test'], pos_params['y_test'])
     )
 
     # plot unigram
@@ -271,6 +355,7 @@ if __name__ == '__main__':
         model_pos['actual'],
         model_pos['predicted']
     )
+    plt.savefig('viz/cm_pos.png')
     plt.show()
 
     # ensembled scored
@@ -291,4 +376,5 @@ if __name__ == '__main__':
     plt.bar(y_pos, performance, align='center', alpha=0.5)
     plt.xticks(y_pos, objects)
     plt.ylabel('Performance')
+    plt.savefig('viz/accuracy_overall.png')
     plt.show()
