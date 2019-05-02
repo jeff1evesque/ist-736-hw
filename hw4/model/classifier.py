@@ -59,7 +59,7 @@ def model_pos(
 	
     # suffix pos
     df_m['pos'] = [m.get_pos(x) for x in df_m['pos']]
-    model = alg(df=df_m, key_class=key_class, key_text=key_text)
+    model = alg(df=df_m, key_class=key_class, key_text=key_text, lowercase=False)
 
     # vectorize data
     vectorized = model.get_tfidf()
