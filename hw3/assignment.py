@@ -57,9 +57,9 @@ df = df_cnn.append(df_foxnews)
 #
 if not os.path.exists('viz'):
     os.makedirs('viz')
-###word_cloud(df_cnn['text'], filename='viz/wc_cnn.png')
-###word_cloud(df_foxnews['text'], filename='viz/wc_foxnews.png')
-###word_cloud(df['text'], filename='viz/wc_cnn_foxnews.png')
+word_cloud(df_cnn['text'], filename='viz/wc_cnn.png')
+word_cloud(df_foxnews['text'], filename='viz/wc_foxnews.png')
+word_cloud(df['text'], filename='viz/wc_cnn_foxnews.png')
 
 #
 # sentiment analysis
@@ -75,9 +75,9 @@ df_overall = sent_overall.vader_analysis()
 # vectorize 'screen_name'
 df_overall = df_overall.replace({'screen_name': {'CNN': 0, 'FoxNews': 1}})
 
-###sent_cnn.plot_ts(title='CNN Sentiment', filename='viz/sentiment_cnn.png')
-###sent_foxnews.plot_ts(title='FoxNews Sentiment', filename='viz/sentiment_foxnews.png')
-###sent_overall.plot_ts(title='Overall Sentiment', filename='viz/sentiment_overall.png')
+sent_cnn.plot_ts(title='CNN Sentiment', filename='viz/sentiment_cnn.png')
+sent_foxnews.plot_ts(title='FoxNews Sentiment', filename='viz/sentiment_foxnews.png')
+sent_overall.plot_ts(title='Overall Sentiment', filename='viz/sentiment_overall.png')
 
 #
 # classifier: use naive bayes to predict cnn and foxnews tweets.
