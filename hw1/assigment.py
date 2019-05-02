@@ -8,6 +8,7 @@
 #     pip install scikit-plot
 #
 
+import os
 import time
 import csv
 import numpy as np
@@ -120,6 +121,10 @@ def time_df(fp='{}/data/sample-sentiment.csv'.format(
     })
 
 if __name__ == '__main__':
+    # create viz directory
+    if not os.path.exists('viz'):
+        os.makedirs('viz')
+
     # dataframe benchmark
     tdf = time_df()
     print('panda upload time: {}'.format(tdf['pd_time']))
@@ -131,6 +136,7 @@ if __name__ == '__main__':
     plt.bar(y_pos, performance, align='center', alpha=0.5)
     plt.xticks(y_pos, objects)
     plt.ylabel('Performance')
+    plt.savefig('viz/sentiment')
     plt.show()
 
     # vader analysis
@@ -143,4 +149,5 @@ if __name__ == '__main__':
         model['actual'],
         model['predicted']
     )
+    plt.savefig('viz/confusion_matrix')
     plt.show()
