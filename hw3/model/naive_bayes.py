@@ -125,9 +125,9 @@ class Model():
                 self.df[self.key_text].iloc[[i]] = combined
 
             self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(
-                self.vectorize(self.df[self.key_text]),
+                self.vectorize(self.df[self.key_text])[1],
                 self.df[self.key_class],
-                test_size=size
+                test_size=test_size
             )
 
         else:
@@ -182,7 +182,7 @@ class Model():
 
             # tfidf weighting
             tfidf_vectorizer = TfidfVectorizer(stop_words=stop_words)
-            tfidf = tfidf_vectorizer.fit_transform(bow)
+            tfidf = tfidf_vectorizer.fit_transform(data)
 
             return(bow, tfidf)
 

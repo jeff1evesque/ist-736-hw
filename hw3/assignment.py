@@ -116,11 +116,11 @@ df_pos['pos'] = [unigram.get_pos(x) for x in df_pos['pos']]
 #
 # @pos_split, appends pos to word before vectorization and tfidf.
 #
-pos = nb(df_pos, key_text='pos', key_class='screen_name')
+pos = nb(df_pos, key_text='pos', key_class='screen_name', lowercase=False)
 
 # pos vectorize
 pos_vectorized = pos.get_tfidf()
-pos.split()
+pos.split(pos_split=True)
 pos_params = pos.get_split()
 
 # pos classifier
