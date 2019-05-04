@@ -121,7 +121,7 @@ class TwitterQuery():
         self.df_query = pd.DataFrame(results)
 
         if force_ascii:
-            self.df_query['text'] = [re.sub(self.regex, r' ', s) for s in self.df_query['text']]
+            self.df_query['text'] = [re.sub(self.regex, r' ', s) for s in str(self.df_query['text'])]
 
         return(self.df_query)
 
@@ -159,7 +159,8 @@ class TwitterQuery():
         try:
             timeline = self.conn.get_user_timeline(
                 screen_name=screen_name,
-                count=count
+                count=count,
+                tweet_mode='extended'
             )
 
         except TwythonError as e:
@@ -180,6 +181,7 @@ class TwitterQuery():
             new_timeline = self.conn.get_user_timeline(
                 screen_name = screen_name,
                 count = count,
+                tweet_mode='extended',
                 max_id = last_id - 1
             )
 
@@ -209,7 +211,7 @@ class TwitterQuery():
         # clean dataframe
         #
         if force_ascii:
-            self.df_timeline['text'] = [re.sub(self.regex, r' ', s) for s in (self.df_timeline['text'])]
+            self.df_timeline['text'] = [re.sub(self.regex, r' ', s) for s in str(self.df_timeline['text'])]
 
         # reformat date
         self.df_timeline['created_at'] = [datetime.strptime(
