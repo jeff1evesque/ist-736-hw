@@ -129,7 +129,7 @@ class TwitterQuery():
         screen_name,
         params=[{'user': ['screen_name']}, 'created_at', 'text'],
         count=200,
-        rate_limit=None,
+        rate_limit=0,
         force_ascii=True
     ):
         '''
@@ -183,32 +183,26 @@ class TwitterQuery():
             )
 
             if len(new_timeline) > 0:
-                keys = []
                 [keys.extend(self.get_dict_path(k)) if isinstance(k, dict) else keys.append([k]) for k in params]
                 new_results = {x[-1]: [] for x in keys}
 
                 for tweet in new_timeline:
-                    last_id = tweet['id']=
+                    last_id = tweet['id']
                     [new_results[k].append(self.get_dict_val(tweet, keys[i])) for i,(k,v) in enumerate(new_results.items())]
 
-        #
-        # combine results
-        #
-        overall_results = {}
-        if rate_limit:
-            for k,v in results.items():
-                if k in new_results:
-                    overall_results[k] = results[k] + new_results[k]
-                else:
-                    overall_results[k] = results[k]
-            for k,v in new_results.items():
-                if k not in results:
-                    overall_results[k] = new_results[k]
+                #
+                # combine results
+                #
+                for k,v in new_results.items():
+                    if k in results:
+                        results[k] = results[k] + new_results[k]
+                    else:
+                        results[k] = new_results[k]
 
         #
         # store results
         #
-        self.df_timeline = pd.DataFrame(overall_results)
+        self.df_timeline = pd.DataFrame(results)
 
         if force_ascii:
             self.df_timeline['text'] = [re.sub(self.regex, r' ', s) for s in (self.df_timeline['text'])]
