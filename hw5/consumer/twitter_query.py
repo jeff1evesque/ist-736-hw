@@ -137,7 +137,8 @@ class TwitterQuery():
         search tweets by supplied screen name.
 
         @screen_name, user timeline to query.
-        @rate_limit, number of api request (limited at 900).
+        @rate_limit, number of api request (limited at 900), where each request
+            has a maximum count=200 tweets to return.
         @params, parameters to return.
         @count, number of tweets to return.
         @keys, list of lists, recursive params key through end value.
