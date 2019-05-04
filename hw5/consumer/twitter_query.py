@@ -3,6 +3,7 @@
 import re
 from twython import Twython, TwythonError
 import pandas as pd
+from datetime import datetime
 
 
 class TwitterQuery():     
@@ -204,7 +205,22 @@ class TwitterQuery():
         #
         self.df_timeline = pd.DataFrame(results)
 
+        #
+        # clean dataframe
+        #
         if force_ascii:
             self.df_timeline['text'] = [re.sub(self.regex, r' ', s) for s in (self.df_timeline['text'])]
+
+        # reformat date
+        self.df_timeline['created_at'] = [datetime.strptime(
+            x,
+            '%a %b %d %H:%M:%S +0000 %Y'
+        ) for x in self.df_timeline['created_at']]
+
+        # duplicate index column: side effect of datetime conversion.
+        self.df_timeline.drop(self.df_timeline.filter(regex='Unnamed:').columns, axis=1, inplace=True)
+        self.df_timeline.sort_values(by='created_at', ascending=True, inplace=True)
+        self.df_timeline.reset_index(inplace=True)
+        self.df_timeline.drop(['index'], axis=1, inplace=True)
 
         return(self.df_timeline)
