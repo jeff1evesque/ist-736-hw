@@ -166,7 +166,7 @@ class TwitterQuery():
         #
         for tweet in timeline:
             last_id = tweet['id']
-            [results[k].append(self.get_dict_val(tweet, keys[i])) for i, (k,v) in enumerate(results.items())]
+            [results[k].append(self.get_dict_val(tweet, keys[i])) for i,(k,v) in enumerate(results.items())]
 
         #
         # query: extend through max limit
@@ -184,20 +184,27 @@ class TwitterQuery():
                 new_results = {x[-1]: [] for x in keys}
 
                 for tweet in new_timeline:
-                    last_id = tweet['id']
-                    print('last_id: {}'.format(last_id))
-                    [new_results[k].append(self.get_dict_val(tweet, keys[i])) for i, (k,v) in enumerate(new_results.items())]
+                    last_id = tweet['id']=
+                    [new_results[k].append(self.get_dict_val(tweet, keys[i])) for i,(k,v) in enumerate(new_results.items())]
 
         #
         # combine results
         #
+        overall_results = {}
         if rate_limit:
-            results.extend(new_results)
+            for k,v in results.items():
+                if k in new_results:
+                    overall_results[k] = results[k] + new_results[k]
+                else:
+                    overall_results[k] = results[k]
+            for k,v in new_results.items():
+                if k not in results:
+                    overall_results[k] = new_results[k]
 
         #
         # store results
         #
-        self.df_timeline = pd.DataFrame(results)
+        self.df_timeline = pd.DataFrame(overall_results)
 
         if force_ascii:
             self.df_timeline['text'] = [re.sub(self.regex, r' ', s) for s in (self.df_timeline['text'])]
