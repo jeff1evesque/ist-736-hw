@@ -149,6 +149,12 @@ class TwitterQuery():
         if rate_limit > 900:
             rate_limit = 900
 
+        elif rate_limit < 0:
+            rate_limit = 0
+
+        #
+        # query: induction step
+        #
         try:
             timeline = self.conn.get_user_timeline(
                 screen_name=screen_name,
@@ -162,9 +168,6 @@ class TwitterQuery():
         [keys.extend(self.get_dict_path(k)) if isinstance(k, dict) else keys.append([k]) for k in params]
         results = {x[-1]: [] for x in keys}
 
-        #
-        # query: induction step
-        #
         for tweet in timeline:
             last_id = tweet['id']
             [results[k].append(self.get_dict_val(tweet, keys[i])) for i,(k,v) in enumerate(results.items())]
