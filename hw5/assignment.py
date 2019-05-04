@@ -14,11 +14,11 @@ from pathlib import Path
 import pandas as pd
 
 # local variables
-csv_taralipinski = 'data/taralipinski.csv'
+csv_taralipinski = 'data/twitter/taralipinski.csv'
 
 # create directories
-if not os.path.exists('data'):
-    os.makedirs('data')
+if not os.path.exists('data/twitter'):
+    os.makedirs('data/twitter')
 
 if not os.path.exists('viz'):
     os.makedirs('viz')
