@@ -81,7 +81,7 @@ class TwitterQuery():
     def query(
         self,
         query,
-        params=[{'user': ['screen_name']}, 'created_at', 'text'],
+        params=[{'user': ['screen_name']}, 'created_at', 'full_text'],
         sorted=None,
         force_ascii=True
     ):
@@ -121,14 +121,14 @@ class TwitterQuery():
         self.df_query = pd.DataFrame(results)
 
         if force_ascii:
-            self.df_query['text'] = [re.sub(self.regex, r' ', s) for s in str(self.df_query['text'])]
+            self.df_timeline['full_text'] = [re.sub(self.regex, r' ', str(s)) for s in self.df_timeline['full_text']]
 
         return(self.df_query)
 
     def query_user(
         self,
         screen_name,
-        params=[{'user': ['screen_name']}, 'created_at', 'text'],
+        params=[{'user': ['screen_name']}, 'created_at', 'full_text'],
         count=200,
         rate_limit=0,
         force_ascii=True
@@ -172,7 +172,10 @@ class TwitterQuery():
 
         for tweet in timeline:
             last_id = tweet['id']
-            [results[k].append(self.get_dict_val(tweet, keys[i])) for i,(k,v) in enumerate(results.items())]
+            [results[k].append(self.get_dict_val(
+                tweet,
+                keys[i]
+            )) for i,(k,v) in enumerate(results.items())]
 
         #
         # query: extend through max limit
@@ -191,7 +194,10 @@ class TwitterQuery():
 
                 for tweet in new_timeline:
                     last_id = tweet['id']
-                    [new_results[k].append(self.get_dict_val(tweet, keys[i])) for i,(k,v) in enumerate(new_results.items())]
+                    [new_results[k].append(self.get_dict_val(
+                        tweet,
+                        keys[i]
+                    )) for i,(k,v) in enumerate(new_results.items())]
 
                 #
                 # combine results
@@ -211,7 +217,7 @@ class TwitterQuery():
         # clean dataframe
         #
         if force_ascii:
-            self.df_timeline['text'] = [re.sub(self.regex, r' ', s) for s in str(self.df_timeline['text'])]
+            self.df_timeline['full_text'] = [re.sub(self.regex, r' ', str(s)) for s in self.df_timeline['full_text']]
 
         # reformat date
         self.df_timeline['created_at'] = [datetime.strptime(
