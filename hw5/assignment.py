@@ -50,9 +50,20 @@ else:
         count=900,
         rate_limit=6000
     )
-    df_taralipinski['full_text'] = df_taralipinski['full_text'].str.replace(
-        'http\S+|www.\S+',
-        '',
-        case=False
+
+#
+# clean dataframe: has two 'full_text' columns, one for regular tweets,
+#     another for 'retweets'. The latter will be suffixed by loop index.
+#
+r = re.compile('^full_text.*')
+cols = list(filter(r.match, df_taralipinski))
+
+for col in cols:
+    df_taralipinski[[col]] = df_taralipinski[[col]].applymap(
+        lambda x: str(x).replace(
+            'http\S+|www.\S+',
+            ''
+        )
     )
-    df_taralipinski.to_csv(csv_taralipinski)
+
+df_taralipinski.to_csv(csv_taralipinski)
