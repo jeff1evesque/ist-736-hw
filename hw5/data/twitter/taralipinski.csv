@@ -1,4 +1,4 @@
-,screen_name,created_at,text
+,screen_name,created_at,full_text
 0,taralipinski,2013-08-13 05:46:40,@GlideApp is changing my life. @NiasJoy   @elisejoanbliss
 1,taralipinski,2013-08-14 19:51:19,Oh boyyyyy big day   dtlally @ Box Eight Studios 
 2,taralipinski,2013-08-15 00:21:20,Sneak peek... 
@@ -231,7 +231,7 @@
 229,taralipinski,2014-01-14 22:43:52,RT @KateRyan_Inc: Olympic gold-medalist @Tara_Lipinski is all grown up! #photography by @Sarah_Silver 
 230,taralipinski,2014-01-15 15:23:03,RT @JohnnyGWeir: Watch me and @Tara_Lipinski today on @KatieShow! Check your local listings.
 231,taralipinski,2014-01-15 17:21:43,RT @Sarah_Silver: New blog post: BTS with @Tara_Lipinski! A great shoot is easy with a girl this fun and photogenic 
-232,taralipinski,2014-01-15 19:54:40,"RT @katiecouric: I have serious Olympics fever - who's with me? @JohnnyGWeir &amp;
+232,taralipinski,2014-01-15 19:54:40,"RT @katiecouric: I have serious Olympics fever - who's with me? @JohnnyGWeir &amp;
 @Tara_Lipinski here today on @KatieShow to give us scoop on  "
 233,taralipinski,2014-01-15 23:24:31,West Coast tune @JohnnyGWeir @katiecouric @KatieShow Katie is the coolest. So sweet &amp; real &amp; down to earth.Love her! 
 234,taralipinski,2014-01-16 02:44:44,RT @espnW: So here's what you're watching tomorrow night guys. Tonya. Nancy. #PriceofGold 
@@ -248,8 +248,8 @@
 245,taralipinski,2014-01-20 16:31:53,"RT @KTLAMorningNews: Good as gold in '98, now @Tara_Lipinski heads back to @Olympics! We'll talk her new career, and controversy re: this y "
 246,taralipinski,2014-01-20 19:45:57,Tune into @CNNLive at 12:10. More Olympic talk!
 247,taralipinski,2014-01-20 19:55:31,Tune into #CNNLive at 12:00pm! @ CNN Building 
-248,taralipinski,2014-01-20 21:49:00,"RT @MarioLopezExtra: Practicing with @Tara_Lipinski for our couples skating competition... 
-#Sochi
+248,taralipinski,2014-01-20 21:49:00,"RT @MarioLopezExtra: Practicing with @Tara_Lipinski for our couples skating competition... 
+#Sochi
 #NBC "
 249,taralipinski,2014-01-20 22:01:29,@MarioLopezExtra who knew you had such natural talent for ice dancing! 
 250,taralipinski,2014-01-21 04:46:29,My other halves... debsvarc @elisejoanbliss dtlally @legallyallie @NiasJoy #HomeSweetLAHome @ Republique 
@@ -303,7 +303,7 @@
 298,taralipinski,2014-02-02 15:30:07,Luge Practice #Sochi2014 @johnnygweir  Follow @tara_lipinski for more of us! @nbcolympics @ Radisson  
 299,taralipinski,2014-02-03 19:49:59,"Back at it @taraandjohnny Follow me &amp; my partner in crime as we take u on T &amp; J adventures! They will be unique, I can promise you that ;)"
 300,taralipinski,2014-02-04 07:26:50,Check out the @RachaelRayShow this Thursday! I'm in a kitchen competition   
-301,taralipinski,2014-02-04 16:11:20,"RT @ScottHamilton84: Newest members of NBC Olympic Figure Skating coverage. Johnny's going to help me w/ my hair!
+301,taralipinski,2014-02-04 16:11:20,"RT @ScottHamilton84: Newest members of NBC Olympic Figure Skating coverage. Johnny's going to help me w/ my hair!
 #SochiSelfie  "
 302,taralipinski,2014-02-04 16:12:39,@RRShowCooks @RachaelRayShow  so nice meeting all of you talented people! Xo
 303,taralipinski,2014-02-04 16:19:20,First #SochiSelfie @nbcolympics nbcsports will be proud I've finally joined the trend. What happens in  
@@ -342,10 +342,10 @@
 336,taralipinski,2014-02-11 07:12:06,RT @EW: .@Tara_Lipinski picks her most memorable ladies' figure skating programs -- VIDEO
 337,taralipinski,2014-02-11 11:43:25,Show us &amp; @NBCOlympics @NBCSports pics of how u r sneaking in #TaraandJohnny at work today. Coverage starts at 10 am! 
 338,taralipinski,2014-02-11 11:46:32,@blue_eye_blond   
-339,taralipinski,2014-02-11 13:42:31,"Today's vibe @ElizandJames
-@HELMUTLANG
-Shoes @LKBennettLondon
-And of course the jewels cartier
+339,taralipinski,2014-02-11 13:42:31,"Today's vibe @ElizandJames
+@HELMUTLANG
+Shoes @LKBennettLondon
+And of course the jewels cartier
 chanel "
 340,taralipinski,2014-02-11 14:12:11,"RT @JohnnyGWeir: Join us in an hour, live from Sochi, for the entirety of the pairs short program on @NBCSN! @Tara_Lipinski #TerryGannon #S "
 341,taralipinski,2014-02-12 15:18:18,#DreamTeam #TerryGannon @johnnygweir My @stelladot necklace is making me happy tonite! @      
@@ -378,7 +378,7 @@ chanel "
 368,taralipinski,2014-02-19 07:03:55,@AshleyAJones @CBSDaytime @YandR_CBS Hi Ashley! So many amazing memories from that. Xo
 369,taralipinski,2014-02-19 13:57:48,It's time for the Ladies..... @johnnygweir @taraandjohnny #lace 
 370,taralipinski,2014-02-19 14:57:29,"RT @JohnnyGWeir: Join me, @Tara_Lipinski and Terry Gannon in 30 minutes for live coverage of the ladies short program on @nbcsn! Let us kno "
-371,taralipinski,2014-02-19 16:49:24,"RT @NBCSports: ""If anyone was worried the 15-year-old couldn't handle the pressure ... she just proved them wrong.""
+371,taralipinski,2014-02-19 16:49:24,"RT @NBCSports: ""If anyone was worried the 15-year-old couldn't handle the pressure ... she just proved them wrong.""
 -- @Tara_Lipinski on @P "
 372,taralipinski,2014-02-19 20:59:28,Just posted a video 
 373,taralipinski,2014-02-19 21:07:55,Sneak peek into the booth #taraandjohnny @johnnygweir @tara_lipinski 
@@ -557,7 +557,7 @@ chanel "
 546,taralipinski,2014-04-15 23:23:10,Love these so much had to get them in tan too.   @aliceandolivia 
 547,taralipinski,2014-04-16 01:29:11,"RT @NBCGameNight: Who is the MOST competitive: @waynebrady, @LaurenCohan, @taralipinski, @rachaelray, @TheJaimePressly or @ZacharyLevi? Fin "
 548,taralipinski,2014-04-16 23:43:40,"Wire, floral tape and flowers gone wild. Went a bit over board with my arts and crafts moment today.  "
-549,taralipinski,2014-04-17 22:53:25,"RT @NBCGameNight: Who will be the fiercest of them all? @waynebrady, @rachaelray, @LaurenCohan,
+549,taralipinski,2014-04-17 22:53:25,"RT @NBCGameNight: Who will be the fiercest of them all? @waynebrady, @rachaelray, @LaurenCohan,
 @TheJaimePressly, @ZacharyLevi or @taralipi "
 550,taralipinski,2014-04-17 22:57:50,Thanks @janemarielynch you know how to host a fun @NBCGameNight Tonite w @ZacharyLevi @LaurenCohan @rachaelray @waynebrady @theJaimePressly
 551,taralipinski,2014-04-17 23:00:32,@theJaimePressly can't wait to see our first round. #weknowourgames
@@ -614,7 +614,7 @@ chanel "
 602,taralipinski,2014-05-01 04:19:56," @keri_herzog: @taralipinski Andrea 2x cancer survivor.Hat by Anya Caliendo, only US milliner   LOVE"
 603,taralipinski,2014-05-01 04:24:08,"""aritzia: @elisejoanbliss Oh hey, Miss Lipinski. We may or may not have named a dress after you...""  "
 604,taralipinski,2014-05-01 12:52:28,3 hats and 3 bags I tried as hard as I could but you can't under pack for the #KyDerby On my way to my boy @JohnnyGWeir   #taraandjohnny
-605,taralipinski,2014-05-01 12:54:10," @SelfishProject: @taralipinski   
+605,taralipinski,2014-05-01 12:54:10," @SelfishProject: @taralipinski   
 BE who YOU ARE, unapologetically &amp; without guilt."" I agree..Own it!"
 606,taralipinski,2014-05-01 13:18:35,Thursday DayDreamin 
 607,taralipinski,2014-05-01 17:49:34,RT @pretareporter: What hats will #KentuckyDerby fashion correspondents @JohnnyGWeir and @taralipinski wear this weekend? We find out: http 
@@ -723,9 +723,9 @@ BE who YOU ARE, unapologetically &amp; without guilt."" I agree..Own it!"
 710,taralipinski,2014-05-29 04:40:41,@JennaElfman just so you know...you make a really pretty judge! Xo
 711,taralipinski,2014-05-29 16:44:47,Fun beach shoot this morning with @thesecore @ Zuma Beach 
 712,taralipinski,2014-05-30 03:32:35,Blue and White kinda night @chelsea_ku  @dizzyfeet 
-713,taralipinski,2014-05-30 04:56:06,"RT @HLundqvist30: It took me 9 years, finally made it..
-My first Stanley Cup final!!
-So proud of this group of guys!
+713,taralipinski,2014-05-30 04:56:06,"RT @HLundqvist30: It took me 9 years, finally made it..
+My first Stanley Cup final!!
+So proud of this group of guys!
 4 to go.. #BecauseItsT "
 714,taralipinski,2014-05-30 20:43:05,Couldn't resist...another photo from @thesecore Also can't take off my freepeople sweater. Cozy  
 715,taralipinski,2014-05-31 07:11:41,RT @victoriousTEENS: Hey @taralipinski Sunday is our #Victorious5k event. Please help us spread the word. Can we get a RT? #TeenCancer http 
@@ -806,8 +806,8 @@ So proud of this group of guys!
 790,taralipinski,2014-06-26 02:35:14,"@EdwardsJenn Thank you, thank you!"
 791,taralipinski,2014-06-26 02:45:55,It's almost on west coast! danceonfox Plus have some exciting news....coming back to #SYTYCD for a  
 792,taralipinski,2014-06-26 03:25:47,RT @CreateSeeShare: Olympic Skater Tara Lipinski Behind The Scenes at 'SYTYCD' 
-793,taralipinski,2014-06-26 04:05:05,"RT @DANCEonFOX: ""I couldn't take my eyes off of you. It was that good."" -@taralipinski 
-
+793,taralipinski,2014-06-26 04:05:05,"RT @DANCEonFOX: ""I couldn't take my eyes off of you. It was that good."" -@taralipinski 
+
 Words that every dancer wants to hear! #sytycd"
 794,taralipinski,2014-06-26 04:05:20,@jcruz29 thank you!!!
 795,taralipinski,2014-06-26 04:05:43,@sarahkate2218 side pony needs a comeback right?!
@@ -973,7 +973,7 @@ Words that every dancer wants to hear! #sytycd"
 955,taralipinski,2014-11-04 15:00:05,"RT @virtue2vice: .@JohnnyGWeir and @taralipinski ""best color commentators of any sport with the possible exception of John McEnroe""  "
 956,taralipinski,2014-11-04 17:33:13, Backstage funnies with @JohnnyGWeir @TaraandJohnny @MeredithShow
 957,taralipinski,2014-11-05 18:03:17,RT @Arielle07: Amazing Duo @Taralipinski and @JohnnyGWeir Put Their Friendship To The Test  via @buzzfeed
-958,taralipinski,2014-11-05 19:56:40,"RT @BuzzFeed: .@taralipinski and @JohnnyGWeir put their friendship to the test
+958,taralipinski,2014-11-05 19:56:40,"RT @BuzzFeed: .@taralipinski and @JohnnyGWeir put their friendship to the test
  "
 959,taralipinski,2014-11-06 19:36:01,@Fetalized @EmHughes26 @SarahHughesNY  oh yes
 960,taralipinski,2014-11-07 19:16:46,#fbf I miss summer days in Kiawah. #HomeSweetHome    
@@ -1066,7 +1066,7 @@ Words that every dancer wants to hear! #sytycd"
 1047,taralipinski,2014-12-27 20:03:43,Christmas came back for me today..a few of my fav things from my king @JohnnyGWeir #hermes #hersheys I love you J 
 1048,taralipinski,2014-12-28 00:55:42,This movie blew my mind. It was so incredibly inspiring. #UnbrokenMovie
 1049,taralipinski,2014-12-28 01:40:54,@AmyKinLA so good!
-1050,taralipinski,2014-12-28 20:40:56,"RT @DatelineNBC: .@TaraLipinski and @JohnnyGWeir reveal their 2015 New Year's Resolutions:  
+1050,taralipinski,2014-12-28 20:40:56,"RT @DatelineNBC: .@TaraLipinski and @JohnnyGWeir reveal their 2015 New Year's Resolutions:  
 Don't miss #Toast2014 De "
 1051,taralipinski,2014-12-29 18:35:32,Who else can't stay in one spot for too long @AlexaAinsworth 
 1052,taralipinski,2014-12-29 21:56:10,And we are off    @AlexaAinsworth 
@@ -1074,7 +1074,7 @@ Don't miss #Toast2014 De "
 1054,taralipinski,2014-12-31 09:48:50,@kaymeloy you are the best! Thank you
 1055,taralipinski,2014-12-31 16:16:35,Apparently I am not sweet enough #copenhagen #joeandthejuice #NewYearsEve  @AlexaAinsworth 
 1056,taralipinski,2014-12-31 18:03:47,   #Copenhagen @AlexaAinsworth 
-1057,taralipinski,2014-12-31 21:36:34,"RT @DatelineNBC: What are @taralipinski and @JohnnyGWeir doing this #NYE? Well... #Toast2014
+1057,taralipinski,2014-12-31 21:36:34,"RT @DatelineNBC: What are @taralipinski and @JohnnyGWeir doing this #NYE? Well... #Toast2014
 "
 1058,taralipinski,2015-01-01 01:41:45,Happy New Year! #copenhagen #2015 @AlexaAinsworth 
 1059,taralipinski,2015-01-01 10:33:58,#2015 
@@ -1158,7 +1158,7 @@ Don't miss #Toast2014 De "
 1137,taralipinski,2015-01-30 01:49:56,"Backstage secrets @ The Ritz-Carlton, Phoenix "
 1138,taralipinski,2015-01-30 03:34:06,@Milldog13 Love it!   
 1139,taralipinski,2015-01-30 05:10:49,"RT @JohnnyGWeir: Tomorrow @accesshollywood and @billybush, spending time with some lovely ladies and @TheSoup. Many outfits, little rest. @ "
-1140,taralipinski,2015-01-30 13:52:54,"RT @ACMawards: The nominees for ACM Album of the Year are   
+1140,taralipinski,2015-01-30 13:52:54,"RT @ACMawards: The nominees for ACM Album of the Year are   
 via @taralipinski #ACMnoms #ACMawards50"
 1141,taralipinski,2015-01-30 16:50:36,Had a great time with our favorites.  @billybush @KitHoover @accesshollywood @JohnnyGWeir 
 1142,taralipinski,2015-01-30 17:06:58,Congrats!! @Jason_Aldean @mirandalambert @DierksBentley #LittleBigTown EricChurch @ACMawards #ACMnoms #ACMawards50 
@@ -1222,8 +1222,8 @@ via @taralipinski #ACMnoms #ACMawards50"
 1200,taralipinski,2015-02-09 20:43:31,View from my couch...only thing missing on this freezing NYC day is the fire    
 1201,taralipinski,2015-02-09 22:35:50,These will definitely last longer..in love with them! Thank you @kennethcole You made this Monday a memorable one! Xo 
 1202,taralipinski,2015-02-10 03:24:21,RT @theMMQB: MMQB is up! @SI_PeterKing talks at length with Tom Brady about #SB49's defining moments:   
-1203,taralipinski,2015-02-10 20:41:07,"RT @MountainDew: @taralipinski We'd love to see you try some of these moves next time you're on the ice!
-
+1203,taralipinski,2015-02-10 20:41:07,"RT @MountainDew: @taralipinski We'd love to see you try some of these moves next time you're on the ice!
+
 "
 1204,taralipinski,2015-02-10 23:36:31,Tis Valentine season #ValentinesDay   
 1205,taralipinski,2015-02-11 23:15:03,Happy to be back on the west coast. Home Sweet California Home    
@@ -1237,7 +1237,7 @@ via @taralipinski #ACMnoms #ACMawards50"
 1213,taralipinski,2015-02-14 18:50:02,#HappyValentinesDay #bestmomever   
 1214,taralipinski,2015-02-14 21:28:22,Los Angeles is bringing the love with this gorgeous sunny Valentines Day! #Love 
 1215,taralipinski,2015-02-15 02:50:40,@DebCinLA good luck!!! Xo
-1216,taralipinski,2015-02-15 19:53:09,"RT @chelsea_ku: Don Draper and his valentines!      #Repost @jhawkruze with repostapp. @taralipinski    
+1216,taralipinski,2015-02-15 19:53:09,"RT @chelsea_ku: Don Draper and his valentines!      #Repost @jhawkruze with repostapp. @taralipinski    
 Where I am  "
 1217,taralipinski,2015-02-15 20:32:11,After some of my favorite light reading @SELFmagazine I've landed in #NY What snowstorm?    
 1218,taralipinski,2015-02-17 02:14:32,"RT @AshWagner2010: @suilruin Well, people who feel the need to be mean on Twitter make my skin crawl, so I guess we're tied!"
@@ -1339,7 +1339,7 @@ Where I am  "
 1314,taralipinski,2015-03-31 23:39:03,"I've been lazy,this gets me excited to pull out my workout goodies #fitness #essentiallytara  "
 1315,taralipinski,2015-04-01 13:37:45,RT @Carolyn_ColbyNY: Love this feature on the AMAZING new @taralipinski blog!!! #EssentiallyTara #thingsilove  
 1316,taralipinski,2015-04-01 14:12:39,RT @misfitmimes: VOTE!! March Media Madness: @TaraandJohnny Reach the Final Four! | Binky's @JohnnyGWeir Blog   
-1317,taralipinski,2015-04-01 17:50:09,"RT @buckhollywood: Uhm! I love love love your new website @taralipinski! 
+1317,taralipinski,2015-04-01 17:50:09,"RT @buckhollywood: Uhm! I love love love your new website @taralipinski! 
 Can't wait to keep up with it! #Essentially "
 1318,taralipinski,2015-04-01 18:28:16,Don't miss the goodies @Chef_Thiago at @catchny made for me.Magic tricks &amp; dessert in 1! On blog now #essentiallytara 
 1319,taralipinski,2015-04-01 19:10:09,"RT @DegreeWomen: @taralipinski Thanks for including us, Tara. Happy #WorkoutWednesday !"
@@ -1512,7 +1512,7 @@ Can't wait to keep up with it! #Essentially "
 1486,taralipinski,2015-06-10 10:53:03,I love birthdays or maybe I just love Italy or maybe I just love the beautiful flowers mom and dad  
 1487,taralipinski,2015-06-10 11:55:36,RT @amandagmcelroy: Thanks for teaching me how to dream   Happy Birthday @taralipinski  !! 
 1488,taralipinski,2015-06-10 15:35:44,I've been saving this cover-up for just the right moment. Obviously this is the right moment   Click  
-1489,taralipinski,2015-06-10 19:53:11,"RT @PartyCity: @taralipinski We hope that your #birthday today is as fabulous as you are! #PartyClub
+1489,taralipinski,2015-06-10 19:53:11,"RT @PartyCity: @taralipinski We hope that your #birthday today is as fabulous as you are! #PartyClub
 "
 1490,taralipinski,2015-06-10 19:54:08,@PartyCity why thank you!!
 1491,taralipinski,2015-06-10 19:54:18,RT @TODAYshow: Happy Birthday @taralipinski! Thanks for teaching us all of your skating moves! 
@@ -1602,8 +1602,8 @@ Can't wait to keep up with it! #Essentially "
 1575,taralipinski,2015-07-10 01:07:03,#Kiawahisland #LowcountryLiving @ Kiawah 
 1576,taralipinski,2015-07-10 14:10:14,Who knew I would fall in love with a one piece and a skirt to match.    Head to #essentiallytara  
 1577,taralipinski,2015-07-11 19:45:10,  @alexaainsworth #Kiawahisland #Charleston @ Kiawah Island Beach Club 
-1578,taralipinski,2015-07-11 19:50:50,"RT @universalsports: Looks like @taralipinski still has it!
-
+1578,taralipinski,2015-07-11 19:50:50,"RT @universalsports: Looks like @taralipinski still has it!
+
 Watch:  "
 1579,taralipinski,2015-07-12 15:09:18,    @alexaainsworth #kiawahisland @ The Sanctuary at Kiawah Island 
 1580,taralipinski,2015-07-13 11:57:29,"Good morning #kiawahisland   @ Boardwalk 32, Kiawah Island "
@@ -1764,12 +1764,12 @@ Watch:  "
 1735,taralipinski,2015-12-21 00:06:24,It's time for mistletoe and holly....   
 1736,taralipinski,2015-12-22 19:53:17,My life changed forever last night. I feel so lucky that I get to spend the rest of my life  
 1737,taralipinski,2015-12-23 01:50:53,RT @JohnnyGWeir: Congratulations to my partner in crime @taralipinski and her partner in crime @toddkap on their  
-1738,taralipinski,2015-12-23 01:51:04,"RT @icenetwork: Congratulations to @taralipinski, who got engaged to boyfriend Todd Kapostasy last night.
+1738,taralipinski,2015-12-23 01:51:04,"RT @icenetwork: Congratulations to @taralipinski, who got engaged to boyfriend Todd Kapostasy last night.
 "
 1739,taralipinski,2015-12-23 01:53:38,@DatelineNBC Of course! Thank you. So much to celebrate this year!
 1740,taralipinski,2015-12-23 01:54:20,@JohnnyGWeir @ToddKap @TOMFORD Johnny and Tara take on a wedding
-1741,taralipinski,2015-12-23 01:54:25,"RT @patmuldowney: A front row to the best love story. 
-
+1741,taralipinski,2015-12-23 01:54:25,"RT @patmuldowney: A front row to the best love story. 
+
 @taralipinski &amp; @toddkap, I love you guys, congrats YOU'RE GETTING MARRIED!!  "
 1742,taralipinski,2015-12-23 01:55:37,RT @people: Congratulations! @taralipinski is engaged   see her gorgeous ring  
 1743,taralipinski,2015-12-23 01:55:42,RT @etnow: Former Olympic figure skater @TaraLipinski is engaged! Congrats!   
@@ -1829,8 +1829,8 @@ Watch:  "
 1797,taralipinski,2016-01-30 17:38:23,2 people 9 bags...a week in Brazil @johnnygweir            @ NBC Sports 
 1798,taralipinski,2016-01-30 19:15:06,"RT @NBCGameNight: It s a bird! It s a plane! It s Olympic gold medalist, @TaraLipinski! #HGN "
 1799,taralipinski,2016-01-30 22:22:07,RT @misfitmimes: Your fabulous #USChamps16 Gala commentary Dream Team: @JohnnyGWeir @taralipinski #TerryGannon Watch NOW @NBC! #smock  
-1800,taralipinski,2016-01-30 22:23:07,"RT @Nate13Burleson: Catch me on @NBCGameNight this Tuesday on
-#HGN Host @janemarielynch
+1800,taralipinski,2016-01-30 22:23:07,"RT @Nate13Burleson: Catch me on @NBCGameNight this Tuesday on
+#HGN Host @janemarielynch
 Celebrity Players @taralipinski @RichEisenShow http "
 1801,taralipinski,2016-01-31 18:41:19,My perch for the next 9 days  #Rio  @johnnygweir @taraandjohnny 
 1802,taralipinski,2016-01-31 20:29:25,RT @JohnnyGWeir: We're moved into our adjoinings. 147 hangers later... @taralipinski @TaraandJohnny #TaraAndJohnnyTakeRio
@@ -1866,9 +1866,9 @@ Celebrity Players @taralipinski @RichEisenShow http "
 1832,taralipinski,2016-02-08 21:46:58,"Goodbye Rio!! Leaving with so many amazing memories, lovely new friends and priceless moments  "
 1833,taralipinski,2016-02-09 10:57:11,A few hours away from being back where I belong...with this guy @toddkap @ Miami International  
 1834,taralipinski,2016-02-09 17:31:56,RT @JohnnyGWeir: Missing my little pierogi so much already. I also miss being un-sunburnt. @taralipinski  
-1835,taralipinski,2016-02-10 04:46:27,"RT @ParkerNewYork: This is @taralipinski in #Brazil. 
-Tara is wearing our Sicily blouse. 
-Tara is killing it.
+1835,taralipinski,2016-02-10 04:46:27,"RT @ParkerNewYork: This is @taralipinski in #Brazil. 
+Tara is wearing our Sicily blouse. 
+Tara is killing it.
 Be  "
 1836,taralipinski,2016-02-11 19:15:03,Swapping the Santa Monica beach for Ipanema...totally the same.   
 1837,taralipinski,2016-02-11 20:02:27,I literally go through withdrawals when I don't see this woman for more than 4 weeks. The Blonde  
@@ -1888,10 +1888,10 @@ Be  "
 1851,taralipinski,2016-02-20 02:58:30,So nice meeting you! @kylepetty @JohnnyGWeir @NBCSports
 1852,taralipinski,2016-02-20 13:18:27,RT @jodiebowey: look who made timehop @taralipinski 
 1853,taralipinski,2016-02-20 15:24:07,I thought about the possibility of this moment day in and day out for so many years and then on  
-1854,taralipinski,2016-02-20 15:54:06,"RT @TeamUSA: .@taralipinski was the youngest to win the women's figure skating title at age 15, at the 1998 Winter Olympic Games!
+1854,taralipinski,2016-02-20 15:54:06,"RT @TeamUSA: .@taralipinski was the youngest to win the women's figure skating title at age 15, at the 1998 Winter Olympic Games!
  "
-1855,taralipinski,2016-02-20 15:55:45,"RT @NBCOlympics: On this day in Olympic History: @taralipinski and @MichelleWKwan faced off at the 1998 Nagano Olympics. 
-
+1855,taralipinski,2016-02-20 15:55:45,"RT @NBCOlympics: On this day in Olympic History: @taralipinski and @MichelleWKwan faced off at the 1998 Nagano Olympics. 
+
 (via IOC)  "
 1856,taralipinski,2016-02-20 17:46:29,What an awesome surprise to start my day! Thank you @toddkap for always knowing how to make me  
 1857,taralipinski,2016-02-20 20:35:56,@amandagmcelroy so sweet...thank you!
@@ -2010,7 +2010,7 @@ Be  "
 1970,taralipinski,2016-06-10 20:49:26,"Ok, I know I'm posting a lot but....dinner overlooking the rolling hills of wine country in  "
 1971,taralipinski,2016-06-11 12:16:18,Woke up missing my favorite little winery...    @ Decugnano dei Barbi 
 1972,taralipinski,2016-06-11 18:45:26,"    @ Rome, Italy "
-1973,taralipinski,2016-06-12 10:08:59,"Checked some things off the list these last few days.
+1973,taralipinski,2016-06-12 10:08:59,"Checked some things off the list these last few days.
 Showed @toddkap Rome for the first time     "
 1974,taralipinski,2016-06-12 15:32:19,Our little Amalfi Coast nook for the next few days @toddkap @ Amalfi Coast - Positano 
 1975,taralipinski,2016-06-13 19:42:27,"Last year at this time due to my poorly timed travel schedule that kept me away for a month,  "
@@ -2083,7 +2083,7 @@ Showed @toddkap Rome for the first time     "
 2042,taralipinski,2016-07-27 05:06:06,RT @LA2024: FESTA! It's a party at #Rio2016 @NBCOlympics Social Opening Ceremony tonight in Santa Monica. 
 2043,taralipinski,2016-07-27 05:06:49,RT @RyanSeacrest: amazing night. Honored to share the stage with these Olympians @NBCOlympics #OlympicSocial #RoadToRio  
 2044,taralipinski,2016-07-27 16:17:40,The first episode of the  Tara and Johnny  podcast is available NOW on iTunes (link in bio) or  
-2045,taralipinski,2016-07-27 18:02:08,"RT @iTunesPodcasts: Just Released: New @NBCSports podcast with commentators @taralipinski &amp; @JohnnyGWeir.
+2045,taralipinski,2016-07-27 18:02:08,"RT @iTunesPodcasts: Just Released: New @NBCSports podcast with commentators @taralipinski &amp; @JohnnyGWeir.
   "
 2046,taralipinski,2016-07-27 19:32:33,Last night with @ryanseacrest kicking off a little pre #Rio2016 celebration. Now it's finally  
 2047,taralipinski,2016-07-28 16:45:54,You used to call me on my flip phone..... #TBT   #90's att 
@@ -2095,8 +2095,8 @@ Showed @toddkap Rome for the first time     "
 2053,taralipinski,2016-07-31 20:02:16,"A hurricane of clothes hit my room. Lots of ""just in case"" options. #MovingIn  "
 2054,taralipinski,2016-07-31 23:15:58,This view makes running on that terrible machine called a treadmill bearable. Hey Rio!!!     
 2055,taralipinski,2016-08-01 20:02:26,I only had to remove a bed and a nightstand but I'm finally moved in. My mom would be so proud  
-2056,taralipinski,2016-08-02 02:21:22,"RT @NBCOlympics: .@taralipinski sat down with all-around gold favorite, @Simone_Biles.
-
+2056,taralipinski,2016-08-02 02:21:22,"RT @NBCOlympics: .@taralipinski sat down with all-around gold favorite, @Simone_Biles.
+
 Watch the full video:   "
 2057,taralipinski,2016-08-02 03:22:52,"RT @pretareporter: Take a peek inside @taralipinski's suitcase (Milano cookies, anyone?)  "
 2058,taralipinski,2016-08-02 03:24:15,@missiflippi it's @nanettelepore   
@@ -2146,7 +2146,7 @@ Watch the full video:   "
 2102,taralipinski,2016-08-10 16:02:48,RT @NBCSportsRadio: More good stuff from our friends @taralipinski &amp; @JohnnyGWeir live from #Rio2016 &gt;&gt;   
 2103,taralipinski,2016-08-10 17:43:19,    +                              by @shoptrinaturk 
 2104,taralipinski,2016-08-11 02:53:19,RT @rogersandcowan: Client @taralipinski lays our her Olympic guide to Rio de Janeiro on @ArchDigest #Rio2016   
-2105,taralipinski,2016-08-11 02:53:28,"RT @JohnnyGWeir: Enjoy the fourth episode of our podcast, ""Tara and Johnny""! I wasn't NOT hungover. @taralipinski @NBCOlympics 
+2105,taralipinski,2016-08-11 02:53:28,"RT @JohnnyGWeir: Enjoy the fourth episode of our podcast, ""Tara and Johnny""! I wasn't NOT hungover. @taralipinski @NBCOlympics 
  "
 2106,taralipinski,2016-08-11 14:13:07,RT @JohnnyGWeir: Off to learn the art of fencing.  
 2107,taralipinski,2016-08-11 16:52:41,It's time to fence!   @johnnygweir 
@@ -2171,8 +2171,8 @@ Watch the full video:   "
 2126,taralipinski,2016-08-15 21:42:00,RT @YahooTV: Every day is a new #Olympics delight on @JohnnyGWeir and @taralipinski's instagram:  #Rio2016  
 2127,taralipinski,2016-08-16 05:03:28,We met @katieledecky and her five medals! Now it's time for OlympicLateNight with @ryanseacrest  
 2128,taralipinski,2016-08-16 05:13:25,RT @NBCOlympics: Tune in and catch @katieledecky @JohnnyGWeir @taralipinski on #OlympicLateNight with @RyanSeacrest. 12:35am EST  
-2129,taralipinski,2016-08-17 01:24:00,"Here's why this is awesome:
-1) they're both achieving personal greatness
+2129,taralipinski,2016-08-17 01:24:00,"Here's why this is awesome:
+1) they're both achieving personal greatness
 2) the United States is  "
 2130,taralipinski,2016-08-17 17:47:42,Coming from an individual sport it's very lonely sometimes. In disappointing moments you only  
 2131,taralipinski,2016-08-17 21:09:26,RT @TaraandJohnny: Synchro    @taralipinski @johnnygweir 
@@ -2193,7 +2193,7 @@ Watch the full video:   "
 2146,taralipinski,2016-08-20 20:13:37,RT @JillMartin: Tonight on Olympic Zone @NBCOlympics we spend the day w/ @JohnnyGWeir @taralipinski - get ready to belly laugh!  
 2147,taralipinski,2016-08-20 23:43:23,Woah....I audibly shrieked a couple times because the divers heads got soooo close to the  
 2148,taralipinski,2016-08-21 00:48:35,#Neymar. I got real into this. Go #Brazil!    
-2149,taralipinski,2016-08-21 01:47:47,"RT @misfitmimes: VIDEO!! A Day in the Lives of @TaraandJohnny @JohnnyGWeir @taralipinski @NBCOlympics 
+2149,taralipinski,2016-08-21 01:47:47,"RT @misfitmimes: VIDEO!! A Day in the Lives of @TaraandJohnny @JohnnyGWeir @taralipinski @NBCOlympics 
   "
 2150,taralipinski,2016-08-21 04:44:37,Time to tune into #OlympicLateNight with @ryanseacrest ......in the pouring rain     @  
 2151,taralipinski,2016-08-21 04:51:32,RT @davidboudia: @JohnnyGWeir @taralipinski @TaraandJohnny my pleasure you guys:) Thanks for coming to watch!!
@@ -2234,7 +2234,7 @@ Watch the full video:   "
 2186,taralipinski,2016-09-20 16:06:18,Just two best friends coincidently finding a fire hydrant to pose in front of on their morning  
 2187,taralipinski,2016-09-21 02:10:39,RT @theknot: Olympic figure skater @taralipinski has asked @JohnnyGWeir to be her bridesman!  
 2188,taralipinski,2016-09-21 02:12:21,Tara Lipinski Asks BFF Johnny Weir to Be Her 'Bridesman' with an Adorable Custom Mug  via @People
-2189,taralipinski,2016-09-21 14:57:26,"RT @JohnnyGWeir: Check out our latest podcast and learn how I lost my pink Nikes. @taralipinski @TaraandJohnny 
+2189,taralipinski,2016-09-21 14:57:26,"RT @JohnnyGWeir: Check out our latest podcast and learn how I lost my pink Nikes. @taralipinski @TaraandJohnny 
 "
 2190,taralipinski,2016-09-21 20:02:32,"RT @PageSix: .@TaraLipinski has asked @JohnnyGWeir to be her ""bridesman""  "
 2191,taralipinski,2016-09-21 20:03:13,Tara Lipinski Asks BFF Johnny Weir to Be Her 'Bridesman' with an Adorable Custom Mug  via @People
@@ -2260,11 +2260,11 @@ Watch the full video:   "
 2211,taralipinski,2016-10-23 21:18:02,Leaving behind Chicago and my cute little munchkin of a goddaughter @KelliHurley @ Chicago  
 2212,taralipinski,2016-10-24 23:48:37,This goofball I get to call my fianc  is one talented guy. I'm snuggled up on the couch about to  
 2213,taralipinski,2016-10-27 19:58:48,Just a few weeks ago. Probably one of my favorite pics I've ever captured of these two. 50 years  
-2214,taralipinski,2016-10-27 20:02:06,"RT @JohnnyGWeir: Hey...it's Wednesday so there's an all new podcast from me &amp; @taralipinski. Go subscribe and enjoy! @TaraandJohnny 
+2214,taralipinski,2016-10-27 20:02:06,"RT @JohnnyGWeir: Hey...it's Wednesday so there's an all new podcast from me &amp; @taralipinski. Go subscribe and enjoy! @TaraandJohnny 
  "
 2215,taralipinski,2016-10-28 21:41:08,       @toddkap 
 2216,taralipinski,2016-11-01 00:09:11,  Happy Halloween! 
-2217,taralipinski,2016-11-02 21:27:16,"RT @JohnnyGWeir: Check out the latest ""Tara and Johnny"" podcast from me and @taralipinski! @TaraandJohnny 
+2217,taralipinski,2016-11-02 21:27:16,"RT @JohnnyGWeir: Check out the latest ""Tara and Johnny"" podcast from me and @taralipinski! @TaraandJohnny 
 "
 2218,taralipinski,2016-11-06 00:29:26,Vibes 
 2219,taralipinski,2016-11-13 18:48:29,Nothing quite like a @johnnygweir lip pout.   @ NBC Sports 
@@ -2319,7 +2319,7 @@ Watch the full video:   "
 2268,taralipinski,2016-12-27 15:52:58,The exciting news is that Todd and I have extended our stay here in snowy Montana. But the not  
 2269,taralipinski,2016-12-27 16:06:19,"And of course I'm missing this big lovable guy too... #PapaLipinski #daddysgirl     @ McLeod,  "
 2270,taralipinski,2016-12-28 04:02:44,I just can't stop kissing him.  I'm truly sorry for all these lovey-dovey pictures. But what can  
-2271,taralipinski,2016-12-29 14:22:51,"RT @TaraandJohnny: New podcast is piping hot and ready for a side of grits and an OJ. Enjoy!
+2271,taralipinski,2016-12-29 14:22:51,"RT @TaraandJohnny: New podcast is piping hot and ready for a side of grits and an OJ. Enjoy!
 "
 2272,taralipinski,2016-12-30 04:11:51,"On home turf. I'm just missing two things.....   @toddkap   @ McLeod, Montana "
 2273,taralipinski,2016-12-31 01:28:34,Tested out some new footwear for our boy. Never seen that high steppin' strut from Dubs before.  
@@ -2330,7 +2330,7 @@ Watch the full video:   "
 2278,taralipinski,2017-01-02 04:39:03,RT @ScottHamilton84: I remember those! That was a fun year! Mirror choreography with @taralipinski Enjoy every moment wearing Jef Billings 
 2279,taralipinski,2017-01-03 19:15:08,I feel like I need this in my life.....I guess I will need a baby to go with it. Have I scared  
 2280,taralipinski,2017-01-04 01:32:49,RT @TaraandJohnny: Tonight...midnight...get ready! #newepisode #podcast @taralipinski @johnnygweir 
-2281,taralipinski,2017-01-04 19:16:38,"Guys listen up.
+2281,taralipinski,2017-01-04 19:16:38,"Guys listen up.
 @loveyourmelons mission is to put a hat on every child battling cancer in the US  "
 2282,taralipinski,2017-01-06 16:36:32,RT @therealgroman: Join The 1.4 Mil &amp; Make Your Resolution Today! Subscribe To @TaraandJohnny Podcast On @NBCSports - Listen --  
 2283,taralipinski,2017-01-06 23:45:17,Here's a flashback for ya! I was just 15 heading to my 1st Olympics...on the ice. In 398 days I  
@@ -2347,7 +2347,7 @@ Watch the full video:   "
 2294,taralipinski,2017-01-20 20:23:58,RT @LynnRutherford: .@JohnnyGWeir @taralipinski gave reporters a dose of wisdom &amp; opinions in mixed zone today. Insightful &amp; entertaining. 
 2295,taralipinski,2017-01-21 02:21:44,RT @AP_Sports: '@TaraandJohnny shine as a top pair at US figure skating championships  @apgelston #USChamps17  
 2296,taralipinski,2017-01-21 03:09:10,"When we aren't at the arena, we're at Lego Land.....pedaling. We always find a way to fit in a  "
-2297,taralipinski,2017-01-21 16:15:10,Me and @JohnnyGWeir feelings today! Focused for some good skating at Nationals! On @nbc LIVE today at 3 &amp; 8 Eastern  
+2297,taralipinski,2017-01-21 16:15:10,Me and @JohnnyGWeir feelings today! Focused for some good skating at Nationals! On @nbc LIVE today at 3 &amp; 8 Eastern. #YuriOnIce 
 2298,taralipinski,2017-01-21 18:19:01,RT @NBCOlympics: .@Nathanwchen is only 17 and he can do THIS. #USChamps17 
 2299,taralipinski,2017-01-21 18:22:12,RT @TaraandJohnny: Check out our morning spin on @TeamUSA Facebook Live! Thanks for joining us. 
 2300,taralipinski,2017-01-21 20:55:57,RT @NBCOlympicTalk: Watch a flashback to @TaraLipinski's national title 20 years ago at age 14   
@@ -2514,7 +2514,7 @@ Watch the full video:   "
 2461,taralipinski,2017-06-18 23:15:05,Happy Father's Day to the best dad a girl could ask for. He may be giving me away next weekend  
 2462,taralipinski,2017-06-19 14:25:47,It's out! Charleston Home and Design Magazine is giving you guys a peek at my Kiawah Island  
 2463,taralipinski,2017-06-20 01:01:41,"TK and Birdy  Our ""nickname"" chair signs came in!  Thank you jasminmichelledesigns #weddingfun  "
-2464,taralipinski,2017-06-20 14:50:18,"Mama and Tara 
+2464,taralipinski,2017-06-20 14:50:18,"Mama and Tara 
 35 years strong! #mamasgirl #beachdays "
 2465,taralipinski,2017-06-21 20:15:03,@jacksondurham unloading some of my wedding flowers!  #weddingflowers #weddingstyle 
 2466,taralipinski,2017-06-21 22:02:45,My girls. Testing out the bridesmaids gifts!        #bridesmaids #bestbridesmaids @KelliHurley  
@@ -2589,7 +2589,7 @@ Watch the full video:   "
 2535,taralipinski,2017-07-11 14:44:32,Our last night in Hanoi. Halong Bay was a good sendoff! @toddkap #HalongBay #TNThoneymoon  
 2536,taralipinski,2017-07-12 04:28:22,And we are off! Bye Hanoi    Any guesses? #TNTravels #TNThoneymoon #veitnam #hanoi 
 2537,taralipinski,2017-07-12 11:04:02,Made it to Ho Chi Minh City! Hotel pool lured me in for a minute but now off to explore.  
-2538,taralipinski,2017-07-12 16:11:23,"Mother and Daughter 
+2538,taralipinski,2017-07-12 16:11:23,"Mother and Daughter 
 It's a special bond that spans the years. Through laughter, worry, smiles  "
 2539,taralipinski,2017-07-13 15:41:03,Mekong Delta #vietnam @ Mekong Delta 
 2540,taralipinski,2017-07-13 16:13:42,Mekong Delta @toddkap @ B n Tre Province 
@@ -2756,7 +2756,7 @@ It's a special bond that spans the years. Through laughter, worry, smiles  "
 2701,taralipinski,2018-01-02 03:25:24,RT @JohnnyGWeir: So excited to head to Nationals tomorrow and bring you guys coverage of the main events! The Olympic team will be decided 
 2702,taralipinski,2018-01-02 21:15:09,Bye beautiful snowy Montana. You are magic. Now it s time to swap snow for some ice.       &gt; San  
 2703,taralipinski,2018-01-03 02:29:50,RT @rfh57: 20 years ago she won Olympic Gold.  Today @TaraandJohnny have solid bag action but even better memories. #USChamps18  
-2704,taralipinski,2018-01-04 06:17:17,"RT @NBCOlympics: .@taralipinski and @JohnnyGWeir's rhinestone headsets.    
+2704,taralipinski,2018-01-04 06:17:17,"RT @NBCOlympics: .@taralipinski and @JohnnyGWeir's rhinestone headsets.    
 #USChamps18 #WinterOlympics "
 2705,taralipinski,2018-01-04 20:52:22,Back at it. The Olympic team will be chosen this weekend! Some of these skaters will soon have a  
 2706,taralipinski,2018-01-05 20:08:45,Turn down for what?! @terrygannon83 @johnnygweir #uschamps18 #roadtopyeongchang @ SAP Center 
@@ -2811,16 +2811,16 @@ It's a special bond that spans the years. Through laughter, worry, smiles  "
 2755,taralipinski,2018-02-01 23:33:58,RT @TeamUSA: @TaraLipinski won gold at age 15. What have you done today? Gold Medal Moment presented by @HERSHEYS! 
 2756,taralipinski,2018-02-02 03:15:49,Pick up the latest People magazine! Thank you @people for this awesome spread- how fun!   
 2757,taralipinski,2018-02-02 05:21:08,@Tyler_J_Ward @TeamUSA @Hersheys This made me laugh
-2758,taralipinski,2018-02-02 09:48:43,"RT @Olympics: RT this for good luck! 
+2758,taralipinski,2018-02-02 09:48:43,"RT @Olympics: RT this for good luck! 
 #PyeongChang2018 "
 2759,taralipinski,2018-02-03 23:01:36,We loved hosting our first special! Tune in for  The Best of U.S  Monday at 10pm ET. You ll get  
 2760,taralipinski,2018-02-04 02:41:45,Rehearsals from when we did Lip Sync Battle! It airs next week. Too much fun   What song do you  
 2761,taralipinski,2018-02-04 11:03:20,RT @TaraandJohnny: I    @ludacris #WinterOlympicsDanceParty 
 2762,taralipinski,2018-02-05 01:42:32,"As we watch the #sb52 from Korea, I can t help but remember our fun times at our last @Nbc  "
-2763,taralipinski,2018-02-05 02:57:42,"RT @lsb: THIS WEEK'S #LIPSYNCBATTLE:
-
- @TaraLipinski
-          vs.
+2763,taralipinski,2018-02-05 02:57:42,"RT @lsb: THIS WEEK'S #LIPSYNCBATTLE:
+
+ @TaraLipinski
+          vs.
 @JohnnyGWeir "
 2764,taralipinski,2018-02-05 03:50:40,Now that the #SuperBowl is over....You know what time it is!  WINTER OLYMPICS time. Bring on the  
 2765,taralipinski,2018-02-05 23:24:03,One thing everyone should be for at least one day in their lives is Gwen Stefani @gwenstefani     
@@ -2844,12 +2844,12 @@ It's a special bond that spans the years. Through laughter, worry, smiles  "
 2783,taralipinski,2018-02-09 06:34:07,RT @lsb: WEST COAST: get pumped because it's almost time for @TaraLipinski and @JohnnyGWeir's #LipSyncBattle on @ParamountNet. Who ya got? 
 2784,taralipinski,2018-02-09 06:34:38,RT @lsb: .@TaraLipinski nailing the choreo because THAT'S WHAT GOLD MEDALISTS DO. #LipSyncBattle 
 2785,taralipinski,2018-02-09 09:35:51,These are the outtakes of a special little project we are working on. Please take note of  
-2786,taralipinski,2018-02-09 11:14:59,@miketirico is gonna kill it! I m so honored and lucky to have the chance to work with him at his first Olympics. S  
+2786,taralipinski,2018-02-09 11:14:59,"@miketirico is gonna kill it! I m so honored and lucky to have the chance to work with him at his first Olympics. So talented, so humble, so nice, so fun and did I mention so darn talented. #GoodLuckMike "
 2787,taralipinski,2018-02-09 12:06:20,RT @JohnnyGWeir: Crying with @taralipinski watching USA come through at the Opening Ceremony.    #winterolympics
 2788,taralipinski,2018-02-09 12:06:45,RT @Lesdoggg: Bedazzled headsets!! Dope!! 
 2789,taralipinski,2018-02-09 15:57:36,The many faces of our first day! So lucky to be sitting next to these two as we start this  
 2790,taralipinski,2018-02-10 02:18:07,#Pyeongchang2018  via @POPSUGARFitness
-2791,taralipinski,2018-02-11 01:30:44,@GarrickDConner @NBCOlympics I hope you are enjoying the dance event! It s a good one. But @JohnnyGWeir and I are n  
+2791,taralipinski,2018-02-11 01:30:44,@GarrickDConner @NBCOlympics I hope you are enjoying the dance event! It s a good one. But @JohnnyGWeir and I are not commentating it. We will be back in the booth in a bit for the ladies!!! Hope you will watch!
 2792,taralipinski,2018-02-11 02:23:19,We are about to get this ladies team event started! See you guys in a few..... @nbcolympics  
 2793,taralipinski,2018-02-12 02:17:28,Bringing out the sparkle today! All thanks to dressthepopulation #winterolympics @ Gangneung 
 2794,taralipinski,2018-02-12 03:46:16,RT @TaraandJohnny: Practice makes perfect. @MacyGraysLife @taralipinski @johnnygweir #winterolympics @ Gangneung 
@@ -2862,8 +2862,8 @@ It's a special bond that spans the years. Through laughter, worry, smiles  "
 2801,taralipinski,2018-02-12 16:20:47,Just living that peacock   life... and loving it. #NBC NNNNNBBBBCCCC @ Gangneung 
 2802,taralipinski,2018-02-12 16:35:43,RT @GQMagazine: How @JohnnyGWeir and @TaraLipinski became the most iconic duo in figure skating  #PyeongChang2018 ht 
 2803,taralipinski,2018-02-13 00:12:13,This tweet made my morning!   Thank you @AnnaChlumsky 
-2804,taralipinski,2018-02-13 00:19:54,"RT @SBNation: Tara and Johnny forever!    
-
+2804,taralipinski,2018-02-13 00:19:54,"RT @SBNation: Tara and Johnny forever!    
+
 ( : @taralipinski / Instagram) "
 2805,taralipinski,2018-02-13 01:13:23,Love that you are watching! Thank you!!!    
 2806,taralipinski,2018-02-13 03:30:47,After calling @mirai_nagasu triple Axel yesterday I got so many chills. It makes you realize how  
@@ -2876,15 +2876,15 @@ It's a special bond that spans the years. Through laughter, worry, smiles  "
 2813,taralipinski,2018-02-15 12:38:05,"I finally got my 23andme results back. This was such a fun process, my parents took the test as  "
 2814,taralipinski,2018-02-15 13:14:03,RT @JohnnyGWeir: 100% singing @katyperry before we went on air. #roar   Mariola Zysk @nbcolympics @taralipinski @TaraandJohnny  
 2815,taralipinski,2018-02-15 22:13:09,Thank you!!!! @ringer  
-2816,taralipinski,2018-02-15 22:56:40,This is our normal. I m looking off into space wondering what my next meal will be. Johnny is guiding me in my heel  
+2816,taralipinski,2018-02-15 22:56:40,This is our normal. I m looking off into space wondering what my next meal will be. Johnny is guiding me in my heels with his beautiful smile....holding all our bags. The perfect gentleman. @johnnygweir #winterolympics 
 2817,taralipinski,2018-02-15 22:57:38,@AmyKinLA @ringer What a nice surprise to wake up to
 2818,taralipinski,2018-02-15 23:00:11,"RT @TheNewPotato: .@taralipinski Talks #WinterOlympics, Shake Shack &amp; Advice to olympians! #Interview "
 2819,taralipinski,2018-02-15 23:00:36,@katiebakes Thank you!!
 2820,taralipinski,2018-02-15 23:03:52,RT @PlayersTribune: Olympic figure skater @taralipinski was 15 years old when she won a gold medal. She looks back on the experience and th 
-2821,taralipinski,2018-02-16 07:17:02,What an emotional roller coaster of a men s event.#YuzuruHanyu was absolutely brilliant. What an inspiring performa  
+2821,taralipinski,2018-02-16 07:17:02,What an emotional roller coaster of a men s event.#YuzuruHanyu was absolutely brilliant. What an inspiring performance. Nathan s skate was obviously surprising &amp; shocking.This year my bet was on him to win but I have a feeling we ll be in for quite a quad show from Nathan tmrw.
 2822,taralipinski,2018-02-16 13:50:21,My Broadcast Boys.   @johnnygweir @terrygannon83 
 2823,taralipinski,2018-02-17 01:15:43,Pre show dancing.   @johnnygweir @terrygannon83 #winterolympics @nbcolympics @ Gangneung Ice Arena 
-2824,taralipinski,2018-02-17 02:14:45,"RT @NormanCharles88: So many incredible Olympic Moments at #PyeongChang2018. This one brought tears to my eyes. Thank you, NBC.  
+2824,taralipinski,2018-02-17 02:14:45,"RT @NormanCharles88: So many incredible Olympic Moments at #PyeongChang2018. This one brought tears to my eyes. Thank you, NBC.  
 #Olympics "
 2825,taralipinski,2018-02-17 06:40:36,Omg @Lesdoggg I see you in the arena!!!!!!!! Hi!
 2826,taralipinski,2018-02-17 06:40:52,RT @Lesdoggg: I don t know nothing without Tara and Johnny!! @NBCOlympics 
@@ -2897,10 +2897,10 @@ It's a special bond that spans the years. Through laughter, worry, smiles  "
 2833,taralipinski,2018-02-18 03:23:46,We have finally met. And then I glitterized her. Isn t she the best?!?! @lesdoggg @ Gangneung 
 2834,taralipinski,2018-02-18 04:17:26,Our morning with @lesdoggg was everything you could ask for and more. Just wait for our next  
 2835,taralipinski,2018-02-18 05:12:30,Crazy in Love with @Lesdoggg @beyonce    @NBCOlympics @Olympics @JohnnyGWeir 
-2836,taralipinski,2018-02-18 13:29:00,Strutting into this week in my stilettos not even looking down. Maybe because @JohnnyGWeir always has my back...and  
+2836,taralipinski,2018-02-18 13:29:00,Strutting into this week in my stilettos not even looking down. Maybe because @JohnnyGWeir always has my back...and my bags. @NBCOlympics #winterolympics 
 2837,taralipinski,2018-02-18 13:51:12,"RT @HuffPost: We're crazy in love for Leslie Jones, Tara Lipinski and Johnny Weir's Beyonc  moves "
-2838,taralipinski,2018-02-19 04:27:45,Virtue/Moir Holy amazing!!!! Their attack and command of the ice...beyond. They danced just like the Olympic Champi  
-2839,taralipinski,2018-02-19 13:20:24,Another Olympic day in the books for us. Did you guys watch the dance!?! I can t wait for the showdown between the  
+2838,taralipinski,2018-02-19 04:27:45,Virtue/Moir Holy amazing!!!! Their attack and command of the ice...beyond. They danced just like the Olympic Champions they are. What do you guys think? Another Olympic gold medal to add to their collection? #VirtueMoir
+2839,taralipinski,2018-02-19 13:20:24,Another Olympic day in the books for us. Did you guys watch the dance!?! I can t wait for the showdown between the Canadians and the French team tomorrow. It will be good! I have my bet down... what s your prediction? #winterolympics 
 2840,taralipinski,2018-02-19 21:07:12,"RT @ericnamofficial: Well, That was fun! @taralipinski @JohnnyGWeir @nbc  #pyeongchang2018"
 2841,taralipinski,2018-02-19 21:39:23,Evaluating NBC's Olympics Coverage at the Halfway Mark in PyeongChang 
 2842,taralipinski,2018-02-20 00:32:54,"20 years ago today my life changed forever. Just in a few short days, another athlete will get  "
@@ -2908,60 +2908,61 @@ It's a special bond that spans the years. Through laughter, worry, smiles  "
 2844,taralipinski,2018-02-20 12:45:11,Today. Tomorrow the ladies take the ice! Who s excited?  Sweater dress @majeofficiel 
 2845,taralipinski,2018-02-21 00:55:21,Let s go Ladies!!!! Tune in!!!   dressthepopulation  #winterolympics @ Gangneung Ice Arena 
 2846,taralipinski,2018-02-21 23:38:56,Thank you Scott! Go buy this inspiring and motivational book guys...it s more than a good read! @ScottHamilton84 
-2847,taralipinski,2018-02-22 01:02:53,We are glad we helped the audience understand what happened. A shocking fall by Tennell but my bet is on an incredi  
+2847,taralipinski,2018-02-22 01:02:53,We are glad we helped the audience understand what happened. A shocking fall by Tennell but my bet is on an incredible Bradie comeback tomorrow.  
 2848,taralipinski,2018-02-22 01:06:43,See Johnny Weir's Hilarious Reaction to Tara Lipinski Surprising Him Before He's Camera-Ready  via @people
 2849,taralipinski,2018-02-22 01:09:20,"Leslie Jones, Johnny Weir and Tara Lipinski made the Olympics' best music video | For The Win via @forthewin "
 2850,taralipinski,2018-02-22 03:00:25,Big T&amp;J news coming your way! We still can t believe it!  12:30ET with @miketirico #winterolympics @nbcolympics 
 2851,taralipinski,2018-02-22 04:33:51,"RT @thelilynews:  I would support a change from  ladies  to  women,   says @taralipinski. "
 2852,taralipinski,2018-02-22 05:01:24,@rockerskating Sinks into that hip just perfectly!
-2853,taralipinski,2018-02-22 05:58:44,WE ARE HOSTING THE CLOSING CEREMONY! What an honor and a privilege. I am so excited!  @JohnnyGWeir @terrygannon83  
-2854,taralipinski,2018-02-22 22:14:06,Is this a #FBF to Sochi or a  Caption This ? It s our last day of skating here in #pyeongchang2018. Let s do this t  
+2853,taralipinski,2018-02-22 05:58:44,WE ARE HOSTING THE CLOSING CEREMONY! What an honor and a privilege. I am so excited!  @JohnnyGWeir @terrygannon83 @NBCOlympics 
+2854,taralipinski,2018-02-22 22:14:06,Is this a #FBF to Sochi or a  Caption This ? It s our last day of skating here in #pyeongchang2018. Let s do this team! @johnnygweir @terrygannon83 @nbcolympics #winterolympics 
 2855,taralipinski,2018-02-23 02:10:22,Our good luck  goodie  The last one is a 3 pointer for Terry.   Are you guys watching the Ladies  
-2856,taralipinski,2018-02-23 13:32:02,"That s a wrap on Olympic figure skating. I am so lucky I get to sit next to this intelligent, beautiful, witty, and  "
-2857,taralipinski,2018-02-24 03:25:05,"Olympic Vibes.  I realize, for the first time, how very lonely I've been in the arena. How comforting the presence  "
-2858,taralipinski,2018-02-24 04:51:16,They showed the skating world how you compete at an Olympic Games. They both gave me chills. Two of the best perfor  
+2856,taralipinski,2018-02-23 13:32:02,"That s a wrap on Olympic figure skating. I am so lucky I get to sit next to this intelligent, beautiful, witty, and loyal man I get to call my best friend. My partner in crime on and off camera for life. #2 Olympics in the books for us. Love you @johnnygweir @NBCOlympics "
+2857,taralipinski,2018-02-24 03:25:05,"Olympic Vibes.  I realize, for the first time, how very lonely I've been in the arena. How comforting the presence of another human being can be.  - Suzanne Collins, #HungerGames #OlympicGames @JohnnyGWeir "
+2858,taralipinski,2018-02-24 04:51:16,They showed the skating world how you compete at an Olympic Games. They both gave me chills. Two of the best performances I ve ever seen in a ladies event at an Olympics.  @JannyMedvedeva #alinazagitova #evgeniamedvedeva #winterolympics 
 2859,taralipinski,2018-02-24 12:18:40,Dance breaks.  Section G10 just sits there with a very confused look on their faces.  - Terry  
 2860,taralipinski,2018-02-25 13:14:22,Kara Lipinski and Johnny Steer deliver their best Olympic moment Olympic to you. @taraandjohnny  
-2861,taralipinski,2018-02-25 13:19:56,The Closing Ceremony just ended and it was truly everything that I remembered a Closing Ceremony to be twenty years  
+2861,taralipinski,2018-02-25 13:19:56,The Closing Ceremony just ended and it was truly everything that I remembered a Closing Ceremony to be twenty years ago. I feel so honored to be able to be part of it once again...just in a different way. Watching these athletes celebrate their Olympic journey was magical.
 2862,taralipinski,2018-02-25 13:58:53,Always love running into my Kiki. 20 years and running. @KurtBrowning 
 2863,taralipinski,2018-02-26 00:56:56,Turn on NBC! It s time for the Closing Ceremony. 8pm ET @johnnygweir @terrygannon83 @nbcolympics #winterolympics 
 2864,taralipinski,2018-02-26 03:13:49,@LTwithoutB @NBCOlympics Exactly
 2865,taralipinski,2018-02-27 03:10:58,This jet lag is for real. Who and where am I? 
 2866,taralipinski,2018-02-27 03:24:44,@rockerskating Yes! Haha
 2867,taralipinski,2018-02-27 04:07:45,Post Olympic vibes. @JohnnyGWeir 
-2868,taralipinski,2018-02-28 21:08:45,I loved wearing this sparkly little gold number. Thank you @dressthepopulation for making this custom dress that fe  
-2869,taralipinski,2018-03-01 17:04:37,52 degrees in LA right now. Don t be surprised to see me walking the streets of Santa Monica today bundled up like  
+2868,taralipinski,2018-02-28 21:08:45,I loved wearing this sparkly little gold number. Thank you @dressthepopulation for making this custom dress that felt like liquid gold! 
+2869,taralipinski,2018-03-01 17:04:37,52 degrees in LA right now. Don t be surprised to see me walking the streets of Santa Monica today bundled up like I m still in Pyeongchang. I expect more from you Los Angeles. #70andsunny #notsomuch 
 2870,taralipinski,2018-03-02 00:46:55,@AmyKinLA I think the same thing all the time. What happened?!
 2871,taralipinski,2018-03-02 02:45:42,My love runs deep for LeBron      @KingJames #cavs #KingJames #goat @cavs 
-2872,taralipinski,2018-03-02 02:52:54,"You know, people always talk about @KingJames playing in the NFL but take it from me I think he could have been a w  "
-2873,taralipinski,2018-03-03 22:49:34,@terrygannon83 @scottdmonaghan @thekapman @GW_MBB @DaytonMBB @JohnnyGWeir @NBCSN I hate when you cheat on us but ho  
+2872,taralipinski,2018-03-02 02:52:54,"You know, people always talk about @KingJames playing in the NFL but take it from me I think he could have been a world class figure skater too. First to do 5 revolutions in the air (The Quint) with that hang time #LeBron #Cavs #goat @cavs"
+2873,taralipinski,2018-03-03 22:49:34,@terrygannon83 @scottdmonaghan @thekapman @GW_MBB @DaytonMBB @JohnnyGWeir @NBCSN I hate when you cheat on us but hoops are your roots and you are forgiven. This time.
 2874,taralipinski,2018-03-04 02:49:11,Just casually doodling to @davematthewsbnd after being off the ice for a couple months. Nothing  
-2875,taralipinski,2018-03-04 22:05:29, 98 #Oscars. Armed with sparkling cider &amp; our disposable cameras. We were so impressed by our limos sunroof that we  
+2875,taralipinski,2018-03-04 22:05:29, 98 #Oscars. Armed with sparkling cider &amp; our disposable cameras. We were so impressed by our limos sunroof that we took too many pics. By the time we met Brad Pitt-no pics left. #OscarDay #Oscars2018 
 2876,taralipinski,2018-03-05 01:28:30,The first person I run into at the @eltonjohn party. Perfect. Just love this guy. @guskenworthy #oscars2018 #oscars 
-2877,taralipinski,2018-03-05 03:07:40,Dressin  up for some Oscar fun. @eltonjohn Thank you for this beautiful dress   @romonakeveza     
-2878,taralipinski,2018-03-05 04:14:45,Watching you right now on the Oscars. Such a huge fan! Should I  at  you as @LinMan or @Iwrotehamilton          
-2879,taralipinski,2018-03-06 00:58:01,Look who I ran into last night?! These two are the best. I m so happy for them! (Also their bronze medals are insan  
-2880,taralipinski,2018-03-06 02:15:15,Thank @romonakeveza for this dreamy dress. I didn t want to take it off!   #oscars #fashion #glam by  
+2877,taralipinski,2018-03-05 03:07:40,Dressin  up for some Oscar fun. @eltonjohn Thank you for this beautiful dress   @romonakeveza    @makeupbynikkilarose Jewelry @carolyn_colby #oscars #oscars2018 
+2878,taralipinski,2018-03-05 04:14:45,Watching you right now on the Oscars. Such a huge fan! Should I  at  you as @LinMan or @Iwrotehamilton         @Lin_Manuel 
+2879,taralipinski,2018-03-06 00:58:01,Look who I ran into last night?! These two are the best. I m so happy for them! (Also their bronze medals are insanely gorgeous) @maiashibutani @alexshibutani @shibsibs 
+2880,taralipinski,2018-03-06 02:15:15,Thank @romonakeveza for this dreamy dress. I didn t want to take it off!   #oscars #fashion #glam by @makeupbynikkilarose   
 2881,taralipinski,2018-03-06 02:28:42,@cassie56A @RomonaKeveza Thank you!!
-2882,taralipinski,2018-03-06 23:43:10,My insanely talented friend and writer @AmyKinLA book is out today! It s a must read.   You can snag it right here.  
+2882,taralipinski,2018-03-06 23:43:10,My insanely talented friend and writer @AmyKinLA book is out today! It s a must read.   You can snag it right here...  
 2883,taralipinski,2018-03-07 03:23:55,Back to my @equinox shoot. Have any of you tried #GoldBarre at Equinox? Feedback please! #Barre #skating 
-2884,taralipinski,2018-03-07 17:27:05,  this! We ve been so proud of you Adam. You ve been killing it! I ve loved watching your journey to this moment. E  
+2884,taralipinski,2018-03-07 17:27:05,  this! We ve been so proud of you Adam. You ve been killing it! I ve loved watching your journey to this moment. Enjoy! Room for all. No one can be Adam Rippon &amp; no one can be Johnny Weir.I love that skaters/skating is in the news. As it should be 
 2885,taralipinski,2018-03-07 18:34:50,Bring on the  sparkle  Wednesday! Miss you @johnnygweir Miss you @lesdogggg 
-2886,taralipinski,2018-03-08 02:09:30,LA is looking a lot different than New York today.  Boy do I love and miss a good snow day. Here s a flashback to o  
+2886,taralipinski,2018-03-08 02:09:30,LA is looking a lot different than New York today.  Boy do I love and miss a good snow day. Here s a flashback to one of my New York snow days. A favorite winter weather activity of mine was to go to @levainbakery for some of their insane cookies with side of hot cocoa.   
 2887,taralipinski,2018-03-08 04:05:04,Well this is just sick. So cool 
 2888,taralipinski,2018-03-09 16:29:36,Doodling again.   
 2889,taralipinski,2018-03-10 17:22:49,@DebCinLA Good luck! Xo
-2890,taralipinski,2018-03-10 18:56:18,Quads aren t just for the men anymore. Ladies Figure Skating is about to start their own quad revolution. History m  
-2891,taralipinski,2018-03-10 19:10:01,But just if you needed to see more of what s happening in Russian Ladies skating we have Anna Scherbakova. Last spr  
+2890,taralipinski,2018-03-10 18:56:18,Quads aren t just for the men anymore. Ladies Figure Skating is about to start their own quad revolution. History made today. Alexandra Trusova became the first to land 2 quads in women s competition....at 13!  #alexandratrusova
+2891,taralipinski,2018-03-10 19:10:01,But just if you needed to see more of what s happening in Russian Ladies skating we have Anna Scherbakova. Last spring not only lands a beautiful  Quad Toe but puts it into combination with a 3Toe....oh and a 3Loop             
 2892,taralipinski,2018-03-10 19:12:47,@peachfish42 I sure did. But never landed one like that! Just a few Q Sals in practice. They are so fun.
 2893,taralipinski,2018-03-10 22:07:16,It s so nice to be back on the ice...      
-2894,taralipinski,2018-03-11 22:40:44,Last week at this time @toddkap and I got all fancy for a night on the town. Today we are going to see the Lakers p  
+2894,taralipinski,2018-03-11 22:40:44,Last week at this time @toddkap and I got all fancy for a night on the town. Today we are going to see the Lakers play the Cavs. Our Sunday affairs are really reaching new heights. #Oscars #basketball 
 2895,taralipinski,2018-03-12 02:44:41,When you re just that damn good. @KingJames @cavs 
-2896,taralipinski,2018-03-12 03:49:13,Went to see @kingjames   and the Lakers   play but also found one of my favorites. #LucRobitaille  @LAKings  
-2897,taralipinski,2018-03-14 19:55:12,To all my skaters out there. What s your favorite spin? I go back and forth between illusions and a sit spin (speci  
+2896,taralipinski,2018-03-12 03:49:13,Went to see @kingjames   and the Lakers   play but also found one of my favorites. #LucRobitaille  @LAKings @ourechoesofhope 
+2897,taralipinski,2018-03-14 19:55:12,To all my skaters out there. What s your favorite spin? I go back and forth between illusions and a sit spin (specifically when your tush is almost touching the ice)...But I think I would land on a good old fashioned scratch spin.   #figureskating #spinning 
 2898,taralipinski,2018-03-15 17:28:14,"RT @guskenworthy: People, please don't forget about the Paralympics! Disability is NOT inability. These athletes and their stories are INCR "
-2899,taralipinski,2018-03-15 18:43:24,Throwin  back to one of my favorite @makeupbynikkilarose glam looks. We ve been on a bronze kick. Those  
-2900,taralipinski,2018-03-15 19:03:02,How cool is this?!? Look who s Short Doc got into the Tribeca Film Festival  Yup. My husband s. @ToddKap  
+2899,taralipinski,2018-03-15 18:43:24,"Throwin  back to one of my favorite @makeupbynikkilarose glam looks. We ve been on a bronze kick. Those @stilacosmetics glitter and glow liquid eyes are my jam.  
+#tbt #glam #bronze "
+2900,taralipinski,2018-03-15 19:03:02,How cool is this?!? Look who s Short Doc got into the Tribeca Film Festival  Yup. My husband s. @ToddKap   #tribecafilmfestival @TribecaFilmIns
 2901,taralipinski,2018-03-16 03:07:30,RT @SInow: BOW TO THE KING 
 2902,taralipinski,2018-03-17 00:13:34,Scraps caught by @chelseakruse   Any suggestions of songs I should play with? #figureskating 
 2903,taralipinski,2018-03-17 21:20:44,@kirbiejohnson @ChelseaKruse @kirbiejohnson on it.
@@ -2970,11 +2971,11 @@ It's a special bond that spans the years. Through laughter, worry, smiles  "
 2906,taralipinski,2018-03-21 18:13:34,It s a rainy day in LA.  Who s loving it? #rainyday #LA 
 2907,taralipinski,2018-03-21 18:22:16,So cute!!! 
 2908,taralipinski,2018-03-22 02:11:31,@AmyKinLA Yes!!!
-2909,taralipinski,2018-03-23 01:53:57,Walking out our barre like...                            @chelseakruse @debsvarc #barre #friendship #exercise  
+2909,taralipinski,2018-03-23 01:53:57,Walking out our barre like...                            @chelseakruse @debsvarc #barre #friendship #exercise @exhalebarre 
 2910,taralipinski,2018-03-24 00:41:23,RT @ScottHamilton84: #FBF to 17 years ago. 
-2911,taralipinski,2018-03-24 01:18:19,Sure it could be a #flashbackfriday post but really I just wanted to post a summer pic. I m ready for sun and sand  
+2911,taralipinski,2018-03-24 01:18:19,"Sure it could be a #flashbackfriday post but really I just wanted to post a summer pic. I m ready for sun and sand again. Olympics are over, winter is over, let s just skip spring. #spring #summer #travelling #greece #fbf "
 2912,taralipinski,2018-03-25 15:52:55,@JohnnyGWeir Birdy
-2913,taralipinski,2018-03-26 22:07:51,New York always make me happy and @chelseakruse ALWAYS makes me happy. Everyone should have a friend like her. Tag  
+2913,taralipinski,2018-03-26 22:07:51,New York always make me happy and @chelseakruse ALWAYS makes me happy. Everyone should have a friend like her. Tag your bestie who loves to travel and have hotel room dance parties as much as we do.     #newyorkcity #travelling #friend 
 2914,taralipinski,2018-03-27 03:33:05,@Davismcp Aww.     
 2915,taralipinski,2018-03-27 18:20:19,@en2gymnastics @JohnnyGWeir That s amazing
 2916,taralipinski,2018-03-27 20:50:01,RT @KellyLiyakasa: Tara and @JohnnyGWeir win my vote for best MCs at an advertiser event probably ever. #nbcuinnovationday2018  
@@ -2982,40 +2983,40 @@ It's a special bond that spans the years. Through laughter, worry, smiles  "
 2918,taralipinski,2018-03-28 19:39:27,Back at my happy place.    #Lowcountry #kiawahisland #southcarolina 
 2919,taralipinski,2018-03-30 17:31:33,@ckcovert1     
 2920,taralipinski,2018-03-30 20:27:59,Fun fact. One of my favorite things about @toddkap is when he raps.     #rap #raplife 
-2921,taralipinski,2018-03-31 20:56:47,My favorite. Nothing better than seeing her laugh and smile. She has filled this house with so much love which make  
+2921,taralipinski,2018-03-31 20:56:47,My favorite. Nothing better than seeing her laugh and smile. She has filled this house with so much love which makes sense since she has the biggest heart I know.       
 2922,taralipinski,2018-04-01 00:23:20,Kiawah bringing all the romantic feels.   @toddkap #charleston #vibes #saturdaynight 
 2923,taralipinski,2018-04-03 02:48:14,My @makeupbynikkilarose keeps me laughing and keeps me pretty. So she s pretty much the perfect human.    #glam 
-2924,taralipinski,2018-04-03 03:43:07,We have some exciting news! We are hosting a new @foodnetwork series and I couldn t be more excited. Anything that  
-2925,taralipinski,2018-04-04 19:21:38,On a vineyard talking about cake. This job really couldn t get better.    #foodnetwork @foodnetwork What s your fav  
+2924,taralipinski,2018-04-03 03:43:07,"We have some exciting news! We are hosting a new @foodnetwork series and I couldn t be more excited. Anything that involves @johnnygweir and cake, I m in.      Any guesses on what the show could be? "
+2925,taralipinski,2018-04-04 19:21:38,On a vineyard talking about cake. This job really couldn t get better.    #foodnetwork @foodnetwork What s your favorite wine? If you know me...oaky or buttery #Chardonnay. 
 2926,taralipinski,2018-04-05 04:30:12,@FoodNetwork So true!!!
 2927,taralipinski,2018-04-06 15:23:14,RT @NBCSuperstore: @thenohnoh @taralipinski ICONIC. #Superstore 
-2928,taralipinski,2018-04-06 15:26:20,Taking you back to the early 2K with some  Genie in a bottle  My obsession with @xtina has never faded.  
+2928,taralipinski,2018-04-06 15:26:20,Taking you back to the early 2K with some  Genie in a bottle  My obsession with @xtina has never faded. #flashbackfriday #christinaaguilera #figureskating 
 2929,taralipinski,2018-04-06 22:17:32,Bring your dog to work day.    Dress by @likelynyc @foodnetwork #foodnetwork 
-2930,taralipinski,2018-04-08 21:24:47,It s a good day when @toddkap is on set but it s a better day when an episode of our @foodnetwork series involves h  
+2930,taralipinski,2018-04-08 21:24:47,It s a good day when @toddkap is on set but it s a better day when an episode of our @foodnetwork series involves him. The Kapostasy s at work.  #foodnetwork 
 2931,taralipinski,2018-04-09 21:08:15,I d rather be in the Maldives. That s all.          @ooreethirah #maldives #monday 
-2932,taralipinski,2018-04-12 22:16:10,It s Coachella weekend. I am not going and I d rather not talk about it. So here s a #tbt with my wife  
+2932,taralipinski,2018-04-12 22:16:10,It s Coachella weekend. I am not going and I d rather not talk about it. So here s a #tbt with my wife @chelseakruse. In our flower crowns. In the wind. Smiling. As long as the wine didn t blow away. #coachella #friendship #wine         
 2933,taralipinski,2018-04-15 01:12:26,It s like I m there. I m totally not upset about it. And I m definitely not upset that I won t  
 2934,taralipinski,2018-04-15 22:47:38,Girls only weekend. Oh and Dublin too.             @chelseakruse #friendstime 
 2935,taralipinski,2018-04-16 17:54:36,US. @JohnnyGWeir Can t wait for more @TaraandJohnny shenanigans.    
 2936,taralipinski,2018-04-17 15:39:58,   through Lexington Kentucky.   #Lexington #Kentucky 
-2937,taralipinski,2018-04-18 00:48:35,Pic 1. When @rutledgewood wins all the stuffed animals in the claw machine and I confidently think I can as well. A  
+2937,taralipinski,2018-04-18 00:48:35,Pic 1. When @rutledgewood wins all the stuffed animals in the claw machine and I confidently think I can as well. And then I come back empty handed. Pic 2. When I refuse to go home the loser of the claw machine and head back just one last time. And win my bear!     
 2938,taralipinski,2018-04-19 22:05:16,Baby Tara learning how to ice skate. I m quite impressed with my holiday attire.   #festive #figureskating #tbt 
-2939,taralipinski,2018-04-20 14:12:44,Checked in with one my favorite sites @ringer and gave my take on #Cavs-Pacers series. My love for LeBron runs deep  
-2940,taralipinski,2018-04-22 00:17:47,Tonight I sat in movie theater and watched Todd s doc premiere at @tribeca. I could go on and on about how talented  
-2941,taralipinski,2018-04-23 00:36:12,Liv is 1 today! It s a good Sunday when you get to see both your godchildren. I love watching these two grow up...j  
+2939,taralipinski,2018-04-20 14:12:44,Checked in with one my favorite sites @ringer and gave my take on #Cavs-Pacers series. My love for LeBron runs deep. @kingjames    @uninterrupted @x_netw3rk_x @patmuldowney @cavs #playoffs #basketball 
+2940,taralipinski,2018-04-22 00:17:47,"Tonight I sat in movie theater and watched Todd s doc premiere at @tribeca. I could go on and on about how talented and creative he is as a director but I will just simply say, I am so proud of him. Link to his story in my insta profile. Check it out. @toddkap @tribeca "
+2941,taralipinski,2018-04-23 00:36:12,Liv is 1 today! It s a good Sunday when you get to see both your godchildren. I love watching these two grow up...just little versions of their mamas. I wouldn t be who I am today without those two mamas in my life. @jillmordy @kellihurley5 #friendship #kids #growingup 
 2942,taralipinski,2018-04-24 15:03:00,@KarinDillahey Love this!   
 2943,taralipinski,2018-04-25 23:19:28,Sometimes you just need to lay down on the ground and take a selfie.     
 2944,taralipinski,2018-04-26 02:15:21,Yes. So ridiculous!!!!!!!!! 
-2945,taralipinski,2018-04-27 00:23:46,I m just wishing I was back on this boat. We had a stroke of good luck at the hands of a nice Italian man who felt  
-2946,taralipinski,2018-04-27 21:52:43,"RT @jga41agher: It s a Thunder Heavy !!!!NBA DESKTOP!!!! w/ @netw3rk
-
+2945,taralipinski,2018-04-27 00:23:46,"I m just wishing I was back on this boat. We had a stroke of good luck at the hands of a nice Italian man who felt very generous that day and our boat turned into a yacht. Okay, back to being on a boat off the coast of Sicily with a glass of Chardonnay in my hand.#tbt "
+2946,taralipinski,2018-04-27 21:52:43,"RT @jga41agher: It s a Thunder Heavy !!!!NBA DESKTOP!!!! w/ @netw3rk
+
 Who gone?, queen @akdobbins on why Melo is bad, KANTER WTFYD?, mavs l "
-2947,taralipinski,2018-04-27 22:07:46,"My form of meditation. Sun,book and a really cute furry footrest while my mind is running a mile a minute.       "
+2947,taralipinski,2018-04-27 22:07:46,"My form of meditation. Sun,book and a really cute furry footrest while my mind is running a mile a minute.      #southerncalifornia #dog "
 2948,taralipinski,2018-04-29 18:32:11,RT @Insider6ix: LeBron James  I m playing the whole game  
 2949,taralipinski,2018-04-30 04:02:25,In the Bu with my boo.  @toddkap #malibu #california #sunday 
 2950,taralipinski,2018-04-30 17:22:30,RT @TaraandJohnny: We re recording a new podcast episode today.   
-2951,taralipinski,2018-05-01 23:07:55,It s that time again. I m heading to Kentucky tomorrow for the Derby! Bring on the horses and hats and juleps.      
-2952,taralipinski,2018-05-02 01:34:04,The fam is ready. 2nd round. @toddkap not pictured because he doesn t have a jersey.  @cavs #playoffs @kingjames    
+2951,taralipinski,2018-05-01 23:07:55,It s that time again. I m heading to Kentucky tomorrow for the Derby! Bring on the horses and hats and juleps.    #kentuckyderby #kyderby @johnnygweir 
+2952,taralipinski,2018-05-02 01:34:04,The fam is ready. 2nd round. @toddkap not pictured because he doesn t have a jersey.  @cavs #playoffs @kingjames  #cavs 
 2953,taralipinski,2018-05-02 18:38:30,@Trinity_Tretons @JohnnyGWeir You should totally unfollow me. Have a great day!
 2954,taralipinski,2018-05-03 16:50:30,Struttin  into Derby weekend.  by @bronxandbanco @harperspr 
 2955,taralipinski,2018-05-03 18:21:59,Well this was amazing! We had so much fun with these kids at Semple Elementary. Adorable is an understatement. 
@@ -3025,64 +3026,69 @@ Who gone?, queen @akdobbins on why Melo is bad, KANTER WTFYD?, mavs l "
 2959,taralipinski,2018-05-05 12:46:35,RT @JohnnyGWeir: Find that light. So excited for @KentuckyDerby on this rainy Saturday! | @taralipinski @TaraandJohnny  
 2960,taralipinski,2018-05-05 13:00:24,Another day with my peacock family. @nbcsports Happy Derby Day!     #derbyday #kentuckyderby 
 2961,taralipinski,2018-05-05 15:25:56,No wonder the grass is so green.      dress by @georgycollection #kyderby #derbyday @harperspr 
-2962,taralipinski,2018-05-06 12:15:03,Just a stroll down the red carpet at our 4th Kentucky Derby. So lucky to have my @johnnygweir by side through all t  
-2963,taralipinski,2018-05-06 21:37:54,Missing these people. Events go by so quickly. The days feel so long in the moment and then it s all over in a blin  
+2962,taralipinski,2018-05-06 12:15:03,Just a stroll down the red carpet at our 4th Kentucky Derby. So lucky to have my @johnnygweir by side through all these incredible adventures.   #kentuckyderby #derbyhats 
+2963,taralipinski,2018-05-06 21:37:54,Missing these people. Events go by so quickly. The days feel so long in the moment and then it s all over in a blink of an eye. Side note...I really hate the older I get the faster time flies by. It s getting a bit annoying. I would like it slow back down. 
 2964,taralipinski,2018-05-07 22:36:21,Mama and me   
 2965,taralipinski,2018-05-10 19:37:33, New York    
-2966,taralipinski,2018-05-13 15:39:31,There are so many things I admire about my mom. The list could go on and on. Today she is once again reminding me o  
+2966,taralipinski,2018-05-13 15:39:31,"There are so many things I admire about my mom. The list could go on and on. Today she is once again reminding me of one of her incredible qualities. She s 5 days out of her knee replacement surgery and her strength, determination and motivation is so inspiring. Happy Mother Day! "
 2967,taralipinski,2018-05-14 15:18:44,   to the other coast.   #Mood 
-2968,taralipinski,2018-05-17 22:48:28,I ve started a new workout! I ve tried so many workouts over the years but pilates and I have never really clicked  
+2968,taralipinski,2018-05-17 22:48:28,I ve started a new workout! I ve tried so many workouts over the years but pilates and I have never really clicked in the past. So giving it another try and liking it! Are any of you Pilates fans...any tips? Tights and top by @aloyoga 
 2969,taralipinski,2018-05-21 19:02:09,Dublin and I are off to a slow start this Monday. And I like it.    #monday #snuggles #flatcoatedretriever 
-2970,taralipinski,2018-05-23 19:16:52,A few weeks ago I told you the good news that @johnnygweir and I had a new series we were working on for  
+2970,taralipinski,2018-05-23 19:16:52,"A few weeks ago I told you the good news that @johnnygweir and I had a new series we were working on for #FoodNetwork.Well it s about to air &amp; I hope you tune in!Wedding Cake Championship will premiere on June 25th @ 9pm ET. @foodnetwork #WeddingCakeChampionship 
+Who s tuning in "
 2971,taralipinski,2018-05-23 20:59:43,@kirbiejohnson Hey now!  
 2972,taralipinski,2018-05-23 21:01:25,@hcisyourfriend @JohnnyGWeir Yes!
 2973,taralipinski,2018-05-23 21:01:44,@cja1952 @JohnnyGWeir @FoodNetwork You crack me up! Haha. Have a great day!
-2974,taralipinski,2018-05-29 02:28:01,The long weekend is over but the dance party continues. @chelseakruse Thank you @ryanmckee90 what a blast!  
+2974,taralipinski,2018-05-29 02:28:01,The long weekend is over but the dance party continues. @chelseakruse Thank you @ryanmckee90 what a blast! @ladancefit #memorialdayweekend 
 2975,taralipinski,2018-06-01 02:52:00,"RT @LaffitPincayTV: A salute to the King s biggest fan @taralipinski- waking up the dead derby  night as Lebron sent Raptors packing, Game "
 2976,taralipinski,2018-06-01 02:52:49,@LaffitPincayTV @KellyMc73636253 I m screaming once again in my living room right this second. Go LeBron!!!!
 2977,taralipinski,2018-06-01 02:54:02,@patmuldowney Agreed
-2978,taralipinski,2018-06-09 00:58:46,Well it IS #nationalbestfriendday      @chelseakruse My besties bring so much laughter and light to my life.I could  
+2978,taralipinski,2018-06-09 00:58:46,Well it IS #nationalbestfriendday      @chelseakruse My besties bring so much laughter and light to my life.I couldn t imagine a life without them in it. Tag your forever bestie and tell me why you couldn t do life without them? I love to hear friendship stories! #bestfriends 
 2979,taralipinski,2018-06-09 23:43:26,@c_woodside Thank you!!! He outdid himself
 2980,taralipinski,2018-06-09 23:58:12,RT @terrygannon83: 18 years later @taralipinski gets her high school prom (courtesy of @ToddKap) while Lisa and I set the record for most y 
 2981,taralipinski,2018-06-10 04:54:14,"I know, I know another post. But I just can t  "
 2982,taralipinski,2018-06-10 04:54:32,Last night was one of the most memorable nights  
 2983,taralipinski,2018-06-10 17:51:06,@ShadeGlobal Thank you!
 2984,taralipinski,2018-06-10 18:10:27,I m feeling like a pretty lucky birthday girl!   @Toddkap 
-2985,taralipinski,2018-06-10 23:47:12,"As a part of my prom surprise, @toddkap figured out a way to get  his high school to make me a letterman jacket!It   "
+2985,taralipinski,2018-06-10 23:47:12,"As a part of my prom surprise, @toddkap figured out a way to get  his high school to make me a letterman jacket!It s a bit big but I like that because it s as if it s his actual jacket.This would have been his exact jacket. Proudly repping Perry High School and the Kapostasy name "
 2986,taralipinski,2018-06-11 00:10:01,@starsonice So many great SOI memories!
-2987,taralipinski,2018-06-11 17:13:09,Happy Monday everyone!  Finally feels like summer here in California. Loving every warm minute of it. #Monday  
+2987,taralipinski,2018-06-11 17:13:09,Happy Monday everyone!  Finally feels like summer here in California. Loving every warm minute of it. #Monday #summer #sunnyday 
 2988,taralipinski,2018-06-14 04:12:02,@yodaveholstein       
-2989,taralipinski,2018-06-14 15:44:28,Later LA    Dreaming of touching down at our first destination of summer vacation! Can anyone guess where we are go  
-2990,taralipinski,2018-06-15 19:26:56,We ve made it to our first destination of our vacation. Greece!    I ve been to so many places in this beautiful co  
-2991,taralipinski,2018-06-16 14:31:21,When you re standing at the edge of the dock with a view like this- just 15 ft from your hotel room- it only seems  
+2989,taralipinski,2018-06-14 15:44:28,Later LA    Dreaming of touching down at our first destination of summer vacation! Can anyone guess where we are going first? #summer #vacation #travel #travelholic 
+2990,taralipinski,2018-06-15 19:26:56,We ve made it to our first destination of our vacation. Greece!    I ve been to so many places in this beautiful country and this spot is completely isolated and oh so gorgeous! #Greece #TNTravels @toddkap #Amanzoe @amanzoe #vacation #travel 
+2991,taralipinski,2018-06-16 14:31:21,When you re standing at the edge of the dock with a view like this- just 15 ft from your hotel room- it only seems right to have a photo shoot there. @toddkap on  .   
 2992,taralipinski,2018-06-16 18:40:30,Happy. @ToddKap    
-2993,taralipinski,2018-06-16 20:53:19,Not our typical Saturday night dinner. Who thinks Greece has the best sunsets?         #Greece #TNTravels @toddkap  
+2993,taralipinski,2018-06-16 20:53:19,Not our typical Saturday night dinner. Who thinks Greece has the best sunsets?         #Greece #TNTravels @toddkap @amanzoe #sunset #travelholic 
 2994,taralipinski,2018-06-17 13:15:30,Axelin  into the Mediterranean. I normally like my H20 frozen but I ll make an exception for Greece. 
 2995,taralipinski,2018-06-17 19:35:44,I am so grateful to be your daughter. I imagine  
 2996,taralipinski,2018-06-18 04:31:13,@Traciellen1 @Scotcombs4 @Traciellen1 you could always unfollow me?
-2997,taralipinski,2018-06-18 08:51:03,"Last night I can home with salty hair, sunburnt shoulders and a tired sea legs from treading water. The ultimate su  "
-2998,taralipinski,2018-06-19 11:50:59,Todd is the one who usually flawlessly executes the surprises/special days in the relationship. But I got to turn t  
-2999,taralipinski,2018-06-19 18:02:19,"Guys, two exciting projects that I can t wait for you to see. First, Jim Carrey....what?! Dead. And....@johnnygweir  "
+2997,taralipinski,2018-06-18 08:51:03,"Last night I can home with salty hair, sunburnt shoulders and a tired sea legs from treading water. The ultimate summer feeling! I loved our day of boating and island hopping. Hydra stole my heart and Spetses came in a close second. #greece #hydra #spetses #vacation "
+2998,taralipinski,2018-06-19 11:50:59,Todd is the one who usually flawlessly executes the surprises/special days in the relationship. But I got to turn the tables last night and give him an early anniversary gift. We had private dinner in a magical  amphitheater. He seemed to love it so I will call it a success! 
+2999,taralipinski,2018-06-19 18:02:19,"Guys, two exciting projects that I can t wait for you to see. First, Jim Carrey....what?! Dead. And....@johnnygweir and I are less than a week away from our @foodnetwork season premiere of our new show. #WeddingcakeChampionship #foodnetwork "
 3000,taralipinski,2018-06-19 21:42:35,@patmuldowney  
 3001,taralipinski,2018-06-20 23:30:11,So we need a selfie stick.  
-3002,taralipinski,2018-06-21 13:34:12,Running into Thursday of anniversary week like...  
+3002,taralipinski,2018-06-21 13:34:12,"Running into Thursday of anniversary week like...                                                        
+
+@sylviegil You said  run a little  and of course I did just that. How did I not fall running in my platform heels on grass with my long train      #anniversary #wedding "
 3003,taralipinski,2018-06-21 14:35:54,"RT @JohnnyGWeir: If you enjoy butter, unicorns, competitive piping, sky high cake construction and artistic breakthroughs, you re going to "
-3004,taralipinski,2018-06-21 22:45:01,"Day 2 of Provence                                    
-St. Remy, Arles,Avignon,S nanque Abbey  "
+3004,taralipinski,2018-06-21 22:45:01,"Day 2 of Provence                                    
+St. Remy, Arles,Avignon,S nanque Abbey                                      
+Venasque                                                  
+Moving on out to our next destination tomorrow! Where do you think we are going?#provence "
 3005,taralipinski,2018-06-22 06:28:54,RT @ManeetChauhan: On #NationalSelfieDay2018 here is one of my favorite pics of @randyfenoli taking a selfie @DavidTutera @thebutterend on 
-3006,taralipinski,2018-06-22 17:19:41,"4 days away from the premiere of #WeddingCakeChampionship @foodnetwork. Monday, June 25th at 9pm   the 1st episode  "
+3006,taralipinski,2018-06-22 17:19:41,"4 days away from the premiere of #WeddingCakeChampionship @foodnetwork. Monday, June 25th at 9pm   the 1st episode you get @randyfenoli in your life &amp; throughout the series the fabulous judges will drop some serious cake knowledge on you @maneetchauhan @davidtutera @thebutterend "
 3007,taralipinski,2018-06-22 19:38:10,This is not photoshopped. #France    
 3008,taralipinski,2018-06-23 17:14:26,Feelin  France.      
-3009,taralipinski,2018-06-23 23:14:44,Happy #olympicday To all the Olympians that I looked up to as a little girl with hopes of skating over those 5 ring  
-3010,taralipinski,2018-06-24 15:52:16,There is only one happiness in life- to love and to be loved.I love loving you and I love the way you love me. I ca  
+3009,taralipinski,2018-06-23 23:14:44,"Happy #olympicday To all the Olympians that I looked up to as a little girl with hopes of skating over those 5 rings one day, to all the incredibly powerful Olympians I had the privilege of competing with and to all the Olympians that continue to inspire us all- thank you. "
+3010,taralipinski,2018-06-24 15:52:16,There is only one happiness in life- to love and to be loved.I love loving you and I love the way you love me. I can t believe it s been a year already. I woke up this morning feeling so happy because today I feel more loved by you than I ever have. I love you. 
 3011,taralipinski,2018-06-24 18:18:21,Anniversary ready! 
 3012,taralipinski,2018-06-24 21:08:07,TNT 
-3013,taralipinski,2018-06-25 09:45:39,I had to share this. Long story short... the night Todd proposed to me he got so nervous he dropped to one knee and  
-3014,taralipinski,2018-06-25 15:05:55,Tonight is the night!!!! Series premiere #WeddingcakeChampionship 9/8c on @foodnetwork  Tune in and comment on here  
+3013,taralipinski,2018-06-25 09:45:39,I had to share this. Long story short... the night Todd proposed to me he got so nervous he dropped to one knee and spurt out  will you marry me  without any preface. He s always said he  
+3014,taralipinski,2018-06-25 15:05:55,Tonight is the night!!!! Series premiere #WeddingcakeChampionship 9/8c on @foodnetwork  Tune in and comment on here while you re watching! Would love know what you think. Xo 
 3015,taralipinski,2018-06-25 15:26:24,@patmuldowney @ToddKap Thanks Pat! love you!
 3016,taralipinski,2018-06-25 15:26:30,"RT @patmuldowney: Your first year in the books. Your wedding was one of the most fun weeks of our lives, here's to decades more to come. Ha "
 3017,taralipinski,2018-06-25 21:12:59,RT @TVInsider: He Said / She Said with @taralipinski &amp; @JohnnyGWeir 
-3018,taralipinski,2018-06-25 22:23:47,Tonight! 9/8c on the FoodNetwork! Series Premiere. Wedding Cake Championship. Comment and let me know what you thin  
+3018,taralipinski,2018-06-25 22:23:47,Tonight! 9/8c on the FoodNetwork! Series Premiere. Wedding Cake Championship. Comment and let me know what you think of our new show! I m so excited. 
 3019,taralipinski,2018-06-26 07:36:48,@Lesdoggg @JohnnyGWeir @FoodNetwork Xoxoxoxoxoxo
 3020,taralipinski,2018-06-26 07:42:10,@GlennBattishill @MissyBee37   
 3021,taralipinski,2018-06-26 07:43:36,"RT @FoodNetwork: Give a warm welcome to our fabulous hosts, @TaraLipinski &amp; @JohnnyGWeir #WeddingCakeChampionship "
@@ -3090,18 +3096,18 @@ St. Remy, Arles,Avignon,S nanque Abbey  "
 3023,taralipinski,2018-06-29 01:32:11,We out      You were good to us! 
 3024,taralipinski,2018-06-29 01:32:17,RT @JohnnyGWeir: Can t wait for Monday night s episode of #weddingcakechampionship! It s all about destination wedding cake realness! Churr 
 3025,taralipinski,2018-06-30 23:20:19,Annual #July4th Tribe Trip.       @chelseakruse @debsvarc @jillmordy @amandakoch21    
-3026,taralipinski,2018-07-01 14:50:23,"Look at me just meddling with their cake. But when Rice Krispies are involved how can I not...              
-
-2nd E  "
+3026,taralipinski,2018-07-01 14:50:23,"Look at me just meddling with their cake. But when Rice Krispies are involved how can I not...              
+
+2nd Episode! Tomorrow night at 9/8c @foodnetwork      #WeddingCakeChampionship "
 3027,taralipinski,2018-07-02 15:18:55,RT @FoodNetwork: .@taralipinski &amp; @JohnnyGWeir are back for another week of over-the-top wedding cakes on an all-new #WeddingCakeChampionsh 
-3028,taralipinski,2018-07-02 15:21:40,Happy Birthday to my partner in crime and to my best friend who never lets me go it alone. I hope this year brings  
+3028,taralipinski,2018-07-02 15:21:40,"Happy Birthday to my partner in crime and to my best friend who never lets me go it alone. I hope this year brings you happiness, love, laughs and some really good Sancerre of course....you deserve it. "
 3029,taralipinski,2018-07-03 02:25:22,"Riding with my ride or dies   @chelseakrusefit debsvarc amandakoch21 dtlally @ Kiawah Island, South Carolina "
 3030,taralipinski,2018-07-04 21:29:17,My little firecrackers #4thofjuly #happy4th 
 3031,taralipinski,2018-07-06 17:13:10,I m just pretending you are still here @chelseakruse (yes floating in a dog bed) 
 3032,taralipinski,2018-07-06 20:44:30,Oh it s #internationalkissingday We got this covered.  @Toddkap 
 3033,taralipinski,2018-07-06 20:44:32,         
-3034,taralipinski,2018-07-07 17:44:37,Happy Birthday to this handsome guy! @toddkap In my vows I said  That initial  falling in love  phase is actually j  
-3035,taralipinski,2018-07-09 18:46:17,"A brand new episode of #weddingcakechampionship is on tonight!!! This might be my favorite episode yet. Yes, probab  "
+3034,taralipinski,2018-07-07 17:44:37,Happy Birthday to this handsome guy! @toddkap In my vows I said  That initial  falling in love  phase is actually just everyday with you  It s so true. Thank you for always making me feel special and loved. I can t wait to love you for the rest of my life.  
+3035,taralipinski,2018-07-09 18:46:17,"A brand new episode of #weddingcakechampionship is on tonight!!! This might be my favorite episode yet. Yes, probably because Dublin makes an appearance but I m promise it s filled with lots of beautiful cakes and a little bit of drama. Tune in at 9/8c on @foodnetwork #cake "
 3036,taralipinski,2018-07-10 02:17:17,RT @FoodNetwork: Dog on the loose! #WeddingCakeChampionship 
 3037,taralipinski,2018-07-12 18:38:12,Tune in! 
 3038,taralipinski,2018-07-12 23:46:33,@DDirecto so fun!   
@@ -3110,70 +3116,75 @@ St. Remy, Arles,Avignon,S nanque Abbey  "
 3041,taralipinski,2018-07-17 03:38:52,@edenlane @FoodNetwork @JohnnyGWeir @TaraandJohnny   
 3042,taralipinski,2018-07-17 03:39:30,RT @FoodNetwork: .@taralipinski's husband @ToddKap joins the crew for the finale of #WeddingCakeChampionship NEXT at 9|8c!  
 3043,taralipinski,2018-07-17 03:40:10,@meganoffortune @JohnnyGWeir   
-3044,taralipinski,2018-07-19 15:08:59,I m shocked and incredibly saddened to wake up to the news of Denis Ten passing. I can t believe it. He was one of  
+3044,taralipinski,2018-07-19 15:08:59,I m shocked and incredibly saddened to wake up to the news of Denis Ten passing. I can t believe it. He was one of the most talented and moving artists to ever take to the ice. We lost a beautiful soul both on and off the ice. Heartbreaking. What a huge loss.  
 3045,taralipinski,2018-07-19 15:15:17,Denis Ten. A performance to always remember.  
 3046,taralipinski,2018-07-22 20:18:07,@jmy143 @TaraandJohnny This made me laugh!!! Love it
-3047,taralipinski,2018-07-25 02:21:25,Weeeeee! @johnnygweir and I got some good news today!!!! Since we can t tell you just yet go ahead and give me your  
-3048,taralipinski,2018-07-26 19:54:28,Throwing back to how we spent our last day of vacation in France. I wouldn t change a thing. Other than the color o  
+3047,taralipinski,2018-07-25 02:21:25,Weeeeee! @johnnygweir and I got some good news today!!!! Since we can t tell you just yet go ahead and give me your best guesses. Hint- you guys were a big part in making it happen.       
+3048,taralipinski,2018-07-26 19:54:28,Throwing back to how we spent our last day of vacation in France. I wouldn t change a thing. Other than the color of the float. My dad has always told me bright yellow attracts sharks!     I am not sure if this is true or if my dad just gets a kick out of scaring me. 
 3049,taralipinski,2018-07-27 20:42:56,RT @peopletv: .@taralipinski shares why her dog Dublin changed her life and why he gives the best welcome home kisses!   Watch more on #Pup 
 3050,taralipinski,2018-07-29 00:13:00,It s #nationaldanceday Does dancing on ice count?   Happy Saturday! 
-3051,taralipinski,2018-08-02 16:20:05,"All of you know I love my fitness classes. I ve had obsessions with spin, weight training, barre, running and the l  "
-3052,taralipinski,2018-08-09 19:34:39,Sometimes you learn some of life s lessons from the most unexpected sources. I m glad that at a very young age this  
-3053,taralipinski,2018-08-10 21:57:32,"I m incredibly proud to join a group of strong,beautiful women in Good American s #GoodSquad #Repost @goodamerican  "
+3051,taralipinski,2018-08-02 16:20:05,"All of you know I love my fitness classes. I ve had obsessions with spin, weight training, barre, running and the list goes on and on. Currently it s Pilates. I have seen more changes in my body since I started Pilates than any other form of exercise except.....skating! #pilates "
+3052,taralipinski,2018-08-09 19:34:39,Sometimes you learn some of life s lessons from the most unexpected sources. I m glad that at a very young age this slab of ice taught me so much. I came across this saying today and felt  
+3053,taralipinski,2018-08-10 21:57:32,"I m incredibly proud to join a group of strong,beautiful women in Good American s #GoodSquad #Repost @goodamerican 
+   
+Talk about a GOOD AMERICAN! Welcome Olympic Figure Skating champion-turned-superstar sports broadcaster @taralipinski to the #GOODSQUAD   "
 3054,taralipinski,2018-08-10 21:58:00,RT @goodamerican: Talk about a GOOD AMERICAN! Welcome Olympic Figure Skating champion-turned-superstar sports broadcaster @taralipinski to 
-3055,taralipinski,2018-08-11 17:19:48,I m so excited to be part of the #goodsquad with @goodamerican Their new work out line is incredible &amp; I m honored  
+3055,taralipinski,2018-08-11 17:19:48,I m so excited to be part of the #goodsquad with @goodamerican Their new work out line is incredible &amp; I m honored to be part of this campaign. I m taking over their InstaStories today! I ll take you along with me on my Saturday and give you some BTS of my shoot with GoodAmerican 
 3056,taralipinski,2018-08-11 17:54:44,RT @goodamerican: Your weekend is about to get even better  @taralipinski of the #goodsquad is taking over our Insta stories TODAY! Follow 
-3057,taralipinski,2018-08-19 18:58:45,We love you Ally! With your quintessential #Leo personality it s quite the challenge to surprise you but we pulled  
+3057,taralipinski,2018-08-19 18:58:45,"We love you Ally! With your quintessential #Leo personality it s quite the challenge to surprise you but we pulled it off! From the moment we met 11 years ago I knew you would forever be my best friend, sister, MOH and life long partner in crime. You get me and I get you. "
 3058,taralipinski,2018-08-22 17:31:54,Wednesday Mood   #babaytara 
-3059,taralipinski,2018-08-23 23:58:11,"#TBT Why are Barbie s bangs better than mine?
-How did she get two medals Did she steal Ken s?
-Why did they cut out  "
+3059,taralipinski,2018-08-23 23:58:11,"#TBT Why are Barbie s bangs better than mine?
+How did she get two medals Did she steal Ken s?
+Why did they cut out my first triple loop in that combo?
+Why does Barbie have feathers and I don t?
+Is Barbie a singles or a pairs skater? 
+How do you get a  Wow  for a score. #Jelly "
 3060,taralipinski,2018-09-02 03:41:21,Bride in the box. 
-3061,taralipinski,2018-09-03 17:52:52,Nothing was funny. It s very unfunny that amandakoch21 bachelorette weekend is over. It s especially unfunny that s  
-3062,taralipinski,2018-09-06 18:48:00,Dave fricken Matthews! For those of you who know me there is no caption needed. For everyone else he is my favorite  
-3063,taralipinski,2018-09-07 17:44:46,"Here s a flashback for ya! I had it rough. I rode in the trunk, got dragged by the dog and was snitched on by Chery  "
-3064,taralipinski,2018-09-10 03:35:57,I m so excited that #Kidding premieres tonight! I don t come in for a few episodes but I m still in shock that I m  
+3061,taralipinski,2018-09-03 17:52:52,Nothing was funny. It s very unfunny that amandakoch21 bachelorette weekend is over. It s especially unfunny that summer is over. Did our laughter fool you into thinking we were actually  
+3062,taralipinski,2018-09-06 18:48:00,Dave fricken Matthews! For those of you who know me there is no caption needed. For everyone else he is my favorite and has been forever. Big   off my bucket list. #davematthews #dead   #bucketlist #davematthewsband 
+3063,taralipinski,2018-09-07 17:44:46,"Here s a flashback for ya! I had it rough. I rode in the trunk, got dragged by the dog and was snitched on by Cheryl Ann. And I never took my skates off! At least they gave me floaties for the pool.  #fbf #snapple "
+3064,taralipinski,2018-09-10 03:35:57,I m so excited that #Kidding premieres tonight! I don t come in for a few episodes but I m still in shock that I m a part of this show! Like what?! Acting with Jim Carrey? What an insane experience and I ll always look back on the last few months with such fond memories. Tune in! 
 3065,taralipinski,2018-09-10 23:04:52,Free cake for anyone who guesses what s happening right now! @JohnnyGWeir 
 3066,taralipinski,2018-09-10 23:05:18,@yodaveholstein    
-3067,taralipinski,2018-09-12 14:39:28,That was a wrap on Day 2...somehow only a few hours later it s Day 3. How many hours constitute a night of sleep?    
+3067,taralipinski,2018-09-12 14:39:28,That was a wrap on Day 2...somehow only a few hours later it s Day 3. How many hours constitute a night of sleep?  #nosleep #foodnetwork #weddingcake 
 3068,taralipinski,2018-09-12 14:41:22,Incredible. 
 3069,taralipinski,2018-09-12 14:41:48,RT @JohnnyGWeir: Back at it. Living and loving our best lives. @taralipinski @TaraandJohnny @FoodNetwork #taraandjohnny  
 3070,taralipinski,2018-09-12 14:42:05,@SummerSanders_     
 3071,taralipinski,2018-09-15 21:39:08,@LaceFitzgerald You should have said hello!!! Xo
 3072,taralipinski,2018-09-15 21:40:07,@whatzoebakes @JohnnyGWeir       
-3073,taralipinski,2018-09-15 22:05:09,Season 2! Who watched #weddingcakechampionship Season 1?! I d love to hear your thoughts and comments....     We lo  
+3073,taralipinski,2018-09-15 22:05:09,Season 2! Who watched #weddingcakechampionship Season 1?! I d love to hear your thoughts and comments....     We love being part of the @foodnetwork family! @johnnygweir #partnersincrime #cake #weddingcake #baking #competition 
 3074,taralipinski,2018-09-16 19:33:14,Another day in the kitchen.   by @dressthepopulation   @foodnetwork #weddingcakechampionship #weddingcake 
 3075,taralipinski,2018-09-16 19:33:20,Cute! 
 3076,taralipinski,2018-09-19 23:18:54,RT @TaraandJohnny: I don t know about you J but I m missing February for so many reasons....~ T #olympics #memories @terrygannon83 @johnnyg 
-3077,taralipinski,2018-09-20 16:00:25,Throwing back to my 6 year old self at my very first ice skating competition. Just a few months on the ice after sw  
+3077,taralipinski,2018-09-20 16:00:25,Throwing back to my 6 year old self at my very first ice skating competition. Just a few months on the ice after switching from roller skates and all I knew is that I loved how fast you could go on ice!   #tbt 
 3078,taralipinski,2018-09-21 23:35:47,Here is my bride to be but now she s officially a Mrs!    @lmc6188 
 3079,taralipinski,2018-09-23 06:42:01,Beyonce and Jay Z @KelliHurley 
 3080,taralipinski,2018-09-28 16:06:34,That Friday kinda feeling. @goodamerican 
 3081,taralipinski,2018-10-02 17:29:09,October means one thing. I get to put my headset back on. Skating is back in full swing!   courtesy of @ringer 
 3082,taralipinski,2018-10-03 20:44:08,Rome n around with my soul sisters. 
-3083,taralipinski,2018-10-07 16:06:07,What happens when we try to mix it up from our usual go to pose. Todd pulls out the air pistols and I uncontrollabl  
+3083,taralipinski,2018-10-07 16:06:07,What happens when we try to mix it up from our usual go to pose. Todd pulls out the air pistols and I uncontrollably laugh.       @ Villa Mangiacane 
 3084,taralipinski,2018-10-08 10:09:01,"RT @SHOKidding:  Melting   s, freezing   .  Welcome to #Kidding, @taralipinski!   #Kidding #Showtime "
 3085,taralipinski,2018-10-08 15:10:29,"After a decade, I m back in Paris.    Restaurant, bars, really any suggestions are welcome! "
 3086,taralipinski,2018-10-08 15:24:09,@MMonticolo Thank you!
 3087,taralipinski,2018-10-08 19:15:02,Thank you Dave! The warped version of myself is much more interesting than everyday Tara. Haha. 
 3088,taralipinski,2018-10-09 23:48:00,2/3 of us 1/3 of Eiffel Tower. @toddkap @ Tour Eiffel 
 3089,taralipinski,2018-10-10 22:44:45,"Au revoir Paris! I already miss your chocolate croissants.   @ Paris, France "
-3090,taralipinski,2018-10-11 19:22:40,"Yup, just me and Jim Carrey and Jim Carrey s head. Who is watching @shokidding ??? I m still in shock that I m part  "
+3090,taralipinski,2018-10-11 19:22:40,"Yup, just me and Jim Carrey and Jim Carrey s head. Who is watching @shokidding ??? I m still in shock that I m part of this show. What an incredible experience. I mean me and Jim Carrey...acting. Pinch me. "
 3091,taralipinski,2018-10-12 01:38:29,@JohnnyGWeir The last time you told me  he has brought us good weather 
-3092,taralipinski,2018-10-13 15:58:58,Last week at this time in    @chelseakruse and I were serving our best menswear looks in between fits of Chardonnay  
+3092,taralipinski,2018-10-13 15:58:58,Last week at this time in    @chelseakruse and I were serving our best menswear looks in between fits of Chardonnay fueled giggles.    
 3093,taralipinski,2018-10-13 17:28:20,Can t wait for a new episode Sunday!!!! #kidding 
-3094,taralipinski,2018-10-15 02:43:27,My outfit tho  Who s tuning in for an all new episode of Kidding today?! Do you guys like the show? #kidding  
+3094,taralipinski,2018-10-15 02:43:27,My outfit tho  Who s tuning in for an all new episode of Kidding today?! Do you guys like the show? #kidding #showtime 
 3095,taralipinski,2018-10-15 02:44:29,"RT @SHOKidding: Coo-coo-ka-choo!   @taralipinski Tara-keet is a bad, bad, bird! Who taught her these naughty words?! #Kidding #Showtime htt "
 3096,taralipinski,2018-10-15 03:01:43,@gingerthejester @SHOKidding         
 3097,taralipinski,2018-10-18 20:59:37,@thegroman @SHOKidding   
 3098,taralipinski,2018-10-21 02:17:12,RT @JohnnyGWeir: Dropped T. Feeling guilty. @taralipinski @TaraandJohnny 
-3099,taralipinski,2018-10-21 17:24:47,Throwing it back to another Skate America many years ago with Michelle. To this day fans get all fired up about our  
+3099,taralipinski,2018-10-21 17:24:47,Throwing it back to another Skate America many years ago with Michelle. To this day fans get all fired up about our rivalry which gives me a little chuckle because they will never  
 3100,taralipinski,2018-10-22 02:24:57,@kwanette @MichelleWKwan Wow! I ve never seen this!   
 3101,taralipinski,2018-10-22 02:25:25,@sixsillysnails @JohnnyGWeir   
-3102,taralipinski,2018-10-22 02:32:03,Skating season has begun! I love being back in the booth with these two guys. How did I get so lucky? @johnnygweir  
+3102,taralipinski,2018-10-22 02:32:03,Skating season has begun! I love being back in the booth with these two guys. How did I get so lucky? @johnnygweir @terrygannon83 
 3103,taralipinski,2018-10-22 02:34:29,@AliceMMaddocks @JohnnyGWeir @terrygannon83 Every weekend on NBC! check us out.
 3104,taralipinski,2018-10-23 18:52:27,RT @Adaripp: @TuktikLiza THANK YOU FOR SPEAKING OUT. This is awful and uncalled for. In 2018 this kind of talk is UNACCEPTABLE. Our skating 
-3105,taralipinski,2018-10-25 20:47:50,Leaving sunny hot LA   today for some New York sweater weather . #tbt To my cozy West Village fall days. #nyc  
+3105,taralipinski,2018-10-25 20:47:50,Leaving sunny hot LA   today for some New York sweater weather . #tbt To my cozy West Village fall days. #nyc #westvillage 
 3106,taralipinski,2018-10-26 18:23:00,@nathancheta   
 3107,taralipinski,2018-10-26 22:29:00,NYC Whats your favorite neighborhood? Obviously the right answer is West Village but I won t judge. 
 3108,taralipinski,2018-10-27 04:11:25,@sndavis15 @TaraandJohnny Yes!
@@ -3187,41 +3198,41 @@ Why did they cut out  "
 3116,taralipinski,2018-11-01 03:07:27,I now openly talk about my love for @KingJames in interviews. It s a problem.   
 3117,taralipinski,2018-11-01 03:11:19,@KristineLeahy Had such a great time!
 3118,taralipinski,2018-11-01 03:11:42,"Halloween 2018.    Chicken sandwiches  , chardonnay  and our couch  Pretty perfect.   @toddkap #halloween "
-3119,taralipinski,2018-11-01 20:39:34,A throwback to one of my favorite tour programs with the legendary Kurt Browning and choreographed by the incredibl  
-3120,taralipinski,2018-11-02 22:05:14,"RT @etnow:   @taralipinski pairs up with @JimCarrey in this #Kidding exclusive.
-
+3119,taralipinski,2018-11-01 20:39:34,A throwback to one of my favorite tour programs with the legendary Kurt Browning and choreographed by the incredible #ChristopherDean. Kurt and I were always paired up and I wouldn t have  
+3120,taralipinski,2018-11-02 22:05:14,"RT @etnow:   @taralipinski pairs up with @JimCarrey in this #Kidding exclusive.
+
 "
-3121,taralipinski,2018-11-03 00:50:39,Heading back to the east coast to talk skating with my boy. @johnnygweir Skating season is my favorite season.   Wh  
-3122,taralipinski,2018-11-03 20:09:20,Talking skating today and missing my husband so clearly I need to post this video my husband made of me skating.     
+3121,taralipinski,2018-11-03 00:50:39,Heading back to the east coast to talk skating with my boy. @johnnygweir Skating season is my favorite season.   Who is watching the Grand Prix on @nbc every Sunday? #figureskating 
+3122,taralipinski,2018-11-03 20:09:20,Talking skating today and missing my husband so clearly I need to post this video my husband made of me skating.    @ NBC Sports 
 3123,taralipinski,2018-11-04 06:42:27,RT @ziyatong: We could all learn a lesson from this baby bear: Look up &amp; don't give up. 
 3124,taralipinski,2018-11-05 23:06:36,"RT @SHOKidding: Careful friend, if you stop watching, she ll (@taralipinski) fall down!   #Kidding #Showtime "
 3125,taralipinski,2018-11-06 22:14:37,His hair is goals. I am trying to steal his shine here. I still lost and always will. My handsome boy!   
 3126,taralipinski,2018-11-08 06:38:08,@johnmichaeliam Thank you!
-3127,taralipinski,2018-11-08 17:26:55,"A throwback to my years on Stars on Ice. How I loved this process! I m not sure which I loved more,the weeks of reh  "
+3127,taralipinski,2018-11-08 17:26:55,"A throwback to my years on Stars on Ice. How I loved this process! I m not sure which I loved more,the weeks of rehearsal and choreography or stepping out to perform to a sold out  "
 3128,taralipinski,2018-11-08 17:34:57,@SandraBezic @KurtBrowning
-3129,taralipinski,2018-11-08 22:11:33,"Okay. I got a lot of messages for the final product! Backstory. Kurt played a clown and well, I fell in love with t  "
+3129,taralipinski,2018-11-08 22:11:33,"Okay. I got a lot of messages for the final product! Backstory. Kurt played a clown and well, I fell in love with that clown. #starsonice "
 3130,taralipinski,2018-11-09 21:44:53,Who s ready for another episode of Kidding this weekend? Who is watching the show??? What do you think? @shokidding 
 3131,taralipinski,2018-11-09 22:16:15,@MrHatnScars @SHOKidding Hahaha yeah pretty rough
 3132,taralipinski,2018-11-09 22:27:20,@mickyd1995 @SHOKidding Gotta watch this Sunday!
 3133,taralipinski,2018-11-11 00:54:01,"RT @JohnnyGWeir: Join me, @taralipinski &amp; @TanithWhite tomorrow on @nbc for our coverage of Grand Prix Japan at 12Eastern. Incredibly skate "
 3134,taralipinski,2018-11-11 00:54:45,@TuktikLiza @JohnnyGWeir @TanithWhite @nbc @rika_kihira Oh I follow you! I wouldn t miss your tweets. #empress
-3135,taralipinski,2018-11-11 17:48:17,Skating is on! Tune in now on NBC! @johnnygweir and I bring you coverage of #nhktrophy @TanithWhite #nhktrophy2018  
+3135,taralipinski,2018-11-11 17:48:17,Skating is on! Tune in now on NBC! @johnnygweir and I bring you coverage of #nhktrophy @TanithWhite #nhktrophy2018 @nbc 
 3136,taralipinski,2018-11-13 02:19:08,I have my party hat on. Can you guess what I was doing today?   #glam @makeupbynikkilarose 
 3137,taralipinski,2018-11-13 22:21:58,@HeyBuckHey Aww. Thank you!!!!
 3138,taralipinski,2018-11-14 01:31:07,Skating makes me happy. That s all. 
-3139,taralipinski,2018-11-15 03:37:51,I will file this under one of the coolest things I ve ever had the opportunity to do. I mean Family Guy!!! What?! T  
-3140,taralipinski,2018-11-15 19:47:21,My very first time on the ice!! I wish I have a memory of this exact moment but from the look on my face it must ha  
+3139,taralipinski,2018-11-15 03:37:51,I will file this under one of the coolest things I ve ever had the opportunity to do. I mean Family Guy!!! What?! Tune in this Sunday at 9/8c on @foxtv to catch @johnnygweir and I on @familyguyfox #familyguy #stewie 
+3140,taralipinski,2018-11-15 19:47:21,My very first time on the ice!! I wish I have a memory of this exact moment but from the look on my face it must have been pretty darn amazing. To all my skating lovers out there- do you remember your first time on the ice?   #tbt #iceskating 
 3141,taralipinski,2018-11-15 20:43:42,RT @JohnnyGWeir: We re going for the gold Sunday night on @FamilyGuyonFOX at 9/8c on @foxtv! Things are not always as they seem! SO EXCITED 
 3142,taralipinski,2018-11-15 21:36:53,@Adaripp @FOXTV @JohnnyGWeir @FamilyGuyFox   
-3143,taralipinski,2018-11-16 13:01:41,Yuzuru Hanyu -Highest scoring Short Program in the world so far this season. #rostelecom2018 #YuzuruHanyu And once  
+3143,taralipinski,2018-11-16 13:01:41,Yuzuru Hanyu -Highest scoring Short Program in the world so far this season. #rostelecom2018 #YuzuruHanyu And once again... 
 3144,taralipinski,2018-11-16 21:13:01,Not your normal day in the office.   @johnnygweir 
 3145,taralipinski,2018-11-16 21:14:29,Not your normal day in the office.  @johnnygweir 
 3146,taralipinski,2018-11-17 21:49:58,Soccer Aunt    
-3147,taralipinski,2018-11-18 17:19:04,These two school teachers are telling you to turn on @Nbc now! Figure Skating is on.   #rostelecomcup2018  
-3148,taralipinski,2018-11-19 01:18:58,Tonight is the night! I usually don t do pairs but I made an exception for Stewie. Tune in tonight at 9/8C on  
-3149,taralipinski,2018-11-19 18:30:35,Doesn t feel like a Monday to me this Thanksgiving week! Just walking on _____  over here. For all my skating fans  
+3147,taralipinski,2018-11-18 17:19:04,These two school teachers are telling you to turn on @Nbc now! Figure Skating is on.   #rostelecomcup2018 #figureskating #competition @johnnygweir 
+3148,taralipinski,2018-11-19 01:18:58,Tonight is the night! I usually don t do pairs but I made an exception for Stewie. Tune in tonight at 9/8C on @foxtv for our episode on @familyguyfox #familyguy #stewie @johnnygweir 
+3149,taralipinski,2018-11-19 18:30:35,Doesn t feel like a Monday to me this Thanksgiving week! Just walking on _____  over here. For all my skating fans out there do you remember what program this was??   
 3150,taralipinski,2018-11-21 00:33:34,@JohnnyGWeir @bryantparknyc @BankofAmerica Queen of Bryant park
-3151,taralipinski,2018-11-22 17:13:58,Happy Thanksgiving! Time to turn on @nbc for The National Dog Show!      #thanksgiving #thenationaldogshow @ Rocky  
+3151,taralipinski,2018-11-22 17:13:58,"Happy Thanksgiving! Time to turn on @nbc for The National Dog Show!      #thanksgiving #thenationaldogshow @ Rocky River, Ohio "
 3152,taralipinski,2018-11-22 18:12:41,@GlennBattishill @MissyBee37 @JohnnyGWeir Love this!  
 3153,taralipinski,2018-11-22 18:13:13,@BetsyKling @JohnnyGWeir @nbc   
 3154,taralipinski,2018-11-22 18:14:19,@jasongay @JohnnyGWeir    
@@ -3229,83 +3240,83 @@ Why did they cut out  "
 3156,taralipinski,2018-11-25 21:18:15,Time to turn on @NBC for some skating!   Who s watching and what do you think of the skating? 
 3157,taralipinski,2018-11-25 21:28:17,@JohnnyGWeir @Eagles Go birds!!@JohnnyGWeir
 3158,taralipinski,2018-11-27 19:36:40,MOOD. Me currently. #xmasshopping      
-3159,taralipinski,2018-11-29 03:24:19,In the spirit. Who else gets irrationally excited to stay home and snuggle on the couch just so you can stare at yo  
+3159,taralipinski,2018-11-29 03:24:19,"In the spirit. Who else gets irrationally excited to stay home and snuggle on the couch just so you can stare at your tree? #christmas #christmastree @ Santa Monica, California "
 3160,taralipinski,2018-11-29 19:21:36,Today marks another day we didn t wake up in the Maldives. #tbt A @toddkap original. #maldives @ Maldives 
-3161,taralipinski,2018-11-30 22:04:22,Flashin  back to that time we hosted the Closing Ceremony at an Olympic Games....like what?!   My dream team  
+3161,taralipinski,2018-11-30 22:04:22,Flashin  back to that time we hosted the Closing Ceremony at an Olympic Games....like what?!   My dream team @johnnygweir and @terrygannon83 #fbf #olympics #partnersincrime @ Pyeongchang  
 3162,taralipinski,2018-12-02 22:13:41,Todd s first time to Disneyland. My zillion-th time. #Disneyland @Disneyland @toddkap  #holidaysbeginhere 
-3163,taralipinski,2018-12-03 03:16:33,I don t want to leave! Thank you @disneyland for this magical day.       What s your favorite attraction at Disneyl  
+3163,taralipinski,2018-12-03 03:16:33,I don t want to leave! Thank you @disneyland for this magical day.       What s your favorite attraction at Disneyland? I fell in love with the Radiator Springs Racers ride...so cute.   #Disneyland #holidaysbeginhere 
 3164,taralipinski,2018-12-03 03:17:19,@DreamyPopLover @JohnnyGWeir @TaraandJohnny We miss it too!!
-3165,taralipinski,2018-12-04 04:04:15,Had to learn a few new things on the job today. Luckily I met someone who knew a thing or two about #gaming @ninja  
-3166,taralipinski,2018-12-04 20:44:49,Hey @scotthamilton84 Do you remember this?! I was getting my autograph at a Stars on Ice show. Little did I know 7  
+3165,taralipinski,2018-12-04 04:04:15,Had to learn a few new things on the job today. Luckily I met someone who knew a thing or two about #gaming @ninja   #ifeelold #ninja #fortnite 
+3166,taralipinski,2018-12-04 20:44:49,Hey @scotthamilton84 Do you remember this?! I was getting my autograph at a Stars on Ice show. Little did I know 7 years later I would be joining the cast! Dreams come true.   Who else had a #Blossom hat? Also why do I have a Christmas bow on my shirt. So many questions.... 
 3167,taralipinski,2018-12-05 01:37:48,@ScottHamilton84 Good idea! I can always pull that out for the next derby.
 3168,taralipinski,2018-12-06 15:39:31,Congratsssss        
-3169,taralipinski,2018-12-06 19:12:18,#fbf Heading back to my partner in crime today to cover some more skating this weekend.  Goodness I miss these past  
-3170,taralipinski,2018-12-11 19:59:24,Happy Birthday to this ray of sunshine. @chelseakrusefit I m so lucky to have a friend like you!   We ll be friends  
-3171,taralipinski,2018-12-12 23:04:05,"  To all my skaters out there- fav spin? Even though I m not doing one here, sit  was my favorite.   
+3169,taralipinski,2018-12-06 19:12:18,#fbf Heading back to my partner in crime today to cover some more skating this weekend.  Goodness I miss these past Olympics! I can t wait til 2022. What are some of your favorite Olympic  
+3170,taralipinski,2018-12-11 19:59:24,"Happy Birthday to this ray of sunshine. @chelseakrusefit I m so lucky to have a friend like you!   We ll be friends forever, won t we, Pooh?  asked Piglet.  Even longer,  Pooh answered.  "
+3171,taralipinski,2018-12-12 23:04:05,"  To all my skaters out there- fav spin? Even though I m not doing one here, sit  was my favorite.   
 #figureskating "
 3172,taralipinski,2018-12-15 17:47:12,@beautyinhistime   
 3173,taralipinski,2018-12-17 00:35:53,Tis the season. The softest onesies ever.      @aerie @chelseakruse 
 3174,taralipinski,2018-12-20 20:10:43,Countdown to Christmas days in our cozy Montana cabin.       #montana #cozy #cabin 
 3175,taralipinski,2018-12-22 20:10:42,I feel like Mars is calling my name.    
-3176,taralipinski,2018-12-23 16:23:58,Only a few more hours and we will be in Montana! Dubby is already there and probably sleeping on that very couch ri  
+3176,taralipinski,2018-12-23 16:23:58,Only a few more hours and we will be in Montana! Dubby is already there and probably sleeping on that very couch right this minute...in his those pajamas he hates that mom puts on him. Who else puts pjs on their dogs? Please tell me I m not alone.    #montana #christmasvacation 
 3177,taralipinski,2018-12-23 19:31:49,@sixptzero This made me laugh!
 3178,taralipinski,2018-12-23 19:32:20,@AmySM55   
-3179,taralipinski,2018-12-25 23:16:04,Christmas 2018. Montana is giving us the perfect winter wonderland vibes.    Who got a white Christmas today???  
-3180,taralipinski,2018-12-26 02:44:34,Holding a conversation while occasionally posing as I knew @toddkap was snapping away on his fancy camera. Not easy  
+3179,taralipinski,2018-12-25 23:16:04,"Christmas 2018. Montana is giving us the perfect winter wonderland vibes.    Who got a white Christmas today??? #christmas #family @ McLeod, Montana "
+3180,taralipinski,2018-12-26 02:44:34,Holding a conversation while occasionally posing as I knew @toddkap was snapping away on his fancy camera. Not easy let me tell ya. How did I do?  #christmas #cabin #montana #family @  
 3181,taralipinski,2018-12-26 19:35:37,Christmas Blue Steel. 
-3182,taralipinski,2018-12-28 00:29:09,Is it too late for an ugly Christmas sweater contest? I think not. Please take note of @toddkap sweater...he pasted  
+3182,taralipinski,2018-12-28 00:29:09,Is it too late for an ugly Christmas sweater contest? I think not. Please take note of @toddkap sweater...he pasted pictures of his father on it (He loves him though! All in good fun).     
 3183,taralipinski,2018-12-29 23:10:21,"             @chelseakrusefit amandakoch21 jillmordy #montana #friends @ McLeod, Montana "
-3184,taralipinski,2018-12-31 00:53:55,Snow strolling with my girls.    jillmordy @chelseakrusefit amandakoch21 #mom #montana #friends Shot by @toddkap of  
-3185,taralipinski,2018-12-31 18:59:01,A few dreams of mine came true in 2018. We broadcasted our first prime time Olympics and for the cherry on top of t  
-3186,taralipinski,2019-01-01 01:22:56," Holding on to my daydreams  as I enter 2019. It s gonna be a good one! #nye #newyears #2019   @toddkap @ McLeod, M  "
-3187,taralipinski,2019-01-02 00:58:29,Spent the day playing with my best friend in the snow...not a bad way to start off 2019.        @chelseakrusefit #2  
+3184,taralipinski,2018-12-31 00:53:55,"Snow strolling with my girls.    jillmordy @chelseakrusefit amandakoch21 #mom #montana #friends Shot by @toddkap of course @ McLeod, Montana "
+3185,taralipinski,2018-12-31 18:59:01,A few dreams of mine came true in 2018. We broadcasted our first prime time Olympics and for the cherry on top of that experience we were lucky enough to host the Closing Ceremony.  
+3186,taralipinski,2019-01-01 01:22:56," Holding on to my daydreams  as I enter 2019. It s gonna be a good one! #nye #newyears #2019   @toddkap @ McLeod, Montana "
+3187,taralipinski,2019-01-02 00:58:29,"Spent the day playing with my best friend in the snow...not a bad way to start off 2019.        @chelseakrusefit #2019 #friends #snow   @toddkap @ McLeod, Montana "
 3188,taralipinski,2019-01-10 23:21:55,A real go to move for me.     #tbt 
-3189,taralipinski,2019-01-11 16:23:59,That Friday Feeling.   And also that feeling when your fever is finally coming down! Who else caught this nasty flu  
-3190,taralipinski,2019-01-18 01:57:25,#TBT I ll never forget this moment looking up at a sold out Edmonton crowd standing on their feet. I proved to myse  
-3191,taralipinski,2019-01-18 20:59:04,That time we went to the Super Bowl.   I believe the key to our success at getting interviews at Media Day was my s  
+3189,taralipinski,2019-01-11 16:23:59,That Friday Feeling.   And also that feeling when your fever is finally coming down! Who else caught this nasty flu going around? #friday #feelings #flu 
+3190,taralipinski,2019-01-18 01:57:25,#TBT I ll never forget this moment looking up at a sold out Edmonton crowd standing on their feet. I proved to myself I deserved to be at a World Championship even after the most  
+3191,taralipinski,2019-01-18 20:59:04,That time we went to the Super Bowl.   I believe the key to our success at getting interviews at Media Day was my size....I just squeezed and pushed our way through very small spaces right to the front of the line. #gronkowski was one of our favorite interviews. #superbowl 
 3192,taralipinski,2019-01-22 01:03:43,It s about time for us to skate on into Detroit for Nationals! Who are you excited to see? Predictions? #uschamps19 
-3193,taralipinski,2019-01-23 19:46:33,As I head to Michigan today I can t help but think of all the years I spent training in Detroit. From the moment I  
+3193,taralipinski,2019-01-23 19:46:33,"As I head to Michigan today I can t help but think of all the years I spent training in Detroit. From the moment I walked through the doors, I knew @dscclub would be my skating home  "
 3194,taralipinski,2019-01-25 01:46:55,Join us on @NBCSports at 9pm for the Ladies short program! I just watched Alysa Liu...speechless. You won t want to miss this!
-3195,taralipinski,2019-01-25 20:11:50,Back at one of my favorite events of the year! Nationals is just so special. Life is good when I m talking skating  
-3196,taralipinski,2019-01-26 04:53:39,Records are meant to be broken and I couldn t be more excited that Alysa was the one to break it. What a talent! So  
-3197,taralipinski,2019-01-26 16:52:40,I still can t get over this sweet little nugget. She is absolutely adorable. Our newly crowned National Champion!  
+3195,taralipinski,2019-01-25 20:11:50,Back at one of my favorite events of the year! Nationals is just so special. Life is good when I m talking skating and sitting in between these two incredible people. How did I get so lucky?! Tune into @Nbc at 8pm tonight for the ladies final! @terrygannon83 @johnnygweir 
+3196,taralipinski,2019-01-26 04:53:39,Records are meant to be broken and I couldn t be more excited that Alysa was the one to break it. What a talent! So well deserved. 22 years ago I tried to push the technical envelope and now Alyssa has taken it to the next level. She is the future of US ladies skating. 
+3197,taralipinski,2019-01-26 16:52:40,I still can t get over this sweet little nugget. She is absolutely adorable. Our newly crowned National Champion! @alysaxliu #uschamps19 #alysaliu 
 3198,taralipinski,2019-01-27 17:56:23,RT @JohnnyGWeir: These Two    | @taralipinski @terrygannon83 @taraandjohnny @nbcolympics | #uschamps19 #figureskating #squad  
 3199,taralipinski,2019-01-27 19:16:20,My people. How I love working with them and the whole @nbcsports team.   @terrygannon83 @johnnygweir #uschamps19 
-3200,taralipinski,2019-01-28 19:48:46,Nationals hangover.   Nationals puts you to work but when it s over you wish it all went a little slower. But the i  
+3200,taralipinski,2019-01-28 19:48:46,Nationals hangover.   Nationals puts you to work but when it s over you wish it all went a little slower. But the important question here....Who watched @nathanwchen kill it this weekend?! #uschamps19 @johnnygweir #nathanchen @terrygannon83 
 3201,taralipinski,2019-01-31 22:52:44,Last year at this time. Glitter and @lesdogggg. Oh and the Olympics! I miss it. @johnnygweir 
-3202,taralipinski,2019-02-02 01:33:42,It s #wegetup day. What defines us is how well we rise after falling. This fall was at the 98  Nationals. After the  
-3203,taralipinski,2019-02-07 12:37:36,"Guys, big day today. I m back at one of my favorite places @todayshow buttttt I m not talking skating.   Can t wait  "
-3204,taralipinski,2019-02-09 00:11:03,"#fbf to dreaming of big things. This is the first medal I won from skating. As we all know, it s not about the meda  "
+3202,taralipinski,2019-02-02 01:33:42,It s #wegetup day. What defines us is how well we rise after falling. This fall was at the 98  Nationals. After the short program sitting in 4th place I knew I lost my title and I wasn t  
+3203,taralipinski,2019-02-07 12:37:36,"Guys, big day today. I m back at one of my favorite places @todayshow buttttt I m not talking skating.   Can t wait to have some fun with my favorite ladies @hodakotb @savannahguthrie "
+3204,taralipinski,2019-02-09 00:11:03,"#fbf to dreaming of big things. This is the first medal I won from skating. As we all know, it s not about the medal itself. (I haven t seen my OG in 19 years) But looking back at this  "
 3205,taralipinski,2019-02-15 22:17:30,#flashback to daydreaming on a dreamy day in Amsterdam.    #fbf 
 3206,taralipinski,2019-02-17 03:17:15,"Big day for the fam! Any guesses where we are? @ West Hollywood, California "
 3207,taralipinski,2019-02-20 21:39:46,I can t wait to get another Olympics! See you soon Tokyo. 
-3208,taralipinski,2019-02-20 21:43:10,Feb 20th. Just moments after realizing I skated out my dreams on Olympic ice. The years of sweat and tears were all  
+3208,taralipinski,2019-02-20 21:43:10,Feb 20th. Just moments after realizing I skated out my dreams on Olympic ice. The years of sweat and tears were all worth it for this single moment in time. Its still a hard one to wrap my mind around! Ice can be cold and unforgiving but skatings highs are worth living for. 
 3209,taralipinski,2019-02-20 21:51:59,Aww love this!!!    
 3210,taralipinski,2019-02-20 21:55:50,@HJFranklin1007 Thank you!!!
 3211,taralipinski,2019-02-21 05:03:46,@ChrisGesue Aww thank you!! This made me smile. Hope you and your family are well!
-3212,taralipinski,2019-02-22 22:15:16,I never post glam pics but @makeupbynikkilarose worked some rose gold magic on me this week and I had to show y all  
-3213,taralipinski,2019-02-24 19:12:05,Happy Birthday Mom! I wouldn t be who I am without you. You mean so much to me...more than you will ever know. I lo  
+3212,taralipinski,2019-02-22 22:15:16,I never post glam pics but @makeupbynikkilarose worked some rose gold magic on me this week and I had to show y all. Get yourself a Nikki in your life. But just don t take her away from me.  #glam #rosegold @beccacosmetics @hudabeauty #makeup 
+3213,taralipinski,2019-02-24 19:12:05,Happy Birthday Mom! I wouldn t be who I am without you. You mean so much to me...more than you will ever know. I love you now and always. 
 3214,taralipinski,2019-02-25 19:12:37,"Pulling out the ballerina outfit. Also, how is there not a ballet shoes emoji? #monday #ballet "
-3215,taralipinski,2019-02-28 20:26:30,#tbt to when LA had good weather all the time. Please bring back the standard 70 and sunny! Dublin is just as upset  
-3216,taralipinski,2019-03-01 21:19:38,Getting my blades cleaned up.    For my figure skaters out there- How good does a fresh sharpening feel?! Also remi  
-3217,taralipinski,2019-03-08 21:12:02,It s #internationalwomensday so I m clearly not going to miss a chance to celebrate the beautiful women in my life.  
+3215,taralipinski,2019-02-28 20:26:30,#tbt to when LA had good weather all the time. Please bring back the standard 70 and sunny! Dublin is just as upset about his lack of pool time with this rainy weather. He has slimmed down with @nulopetfood and is just waiting to show off his summer bod.     
+3216,taralipinski,2019-03-01 21:19:38,Getting my blades cleaned up.    For my figure skaters out there- How good does a fresh sharpening feel?! Also reminds me of my old go to excuse when having a bad day... I must need a sharpening  #figureskating 
+3217,taralipinski,2019-03-08 21:12:02,It s #internationalwomensday so I m clearly not going to miss a chance to celebrate the beautiful women in my life. Every single one of them has shaped me into the person I am today. I m  
 3218,taralipinski,2019-03-17 00:57:47,"This Palm Springs wedding is bringin  the heat.    Dress  by @bronxandbanco @harperspr @ La Quinta, California "
-3219,taralipinski,2019-03-18 00:39:59,We tried to match the flowers. When the dress said  bright and colorful  we were determined to succeed. I think we  
-3220,taralipinski,2019-03-19 23:07:39,It s time for Worlds! I will have the privilege to call this event where the greatest skaters in the world battle i  
+3219,taralipinski,2019-03-18 00:39:59,"We tried to match the flowers. When the dress said  bright and colorful  we were determined to succeed. I think we delivered, no?   @legallyallie   debsvarc    amandakoch21    "
+3220,taralipinski,2019-03-19 23:07:39,It s time for Worlds! I will have the privilege to call this event where the greatest skaters in the world battle it out. I wish all these competitors the best of luck and I hope they  
 3221,taralipinski,2019-03-21 01:28:37,@JohnnyGWeir You mean currently?
-3222,taralipinski,2019-03-21 17:00:12,Back at it with my boys! Who s watching Worlds this week? Give me your thoughts. Also tune into @nbcsports today fo  
+3222,taralipinski,2019-03-21 17:00:12,Back at it with my boys! Who s watching Worlds this week? Give me your thoughts. Also tune into @nbcsports today for some men s and pair skating.   #worldfigure2019 @JohnnyGWeir @terrygannon83 
 3223,taralipinski,2019-03-22 16:56:52,             
 3224,taralipinski,2019-03-22 22:21:22,RT @terrygannon83: #MarchMadness2019 + Olympic Gold Medalist + #WorldFigure Skating Championships downtime = the making of a 3 point sharps 
 3225,taralipinski,2019-03-23 13:17:20,RT @JohnnyGWeir: Join us at 1pm Eastern on @NBCSN &amp; 8pm Eastern on @nbc for our coverage of the men s free skates from the world championsh 
 3226,taralipinski,2019-03-23 13:18:39,@goodmagicme @JohnnyGWeir Today at 1 pm EST on @NBCSports and tonight at 8pm on @nbc  
 3227,taralipinski,2019-03-25 17:57:05,Morning portraits with Dubby.    
-3228,taralipinski,2019-03-31 18:43:47,Sleepin  in late on the weekend with this furry guy. We also woke up with some serious bed head.(More me than him  
-3229,taralipinski,2019-04-08 19:05:26,Guys some big news! We did #MasterChef and it was one of my favorite work experiences ever. Not hyperbole.Teaming u  
-3230,taralipinski,2019-04-12 21:55:42,I m really digging this racing suit. It just needed a little sparkle.   @goldengoose @nbcsports  
-3231,taralipinski,2019-04-13 02:33:51,"When it comes to work, I never really know what I m signing myself up for but it s always so fun. Scored some new r  "
-3232,taralipinski,2019-04-24 20:28:21,We re back! Season 2! I can t be more excited for u guys to see what this show has in store.Who knew I d host a Foo  
+3228,taralipinski,2019-03-31 18:43:47,"Sleepin  in late on the weekend with this furry guy. We also woke up with some serious bed head.(More me than him      )Time to get this Sunday started! First on tap, celery juice for me and Dubs will dine on his healthy favorite @nulopetfood #flatcoatedretriever #healthiertogether "
+3229,taralipinski,2019-04-08 19:05:26,Guys some big news! We did #MasterChef and it was one of my favorite work experiences ever. Not hyperbole.Teaming up with my husband might have had something to do with that.Catch me &amp; @toddkap on the two-night MasterChef Celebrity Family Showdown special May 15&amp;22 8/7c on @FOXTV 
+3230,taralipinski,2019-04-12 21:55:42,I m really digging this racing suit. It just needed a little sparkle.   @goldengoose @nbcsports  #grandprixoflongbeach 
+3231,taralipinski,2019-04-13 02:33:51,"When it comes to work, I never really know what I m signing myself up for but it s always so fun. Scored some new race car headshots.      All in a days work.    makeupbyhaileyhoff "
+3232,taralipinski,2019-04-24 20:28:21,We re back! Season 2! I can t be more excited for u guys to see what this show has in store.Who knew I d host a Food Network show with my best friend and that it would involve CAKE?! Pinch me #WeddingCakeChampionship premieres June 3rd 10pm ET/PT @foodnetwork Set your Dvr s now. 
 3233,taralipinski,2019-04-25 01:01:17,RT @JohnnyGWeir: GET READY! We re back for an all-new season of Wedding Cake Championship commencing June 3 at 10 Eastern on @foodnetwork! 
-3234,taralipinski,2019-04-26 00:26:00,Here s a #TBT for ya. Came across this today while I was organizing boxes of old photos. A trip to Turks and Caicos  
-3235,taralipinski,2019-04-26 16:54:42,He can be a charmer when he wants to! Dublin on his best behavior kindly begging for his @nulopetfood. It s hard no  
+3234,taralipinski,2019-04-26 00:26:00,Here s a #TBT for ya. Came across this today while I was organizing boxes of old photos. A trip to Turks and Caicos back in 2001 with my bestie @erinlockwoodauthor @realjoeyfatone I remember you taking this pic! #nsync 
+3235,taralipinski,2019-04-26 16:54:42,"He can be a charmer when he wants to! Dublin on his best behavior kindly begging for his @nulopetfood. It s hard not to give in to this tall, dark and handsome boy of mine.  #HeathierTogether #nutrition #flatcoatedretriever "
 3236,taralipinski,2019-04-27 19:35:20,Waking up at one of my favorite places in California. @montagelaguna     #weekend #montage #lagunabeach 
 3237,taralipinski,2019-04-29 17:35:15,RT @DiscoveryIncTV: Our favorite sassy duo is back!! Hosts @taralipinski and @JohnnyGWeir are bringing season 2 of  Wedding Cake Championsh 
