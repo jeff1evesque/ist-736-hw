@@ -35,7 +35,11 @@ class TwitterQuery():
             d = d.get(k, None)
             if d is None:
                 return(None)
-        return(json.dumps(d))
+
+        if isinstance(d, dict) or isinstance(d, list):
+            return(json.dumps(d))
+        else:
+            return(d)
 
     def get_dict_path(self, d):
         '''
@@ -62,30 +66,18 @@ class TwitterQuery():
         result = []
         for i,(k,v) in enumerate(d.items()):
             if isinstance(v, dict):
-                if k in temp:
-                    temp.append('{key}-{index}'.format(key=k, index=i)
-                else:
-                    temp.append(k)
-
+                temp.append(k)
                 self.get_dict_path(v)
 
             else:
                 if isinstance(v, list):
-                    if k in temp:
-                        temp.append('{key}-{index}'.format(key=k, index=i)
-                    else:
-                        temp.append(k)
-
+                    temp.append(k)
                     [temp.append(x) for x in v]
                     result.append(temp)
                     temp = []
 
                 else:
-                if k in temp:
-                    temp.append('{key}-{index}'.format(key=k, index=i)
-                else:
                     temp.append(k)
-
                     result.append(temp)
                     temp = []
 
@@ -181,7 +173,13 @@ class TwitterQuery():
 
         keys = []
         [keys.extend(self.get_dict_path(k)) if isinstance(k, dict) else keys.append([k]) for k in params]
-        results = {x[-1]: [] for x in keys}
+
+        results = {}
+        for i,x in enumerate(keys):
+            if x[-1] in results:
+                results['{x}-{suffix}'.format(x=x[-1], suffix=i)] = []
+            else:
+                results[x[-1]] = []
 
         for tweet in timeline:
             last_id = tweet['id']
@@ -202,24 +200,12 @@ class TwitterQuery():
             )
 
             if len(new_timeline) > 0:
-                [keys.extend(self.get_dict_path(k)) if isinstance(k, dict) else keys.append([k]) for k in params]
-                new_results = {x[-1]: [] for x in keys}
-
                 for tweet in new_timeline:
                     last_id = tweet['id']
-                    [new_results[k].append(self.get_dict_val(
+                    [results[k].append(self.get_dict_val(
                         tweet,
                         keys[i]
-                    )) for i,(k,v) in enumerate(new_results.items())]
-
-                #
-                # combine results
-                #
-                for k,v in new_results.items():
-                    if k in results:
-                        results[k] = results[k] + new_results[k]
-                    else:
-                        results[k] = new_results[k]
+                    )) for i,(k,v) in enumerate(results.items())]
 
         #
         # store results
