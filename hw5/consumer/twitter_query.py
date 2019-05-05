@@ -1,6 +1,7 @@
 #!/usr/bin/python
 
 import re
+import json
 from twython import Twython, TwythonError
 import pandas as pd
 from datetime import datetime
@@ -34,7 +35,7 @@ class TwitterQuery():
             d = d.get(k, None)
             if d is None:
                 return(None)
-        return(d)
+        return(json.dumps(d))
 
     def get_dict_path(self, d):
         '''
@@ -59,20 +60,32 @@ class TwitterQuery():
 
         temp = []
         result = []
-        for k,v in d.items():
+        for i,(k,v) in enumerate(d.items()):
             if isinstance(v, dict):
-                temp.append(k)
+                if k in temp:
+                    temp.append('{key}-{index}'.format(key=k, index=i)
+                else:
+                    temp.append(k)
+
                 self.get_dict_path(v)
 
             else:
                 if isinstance(v, list):
-                    temp.append(k)
+                    if k in temp:
+                        temp.append('{key}-{index}'.format(key=k, index=i)
+                    else:
+                        temp.append(k)
+
                     [temp.append(x) for x in v]
                     result.append(temp)
                     temp = []
 
                 else:
-                    temp.append(v)
+                if k in temp:
+                    temp.append('{key}-{index}'.format(key=k, index=i)
+                else:
+                    temp.append(k)
+
                     result.append(temp)
                     temp = []
 

@@ -36,7 +36,20 @@ if Path(csv_taralipinski).is_file():
     df_taralipinski = pd.read_csv(csv_taralipinski)
 
 else:
-    df_taralipinski = q.query_user('taralipinski', count=900, rate_limit=6000)
+    df_taralipinski = q.query_user(
+        'taralipinski',
+        params=[
+            {'user': ['screen_name']},
+            'created_at',
+            'full_text',
+            {'retweeted_status': ['full_text']},
+            'retweet_count',
+            'favorite_count',
+            {'entities': ['user_mentions']}
+        ],
+        count=900,
+        rate_limit=6000
+    )
     df_taralipinski['full_text'] = df_taralipinski['full_text'].str.replace(
         'http\S+|www.\S+',
         '',
