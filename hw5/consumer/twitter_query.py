@@ -177,7 +177,7 @@ class TwitterQuery():
         results = {}
         for i,x in enumerate(keys):
             if x[-1] in results:
-                results['{x}-{suffix}'.format(x=x[-1], suffix=i)] = []
+                results['{x}_{suffix}'.format(x=x[-1], suffix=i)] = []
             else:
                 results[x[-1]] = []
 
