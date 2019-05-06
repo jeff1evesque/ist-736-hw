@@ -47,8 +47,8 @@ else:
             'favorite_count',
             {'entities': ['user_mentions']}
         ],
-        count=900,
-        rate_limit=6000
+        count=600,
+        rate_limit=900
     )
 
     df_taralipinski.to_csv(csv_taralipinski)
