@@ -1,6 +1,7 @@
 #!/usr/bin/python
 
 import re
+import json
 from twython import Twython, TwythonError
 import pandas as pd
 from datetime import datetime
@@ -34,7 +35,11 @@ class TwitterQuery():
             d = d.get(k, None)
             if d is None:
                 return(None)
-        return(d)
+
+        if isinstance(d, dict) or isinstance(d, list):
+            return(json.dumps(d))
+        else:
+            return(d)
 
     def get_dict_path(self, d):
         '''
@@ -59,7 +64,7 @@ class TwitterQuery():
 
         temp = []
         result = []
-        for k,v in d.items():
+        for i,(k,v) in enumerate(d.items()):
             if isinstance(v, dict):
                 temp.append(k)
                 self.get_dict_path(v)
@@ -72,7 +77,7 @@ class TwitterQuery():
                     temp = []
 
                 else:
-                    temp.append(v)
+                    temp.append(k)
                     result.append(temp)
                     temp = []
 
@@ -81,7 +86,7 @@ class TwitterQuery():
     def query(
         self,
         query,
-        params=[{'user': ['screen_name']}, 'created_at', 'text'],
+        params=[{'user': ['screen_name']}, 'created_at', 'full_text'],
         sorted=None,
         force_ascii=True
     ):
@@ -121,14 +126,14 @@ class TwitterQuery():
         self.df_query = pd.DataFrame(results)
 
         if force_ascii:
-            self.df_query['text'] = [re.sub(self.regex, r' ', s) for s in self.df_query['text']]
+            self.df_timeline['full_text'] = [re.sub(self.regex, r' ', str(s)) for s in self.df_timeline['full_text']]
 
         return(self.df_query)
 
     def query_user(
         self,
         screen_name,
-        params=[{'user': ['screen_name']}, 'created_at', 'text'],
+        params=[{'user': ['screen_name']}, 'created_at', 'full_text'],
         count=200,
         rate_limit=0,
         force_ascii=True
@@ -159,7 +164,8 @@ class TwitterQuery():
         try:
             timeline = self.conn.get_user_timeline(
                 screen_name=screen_name,
-                count=count
+                count=count,
+                tweet_mode='extended'
             )
 
         except TwythonError as e:
@@ -167,11 +173,20 @@ class TwitterQuery():
 
         keys = []
         [keys.extend(self.get_dict_path(k)) if isinstance(k, dict) else keys.append([k]) for k in params]
-        results = {x[-1]: [] for x in keys}
+
+        results = {}
+        for i,x in enumerate(keys):
+            if x[-1] in results:
+                results['{x}_{suffix}'.format(x=x[-1], suffix=i)] = []
+            else:
+                results[x[-1]] = []
 
         for tweet in timeline:
             last_id = tweet['id']
-            [results[k].append(self.get_dict_val(tweet, keys[i])) for i,(k,v) in enumerate(results.items())]
+            [results[k].append(self.get_dict_val(
+                tweet,
+                keys[i]
+            )) for i,(k,v) in enumerate(results.items())]
 
         #
         # query: extend through max limit
@@ -180,25 +195,17 @@ class TwitterQuery():
             new_timeline = self.conn.get_user_timeline(
                 screen_name = screen_name,
                 count = count,
+                tweet_mode='extended',
                 max_id = last_id - 1
             )
 
             if len(new_timeline) > 0:
-                [keys.extend(self.get_dict_path(k)) if isinstance(k, dict) else keys.append([k]) for k in params]
-                new_results = {x[-1]: [] for x in keys}
-
                 for tweet in new_timeline:
                     last_id = tweet['id']
-                    [new_results[k].append(self.get_dict_val(tweet, keys[i])) for i,(k,v) in enumerate(new_results.items())]
-
-                #
-                # combine results
-                #
-                for k,v in new_results.items():
-                    if k in results:
-                        results[k] = results[k] + new_results[k]
-                    else:
-                        results[k] = new_results[k]
+                    [results[k].append(self.get_dict_val(
+                        tweet,
+                        keys[i]
+                    )) for i,(k,v) in enumerate(results.items())]
 
         #
         # store results
@@ -209,7 +216,7 @@ class TwitterQuery():
         # clean dataframe
         #
         if force_ascii:
-            self.df_timeline['text'] = [re.sub(self.regex, r' ', s) for s in (self.df_timeline['text'])]
+            self.df_timeline['full_text'] = [re.sub(self.regex, r' ', str(s)) for s in self.df_timeline['full_text']]
 
         # reformat date
         self.df_timeline['created_at'] = [datetime.strptime(
