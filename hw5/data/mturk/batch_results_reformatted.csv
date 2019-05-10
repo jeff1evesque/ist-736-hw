@@ -1,31 +1,31 @@
-Input.text,AMT 1,AMT 2,,,,AMT 2,,,,,,,
-@patmuldowney @JohnnyGWeir I feel like ours would have performed well,1,2,,,,AMT(1/2),0,1,2,,,AMT,
-Talking skating today and missing my husband so clearly I need to post this video my husband made of me skating.,2,1,,,AMT 1,0,5,3,0,8,,observed accuracy,0.566666667
-Congratsssss,1,1,,,,1,4,10,3,17,,expected accuracy,0.43
-Happy Birthday to this ray of sunshine. @chelseakrusefit I m so lucky to have a friend like you!   We ll be friends,1,1,,,,2,1,2,2,5,,kappa accuracy,0.239766082
-RT @terrygannon83: 18 years later @taralipinski gets her high school prom (courtesy of @ToddKap) while Lisa and I set the record for most y,0,0,,,,,10,16,7,30,,,
-RT @JohnnyGWeir: 100% singing @katyperry before we went on air. #roar   Mariola Zysk @nbcolympics @taralipinski @TaraandJohnny,0,0,,,,,,,,,,,
-@en2gymnastics @JohnnyGWeir That s amazing,2,2,,,,,,,,,,,
-@terrygannon83 @scottdmonaghan @thekapman @GW_MBB @DaytonMBB @JohnnyGWeir @NBCSN I hate when you cheat on us but ho,2,2,,,,,,,,,,,
-Pic 1. When @rutledgewood wins all the stuffed animals in the claw machine and I confidently think I can as well. A,0,1,,,,,,,,,,,
-@ChateauHemmer Still wearing rings on almost every  finger to this day.,1,2,,,,,,,,,,,
-@rockerskating This is my dog Dublin every morning,1,2,,,,,,,,,,,
-I am so grateful to be your daughter. I imagine,1,1,,,,,,,,,,,
-@yodaveholstein,0,0,,,,,,,,,,,
-@patmuldowney Agreed,0,0,,,,,,,,,,,
-They showed the skating world how you compete at an Olympic Games. They both gave me chills. Two of the best perfor,0,1,,,,,,,,,,,
-@AmySM55,0,0,,,,,,,,,,,
-It s so nice to be back on the ice...,1,1,,,,,,,,,,,
-US. #GoldenGlobes @ The Beverly Hilton,1,0,,,,,,,,,,,
-@HeyBuckHey Aww. Thank you!!!!,1,1,,,,,,,,,,,
-October means one thing. I get to put my headset back on. Skating is back in full swing!   courtesy of @ringer,2,1,,,,,,,,,,,
-"I know, I know another post. But I just can t  ",2,0,,,,,,,,,,,
-We packed super light.  @TaraandJohnny @NBCOlympics,0,1,,,,,,,,,,,
-RT @JohnnyGWeir: We re going for the gold Sunday night on @FamilyGuyonFOX at 9/8c on @foxtv! Things are not always as they seem! SO EXCITED,1,1,,,,,,,,,,,
-52 degrees in LA right now. Don t be surprised to see me walking the streets of Santa Monica today bundled up like,1,0,,,,,,,,,,,
-Throwin  back to one of my favorite @makeupbynikkilarose glam looks. We ve been on a bronze kick. Those,1,1,,,,,,,,,,,
-Had to learn a few new things on the job today. Luckily I met someone who knew a thing or two about #gaming @ninja,1,0,,,,,,,,,,,
-@patmuldowney @HolyCowBBQLA Yes most definitely haha!!,1,1,,,,,,,,,,,
-"This Palm Springs wedding is bringin  the heat.    Dress  by @bronxandbanco @harperspr @ La Quinta, California ",1,1,,,,,,,,,,,
-Happy #olympicday To all the Olympians that I looked up to as a little girl with hopes of skating over those 5 ring,1,1,,,,,,,,,,,
-"Riding with my ride or dies   @chelseakrusefit debsvarc amandakoch21 dtlally @ Kiawah Island, South Carolina ",1,0,,,,,,,,,,,
+Input.text,Ground Truth,AMT 1,AMT 2,AMT 3,,,,Predicted,,,,,,,
+@patmuldowney @JohnnyGWeir I feel like ours would have performed well,1,1,2,1,,,,AMT1,0,1,2,,,AMT1 (Ground),
+Talking skating today and missing my husband so clearly I need to post this video my husband made of me skating.,1,2,1,1,,,Ground,0,5,1,1,7,,observed accuracy,0.7
+Congratsssss,1,1,1,1,,,,1,3,15,3,21,,expected accuracy,0.497777778
+Happy Birthday to this ray of sunshine. @chelseakrusefit I m so lucky to have a friend like you!   We ll be friends,1,1,1,1,,,,2,0,1,1,2,,kappa accuracy,0.402654867
+RT @terrygannon83: 18 years later @taralipinski gets her high school prom (courtesy of @ToddKap) while Lisa and I set the record for most y,0,0,0,1,,,,,8,18,7,30,,,
+RT @JohnnyGWeir: 100% singing @katyperry before we went on air. #roar   Mariola Zysk @nbcolympics @taralipinski @TaraandJohnny,1,0,0,0,,,,,,,,,,,
+@en2gymnastics @JohnnyGWeir That s amazing,1,2,2,1,,,,,,,,,,,
+@terrygannon83 @scottdmonaghan @thekapman @GW_MBB @DaytonMBB @JohnnyGWeir @NBCSN I hate when you cheat on us but ho,2,2,2,2,,,,Predicted,,,,,,,
+Pic 1. When @rutledgewood wins all the stuffed animals in the claw machine and I confidently think I can as well. A,1,0,1,1,,,,AMT2,0,1,2,,,AMT2 (Ground),
+@ChateauHemmer Still wearing rings on almost every  finger to this day.,0,1,2,2,,,Ground,0,5,1,1,7,,observed accuracy,0.666666667
+@rockerskating This is my dog Dublin every morning,1,1,2,0,,,,1,4,14,3,21,,expected accuracy,0.466666667
+I am so grateful to be your daughter. I imagine,1,1,1,2,,,,2,1,0,1,2,,kappa accuracy,0.375
+@yodaveholstein,0,0,0,0,,,,,10,16,7,30,,,
+@patmuldowney Agreed,0,0,0,0,,,,,,,,,,,
+They showed the skating world how you compete at an Olympic Games. They both gave me chills. Two of the best perfor,1,0,1,1,,,,,,,,,,,
+@AmySM55,0,0,0,0,,,,Predicted,,,,,,,
+It s so nice to be back on the ice...,1,1,1,2,,,,AMT3,0,1,2,,,AMT3 (Ground),
+US. #GoldenGlobes @ The Beverly Hilton,1,1,0,0,,,Ground,0,4,2,1,7,,observed accuracy,0.666666667
+@HeyBuckHey Aww. Thank you!!!!,1,1,1,0,,,,1,4,15,2,21,,expected accuracy,0.503333333
+October means one thing. I get to put my headset back on. Skating is back in full swing!   courtesy of @ringer,1,2,1,1,,,,2,1,0,1,2,,kappa accuracy,0.32885906
+"I know, I know another post. But I just can t  ",0,2,0,0,,,,,9,18,6,30,,,
+We packed super light.  @TaraandJohnny @NBCOlympics,0,0,1,1,,,,,,,,,,,
+RT @JohnnyGWeir: We re going for the gold Sunday night on @FamilyGuyonFOX at 9/8c on @foxtv! Things are not always as they seem! SO EXCITED,1,1,1,1,,,,,,,,,,,
+52 degrees in LA right now. Don t be surprised to see me walking the streets of Santa Monica today bundled up like,2,1,0,0,,,,,,,,,,,
+Throwin  back to one of my favorite @makeupbynikkilarose glam looks. We ve been on a bronze kick. Those,1,1,1,1,,,,,,,,,,,
+Had to learn a few new things on the job today. Luckily I met someone who knew a thing or two about #gaming @ninja,1,1,0,1,,,,,,,,,,,
+@patmuldowney @HolyCowBBQLA Yes most definitely haha!!,1,1,1,1,,,,,,,,,,,
+"This Palm Springs wedding is bringin  the heat.    Dress  by @bronxandbanco @harperspr @ La Quinta, California ",1,1,1,1,,,,,,,,,,,
+Happy #olympicday To all the Olympians that I looked up to as a little girl with hopes of skating over those 5 ring,1,1,1,1,,,,,,,,,,,
+"Riding with my ride or dies   @chelseakrusefit debsvarc amandakoch21 dtlally @ Kiawah Island, South Carolina ",1,1,0,1,,,,,,,,,,,
