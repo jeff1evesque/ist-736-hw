@@ -9,7 +9,8 @@ def model(
     model_type='multinomial',
     key_text='text',
     key_class='screen_name',
-    max_length=280
+    max_length=280,
+    ngram_range=(1,1)
 ):
     '''
 
@@ -19,9 +20,9 @@ def model(
 
     # initialize classifier
     if df is not None:
-        model = alg(df=df, key_text=key_text, key_class=key_class)
+        model = alg(df=df, key_text=key_text, key_class=key_class, ngram=ngram)
     else:
-        model = alg(key_text=key_text, key_class=key_class)
+        model = alg(key_text=key_text, key_class=key_class, ngram=ngram)
 
     # vectorize data
     model.split()
