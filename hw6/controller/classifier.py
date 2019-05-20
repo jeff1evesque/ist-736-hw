@@ -13,6 +13,8 @@ def classify(
     kfold=True,
     n_splits=5,
     top_words=20,
+    ngram_range=(1,1),
+    rotatio=90,
     directory='viz',
     flag_mnb=True,
     flag_mnb_pos=True,
@@ -32,18 +34,31 @@ def classify(
     kfold_scores = {}
     model_scores = {}
 
+    if ngram_range == (1,1):
+        suffix = ''
+    else:
+        suffix = '_ngram'
+
     # multinomial naive bayes
     if flag_mnb:
         mnb = m_model(
             df=df,
             key_class=key_class,
             key_text=key_text,
-            max_length=math.inf
+            max_length=math.inf,
+            ngram=ngram
         )
         model_scores['mnb'] = mnb.get_accuracy()
 
         if plot:
-            plot_cm(mnb, directory=directory, file_suffix=key_class)
+            plot_cm(
+                mnb,
+                directory=directory,
+                file_suffix='{key_class}{suffix}'.format(
+                    key_class=key_class,
+                    suffix=suffix
+                )
+            )
 
             # extract top n words
             tfidf = mnb.get_tfidf()
@@ -64,8 +79,11 @@ def classify(
                 labels=[*keywords],
                 performance=[*keywords.values()],
                 directory=directory,
-                filename='top_{count}_tfidf'.format(count=top_words),
-                rotation=90
+                filename='top_{count}_tfidf{suffix}'.format(
+                    count=top_words,
+                    suffix=suffix
+                ),
+                rotation=rotation
             )
 
             # feature distribution
@@ -75,19 +93,26 @@ def classify(
                 labels=[x[0] for x in train],
                 performance=[x[1] for x in train],
                 directory=directory,
-                filename='train_distribution_mnb'
+                filename='train_distribution_mnb{suffix}'.format(
+                    suffix=suffix
+                ),
+                rotation=rotation
             )
             plot_bar(
                 labels=[x[0] for x in test],
                 performance=[x[1] for x in test],
                 directory=directory,
-                filename='test_distribution_mnb'
+                filename='test_distribution_mnb{suffix}'.format(
+                    suffix=suffix
+                ),
+                rotation=rotation
             )
 
         if kfold:
             kmnb = mnb.get_kfold_scores(
                 model_type='multinomial',
-                n_splits=n_splits
+                n_splits=n_splits,
+                ngram=ngram
             )
             kfold_scores['mnb'] = kmnb
 
@@ -127,7 +152,7 @@ def classify(
                 performance=[*keywords.values()],
                 directory=directory,
                 filename='top_{count}_tfidf'.format(count=top_words),
-                rotation=90
+                rotation=rotation
             )
 
             # feature distribution
@@ -137,13 +162,15 @@ def classify(
                 labels=[x[0] for x in train],
                 performance=[x[1] for x in train],
                 directory=directory,
-                filename='train_distribution_mnb_pos'
+                filename='train_distribution_mnb_pos',
+                rotation=rotation
             )
             plot_bar(
                 labels=[x[0] for x in test],
                 performance=[x[1] for x in test],
                 directory=directory,
-                filename='test_distribution_mnb_pos'
+                filename='test_distribution_mnb_pos',
+                rotation=rotation
             )
 
         if kfold:
@@ -160,7 +187,8 @@ def classify(
             model_type='bernoulli',
             key_class=key_class,
             key_text=key_text,
-            max_length=0
+            max_length=0,
+            ngram=ngram
         )
         model_scores['bnb'] = bnb.get_accuracy()
 
@@ -169,7 +197,10 @@ def classify(
                 bnb,
                 model_type='bernoulli',
                 directory=directory,
-                file_suffix=key_class
+                file_suffix='{key_class}{suffix}'.format(
+                    key_class=key_class,
+                    suffix=suffix
+                )
             )
 
             # extract top n words
@@ -191,8 +222,11 @@ def classify(
                 labels=[*keywords],
                 performance=[*keywords.values()],
                 directory=directory,
-                filename='top_{count}_tfidf'.format(count=top_words),
-                rotation=90
+                filename='top_{count}_tfidf{suffix}'.format(
+                    count=top_words,
+                    suffix=suffix
+                ),
+                rotation=rotation
             )
 
             # feature distribution
@@ -202,19 +236,26 @@ def classify(
                 labels=[x[0] for x in train],
                 performance=[x[1] for x in train],
                 directory=directory,
-                filename='train_distribution_bnb'
+                filename='train_distribution_bnb{suffix}'.format(
+                    suffix=suffix
+                ),
+                rotation=rotation
             )
             plot_bar(
                 labels=[x[0] for x in test],
                 performance=[x[1] for x in test],
                 directory=directory,
-                filename='test_distribution_bnb'
+                filename='test_distribution_bnb{suffix}'.format(
+                    suffix=suffix
+                ),
+                rotation=rotation
             )
 
         if kfold:
             kbnb = bnb.get_kfold_scores(
                 model_type='bernoulli',
-                n_splits=n_splits
+                n_splits=n_splits,
+                ngram=ngram
             )
             kfold_scores['bnb'] = kbnb
 
@@ -256,7 +297,7 @@ def classify(
                 performance=[*keywords.values()],
                 directory=directory,
                 filename='top_{count}_tfidf'.format(count=top_words),
-                rotation=90
+                rotation=rotation
             )
 
             # feature distribution
@@ -266,13 +307,15 @@ def classify(
                 labels=[x[0] for x in train],
                 performance=[x[1] for x in train],
                 directory=directory,
-                filename='train_distribution_bnb_pos'
+                filename='train_distribution_bnb_pos',
+                rotation=rotation
             )
             plot_bar(
                 labels=[x[0] for x in test],
                 performance=[x[1] for x in test],
                 directory=directory,
-                filename='test_distribution_bnb_pos'
+                filename='test_distribution_bnb_pos',
+                rotation=rotation
             )
 
         if kfold:
@@ -288,7 +331,8 @@ def classify(
             df=df,
             model_type='svm',
             key_class=key_class,
-            key_text=key_text
+            key_text=key_text,
+            ngram=ngram
         )
         model_scores['svm'] = svm.get_accuracy()
 
@@ -297,7 +341,10 @@ def classify(
                 svm,
                 model_type='svm',
                 directory=directory,
-                file_suffix=key_class
+                file_suffix='{key_class}_pos{suffix}'.format(
+                    key_class=key_class,
+                    suffix=suffix
+                )
             )
 
             # extract top n words
@@ -319,8 +366,11 @@ def classify(
                 labels=[*keywords],
                 performance=[*keywords.values()],
                 directory=directory,
-                filename='top_{count}_tfidf'.format(count=top_words),
-                rotation=90
+                filename='top_{count}_tfidf{suffix}'.format(
+                    count=top_words,
+                    suffix=suffix
+                ),
+                rotation=rotation
             )
 
             # feature distribution
@@ -330,17 +380,27 @@ def classify(
                 labels=[x[0] for x in train],
                 performance=[x[1] for x in train],
                 directory=directory,
-                filename='train_distribution_svm'
+                filename='train_distribution_svm{suffix}'.format(
+                    suffix=suffix
+                ),
+                rotation=rotation
             )
             plot_bar(
                 labels=[x[0] for x in test],
                 performance=[x[1] for x in test],
                 directory=directory,
-                filename='test_distribution_svm'
+                filename='test_distribution_svm{suffix}'.format(
+                    suffix=suffix
+                ),
+                rotation=rotation
             )
 
         if kfold:
-            ksvm = svm.get_kfold_scores(model_type='svm', n_splits=n_splits)
+            ksvm = svm.get_kfold_scores(
+                model_type='svm',
+                n_splits=n_splits,
+                ngram=ngram
+            )
             kfold_scores['svm'] = ksvm
 
     if flag_svm_pos:
@@ -380,7 +440,7 @@ def classify(
                 performance=[*keywords.values()],
                 directory=directory,
                 filename='top_{count}_tfidf'.format(count=top_words),
-                rotation=90
+                rotation=rotation
             )
 
             # feature distribution
@@ -390,13 +450,15 @@ def classify(
                 labels=[x[0] for x in train],
                 performance=[x[1] for x in train],
                 directory=directory,
-                filename='train_distribution_svm_pos'
+                filename='train_distribution_svm_pos',
+                rotation=rotation
             )
             plot_bar(
                 labels=[x[0] for x in test],
                 performance=[x[1] for x in test],
                 directory=directory,
-                filename='test_distribution_svm_pos'
+                filename='test_distribution_svm_pos',
+                rotation=rotation
             )
 
         if kfold:
@@ -420,14 +482,22 @@ def classify(
             labels=labels,
             performance=performance,
             directory=directory,
-            filename='overall_accuracy_{}'.format(key_class)
+            filename='overall_accuracy_{key_class}{suffix}'.format(
+                key_class=key_class,
+                suffix=suffix
+            ),
+            rotation=rotation
         )
 
         [plot_bar(
             range(len(v)),
             v,
             directory=directory,
-            filename='bargraph_kfold_{model}'.format(model=k)
+            filename='bargraph_kfold_{model}{suffix}'.format(
+                model=k,
+                suffix=suffix
+            ),
+            rotation=rotation
         ) for k,v in kfold_scores.items()]
 
     # return score
