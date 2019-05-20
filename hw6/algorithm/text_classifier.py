@@ -47,6 +47,7 @@ class Model():
         stem=True,
         lowercase=True,
         cleanse_data=True,
+        ngram=(1,1),
         fp='{}/data/sample-sentiment.csv'.format(
             Path(__file__).resolve().parents[1]
         )
@@ -83,7 +84,7 @@ class Model():
 
         # vectorize data
         if vectorize:
-            self.vectorize()
+            self.vectorize(ngram=ngram)
             self.split()
 
     def set_df(self, df):
@@ -160,7 +161,13 @@ class Model():
         ) for i,x in enumerate(pos)])
         return(result)
 
-    def vectorize(self, data=None, stop_words='english', topn=25):
+    def vectorize(
+        self,
+        data=None,
+        stop_words='english',
+        ngram=(1,1),
+        topn=25
+    ):
         '''
 
         vectorize provided data.
@@ -172,11 +179,17 @@ class Model():
         #
         if data is not None:
             # bag of words: with 'english' stopwords
-            count_vect = CountVectorizer(stop_words=stop_words)
+            count_vect = CountVectorizer(
+                stop_words=stop_words,
+                ngram_range=ngram
+            )
             bow = count_vect.fit_transform(data)
 
             # tfidf weighting
-            tfidf_vectorizer = TfidfVectorizer(stop_words=stop_words)
+            tfidf_vectorizer = TfidfVectorizer(
+                stop_words=stop_words,
+                ngram_range=ngram
+            )
             tfidf = tfidf_vectorizer.fit_transform(data)
 
             return(bow, tfidf)
@@ -186,11 +199,17 @@ class Model():
         #
         else:
             # bag of words: with 'english' stopwords
-            self.count_vect = CountVectorizer(stop_words=stop_words)
+            self.count_vect = CountVectorizer(
+                stop_words=stop_words,
+                ngram_range=ngram
+            )
             self.bow = self.count_vect.fit_transform(self.df[self.key_text])
 
             # tfidf weighting
-            self.tfidf_vectorizer = TfidfVectorizer(stop_words=stop_words)
+            self.tfidf_vectorizer = TfidfVectorizer(
+                stop_words=stop_words,
+                ngram_range=ngram
+            )
             self.tfidf = self.tfidf_vectorizer.fit_transform(self.df[self.key_text])
 
             # top n tfidf words
@@ -387,7 +406,8 @@ class Model():
         actual=None,
         predicted=None,
         filename='confusion_matrix.png',
-        show=False
+        show=False,
+        rotation=90
     ):
         '''
 
@@ -402,7 +422,11 @@ class Model():
 
         # generate plot
         plt.figure()
-        skplt.metrics.plot_confusion_matrix(actual, predicted)
+        skplt.metrics.plot_confusion_matrix(
+            actual,
+            predicted,
+            x_tick_rotation=rotation
+        )
 
         # save plot
         plt.savefig(filename)
@@ -434,7 +458,8 @@ class Model():
         max_length=280,
         shuffle=True,
         model_type=None,
-        multiclass=False
+        multiclass=False,
+        ngram=(1,1)
     ):
         '''
 
@@ -453,18 +478,28 @@ class Model():
         '''
 
         # bag of words: with 'english' stopwords
-        count_vect = CountVectorizer(stop_words=stop_words)
+        count_vect = CountVectorizer(
+            stop_words=stop_words,
+            ngram_range=ngram
+        )
         bow = self.count_vect.fit_transform(self.df[self.key_text])
 
         # conditionally select model
         if (model_type == 'svm'):
             if multiclass:
-                clf = svm.SVC(gamma='scale', kernel='linear', decision_function_shape='ovo')
+                clf = svm.SVC(
+                    gamma='scale',
+                    kernel='linear',
+                    decision_function_shape='ovo'
+                )
             else:
                 clf = svm.SVC(gamma='scale', kernel='linear')
 
             # tfidf weighting
-            tfidf_vectorizer = TfidfVectorizer(stop_words=stop_words)
+            tfidf_vectorizer = TfidfVectorizer(
+                stop_words=stop_words,
+                ngram_range=ngram
+            )
             data = tfidf_vectorizer.fit_transform(self.df[self.key_text])
 
         elif (
@@ -476,7 +511,10 @@ class Model():
 
         else:
             clf = MultinomialNB()
-            tfidf_vectorizer = TfidfVectorizer(stop_words=stop_words)
+            tfidf_vectorizer = TfidfVectorizer(
+                stop_words=stop_words,
+                ngram_range=ngram
+            )
             data = tfidf_vectorizer.fit_transform(self.df[self.key_text])
 
         # random kfolds
