@@ -341,7 +341,7 @@ def classify(
                 svm,
                 model_type='svm',
                 directory=directory,
-                file_suffix='{key_class}_pos{suffix}'.format(
+                file_suffix='{key_class}{suffix}'.format(
                     key_class=key_class,
                     suffix=suffix
                 )
