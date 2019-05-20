@@ -47,6 +47,7 @@ class Model():
         stem=True,
         lowercase=True,
         cleanse_data=True,
+        ngram=(1,1),
         fp='{}/data/sample-sentiment.csv'.format(
             Path(__file__).resolve().parents[1]
         )
@@ -83,7 +84,7 @@ class Model():
 
         # vectorize data
         if vectorize:
-            self.vectorize()
+            self.vectorize(ngram=ngram)
             self.split()
 
     def set_df(self, df):
@@ -164,7 +165,7 @@ class Model():
         self,
         data=None,
         stop_words='english',
-        ngram_range=(1,1),
+        ngram=(1,1),
         topn=25
     ):
         '''
@@ -180,14 +181,14 @@ class Model():
             # bag of words: with 'english' stopwords
             count_vect = CountVectorizer(
                 stop_words=stop_words,
-                ngram=ngram
+                ngram_range=ngram
             )
             bow = count_vect.fit_transform(data)
 
             # tfidf weighting
             tfidf_vectorizer = TfidfVectorizer(
                 stop_words=stop_words,
-                ngram=ngram
+                ngram_range=ngram
             )
             tfidf = tfidf_vectorizer.fit_transform(data)
 
@@ -200,14 +201,14 @@ class Model():
             # bag of words: with 'english' stopwords
             self.count_vect = CountVectorizer(
                 stop_words=stop_words,
-                ngram=ngram
+                ngram_range=ngram
             )
             self.bow = self.count_vect.fit_transform(self.df[self.key_text])
 
             # tfidf weighting
             self.tfidf_vectorizer = TfidfVectorizer(
                 stop_words=stop_words,
-                ngram=ngram
+                ngram_range=ngram
             )
             self.tfidf = self.tfidf_vectorizer.fit_transform(self.df[self.key_text])
 
@@ -405,7 +406,7 @@ class Model():
         actual=None,
         predicted=None,
         filename='confusion_matrix.png',
-        show=False
+        show=False,
         rotation=90
     ):
         '''
@@ -479,7 +480,7 @@ class Model():
         # bag of words: with 'english' stopwords
         count_vect = CountVectorizer(
             stop_words=stop_words,
-            ngram=ngram
+            ngram_range=ngram
         )
         bow = self.count_vect.fit_transform(self.df[self.key_text])
 
@@ -497,7 +498,7 @@ class Model():
             # tfidf weighting
             tfidf_vectorizer = TfidfVectorizer(
                 stop_words=stop_words,
-                ngram=ngram
+                ngram_range=ngram
             )
             data = tfidf_vectorizer.fit_transform(self.df[self.key_text])
 
@@ -512,7 +513,7 @@ class Model():
             clf = MultinomialNB()
             tfidf_vectorizer = TfidfVectorizer(
                 stop_words=stop_words,
-                ngram=ngram
+                ngram_range=ngram
             )
             data = tfidf_vectorizer.fit_transform(self.df[self.key_text])
 

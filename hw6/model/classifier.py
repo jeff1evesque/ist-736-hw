@@ -10,7 +10,7 @@ def model(
     key_text='text',
     key_class='screen_name',
     max_length=280,
-    ngram_range=(1,1)
+    ngram=(1,1)
 ):
     '''
 

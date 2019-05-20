@@ -13,8 +13,8 @@ def classify(
     kfold=True,
     n_splits=5,
     top_words=20,
-    ngram_range=(1,1),
-    rotatio=90,
+    ngram=(1,1),
+    rotation=90,
     directory='viz',
     flag_mnb=True,
     flag_mnb_pos=True,
@@ -34,7 +34,7 @@ def classify(
     kfold_scores = {}
     model_scores = {}
 
-    if ngram_range == (1,1):
+    if ngram == (1,1):
         suffix = ''
     else:
         suffix = '_ngram'
