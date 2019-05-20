@@ -34,10 +34,25 @@ if not os.path.exists('viz'):
 #
 # classify
 #
-classify_results[sn] = classify(
+base_results = classify(
     df,
     key_class='genre',
     key_text='lyrics',
     directory='viz',
     top_words=25
+)
+
+#
+# classify: with ngrams
+#
+ngram_results = classify(
+    df,
+    key_class='genre',
+    key_text='lyrics',
+    directory='viz',
+    top_words=25,
+    ngram_range=(1,3),
+    flag_mnb_pos=False,
+    flag_bnb_pos=False,
+    flag_svm_pos=False,
 )
