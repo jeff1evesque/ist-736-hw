@@ -21,11 +21,12 @@ from controller.classifier import classify
 import matplotlib.pyplot as plt
 
 #
-# read dataset: only first 1000 rows
+# read dataset: sample equally 500 by gender.
 #
 df = pd.read_csv('{}/data/380000-lyrics-from-metrolyrics/lyrics1.csv'.format(
     Path(__file__).resolve().parents[1]
-), nrows=1000)
+))
+df = df.groupby('genre').apply(lambda x: x.sample(500))
 
 if not os.path.exists('viz'):
     os.makedirs('viz')
