@@ -86,14 +86,16 @@ class TwitterQuery():
     def query(
         self,
         query,
+        count=50,
+        rate_limit=0,
         params=[{'user': ['screen_name']}, 'created_at', 'full_text'],
-        sorted=None,
         force_ascii=True
     ):
         '''
 
         search tweets using provided parameters and default credentials.
 
+        @params, parameters to return.
         @query, query parameters of the form:
 
             {
@@ -103,9 +105,6 @@ class TwitterQuery():
                 'lang': 'en',
             }
 
-        @params, parameters to return.
-        @keys, list of lists, recursive params key through end value.
-
         Note: additional search arguments, as well as full response
               'statuses' can be utilized and referenced:
 
@@ -113,22 +112,88 @@ class TwitterQuery():
 
         '''
 
+        # local variables
         keys = []
-        [keys.extend(self.get_dict_path(k)) if isinstance(k, dict) else keys.append([k]) for k in params]
-        results = {x[-1]: [] for x in keys}
+        if rate_limit > 15:
+            rate_limit = 15
+
+        elif rate_limit < 0:
+            rate_limit = 0
 
         #
-        # query
+        # query: induction step
         #
-        for status in self.conn.search(**query)['statuses']:
-            [results[k].append(self.get_dict_val(status, keys[i])) for i, (k,v) in enumerate(results.items())]
+        try:
+            tweets = self.conn.search(
+                q=query,
+                count=count,
+                tweet_mode='extended'
+            )
 
-        self.df_query = pd.DataFrame(results)
+        except TwythonError as e:
+            print(e)
 
+        # desired params
+        [keys.extend(self.get_dict_path(k)) if isinstance(
+            k,
+            dict
+        ) else keys.append([k]) for k in params]
+
+        results = {}
+        for i,x in enumerate(keys):
+            if x[-1] in results:
+                results['{x}_{suffix}'.format(x=x[-1], suffix=i)] = []
+            else:
+                results[x[-1]] = []
+
+        for tweet in tweets['statuses']:
+            last_id = tweet['id']
+            [results[k].append(self.get_dict_val(
+                tweet,
+                keys[i]
+            )) for i,(k,v) in enumerate(results.items())]
+
+        #
+        # query: extend through max limit
+        #
+        for i in range(rate_limit):
+            tweets = self.conn.search(
+                q=query,
+                count=count,
+                tweet_mode='extended',
+                max_id = last_id - 1
+            )
+
+            if len(tweets) > 0:
+                for tweet in tweets['statuses']:
+                    last_id = tweet['id']
+                    [results[k].append(self.get_dict_val(
+                        tweet,
+                        keys[i]
+                    )) for i,(k,v) in enumerate(results.items())]
+
+        #
+        # store results
+        #
+        self.df_tweets = pd.DataFrame(results)
+
+        #
+        # clean dataframe
+        #
         if force_ascii:
-            self.df_timeline['full_text'] = [re.sub(self.regex, r' ', str(s)) for s in self.df_timeline['full_text']]
+            self.df_tweets['full_text'] = [re.sub(
+                self.regex,
+                r' ',
+                str(s)
+            ) for s in self.df_tweets['full_text']]
 
-        return(self.df_query)
+        # reformat date
+        self.df_tweets['created_at'] = [datetime.strptime(
+            x,
+            '%a %b %d %H:%M:%S +0000 %Y'
+        ) for x in self.df_tweets['created_at']]
+
+        return(self.df_tweets)
 
     def query_user(
         self,
@@ -148,6 +213,11 @@ class TwitterQuery():
         @params, parameters to return.
         @count, number of tweets to return.
         @keys, list of lists, recursive params key through end value.
+
+        Note: additional search arguments, as well as full response
+              can be utilized and referenced:
+
+            - https://developer.twitter.com/en/docs/tweets/timelines/api-reference/get-statuses-user_timeline.html
 
         '''
 
@@ -172,7 +242,10 @@ class TwitterQuery():
             print(e)
 
         keys = []
-        [keys.extend(self.get_dict_path(k)) if isinstance(k, dict) else keys.append([k]) for k in params]
+        [keys.extend(self.get_dict_path(k)) if isinstance(
+            k,
+            dict
+        ) else keys.append([k]) for k in params]
 
         results = {}
         for i,x in enumerate(keys):
@@ -216,7 +289,11 @@ class TwitterQuery():
         # clean dataframe
         #
         if force_ascii:
-            self.df_timeline['full_text'] = [re.sub(self.regex, r' ', str(s)) for s in self.df_timeline['full_text']]
+            self.df_timeline['full_text'] = [re.sub(
+                self.regex,
+                r' ',
+                str(s)
+            ) for s in self.df_timeline['full_text']]
 
         # reformat date
         self.df_timeline['created_at'] = [datetime.strptime(
@@ -225,8 +302,16 @@ class TwitterQuery():
         ) for x in self.df_timeline['created_at']]
 
         # duplicate index column: side effect of datetime conversion.
-        self.df_timeline.drop(self.df_timeline.filter(regex='Unnamed:').columns, axis=1, inplace=True)
-        self.df_timeline.sort_values(by='created_at', ascending=True, inplace=True)
+        self.df_timeline.drop(
+            self.df_timeline.filter(regex='Unnamed:').columns,
+            axis=1,
+            inplace=True
+        )
+        self.df_timeline.sort_values(
+            by='created_at',
+            ascending=True,
+            inplace=True
+        )
         self.df_timeline.reset_index(inplace=True)
         self.df_timeline.drop(['index'], axis=1, inplace=True)
 
