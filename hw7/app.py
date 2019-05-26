@@ -7,7 +7,7 @@
 #
 
 import os
-import re
+import scipy.stats
 from pathlib import Path
 import pandas as pd
 import numpy as np
@@ -16,7 +16,6 @@ from consumer.twitter_query import TwitterQuery
 from view.exploratory import explore
 from view.classifier import plot_bar
 from exploratory.sentiment import Sentiment
-from datetime import datetime
 from controller.classifier import classify
 import matplotlib.pyplot as plt
 import sys
@@ -87,10 +86,22 @@ for i,sn in enumerate(screen_name):
 
 # combine samples
 if Path('data/twitter/sample.csv').is_file():
-    df = pd.read_csv('data/twitter/sample.csv')
+    df_sample = pd.read_csv('data/twitter/sample.csv')
 
 else:
-    df = [data[x].sample(500) for x in [*data]]
-    df = pd.concat(df).reset_index()
-    df.drop(['index', 'Unnamed: 0'], axis=1, inplace=True)
-    df.to_csv('data/twitter/sample.csv')
+    df_sample = [data[x].sample(500) for x in [*data]]
+    df_sample = pd.concat(df).reset_index()
+    df_sample.drop(['index', 'Unnamed: 0'], axis=1, inplace=True)
+    df_sample.to_csv('data/twitter/sample.csv')
+
+# load mturk
+if Path('../data/mturk/got.csv').is_file():
+    df_mturk = pd.read_csv('../data/mturk/got.csv')
+
+#
+# aggregate dataframe: get most frequent label across tweets, select first
+#     instance between ties.
+#
+df = df_mturk.groupby(['Input.index', 'Input.full_text'])['Answer.sentiment.label'].agg(
+    lambda x: scipy.stats.mode(x)[0][0]
+)
