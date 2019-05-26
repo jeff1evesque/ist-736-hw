@@ -114,11 +114,24 @@ class TwitterQuery():
 
         # local variables
         keys = []
-        if rate_limit > 900:
-            rate_limit = 900
+        if rate_limit > 15:
+            rate_limit = 15
 
         elif rate_limit < 0:
             rate_limit = 0
+
+        #
+        # query: induction step
+        #
+        try:
+            tweets = self.conn.search(
+                q=query,
+                count=count,
+                tweet_mode='extended'
+            )
+
+        except TwythonError as e:
+            print(e)
 
         # desired params
         [keys.extend(self.get_dict_path(k)) if isinstance(
@@ -133,6 +146,13 @@ class TwitterQuery():
             else:
                 results[x[-1]] = []
 
+        for tweet in tweets['statuses']:
+            last_id = tweet['id']
+            [results[k].append(self.get_dict_val(
+                tweet,
+                keys[i]
+            )) for i,(k,v) in enumerate(results.items())]
+
         #
         # query: extend through max limit
         #
@@ -140,7 +160,8 @@ class TwitterQuery():
             tweets = self.conn.search(
                 q=query,
                 count=count,
-                tweet_mode='extended'
+                tweet_mode='extended',
+                max_id = last_id - 1
             )
 
             if len(tweets) > 0:
@@ -192,6 +213,11 @@ class TwitterQuery():
         @params, parameters to return.
         @count, number of tweets to return.
         @keys, list of lists, recursive params key through end value.
+
+        Note: additional search arguments, as well as full response
+              can be utilized and referenced:
+
+            - https://developer.twitter.com/en/docs/tweets/timelines/api-reference/get-statuses-user_timeline.html
 
         '''
 
