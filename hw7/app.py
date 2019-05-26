@@ -75,7 +75,7 @@ for i,sn in enumerate(screen_name):
 
     else:
         try:
-            data[sn] = t.query(query=sn, count=600, rate_limit=900)
+            data[sn] = t.query(query=sn, count=600, rate_limit=15)
             data[sn].to_csv('data/twitter/{sn}.csv'.format(sn=sn))
 
         except Exception as e:
