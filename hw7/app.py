@@ -45,6 +45,9 @@ stopwords.extend(screen_name)
 #
 # create directories
 #
+if not os.path.exists('data/twitter'):
+    os.makedirs('data/twitter')
+
 if not os.path.exists('../data/twitter'):
     os.makedirs('../data/twitter')
 
@@ -81,3 +84,13 @@ for i,sn in enumerate(screen_name):
         except Exception as e:
             print('Error: did not finish \'{sn}\'.'.format(sn=sn))
             print(e)
+
+# combine samples
+if Path('data/twitter/sample.csv').is_file():
+    df = pd.read_csv('data/twitter/sample.csv')
+
+else:
+    df = [data[x].sample(500) for x in [*data]]
+    df = pd.concat(df).reset_index()
+    df.drop(['index', 'Unnamed: 0'], axis=1, inplace=True)
+    df.to_csv('data/twitter/sample.csv')
