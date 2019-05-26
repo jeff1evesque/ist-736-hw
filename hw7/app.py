@@ -45,8 +45,8 @@ stopwords.extend(screen_name)
 #
 # create directories
 #
-if not os.path.exists('data/twitter'):
-    os.makedirs('data/twitter')
+if not os.path.exists('../data/twitter'):
+    os.makedirs('../data/twitter')
 
 if not os.path.exists('viz'):
     os.makedirs('viz')
@@ -70,13 +70,13 @@ for i,sn in enumerate(screen_name):
     #
     # harvest tweets
     #
-    if Path('data/twitter/{sn}.csv'.format(sn=sn)).is_file():
-        data[sn] = pd.read_csv('data/twitter/{sn}.csv'.format(sn=sn))
+    if Path('../data/twitter/{sn}.csv'.format(sn=sn)).is_file():
+        data[sn] = pd.read_csv('../data/twitter/{sn}.csv'.format(sn=sn))
 
     else:
         try:
             data[sn] = t.query(query=sn, count=600, rate_limit=15)
-            data[sn].to_csv('data/twitter/{sn}.csv'.format(sn=sn))
+            data[sn].to_csv('../data/twitter/{sn}.csv'.format(sn=sn))
 
         except Exception as e:
             print('Error: did not finish \'{sn}\'.'.format(sn=sn))
