@@ -10,6 +10,7 @@
 
 import time
 import csv
+from operator import itemgetter
 import numpy as np
 from pathlib import Path
 import pandas as pd
@@ -437,6 +438,36 @@ class Model():
             plt.show()
         else:
             plt.close()
+
+    def get_word_scores(self, label='positive', range=10):
+        '''
+
+        use generalized method using word counts to determine most indicative
+            positive or negative words.
+
+        @reverse, positive sentiment words indicated by 'True', while negative
+            words indicate by 'False'.
+
+        Note: naive bayes includes an alternative method included through
+              sklearn using 'feature_log_prob_'.
+
+        '''
+
+        # convert (shape 1, n_terms) to (1, n_terms)
+        total_count = self.bow.sum(axis=0)
+        count = self.bow[self.df.sentiment == label].sum(axis=0)
+
+        # convert to 1d np.arrays
+        total_count = np.asarray(total_count).ravel()
+        count = np.asarray(count).ravel()
+
+        # terms and prob
+        terms = self.count_vect.get_feature_names()
+        prob = count / total_count
+        words = zip(terms, prob)
+
+        # top indicative words
+        return(sorted(words, key=itemgetter(1), reverse = True)[:range])
 
     def get_accuracy(self, actual=None, predicted=None):
         '''
