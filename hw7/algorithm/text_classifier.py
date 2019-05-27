@@ -10,6 +10,7 @@
 
 import time
 import csv
+from operator import itemgetter
 import numpy as np
 from pathlib import Path
 import pandas as pd
@@ -19,6 +20,7 @@ from nltk import tokenize, download, pos_tag
 from nltk.stem.porter import PorterStemmer
 from sklearn.metrics import accuracy_score
 from sklearn.model_selection import KFold
+from sklearn.metrics import precision_recall_fscore_support
 from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
 from sklearn import svm
 from sklearn.naive_bayes import BernoulliNB, MultinomialNB
@@ -427,6 +429,7 @@ class Model():
             predicted,
             x_tick_rotation=rotation
         )
+        plt.tight_layout()
 
         # save plot
         plt.savefig(filename)
@@ -435,6 +438,36 @@ class Model():
             plt.show()
         else:
             plt.close()
+
+    def get_word_scores(self, label='positive', range=10):
+        '''
+
+        use generalized method using word counts to determine most indicative
+            positive or negative words.
+
+        @reverse, positive sentiment words indicated by 'True', while negative
+            words indicate by 'False'.
+
+        Note: naive bayes includes an alternative method included through
+              sklearn using 'feature_log_prob_'.
+
+        '''
+
+        # convert (shape 1, n_terms) to (1, n_terms)
+        total_count = self.bow.sum(axis=0)
+        count = self.bow[self.df.sentiment == label].sum(axis=0)
+
+        # convert to 1d np.arrays
+        total_count = np.asarray(total_count).ravel()
+        count = np.asarray(count).ravel()
+
+        # terms and prob
+        terms = self.count_vect.get_feature_names()
+        prob = count / total_count
+        words = zip(terms, prob)
+
+        # top indicative words
+        return(sorted(words, key=itemgetter(1), reverse = True)[:range])
 
     def get_accuracy(self, actual=None, predicted=None):
         '''
@@ -450,6 +483,30 @@ class Model():
 
         return(accuracy_score(actual, predicted))
 
+    def get_precision_recall_fscore(
+        self,
+        actual=None,
+        predicted=None,
+        average='weighted'
+    ):
+        '''
+
+        return precision, recall, and fscore.
+
+        '''
+
+        if not actual:
+            actual = self.actual
+        if not predicted:
+            predicted = self.predicted
+
+        return(
+            precision_recall_fscore_support(
+                actual,
+                predicted,
+                average=average
+            )
+        )
 
     def get_kfold_scores(
         self,
