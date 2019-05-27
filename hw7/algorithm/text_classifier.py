@@ -19,6 +19,7 @@ from nltk import tokenize, download, pos_tag
 from nltk.stem.porter import PorterStemmer
 from sklearn.metrics import accuracy_score
 from sklearn.model_selection import KFold
+from sklearn.metrics import precision_recall_fscore_support
 from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
 from sklearn import svm
 from sklearn.naive_bayes import BernoulliNB, MultinomialNB
@@ -451,6 +452,30 @@ class Model():
 
         return(accuracy_score(actual, predicted))
 
+    def get_precision_recall_fscore(
+        self,
+        actual=None,
+        predicted=None,
+        average='weighted'
+    ):
+        '''
+
+        return precision, recall, and fscore.
+
+        '''
+
+        if not actual:
+            actual = self.actual
+        if not predicted:
+            predicted = self.predicted
+
+        return(
+            precision_recall_fscore_support(
+                actual,
+                predicted,
+                average=average
+            )
+        )
 
     def get_kfold_scores(
         self,
