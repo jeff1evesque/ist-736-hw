@@ -49,7 +49,22 @@ stopwords=[
     'think',
     'twitter',
     'thefinalepisode',
-    'ye'
+    'ye',
+    'el',
+    'la',
+    'lo',
+    'en',
+    'es',
+    'est',
+    'deo',
+    'se',
+    's8',
+    'que',
+    'para',
+    'guion',
+    'hecho',
+    'trono',
+    'ser'
 ]
 
 #
