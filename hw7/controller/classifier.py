@@ -35,6 +35,7 @@ def classify(
     kfold_scores = {}
     model_scores = {}
     prf_scores = {}
+    indicative_words = {}
 
     if ngram == (1,1):
         suffix = ''
@@ -51,6 +52,8 @@ def classify(
             ngram=ngram
         )
         model_scores['mnb'] = mnb.get_accuracy()
+        indicative_words['positive'] = mnb.get_word_scores(label='positive')
+        indicative_words['negative'] = mnb.get_word_scores(label='negative')
 
         if plot:
             plot_cm(
@@ -128,6 +131,8 @@ def classify(
             max_length=math.inf
         )
         model_scores['mnb_pos'] = mnb_pos.get_accuracy()
+        indicative_words['positive'] = mnb.get_word_scores(label='positive')
+        indicative_words['negative'] = mnb.get_word_scores(label='negative')
 
         if plot:
             plot_cm(
@@ -197,6 +202,8 @@ def classify(
             ngram=ngram
         )
         model_scores['bnb'] = bnb.get_accuracy()
+        indicative_words['positive'] = mnb.get_word_scores(label='positive')
+        indicative_words['negative'] = mnb.get_word_scores(label='negative')
 
         if plot:
             plot_cm(
@@ -276,6 +283,8 @@ def classify(
             max_length=0
         )
         model_scores['bnb_pos'] = bnb_pos.get_accuracy()
+        indicative_words['positive'] = mnb.get_word_scores(label='positive')
+        indicative_words['negative'] = mnb.get_word_scores(label='negative')
 
         if plot:
             plot_cm(
@@ -345,6 +354,8 @@ def classify(
             ngram=ngram
         )
         model_scores['svm'] = svm.get_accuracy()
+        indicative_words['positive'] = mnb.get_word_scores(label='positive')
+        indicative_words['negative'] = mnb.get_word_scores(label='negative')
 
         if plot:
             plot_cm(
@@ -423,6 +434,8 @@ def classify(
             key_text=key_text
         )
         model_scores['svm_pos'] = svm_pos.get_accuracy()
+        indicative_words['positive'] = mnb.get_word_scores(label='positive')
+        indicative_words['negative'] = mnb.get_word_scores(label='negative')
 
         if plot:
             plot_cm(
@@ -525,5 +538,21 @@ def classify(
             rotation=rotation
         ) for k,v in prf_scores.items()]
 
+        plot_bar(
+            labels=[x[0] for x in indicative_words['positive']],
+            performance=[x[1] for x in indicative_words['positive']],
+            directory=directory,
+            filename='top_positive_words',
+            rotation=rotation
+        )
+
+        plot_bar(
+            labels=[x[0] for x in indicative_words['negative']],
+            performance=[x[1] for x in indicative_words['negative']],
+            directory=directory,
+            filename='top_negative_words',
+            rotation=rotation
+        )
+
     # return score
-    return(score_good, kfold_scores, prf_scores)
+    return(score_good, kfold_scores, prf_scores, indicative_words)
