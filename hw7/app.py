@@ -50,8 +50,8 @@ if not os.path.exists('data/twitter'):
 if not os.path.exists('../data/twitter'):
     os.makedirs('../data/twitter')
 
-if not os.path.exists('viz'):
-    os.makedirs('viz')
+if not os.path.exists('viz/unigram'):
+    os.makedirs('viz/unigram')
 
 # instantiate api
 t = TwitterQuery(
@@ -130,6 +130,6 @@ base_results = classify(
     df,
     key_class='sentiment',
     key_text='full_text',
-    directory='viz',
+    directory='viz/unigram',
     top_words=25
 )
