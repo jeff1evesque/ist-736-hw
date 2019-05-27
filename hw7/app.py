@@ -147,3 +147,12 @@ ngram_results = classify(
     top_words=25,
     ngram=(1,2)
 )
+
+full_results = classify(
+    df,
+    key_class='sentiment',
+    key_text='full_text',
+    split_size=1,
+    directory='viz/ngram',
+    top_words=25
+)
