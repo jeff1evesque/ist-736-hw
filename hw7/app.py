@@ -53,6 +53,9 @@ if not os.path.exists('../data/twitter'):
 if not os.path.exists('viz/unigram'):
     os.makedirs('viz/unigram')
 
+if not os.path.exists('viz/ngram'):
+    os.makedirs('viz/ngram')
+
 # instantiate api
 t = TwitterQuery(
     t_creds['CONSUMER_KEY'],
@@ -138,7 +141,7 @@ ngram_results = classify(
     df,
     key_class='sentiment',
     key_text='full_text',
-    directory='viz/unigram',
+    directory='viz/ngram',
     top_words=25,
     ngram=(1,2)
 )
