@@ -43,6 +43,7 @@ class Model():
     def __init__(
         self,
         df=None,
+        split_size=0.2,
         vectorize=True,
         key_text='SentimentText',
         key_class='Sentiment',
@@ -63,6 +64,7 @@ class Model():
         # class variables
         self.key_text = key_text
         self.key_class = key_class
+        self.split_size = split_size
         self.actual = None
         self.predicted = None
 
@@ -107,12 +109,15 @@ class Model():
 
         self.key_text = key_text
 
-    def split(self, size=0.20):
+    def split(self, size=None):
         '''
 
         split data into train and test.
 
         '''
+
+        if not size:
+            size = split_size
 
         self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(
             self.tfidf,

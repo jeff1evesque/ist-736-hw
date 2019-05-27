@@ -133,6 +133,7 @@ base_results = classify(
     df,
     key_class='sentiment',
     key_text='full_text',
+    split_size=0.4,
     directory='viz/unigram',
     top_words=25
 )
@@ -141,6 +142,7 @@ ngram_results = classify(
     df,
     key_class='sentiment',
     key_text='full_text',
+    split_size=0.4,
     directory='viz/ngram',
     top_words=25,
     ngram=(1,2)

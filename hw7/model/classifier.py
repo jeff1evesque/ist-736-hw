@@ -10,7 +10,8 @@ def model(
     key_text='text',
     key_class='screen_name',
     max_length=280,
-    ngram=(1,1)
+    ngram=(1,1),
+    split_size=0.2
 ):
     '''
 
@@ -45,7 +46,8 @@ def model_pos(
     key_text='SentimentText',
     key_class='Sentiment',
     max_length=280,
-    stem=False
+    stem=False,
+    split_size=0.2
 ):
     '''
 

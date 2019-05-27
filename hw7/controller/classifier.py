@@ -23,7 +23,8 @@ def classify(
     flag_bnb_pos=True,
     flag_svm=True,
     flag_svm_pos=True,
-    plot=True
+    plot=True,
+    split_size=0.2
 ):
     '''
 
@@ -49,7 +50,8 @@ def classify(
             key_class=key_class,
             key_text=key_text,
             max_length=math.inf,
-            ngram=ngram
+            ngram=ngram,
+            split_size=0.2
         )
         model_scores['mnb'] = mnb.get_accuracy()
         indicative_words['positive'] = mnb.get_word_scores(
@@ -134,7 +136,8 @@ def classify(
             df=df,
             key_class=key_class,
             key_text=key_text,
-            max_length=math.inf
+            max_length=math.inf,
+            split_size=0.2
         )
         model_scores['mnb_pos'] = mnb_pos.get_accuracy()
         indicative_words['positive'] = mnb.get_word_scores(
@@ -211,7 +214,8 @@ def classify(
             key_class=key_class,
             key_text=key_text,
             max_length=0,
-            ngram=ngram
+            ngram=ngram,
+            split_size=0.2
         )
         model_scores['bnb'] = bnb.get_accuracy()
         indicative_words['positive'] = mnb.get_word_scores(
@@ -298,7 +302,8 @@ def classify(
             model_type='bernoulli',
             key_class=key_class,
             key_text=key_text,
-            max_length=0
+            max_length=0,
+            split_size=0.2
         )
         model_scores['bnb_pos'] = bnb_pos.get_accuracy()
         indicative_words['positive'] = mnb.get_word_scores(
@@ -375,7 +380,8 @@ def classify(
             model_type='svm',
             key_class=key_class,
             key_text=key_text,
-            ngram=ngram
+            ngram=ngram,
+            split_size=0.2
         )
         model_scores['svm'] = svm.get_accuracy()
         indicative_words['positive'] = mnb.get_word_scores(
@@ -461,7 +467,8 @@ def classify(
             df=df,
             model_type='svm',
             key_class=key_class,
-            key_text=key_text
+            key_text=key_text,
+            split_size=0.2
         )
         model_scores['svm_pos'] = svm_pos.get_accuracy()
         indicative_words['positive'] = mnb.get_word_scores(
