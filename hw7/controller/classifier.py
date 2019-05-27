@@ -70,11 +70,19 @@ def classify(
             terms[x],
             log_prob['positive']['value'][i]
         ) for i,x in enumerate(log_prob['positive']['index'])]
+        indicative_words['positive'] = sorted(
+            indicative_words['positive'],
+            key=itemgetter(0)
+        )
 
         indicative_words['negative'] = [(
             terms[x],
             log_prob['negative']['value'][i]
         ) for i,x in enumerate(log_prob['negative']['index'])]
+        indicative_words['negative'] = sorted(
+            indicative_words['negative'],
+            key=itemgetter(0)
+        )
 
         if plot:
             plot_cm(
@@ -188,11 +196,19 @@ def classify(
             terms[x],
             log_prob['positive']['value'][i]
         ) for i,x in enumerate(log_prob['positive']['index'])]
+        indicative_words['positive'] = sorted(
+            indicative_words['positive'],
+            key=itemgetter(0)
+        )
 
         indicative_words['negative'] = [(
             terms[x],
             log_prob['negative']['value'][i]
         ) for i,x in enumerate(log_prob['negative']['index'])]
+        indicative_words['negative'] = sorted(
+            indicative_words['negative'],
+            key=itemgetter(0)
+        )
 
         if plot:
             plot_cm(
