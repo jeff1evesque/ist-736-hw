@@ -64,12 +64,6 @@ t = TwitterQuery(
 #
 for i,sn in enumerate(screen_name):
     #
-    # create directories
-    #
-    if not os.path.exists('viz/{sn}'.format(sn=sn)):
-        os.makedirs('viz/{sn}'.format(sn=sn))
-
-    #
     # harvest tweets
     #
     if Path('../data/twitter/{sn}.csv'.format(sn=sn)).is_file():
@@ -104,4 +98,38 @@ if Path('../data/mturk/got.csv').is_file():
 #
 df = df_mturk.groupby(['Input.index', 'Input.full_text'])['Answer.sentiment.label'].agg(
     lambda x: scipy.stats.mode(x)[0][0]
+)
+
+# convert series to dataframe
+df = df.to_frame().reset_index()
+df.drop(['Input.index'], axis=1, inplace=True)
+df.columns = ['full_text', 'sentiment']
+
+#
+# combine labels: very negative, and very positive have less than 10%
+#     of the associated positive and negative labels.
+#
+df.sentiment.replace(
+    to_replace='very negative',
+    value='negative',
+    inplace=True
+)
+df.sentiment.replace(
+    to_replace='very positive',
+    value='positive',
+    inplace=True
+)
+
+# unbalanced neutral
+df.drop(df.index[df['sentiment'] == 'neutral'], inplace = True)
+
+#
+# classify
+#
+base_results = classify(
+    df,
+    key_class='sentiment',
+    key_text='full_text',
+    directory='viz',
+    top_words=25
 )
