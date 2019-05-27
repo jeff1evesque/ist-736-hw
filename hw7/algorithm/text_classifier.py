@@ -89,7 +89,7 @@ class Model():
         # vectorize data
         if vectorize:
             self.vectorize(ngram=ngram)
-            self.split()
+            self.split(size=split_size)
 
     def set_df(self, df):
         '''
@@ -118,12 +118,24 @@ class Model():
 
         if not size:
             size = self.split_size
+            self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(
+                self.tfidf,
+                self.df[self.key_class],
+                test_size=size
+            )
 
-        self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(
-            self.tfidf,
-            self.df[self.key_class],
-            test_size=size
-        )
+        elif size == 1.0:
+            self.X_train = self.tfidf
+            self.y_train = self.df[self.key_class]
+            self.X_test = 0
+            self.y_test = 0
+
+        else:
+            self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(
+                self.tfidf,
+                self.df[self.key_class],
+                test_size=size
+            )
 
     def get_split(self):
         '''

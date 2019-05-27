@@ -155,7 +155,8 @@ full_results = classify(
     df,
     key_class='sentiment',
     key_text='full_text',
-    split_size=1,
+    split_size=1.0,
     directory='viz/full',
-    top_words=25
+    top_words=25,
+    validate='full'
 )

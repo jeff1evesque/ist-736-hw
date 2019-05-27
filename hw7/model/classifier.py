@@ -11,7 +11,8 @@ def model(
     key_class='screen_name',
     max_length=280,
     ngram=(1,1),
-    split_size=0.2
+    split_size=0.2,
+    validate=True
 ):
     '''
 
@@ -37,15 +38,25 @@ def model(
         )
 
     # vectorize data
-    model.split()
+    model.split(size=split_size)
     params = model.get_split()
+
+    # split validation
+    if not validate:
+        validate = False
+
+    elif validate == 'full':
+        validate = (params['X_train'], params['y_train'])
+
+    else:
+        validate = (params['X_test'], params['y_test'])
 
     # train classifier
     model.train(
         params['X_train'],
         params['y_train'],
         model_type=model_type,
-        validate=(params['X_test'], params['y_test']),
+        validate=validate,
         max_length=max_length
     )
 
@@ -58,7 +69,8 @@ def model_pos(
     key_class='Sentiment',
     max_length=280,
     stem=False,
-    split_size=0.2
+    split_size=0.2,
+    validate=True
 ):
     '''
 
@@ -68,9 +80,20 @@ def model_pos(
 
     # initialize classifier
     if df is not None:
-        model = alg(df=df, key_text=key_text, key_class=key_class, stem=False)
+        model = alg(
+            df=df,
+            key_text=key_text,
+            key_class=key_class,
+            stem=False,
+            split_size=split_size
+        )
     else:
-        model = alg(key_text=key_text, key_class=key_class, stem=False)
+        model = alg(
+            key_text=key_text,
+            key_class=key_class,
+            stem=False,
+            split_size=split_size
+        )
 
     #
     # suffix pos: add part of speech suffix to each word.
@@ -85,15 +108,25 @@ def model_pos(
     model.set_key_text('pos')
 
     # vectorize data
-    model.split()
+    model.split(size=split_size)
     params = model.get_split()
+
+    # split validation
+    if not validate:
+        validate = False
+
+    elif validate == 'full':
+        validate = (params['X_train'], params['y_train'])
+
+    else:
+        validate = (params['X_test'], params['y_test'])
 
     # train classifier
     model.train(
         params['X_train'],
         params['y_train'],
         model_type=model_type,
-        validate=(params['X_test'], params['y_test']),
+        validate=validate,
         max_length=max_length
     )
 
