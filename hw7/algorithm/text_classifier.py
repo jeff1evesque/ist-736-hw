@@ -264,6 +264,15 @@ class Model():
         tuples = zip(coo_matrix.col, coo_matrix.data)
         return(sorted(tuples, key=lambda x: (x[1], x[0]), reverse=True))
 
+    def get_clf(self):
+        '''
+
+        return current model.
+
+        '''
+
+        return(self.clf)
+
     def get_top_features(self, feature_names, sorted_items, topn):
         '''
 
@@ -309,6 +318,15 @@ class Model():
 
         return(self.tfidf)
 
+    def get_count_vect(self):
+        '''
+
+        get current vectorized count.
+
+        '''
+
+        return(self.count_vect)
+
     def get_df(self):
         '''
 
@@ -345,11 +363,15 @@ class Model():
         # conditionally select model
         if (model_type == 'svm'):
             if multiclass:
-                clf = svm.SVC(gamma='scale', kernel='linear', decision_function_shape='ovo')
+                self.clf = svm.SVC(
+                    gamma='scale',
+                    kernel='linear',
+                    decision_function_shape='ovo'
+                )
             else:
-                clf = svm.SVC(gamma='scale', kernel='linear')
+                self.clf = svm.SVC(gamma='scale', kernel='linear')
 
-            clf.fit(X, y)
+            self.clf.fit(X, y)
 
             # validate
             if validate and len(validate) == 2:
@@ -357,20 +379,20 @@ class Model():
 
                 for item in list(validate[0]):
                     predictions.append(
-                        clf.predict(item)
+                        self.clf.predict(item)
                     )
 
                 self.actual = validate[1]
                 self.predicted = predictions
 
                 return({
-                    'model': clf,
+                    'model': self.clf,
                     'actual': validate[1],
                     'predicted': predictions
                 })
 
             return({
-                'model': clf,
+                'model': self.clf,
                 'actual': None,
                 'predicted': None
             })
@@ -379,8 +401,8 @@ class Model():
             (model_type == 'bernoulli') or
             (not model_type and all(len(sent) <= max_length for sent in self.X_train))
         ):
-            clf = BernoulliNB()
-            clf.fit(X, y)
+            self.clf = BernoulliNB()
+            self.clf.fit(X, y)
 
             # validate
             if validate and len(validate) == 2:
@@ -388,27 +410,27 @@ class Model():
 
                 for item in list(validate[0]):
                     predictions.append(
-                        clf.predict(item)
+                        self.clf.predict(item)
                     )
 
                 self.actual = validate[1]
                 self.predicted = predictions
 
                 return({
-                    'model': clf,
+                    'model': self.clf,
                     'actual': validate[1],
                     'predicted': predictions
                 })
 
             return({
-                'model': clf,
+                'model': self.clf,
                 'actual': None,
                 'predicted': None
             })
 
         else:
-            clf = MultinomialNB()
-            clf.fit(X, y)
+            self.clf = MultinomialNB()
+            self.clf.fit(X, y)
 
             # validate
             if validate and len(validate) == 2:
@@ -416,20 +438,20 @@ class Model():
 
                 for item in list(validate[0]):
                     predictions.append(
-                        clf.predict(item)
+                        self.clf.predict(item)
                     )
 
                 self.actual = validate[1]
                 self.predicted = predictions
 
                 return({
-                    'model': clf,
+                    'model': self.clf,
                     'actual': validate[1],
                     'predicted': predictions
                 })
 
             return({
-                'model': clf,
+                'model': self.clf,
                 'actual': None,
                 'predicted': None
             })
@@ -470,32 +492,31 @@ class Model():
         else:
             plt.close()
 
-    def get_word_scores(self, label='positive', top_words=10):
+    def get_word_scores(self, mnb, top_words=10):
         '''
 
-        return top words using provided label (i.e. negative, positive).
+        return top words (i.e. negative, positive).
 
-        @reverse, positive sentiment words indicated by 'True', while negative
-            words indicate by 'False'.
-
-        Note: naive bayes includes an alternative method included through
-              sklearn using 'feature_log_prob_'.
+        @mnb, must be mnb trained classifier.
 
         '''
 
         # local variables
-        total_count = self.bow.sum(axis=0)
-        sum_words = self.bow[self.df[self.key_class] == label].sum(axis=0)
-
-        # most common words
-        words_freq = [(
-            word,
-            sum_words[0,idx]
-        ) for word,idx in self.count_vect.vocabulary_.items()]
-        words_freq = sorted(words_freq, key = lambda x: x[1], reverse=True)
+        positive_probs = mnb.feature_log_prob_[0,:]
+        negative_probs = mnb.feature_log_prob_[1,:]
+        logodds = positive_probs - negative_probs
 
         # top words
-        return(words_freq[:top_words])
+        return({
+            'positive': {
+                'index': np.argsort(logodds)[:top_words],
+                'value': logodds[:top_words]
+            },
+            'negative': {
+                'index': np.argsort(-logodds)[:top_words],
+                'value': logodds[-top_words:]
+            }
+        })
 
     def get_accuracy(self, actual=None, predicted=None):
         '''

@@ -58,14 +58,23 @@ def classify(
             stopwords=stopwords
         )
         model_scores['mnb'] = mnb.get_accuracy()
-        indicative_words['positive'] = mnb.get_word_scores(
-            label='positive',
+
+        # most indicative words
+        log_prob = mnb.get_word_scores(
+            mnb.get_clf(),
             top_words=top_words
         )
-        indicative_words['negative'] = mnb.get_word_scores(
-            label='negative',
-            top_words=top_words
-        )
+
+        terms = mnb.get_count_vect().get_feature_names()
+        indicative_words['positive'] = [(
+            terms[x],
+            log_prob['positive']['value'][i]
+        ) for i,x in enumerate(log_prob['positive']['index'])]
+
+        indicative_words['negative'] = [(
+            terms[x],
+            log_prob['negative']['value'][i]
+        ) for i,x in enumerate(log_prob['negative']['index'])]
 
         if plot:
             plot_cm(
@@ -125,6 +134,27 @@ def classify(
                 rotation=rotation
             )
 
+            # plot top n words
+            plot_bar(
+                labels=[x[0] for x in indicative_words['positive']],
+                performance=[x[1] for x in indicative_words['positive']],
+                directory=directory,
+                filename='top_{count}_positive_words_mnb'.format(
+                    count=top_words
+                ),
+                rotation=rotation
+            )
+
+            plot_bar(
+                labels=[x[0] for x in indicative_words['negative']],
+                performance=[x[1] for x in indicative_words['negative']],
+                directory=directory,
+                filename='top_{count}_negative_words_mnb'.format(
+                    count=top_words
+                ),
+                rotation=rotation
+            )
+
         if kfold:
             kfold_scores['mnb'] = mnb.get_kfold_scores(
                 model_type='multinomial',
@@ -146,14 +176,23 @@ def classify(
             stopwords=stopwords
         )
         model_scores['mnb_pos'] = mnb_pos.get_accuracy()
-        indicative_words['positive'] = mnb.get_word_scores(
-            label='positive',
+
+        # most indicative words
+        log_prob = mnb_pos.get_word_scores(
+            mnb_pos.get_clf(),
             top_words=top_words
         )
-        indicative_words['negative'] = mnb.get_word_scores(
-            label='negative',
-            top_words=top_words
-        )
+
+        terms = mnb.get_count_vect().get_feature_names()
+        indicative_words['positive'] = [(
+            terms[x],
+            log_prob['positive']['value'][i]
+        ) for i,x in enumerate(log_prob['positive']['index'])]
+
+        indicative_words['negative'] = [(
+            terms[x],
+            log_prob['negative']['value'][i]
+        ) for i,x in enumerate(log_prob['negative']['index'])]
 
         if plot:
             plot_cm(
@@ -203,6 +242,27 @@ def classify(
                 rotation=rotation
             )
 
+            # plot top n words
+            plot_bar(
+                labels=[x[0] for x in indicative_words['positive']],
+                performance=[x[1] for x in indicative_words['positive']],
+                directory=directory,
+                filename='top_{count}_positive_words_mnb_pos'.format(
+                    count=top_words
+                ),
+                rotation=rotation
+            )
+
+            plot_bar(
+                labels=[x[0] for x in indicative_words['negative']],
+                performance=[x[1] for x in indicative_words['negative']],
+                directory=directory,
+                filename='top_{count}_negative_words_mnb_pos'.format(
+                    count=top_words
+                ),
+                rotation=rotation
+            )
+
         if kfold:
             kfold_scores['mnb_pos'] = mnb_pos.get_kfold_scores(
                 model_type='multinomial',
@@ -226,14 +286,6 @@ def classify(
             stopwords=stopwords
         )
         model_scores['bnb'] = bnb.get_accuracy()
-        indicative_words['positive'] = mnb.get_word_scores(
-            label='positive',
-            top_words=top_words
-        )
-        indicative_words['negative'] = mnb.get_word_scores(
-            label='negative',
-            top_words=top_words
-        )
 
         if plot:
             plot_cm(
@@ -316,14 +368,6 @@ def classify(
             stopwords=stopwords
         )
         model_scores['bnb_pos'] = bnb_pos.get_accuracy()
-        indicative_words['positive'] = mnb.get_word_scores(
-            label='positive',
-            top_words=top_words
-        )
-        indicative_words['negative'] = mnb.get_word_scores(
-            label='negative',
-            top_words=top_words
-        )
 
         if plot:
             plot_cm(
@@ -396,14 +440,6 @@ def classify(
             stopwords=stopwords
         )
         model_scores['svm'] = svm.get_accuracy()
-        indicative_words['positive'] = mnb.get_word_scores(
-            label='positive',
-            top_words=top_words
-        )
-        indicative_words['negative'] = mnb.get_word_scores(
-            label='negative',
-            top_words=top_words
-        )
 
         if plot:
             plot_cm(
@@ -483,15 +519,6 @@ def classify(
             split_size=split_size,
             validate=validate,
             stopwords=stopwords
-        )
-        model_scores['svm_pos'] = svm_pos.get_accuracy()
-        indicative_words['positive'] = mnb.get_word_scores(
-            label='positive',
-            top_words=top_words
-        )
-        indicative_words['negative'] = mnb.get_word_scores(
-            label='negative',
-            top_words=top_words
         )
 
         if plot:
