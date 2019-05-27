@@ -52,8 +52,14 @@ def classify(
             ngram=ngram
         )
         model_scores['mnb'] = mnb.get_accuracy()
-        indicative_words['positive'] = mnb.get_word_scores(label='positive')
-        indicative_words['negative'] = mnb.get_word_scores(label='negative')
+        indicative_words['positive'] = mnb.get_word_scores(
+            label='positive',
+            top_words=top_words
+        )
+        indicative_words['negative'] = mnb.get_word_scores(
+            label='negative',
+            top_words=top_words
+        )
 
         if plot:
             plot_cm(
@@ -131,8 +137,14 @@ def classify(
             max_length=math.inf
         )
         model_scores['mnb_pos'] = mnb_pos.get_accuracy()
-        indicative_words['positive'] = mnb.get_word_scores(label='positive')
-        indicative_words['negative'] = mnb.get_word_scores(label='negative')
+        indicative_words['positive'] = mnb.get_word_scores(
+            label='positive',
+            top_words=top_words
+        )
+        indicative_words['negative'] = mnb.get_word_scores(
+            label='negative',
+            top_words=top_words
+        )
 
         if plot:
             plot_cm(
@@ -202,8 +214,14 @@ def classify(
             ngram=ngram
         )
         model_scores['bnb'] = bnb.get_accuracy()
-        indicative_words['positive'] = mnb.get_word_scores(label='positive')
-        indicative_words['negative'] = mnb.get_word_scores(label='negative')
+        indicative_words['positive'] = mnb.get_word_scores(
+            label='positive',
+            top_words=top_words
+        )
+        indicative_words['negative'] = mnb.get_word_scores(
+            label='negative',
+            top_words=top_words
+        )
 
         if plot:
             plot_cm(
@@ -283,8 +301,14 @@ def classify(
             max_length=0
         )
         model_scores['bnb_pos'] = bnb_pos.get_accuracy()
-        indicative_words['positive'] = mnb.get_word_scores(label='positive')
-        indicative_words['negative'] = mnb.get_word_scores(label='negative')
+        indicative_words['positive'] = mnb.get_word_scores(
+            label='positive',
+            top_words=top_words
+        )
+        indicative_words['negative'] = mnb.get_word_scores(
+            label='negative',
+            top_words=top_words
+        )
 
         if plot:
             plot_cm(
@@ -354,8 +378,14 @@ def classify(
             ngram=ngram
         )
         model_scores['svm'] = svm.get_accuracy()
-        indicative_words['positive'] = mnb.get_word_scores(label='positive')
-        indicative_words['negative'] = mnb.get_word_scores(label='negative')
+        indicative_words['positive'] = mnb.get_word_scores(
+            label='positive',
+            top_words=top_words
+        )
+        indicative_words['negative'] = mnb.get_word_scores(
+            label='negative',
+            top_words=top_words
+        )
 
         if plot:
             plot_cm(
@@ -434,8 +464,14 @@ def classify(
             key_text=key_text
         )
         model_scores['svm_pos'] = svm_pos.get_accuracy()
-        indicative_words['positive'] = mnb.get_word_scores(label='positive')
-        indicative_words['negative'] = mnb.get_word_scores(label='negative')
+        indicative_words['positive'] = mnb.get_word_scores(
+            label='positive',
+            top_words=top_words
+        )
+        indicative_words['negative'] = mnb.get_word_scores(
+            label='negative',
+            top_words=top_words
+        )
 
         if plot:
             plot_cm(
