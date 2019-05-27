@@ -25,7 +25,8 @@ def classify(
     flag_svm_pos=True,
     plot=True,
     split_size=0.2,
-    validate=True
+    validate=True,
+    stopwords=None
 ):
     '''
 
@@ -53,7 +54,8 @@ def classify(
             max_length=math.inf,
             ngram=ngram,
             split_size=split_size,
-            validate=validate
+            validate=validate,
+            stopwords=stopwords
         )
         model_scores['mnb'] = mnb.get_accuracy()
         indicative_words['positive'] = mnb.get_word_scores(
@@ -140,7 +142,8 @@ def classify(
             key_text=key_text,
             max_length=math.inf,
             split_size=split_size,
-            validate=validate
+            validate=validate,
+            stopwords=stopwords
         )
         model_scores['mnb_pos'] = mnb_pos.get_accuracy()
         indicative_words['positive'] = mnb.get_word_scores(
@@ -219,7 +222,8 @@ def classify(
             max_length=0,
             ngram=ngram,
             split_size=split_size,
-            validate=validate
+            validate=validate,
+            stopwords=stopwords
         )
         model_scores['bnb'] = bnb.get_accuracy()
         indicative_words['positive'] = mnb.get_word_scores(
@@ -308,7 +312,8 @@ def classify(
             key_text=key_text,
             max_length=0,
             split_size=split_size,
-            validate=validate
+            validate=validate,
+            stopwords=stopwords
         )
         model_scores['bnb_pos'] = bnb_pos.get_accuracy()
         indicative_words['positive'] = mnb.get_word_scores(
@@ -387,7 +392,8 @@ def classify(
             key_text=key_text,
             ngram=ngram,
             split_size=split_size,
-            validate=validate
+            validate=validate,
+            stopwords=stopwords
         )
         model_scores['svm'] = svm.get_accuracy()
         indicative_words['positive'] = mnb.get_word_scores(
@@ -475,7 +481,8 @@ def classify(
             key_class=key_class,
             key_text=key_text,
             split_size=split_size,
-            validate=validate
+            validate=validate,
+            stopwords=stopwords
         )
         model_scores['svm_pos'] = svm_pos.get_accuracy()
         indicative_words['positive'] = mnb.get_word_scores(

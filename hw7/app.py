@@ -37,7 +37,24 @@ stopwords=[
     'RT',
     'amp',
     'co',
-    'TheStreet'
+    'gameofthrones',
+    'GameOfThrones',
+    'GameofThrones',
+    'GameOfThronesFinale',
+    'GameofThronesFinale',
+    'gotfinale',
+    'GOTFinale',
+    'GoTfinale',
+    'GoTFinale',
+    'Season',
+    'season',
+    'seasons',
+    'Got8',
+    'GoT8',
+    'GoT',
+    'GOT',
+    'got',
+    'gt'
 ]
 stopwords.extend(screen_name)
 
@@ -138,7 +155,8 @@ base_results = classify(
     key_text='full_text',
     split_size=0.4,
     directory='viz/unigram',
-    top_words=25
+    top_words=25,
+    stopwords=stopwords
 )
 
 ngram_results = classify(
@@ -148,6 +166,7 @@ ngram_results = classify(
     split_size=0.4,
     directory='viz/ngram',
     top_words=25,
+    stopwords=stopwords,
     ngram=(1,2)
 )
 
@@ -158,5 +177,6 @@ full_results = classify(
     split_size=1.0,
     directory='viz/full',
     top_words=25,
+    stopwords=stopwords,
     validate='full'
 )

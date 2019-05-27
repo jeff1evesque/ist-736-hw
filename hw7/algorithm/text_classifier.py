@@ -15,7 +15,7 @@ import numpy as np
 from pathlib import Path
 import pandas as pd
 from scipy.stats import itemfreq
-from nltk.corpus import stopwords
+from nltk.corpus import stopwords as stp
 from nltk import tokenize, download, pos_tag
 from nltk.stem.porter import PorterStemmer
 from sklearn.metrics import accuracy_score
@@ -29,7 +29,7 @@ import matplotlib.pyplot as plt
 import scikitplot as skplt
 from algorithm.penn_treebank import penn_scale
 from utility.dataframe import cleanse
-stop_words = set(stopwords.words('english'))
+stop_words = set(stp.words('english'))
 download('vader_lexicon')
 
 
@@ -51,6 +51,7 @@ class Model():
         lowercase=True,
         cleanse_data=True,
         ngram=(1,1),
+        stopwords=[],
         fp='{}/data/sample-sentiment.csv'.format(
             Path(__file__).resolve().parents[1]
         )
@@ -67,6 +68,7 @@ class Model():
         self.split_size = split_size
         self.actual = None
         self.predicted = None
+        self.stopwords = stopwords.append(stop_words)
 
         if df is not None:
             self.df = df
@@ -183,7 +185,7 @@ class Model():
     def vectorize(
         self,
         data=None,
-        stop_words='english',
+        stop_words=None,
         ngram=(1,1),
         topn=25
     ):
@@ -193,20 +195,23 @@ class Model():
 
         '''
 
+        if stop_words:
+            self.stopwords.extend(stop_words)
+
         #
         # pos case: implemented internally by 'split' when 'pos_split=True'.
         #
         if data is not None:
             # bag of words: with 'english' stopwords
             count_vect = CountVectorizer(
-                stop_words=stop_words,
+                stop_words=self.stopwords,
                 ngram_range=ngram
             )
             bow = count_vect.fit_transform(data)
 
             # tfidf weighting
             tfidf_vectorizer = TfidfVectorizer(
-                stop_words=stop_words,
+                stop_words=self.stopwords,
                 ngram_range=ngram
             )
             tfidf = tfidf_vectorizer.fit_transform(data)
@@ -219,14 +224,14 @@ class Model():
         else:
             # bag of words: with 'english' stopwords
             self.count_vect = CountVectorizer(
-                stop_words=stop_words,
+                stop_words=self.stopwords,
                 ngram_range=ngram
             )
             self.bow = self.count_vect.fit_transform(self.df[self.key_text])
 
             # tfidf weighting
             self.tfidf_vectorizer = TfidfVectorizer(
-                stop_words=stop_words,
+                stop_words=self.stopwords,
                 ngram_range=ngram
             )
             self.tfidf = self.tfidf_vectorizer.fit_transform(self.df[self.key_text])
@@ -459,8 +464,7 @@ class Model():
     def get_word_scores(self, label='positive', top_words=10):
         '''
 
-        use generalized method using word counts to determine most indicative
-            positive or negative words.
+        return top words using provided label (i.e. negative, positive).
 
         @reverse, positive sentiment words indicated by 'True', while negative
             words indicate by 'False'.
@@ -470,21 +474,19 @@ class Model():
 
         '''
 
-        # convert (shape 1, n_terms) to (1, n_terms)
+        # local variables
         total_count = self.bow.sum(axis=0)
-        count = self.bow[self.df.sentiment == label].sum(axis=0)
+        sum_words = self.bow[self.df[self.key_class] == label].sum(axis=0)
 
-        # convert to 1d np.arrays
-        total_count = np.asarray(total_count).ravel()
-        count = np.asarray(count).ravel()
+        # most common words
+        words_freq = [(
+            word,
+            sum_words[0,idx]
+        ) for word,idx in self.count_vect.vocabulary_.items()]
+        words_freq = sorted(words_freq, key = lambda x: x[1], reverse=True)
 
-        # terms and prob
-        terms = self.count_vect.get_feature_names()
-        prob = count / total_count
-        words = zip(terms, prob)
-
-        # top indicative words
-        return(sorted(words, key=itemgetter(1), reverse = True)[:top_words])
+        # top words
+        return(words_freq[:top_words])
 
     def get_accuracy(self, actual=None, predicted=None):
         '''
@@ -528,7 +530,7 @@ class Model():
     def get_kfold_scores(
         self,
         n_splits=2,
-        stop_words='english',
+        stop_words=None,
         max_length=280,
         shuffle=True,
         model_type=None,
@@ -551,9 +553,12 @@ class Model():
 
         '''
 
+        if stop_words:
+            self.stopwords.extend(stop_words)
+
         # bag of words: with 'english' stopwords
         count_vect = CountVectorizer(
-            stop_words=stop_words,
+            stop_words=self.stopwords,
             ngram_range=ngram
         )
         bow = self.count_vect.fit_transform(self.df[self.key_text])
@@ -571,7 +576,7 @@ class Model():
 
             # tfidf weighting
             tfidf_vectorizer = TfidfVectorizer(
-                stop_words=stop_words,
+                stop_words=self.stopwords,
                 ngram_range=ngram
             )
             data = tfidf_vectorizer.fit_transform(self.df[self.key_text])
@@ -586,7 +591,7 @@ class Model():
         else:
             clf = MultinomialNB()
             tfidf_vectorizer = TfidfVectorizer(
-                stop_words=stop_words,
+                stop_words=self.stopwords,
                 ngram_range=ngram
             )
             data = tfidf_vectorizer.fit_transform(self.df[self.key_text])

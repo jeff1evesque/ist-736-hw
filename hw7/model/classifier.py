@@ -12,7 +12,8 @@ def model(
     max_length=280,
     ngram=(1,1),
     split_size=0.2,
-    validate=True
+    validate=True,
+    stopwords=None
 ):
     '''
 
@@ -27,14 +28,16 @@ def model(
             key_text=key_text,
             key_class=key_class,
             ngram=ngram,
-            split_size=split_size
+            split_size=split_size,
+            stopwords=stopwords
         )
     else:
         model = alg(
             key_text=key_text,
             key_class=key_class,
             ngram=ngram,
-            split_size=split_size
+            split_size=split_size,
+            stopwords=stopwords
         )
 
     # vectorize data
@@ -70,7 +73,8 @@ def model_pos(
     max_length=280,
     stem=False,
     split_size=0.2,
-    validate=True
+    validate=True,
+    stopwords=None
 ):
     '''
 
@@ -85,14 +89,16 @@ def model_pos(
             key_text=key_text,
             key_class=key_class,
             stem=False,
-            split_size=split_size
+            split_size=split_size,
+            stopwords=stopwords
         )
     else:
         model = alg(
             key_text=key_text,
             key_class=key_class,
             stem=False,
-            split_size=split_size
+            split_size=split_size,
+            stopwords=stopwords
         )
 
     #
