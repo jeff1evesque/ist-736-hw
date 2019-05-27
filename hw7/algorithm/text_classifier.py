@@ -439,7 +439,7 @@ class Model():
         else:
             plt.close()
 
-    def get_word_scores(self, label='positive', range=10):
+    def get_word_scores(self, label='positive', top_words=10):
         '''
 
         use generalized method using word counts to determine most indicative
@@ -467,7 +467,7 @@ class Model():
         words = zip(terms, prob)
 
         # top indicative words
-        return(sorted(words, key=itemgetter(1), reverse = True)[:range])
+        return(sorted(words, key=itemgetter(1), reverse = True)[:top_words])
 
     def get_accuracy(self, actual=None, predicted=None):
         '''
