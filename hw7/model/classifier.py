@@ -21,9 +21,20 @@ def model(
 
     # initialize classifier
     if df is not None:
-        model = alg(df=df, key_text=key_text, key_class=key_class, ngram=ngram)
+        model = alg(
+            df=df,
+            key_text=key_text,
+            key_class=key_class,
+            ngram=ngram,
+            split_size=split_size
+        )
     else:
-        model = alg(key_text=key_text, key_class=key_class, ngram=ngram)
+        model = alg(
+            key_text=key_text,
+            key_class=key_class,
+            ngram=ngram,
+            split_size=split_size
+        )
 
     # vectorize data
     model.split()
