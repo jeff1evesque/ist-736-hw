@@ -133,3 +133,12 @@ base_results = classify(
     directory='viz/unigram',
     top_words=25
 )
+
+ngram_results = classify(
+    df,
+    key_class='sentiment',
+    key_text='full_text',
+    directory='viz/unigram',
+    top_words=25,
+    ngram=(1,2)
+)
