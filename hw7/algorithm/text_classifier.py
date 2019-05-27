@@ -117,7 +117,7 @@ class Model():
         '''
 
         if not size:
-            size = split_size
+            size = self.split_size
 
         self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(
             self.tfidf,
