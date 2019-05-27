@@ -39,6 +39,7 @@ stopwords=[
     'amp',
     'co',
     'gameofthrones',
+    'gameofthronesfinale',
     'gotfinale',
     'season',
     'seasons',
@@ -47,9 +48,9 @@ stopwords=[
     'gt',
     'think',
     'twitter',
-    'thefinalepisode'
+    'thefinalepisode',
+    'ye'
 ]
-stopwords.extend(screen_name)
 
 #
 # create directories

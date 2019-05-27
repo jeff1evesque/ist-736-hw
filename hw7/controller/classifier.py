@@ -1,7 +1,6 @@
 #!/usr/bin/python
 
 import math
-from operator import itemgetter
 from collections import OrderedDict
 from model.classifier import model as m_model
 from model.classifier import model_pos as mp_model
@@ -68,21 +67,19 @@ def classify(
 
         terms = mnb.get_count_vect().get_feature_names()
         indicative_words['positive'] = [(
-            terms[x],
-            log_prob['positive']['value'][i]
+            log_prob['positive']['value'][i],
+            terms[x]
         ) for i,x in enumerate(log_prob['positive']['index'])]
         indicative_words['positive'] = sorted(
-            indicative_words['positive'],
-            key=itemgetter(0)
+            indicative_words['positive']
         )
 
         indicative_words['negative'] = [(
-            terms[x],
-            log_prob['negative']['value'][i]
+            log_prob['negative']['value'][i],
+            terms[x]
         ) for i,x in enumerate(log_prob['negative']['index'])]
         indicative_words['negative'] = sorted(
-            indicative_words['negative'],
-            key=itemgetter(0)
+            indicative_words['negative']
         )
 
         if plot:
@@ -145,8 +142,8 @@ def classify(
 
             # plot top n words
             plot_bar(
-                labels=[x[0] for x in indicative_words['positive']],
-                performance=[x[1] for x in indicative_words['positive']],
+                labels=[x[1] for x in indicative_words['positive']],
+                performance=[x[0] for x in indicative_words['positive']],
                 directory=directory,
                 filename='top_{count}_positive_words_mnb'.format(
                     count=top_words
@@ -155,8 +152,8 @@ def classify(
             )
 
             plot_bar(
-                labels=[x[0] for x in indicative_words['negative']],
-                performance=[x[1] for x in indicative_words['negative']],
+                labels=[x[1] for x in indicative_words['negative']],
+                performance=[x[0] for x in indicative_words['negative']],
                 directory=directory,
                 filename='top_{count}_negative_words_mnb'.format(
                     count=top_words
@@ -194,21 +191,19 @@ def classify(
 
         terms = mnb.get_count_vect().get_feature_names()
         indicative_words['positive'] = [(
-            terms[x],
-            log_prob['positive']['value'][i]
+            log_prob['positive']['value'][i],
+            terms[x]
         ) for i,x in enumerate(log_prob['positive']['index'])]
         indicative_words['positive'] = sorted(
-            indicative_words['positive'],
-            key=itemgetter(0)
+            indicative_words['positive']
         )
 
         indicative_words['negative'] = [(
-            terms[x],
-            log_prob['negative']['value'][i]
+            log_prob['negative']['value'][i],
+            terms[x]
         ) for i,x in enumerate(log_prob['negative']['index'])]
         indicative_words['negative'] = sorted(
-            indicative_words['negative'],
-            key=itemgetter(0)
+            indicative_words['negative']
         )
 
         if plot:
@@ -261,8 +256,8 @@ def classify(
 
             # plot top n words
             plot_bar(
-                labels=[x[0] for x in indicative_words['positive']],
-                performance=[x[1] for x in indicative_words['positive']],
+                labels=[x[1] for x in indicative_words['positive']],
+                performance=[x[0] for x in indicative_words['positive']],
                 directory=directory,
                 filename='top_{count}_positive_words_mnb_pos'.format(
                     count=top_words
@@ -271,8 +266,8 @@ def classify(
             )
 
             plot_bar(
-                labels=[x[0] for x in indicative_words['negative']],
-                performance=[x[1] for x in indicative_words['negative']],
+                labels=[x[1] for x in indicative_words['negative']],
+                performance=[x[0] for x in indicative_words['negative']],
                 directory=directory,
                 filename='top_{count}_negative_words_mnb_pos'.format(
                     count=top_words
@@ -638,22 +633,6 @@ def classify(
             ),
             rotation=rotation
         ) for k,v in prf_scores.items()]
-
-        plot_bar(
-            labels=[x[0] for x in indicative_words['positive']],
-            performance=[x[1] for x in indicative_words['positive']],
-            directory=directory,
-            filename='top_positive_words',
-            rotation=rotation
-        )
-
-        plot_bar(
-            labels=[x[0] for x in indicative_words['negative']],
-            performance=[x[1] for x in indicative_words['negative']],
-            directory=directory,
-            filename='top_negative_words',
-            rotation=rotation
-        )
 
     # return score
     return(score_good, kfold_scores, prf_scores, indicative_words)
