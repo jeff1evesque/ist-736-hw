@@ -39,6 +39,7 @@ def plot_bar(
     plt.bar(y_pos, performance, align='center', alpha=0.5)
     plt.xticks(y_pos, labels, rotation=rotation)
     plt.ylabel('Performance')
+    plt.tight_layout()
     plt.savefig('{d}/{f}'.format(d=directory, f=filename))
 
     if show:

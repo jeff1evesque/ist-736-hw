@@ -427,6 +427,7 @@ class Model():
             predicted,
             x_tick_rotation=rotation
         )
+        plt.tight_layout()
 
         # save plot
         plt.savefig(filename)
