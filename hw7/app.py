@@ -45,7 +45,9 @@ stopwords=[
     'got8',
     'got',
     'gt',
-    'think'
+    'think',
+    'twitter',
+    'thefinalepisode'
 ]
 stopwords.extend(screen_name)
 
