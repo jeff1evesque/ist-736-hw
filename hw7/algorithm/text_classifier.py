@@ -29,9 +29,8 @@ import matplotlib.pyplot as plt
 import scikitplot as skplt
 from algorithm.penn_treebank import penn_scale
 from utility.dataframe import cleanse
-stop_words = set(stp.words('english'))
+stop_english = stp.words('english')
 download('vader_lexicon')
-
 
 class Model():
     '''
@@ -68,7 +67,8 @@ class Model():
         self.split_size = split_size
         self.actual = None
         self.predicted = None
-        self.stopwords = stopwords.append(stop_words)
+        stopwords.extend(stop_english)
+        self.stopwords = stopwords
 
         if df is not None:
             self.df = df
@@ -85,7 +85,16 @@ class Model():
         if stem:
             p = PorterStemmer()
             self.df[self.key_text] = self.df[self.key_text].apply(
-                lambda x: [' '.join([p.stem(w) for w in x.split(' ')])][0]
+                lambda x: [' '.join(
+                    [p.stem(w) for w in x.split(' ') if w not in self.stopwords]
+                )][0]
+            )
+
+        else:
+            self.df[self.key_text] = self.df[self.key_text].apply(
+                lambda x: [' '.join(
+                    [w for w in x.split(' ') if w not in self.stopwords]
+                )][0]
             )
 
         # vectorize data
@@ -185,7 +194,7 @@ class Model():
     def vectorize(
         self,
         data=None,
-        stop_words=None,
+        stop_words='english',
         ngram=(1,1),
         topn=25
     ):
@@ -204,14 +213,14 @@ class Model():
         if data is not None:
             # bag of words: with 'english' stopwords
             count_vect = CountVectorizer(
-                stop_words=self.stopwords,
+                stop_words=stop_words,
                 ngram_range=ngram
             )
             bow = count_vect.fit_transform(data)
 
             # tfidf weighting
             tfidf_vectorizer = TfidfVectorizer(
-                stop_words=self.stopwords,
+                stop_words=stop_words,
                 ngram_range=ngram
             )
             tfidf = tfidf_vectorizer.fit_transform(data)
@@ -224,14 +233,14 @@ class Model():
         else:
             # bag of words: with 'english' stopwords
             self.count_vect = CountVectorizer(
-                stop_words=self.stopwords,
+                stop_words=stop_words,
                 ngram_range=ngram
             )
             self.bow = self.count_vect.fit_transform(self.df[self.key_text])
 
             # tfidf weighting
             self.tfidf_vectorizer = TfidfVectorizer(
-                stop_words=self.stopwords,
+                stop_words=stop_words,
                 ngram_range=ngram
             )
             self.tfidf = self.tfidf_vectorizer.fit_transform(self.df[self.key_text])
@@ -530,7 +539,7 @@ class Model():
     def get_kfold_scores(
         self,
         n_splits=2,
-        stop_words=None,
+        stop_words='english',
         max_length=280,
         shuffle=True,
         model_type=None,
@@ -553,12 +562,9 @@ class Model():
 
         '''
 
-        if stop_words:
-            self.stopwords.extend(stop_words)
-
         # bag of words: with 'english' stopwords
         count_vect = CountVectorizer(
-            stop_words=self.stopwords,
+            stop_words=stop_words,
             ngram_range=ngram
         )
         bow = self.count_vect.fit_transform(self.df[self.key_text])
@@ -576,7 +582,7 @@ class Model():
 
             # tfidf weighting
             tfidf_vectorizer = TfidfVectorizer(
-                stop_words=self.stopwords,
+                stop_words=stop_words,
                 ngram_range=ngram
             )
             data = tfidf_vectorizer.fit_transform(self.df[self.key_text])
@@ -591,7 +597,7 @@ class Model():
         else:
             clf = MultinomialNB()
             tfidf_vectorizer = TfidfVectorizer(
-                stop_words=self.stopwords,
+                stop_words=stop_words,
                 ngram_range=ngram
             )
             data = tfidf_vectorizer.fit_transform(self.df[self.key_text])
