@@ -5,7 +5,6 @@ stopwords=[
     'https',
     'nhttps',
     'rt',
-    'RT',
     'amp',
     'co',
     'gameofthrones',
