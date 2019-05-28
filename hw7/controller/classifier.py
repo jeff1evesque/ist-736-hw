@@ -71,7 +71,8 @@ def classify(
             terms[x]
         ) for i,x in enumerate(log_prob['positive']['index'])]
         indicative_words['positive'] = sorted(
-            indicative_words['positive']
+            indicative_words['positive'],
+            reverse=True
         )
 
         indicative_words['negative'] = [(
@@ -79,7 +80,8 @@ def classify(
             terms[x]
         ) for i,x in enumerate(log_prob['negative']['index'])]
         indicative_words['negative'] = sorted(
-            indicative_words['negative']
+            indicative_words['negative'],
+            reverse=True
         )
 
         if plot:
@@ -195,7 +197,8 @@ def classify(
             terms[x]
         ) for i,x in enumerate(log_prob['positive']['index'])]
         indicative_words['positive'] = sorted(
-            indicative_words['positive']
+            indicative_words['positive'],
+            reverse=True,
         )
 
         indicative_words['negative'] = [(
@@ -203,7 +206,8 @@ def classify(
             terms[x]
         ) for i,x in enumerate(log_prob['negative']['index'])]
         indicative_words['negative'] = sorted(
-            indicative_words['negative']
+            indicative_words['negative'],
+            reverse=True
         )
 
         if plot:

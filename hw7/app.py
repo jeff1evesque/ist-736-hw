@@ -18,6 +18,7 @@ from view.classifier import plot_bar
 from exploratory.sentiment import Sentiment
 from controller.classifier import classify
 import matplotlib.pyplot as plt
+from utility.stopwords import stopwords
 import sys
 sys.path.append('..')
 
@@ -29,42 +30,6 @@ screen_name = [
     'GameofThrones',
     'GameofThronesFinale',
     'GOTFinale'
-]
-stopwords=[
-    'http',
-    'https',
-    'nhttps',
-    'rt',
-    'RT',
-    'amp',
-    'co',
-    'gameofthrones',
-    'gameofthronesfinale',
-    'gotfinale',
-    'season',
-    'seasons',
-    'got8',
-    'got',
-    'gt',
-    'think',
-    'twitter',
-    'thefinalepisode',
-    'ye',
-    'el',
-    'la',
-    'lo',
-    'en',
-    'es',
-    'est',
-    'deo',
-    'se',
-    's8',
-    'que',
-    'para',
-    'guion',
-    'hecho',
-    'trono',
-    'ser'
 ]
 
 #

@@ -505,16 +505,18 @@ class Model():
         positive_probs = mnb.feature_log_prob_[0,:]
         negative_probs = mnb.feature_log_prob_[1,:]
         logodds = positive_probs - negative_probs
+        positive_index = np.argsort(logodds)[:top_words]
+        negative_index = np.argsort(-logodds)[:top_words]
 
         # top words
         return({
             'positive': {
-                'index': np.argsort(logodds)[:top_words],
-                'value': logodds[:top_words]
+                'index': positive_index,
+                'value': [logodds[x] for x in positive_index]
             },
             'negative': {
-                'index': np.argsort(-logodds)[:top_words],
-                'value': logodds[-top_words:]
+                'index': negative_index,
+                'value': [logodds[x] for x in negative_index]
             }
         })
 
