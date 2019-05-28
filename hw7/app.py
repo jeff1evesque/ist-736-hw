@@ -34,12 +34,38 @@ stopwords=[
     'http',
     'https',
     'nhttps',
+    'rt',
     'RT',
     'amp',
     'co',
-    'TheStreet'
+    'gameofthrones',
+    'gameofthronesfinale',
+    'gotfinale',
+    'season',
+    'seasons',
+    'got8',
+    'got',
+    'gt',
+    'think',
+    'twitter',
+    'thefinalepisode',
+    'ye',
+    'el',
+    'la',
+    'lo',
+    'en',
+    'es',
+    'est',
+    'deo',
+    'se',
+    's8',
+    'que',
+    'para',
+    'guion',
+    'hecho',
+    'trono',
+    'ser'
 ]
-stopwords.extend(screen_name)
 
 #
 # create directories
@@ -138,7 +164,8 @@ base_results = classify(
     key_text='full_text',
     split_size=0.4,
     directory='viz/unigram',
-    top_words=25
+    top_words=25,
+    stopwords=stopwords
 )
 
 ngram_results = classify(
@@ -148,6 +175,7 @@ ngram_results = classify(
     split_size=0.4,
     directory='viz/ngram',
     top_words=25,
+    stopwords=stopwords,
     ngram=(1,2)
 )
 
@@ -155,7 +183,9 @@ full_results = classify(
     df,
     key_class='sentiment',
     key_text='full_text',
-    split_size=1,
+    split_size=1.0,
     directory='viz/full',
-    top_words=25
+    top_words=25,
+    stopwords=stopwords,
+    validate='full'
 )
