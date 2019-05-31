@@ -82,5 +82,5 @@ else:
     row_count = df.shape[0]
     split_index = math.ceil(row_count / 2)
 
-    df.iloc[split_index:,:].to_csv('data/lda_1.csv')
-    df.iloc[:split_index,:].to_csv('data/lda_2.csv')
+    df.iloc[:split_index,:].to_csv('data/lda_1.csv')
+    df.iloc[split_index:,:].to_csv('data/lda_2.csv')
