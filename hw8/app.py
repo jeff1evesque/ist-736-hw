@@ -7,150 +7,80 @@
 #
 
 import os
-import scipy.stats
-from pathlib import Path
-import pandas as pd
-import numpy as np
-from config import twitter_api as t_creds
-from consumer.twitter_query import TwitterQuery
-from view.exploratory import explore
-from view.classifier import plot_bar
-from exploratory.sentiment import Sentiment
-from controller.classifier import classify
-import matplotlib.pyplot as plt
-from utility.stopwords import stopwords
 import sys
+import math
+import pandas as pd
+from lxml import etree as et
+from pathlib import Path
 sys.path.append('..')
 
 #
 # local variables
 #
-data = {}
-screen_name = [
-    'GameofThrones',
-    'GameofThronesFinale',
-    'GOTFinale'
-]
+df = None
+dir = '../data/110'
 
 #
 # create directories
 #
-if not os.path.exists('data/twitter'):
-    os.makedirs('data/twitter')
+if not os.path.exists('viz'):
+    os.makedirs('viz')
 
-if not os.path.exists('../data/twitter'):
-    os.makedirs('../data/twitter')
-
-if not os.path.exists('viz/unigram'):
-    os.makedirs('viz/unigram')
-
-if not os.path.exists('viz/ngram'):
-    os.makedirs('viz/ngram')
-
-if not os.path.exists('viz/full'):
-    os.makedirs('viz/full')
-
-# instantiate api
-t = TwitterQuery(
-    t_creds['CONSUMER_KEY'],
-    t_creds['CONSUMER_SECRET']
-)
+if not os.path.exists('data'):
+    os.makedirs('data')
 
 #
-# classify
+# create dataframe
 #
-for i,sn in enumerate(screen_name):
-    #
-    # harvest tweets
-    #
-    if Path('../data/twitter/{sn}.csv'.format(sn=sn)).is_file():
-        data[sn] = pd.read_csv('../data/twitter/{sn}.csv'.format(sn=sn))
-
-    else:
-        try:
-            data[sn] = t.query(query=sn, count=600, rate_limit=15)
-            data[sn].to_csv('../data/twitter/{sn}.csv'.format(sn=sn))
-
-        except Exception as e:
-            print('Error: did not finish \'{sn}\'.'.format(sn=sn))
-            print(e)
-
-# combine samples
-if Path('data/twitter/sample.csv').is_file():
-    df_sample = pd.read_csv('data/twitter/sample.csv')
+if Path('data/lda_1.csv').is_file() and Path('data/lda_2.csv').is_file():
+    df = pd.concat([
+        pd.read_csv('data/lda_1.csv'),
+        pd.read_csv('data/lda_2.csv')
+    ])
 
 else:
-    df_sample = [data[x].sample(500) for x in [*data]]
-    df_sample = pd.concat(df).reset_index()
-    df_sample.drop(['index', 'Unnamed: 0'], axis=1, inplace=True)
-    df_sample.to_csv('data/twitter/sample.csv')
+    for subdir, dirs, files in os.walk(dir):
+        for file in files:
+            dtype = os.path.basename(subdir).split('-')[-2:]
+            fp = os.path.join(subdir, file)
 
-# load mturk
-if Path('../data/mturk/got.csv').is_file():
-    df_mturk = pd.read_csv('../data/mturk/got.csv')
+            if Path(fp).is_file():
+                file = Path(fp)
 
-#
-# aggregate dataframe: get most frequent label across tweets, select first
-#     instance between ties.
-#
-df = df_mturk.groupby(['Input.index', 'Input.full_text'])['Answer.sentiment.label'].agg(
-    lambda x: scipy.stats.mode(x)[0][0]
-)
+                with open(fp, 'rb') as f:
+                    data = '<data>{content}</data>'.format(
+                        content=f.read()
+                    )
 
-# convert series to dataframe
-df = df.to_frame().reset_index()
-df.drop(['Input.index'], axis=1, inplace=True)
-df.columns = ['full_text', 'sentiment']
+                parser = et.XMLParser(recover=True)
+                tree = et.fromstring(data, parser=parser)
 
-#
-# combine labels: very negative, and very positive have less than 10%
-#     of the associated positive and negative labels.
-#
-df.sentiment.replace(
-    to_replace='very negative',
-    value='negative',
-    inplace=True
-)
-df.sentiment.replace(
-    to_replace='very positive',
-    value='positive',
-    inplace=True
-)
+                df_cols = ['docno', 'text', 'gender', 'party']
+                if df is None:
+                    df = pd.DataFrame(columns = df_cols)
 
-# unbalanced neutral
-df.drop(df.index[df['sentiment'] == 'neutral'], inplace = True)
+                for doc in tree.getchildren():
+                    lda_docno, lda_text = None, None
+                    for el in doc.getchildren():
+                        if el is not None:
+                            if el.tag == 'DOCNO':
+                                lda_docno = el.text if el.text else None
+                            elif el.tag == 'TEXT':
+                                lda_text = el.text if el.text else None
 
-#
-# classify
-#
-base_results = classify(
-    df,
-    key_class='sentiment',
-    key_text='full_text',
-    split_size=0.4,
-    directory='viz/unigram',
-    top_words=25,
-    stopwords=stopwords
-)
+                    df = df.append(
+                        pd.Series(
+                            [lda_docno, lda_text, dtype[0], dtype[1]], 
+                            index = df_cols
+                        ), 
+                        ignore_index=True
+                    )
 
-ngram_results = classify(
-    df,
-    key_class='sentiment',
-    key_text='full_text',
-    split_size=0.4,
-    directory='viz/ngram',
-    top_words=25,
-    stopwords=stopwords,
-    ngram=(1,2)
-)
+    #
+    # split dataframes: too big for github
+    #
+    row_count = df.shape[0]
+    split_index = math.ceil(row_count / 2)
 
-full_results = classify(
-    df,
-    key_class='sentiment',
-    key_text='full_text',
-    split_size=1.0,
-    directory='viz/full',
-    top_words=25,
-    stopwords=stopwords,
-    validate='full'
-)
+    df.iloc[split_index:,:].to_csv('data/lda_1.csv')
+    df.iloc[:split_index,:].to_csv('data/lda_2.csv')
