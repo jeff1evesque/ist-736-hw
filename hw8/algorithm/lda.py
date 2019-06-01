@@ -10,20 +10,17 @@ class LDA():
 
     '''
 
-    def __init__(self, df):
+    def __init__(self, df, auto=True):
         '''
 
         define class variables.
 
-        @num_topics, number of topics to generate
-        @passes, number of iterations for training.
-        @alpha, defines dirichlet prior, where higher values correspond to more
-            topics per document. When set to 'auto' parameter will tune itself.
-
         '''
 
         self.df = df
-        self.train(df)
+
+        if auto:
+            self.train(df)
 
     def get_df(self):
         '''
@@ -38,6 +35,11 @@ class LDA():
         '''
 
         split data into train and test.
+
+        @num_topics, number of topics to generate
+        @passes, number of iterations for training.
+        @alpha, defines dirichlet prior, where higher values correspond to more
+            topics per document. When set to 'auto' parameter will tune itself.
 
         Note: this requires execution of 'self.normalize'.
 
