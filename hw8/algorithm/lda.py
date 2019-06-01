@@ -20,7 +20,7 @@ class LDA():
         self.df = df
 
         if auto:
-            self.train(df)
+            self.train(self.df)
 
     def get_df(self):
         '''
