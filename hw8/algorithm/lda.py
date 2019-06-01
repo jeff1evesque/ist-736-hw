@@ -60,7 +60,7 @@ class LDA():
 
         return(self.model)
 
-    def get_topic(self, num_topics=10):
+    def get_topics(self, num_topics=10):
         '''
 
         return most frequent topics.
@@ -69,7 +69,7 @@ class LDA():
 
         return(model.show_topic(num_topics))
 
-    def get_topic_words(self, num_topics, num_words):
+    def get_topic_words(self, num_words=10):
         '''
 
         return most frequent words for most frequent topics.
@@ -77,9 +77,9 @@ class LDA():
         '''
 
         return([(
-            topic_id,
-            [x for x, _ in self.model.get_topic(topic_id, num_words)]
-        ) for topic_id in range(self.model.num_topics)])
+            i,
+            [x for x, _ in self.model.get_topics(i, num_words)]
+        ) for i in range(self.model.num_topics)])
 
     def predict(self, data):
         '''
