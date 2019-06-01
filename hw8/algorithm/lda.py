@@ -34,7 +34,7 @@ class LDA():
     def train(self, num_topics=10, passes=3, alpha='auto'):
         '''
 
-        split data into train and test.
+        train lda model.
 
         @num_topics, number of topics to generate
         @passes, number of iterations for training.
