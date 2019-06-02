@@ -37,7 +37,8 @@ class Model():
     def vectorize(
         self,
         max_df=0.95,
-        min_df=2,
+        min_df=0.2,
+        max_features=30,
         stop_words='english',
         model_type=None
     ):
@@ -58,12 +59,12 @@ class Model():
         '''
 
         # term frequency-inverse document frequency
-        if model_type = 'nmf':
+        if model_type == 'nmf':
             self.vectorizer = TfidfVectorizer(
                 max_df=max_df,
                 min_df=min_df,
-                max_features=no_features,
-                stop_words=stopwords
+                max_features=max_features,
+                stop_words=stop_words
             )
 
         # term frequency
@@ -71,8 +72,8 @@ class Model():
             self.vectorizer = CountVectorizer(
                 max_df=max_df,
                 min_df=min_df,
-                max_features=no_features,
-                stop_words=stopwords
+                max_features=max_features,
+                stop_words=stop_words
             )
 
         self.fit = self.vectorizer.fit_transform(self.df)
@@ -98,7 +99,7 @@ class Model():
     def train(
         self,
         model_type=None,
-        n_components=20,
+        num_components=20,
         random_state=1,
         alpha=.1,
         l1_ratio=.5,
@@ -131,7 +132,7 @@ class Model():
 
         if model_type == 'nmf':
             self.model = NMF(
-                n_components=n_components,
+                n_components=num_components,
                 random_state=random_state,
                 alpha=alpha,
                 l1_ratio=l1_ratio,
@@ -156,26 +157,18 @@ class Model():
 
         return(self.model)
 
-    def get_topics(self, num_topics=10):
-        '''
-
-        return most frequent topics.
-
-        '''
-
-        return([topic_idx for topic_idx,
-            topic in enumerate(self.model.components_)])
-
-    def get_topic_words(self, num_words=10):
+    def get_topic_words(self, feature_names, num_words=10):
         '''
 
         return most frequent words for most frequent topics.
 
         '''
 
-        return([[feature_names[i]
-            for i in topic.argsort()[:-no_top_words - 1:-1]] for topic_idx,
-                topic in enumerate(self.model.components_)])
+        return([(topic_idx,
+            [feature_names[i]
+                for i in topic.argsort()[:-num_words - 1:-1]])
+                    for topic_idx,
+                        topic in enumerate(self.model.components_)])
 
     def predict(self, data):
         '''
