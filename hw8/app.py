@@ -12,6 +12,7 @@ import math
 import pandas as pd
 from lxml import etree as et
 from pathlib import Path
+from controller.topic_model import topic_model
 sys.path.append('..')
 
 #
@@ -32,10 +33,13 @@ if not os.path.exists('data'):
 #
 # create dataframe
 #
-if Path('data/lda_1.csv').is_file() and Path('data/lda_2.csv').is_file():
+if (
+    Path('data/topic_model_1.csv').is_file() and
+    Path('data/topic_model_2.csv').is_file()
+):
     df = pd.concat([
-        pd.read_csv('data/lda_1.csv'),
-        pd.read_csv('data/lda_2.csv')
+        pd.read_csv('data/topic_model_1.csv'),
+        pd.read_csv('data/topic_model_2.csv')
     ])
 
 else:
@@ -60,17 +64,17 @@ else:
                     df = pd.DataFrame(columns = df_cols)
 
                 for doc in tree.getchildren():
-                    lda_docno, lda_text = None, None
+                    tm_docno, tm_text = None, None
                     for el in doc.getchildren():
                         if el is not None:
                             if el.tag == 'DOCNO':
-                                lda_docno = el.text if el.text else None
+                                tm_docno = el.text if el.text else None
                             elif el.tag == 'TEXT':
-                                lda_text = el.text if el.text else None
+                                tm_text = el.text if el.text else None
 
                     df = df.append(
                         pd.Series(
-                            [lda_docno, lda_text, dtype[0], dtype[1]], 
+                            [tm_docno, tm_text, dtype[0], dtype[1]], 
                             index = df_cols
                         ), 
                         ignore_index=True
@@ -82,5 +86,10 @@ else:
     row_count = df.shape[0]
     split_index = math.ceil(row_count / 2)
 
-    df.iloc[:split_index,:].to_csv('data/lda_1.csv')
-    df.iloc[split_index:,:].to_csv('data/lda_2.csv')
+    df.iloc[:split_index,:].to_csv('data/topic_model_1.csv')
+    df.iloc[split_index:,:].to_csv('data/topic_model_2.csv')
+
+#
+# topic modeling
+#
+topic_model(df, rotation=0)
