@@ -19,7 +19,6 @@ def topic_model(
     max_iter=5,
     learning_method='online',
     learning_offset=50.,
-    auto=False,
     directory='viz',
     rotation=90,
     flag_lda=True,
@@ -37,6 +36,7 @@ def topic_model(
     if flag_lda:
         lda = model(
             df=df,
+            key_text='text',
             max_df=max_df,
             min_df=min_df,
             num_topics=num_topics,
@@ -59,12 +59,14 @@ def topic_model(
                     columns=['topics', 'words']
                 ),
                 target='words',
+                suffix='lda',
                 sent_cases={'topics': [x[0] for x in topic_words]}
             )
 
     if flag_nmf:
         nmf = model(
             df=df,
+            key_text='text',
             max_df=max_df,
             min_df=min_df,
             num_components=num_components,
@@ -87,6 +89,7 @@ def topic_model(
                     columns=['topics', 'words']
                 ),
                 target='words',
+                suffix='nmf',
                 sent_cases={'topics': [x[0] for x in topic_words]}
             )
 

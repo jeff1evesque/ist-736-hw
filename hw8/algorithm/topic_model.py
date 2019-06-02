@@ -12,7 +12,7 @@ class Model():
 
     '''
 
-    def __init__(self, df, auto=True):
+    def __init__(self, df, key_text='text', auto=True):
         '''
 
         define class variables.
@@ -20,6 +20,7 @@ class Model():
         '''
 
         self.df = df
+        self.key_text = key_text
 
         if auto:
             self.vectorize()
@@ -76,7 +77,7 @@ class Model():
                 stop_words=stop_words
             )
 
-        self.fit = self.vectorizer.fit_transform(self.df)
+        self.fit = self.vectorizer.fit_transform(self.df[self.key_text])
 
     def get_fit(self):
         '''

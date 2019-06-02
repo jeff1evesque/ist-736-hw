@@ -6,6 +6,7 @@ from algorithm.topic_model import Model
 
 def model(
     df,
+    key_text='text',
     max_df=0.95,
     min_df=0.2,
     model_type=None,
@@ -28,7 +29,7 @@ def model(
     '''
 
     if not auto:
-        model = Model(df=df, auto=False)
+        model = Model(df=df, auto=False, key_text=key_text)
         model.vectorize(
             max_df=max_df,
             min_df=min_df,
@@ -37,7 +38,7 @@ def model(
         )
 
     else:
-        model = Model(df=df)
+        model = Model(df=df, key_text=key_text)
 
     if model_type == 'nmf':
         model.train(
