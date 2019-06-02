@@ -23,7 +23,7 @@ def model(
 ):
     '''
 
-    return lda categorization.
+    return topic model categorization.
 
     '''
 
@@ -37,7 +37,7 @@ def model(
         )
 
     else:
-        lda = Model(df=df)
+        model = Model(df=df)
 
     if model_type == 'nmf':
         model.train(

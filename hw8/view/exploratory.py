@@ -8,7 +8,7 @@ from exploratory.sentiment import Sentiment
 from exploratory.word_cloud import word_cloud
 from utility.dataframe import cleanse
 
-def explore(df, sent_cases=None, stopwords=[], target='full_text'):
+def explore(df, sent_cases=None, stopwords=[], target='full_text', suffix=None):
     '''
 
     generate wordclouds and sentiment series plot.
@@ -18,6 +18,9 @@ def explore(df, sent_cases=None, stopwords=[], target='full_text'):
         of possible column values. This is used to filter the dataframe.
 
     '''
+
+    if suffix:
+        suffix = '{suffix}_'.format(suffix=suffix)
 
     if sent_cases:
         cases = []
@@ -38,7 +41,10 @@ def explore(df, sent_cases=None, stopwords=[], target='full_text'):
                 # create wordcloud
                 word_cloud(
                     wc_temp[target],
-                    filename='viz/{value}/wc.png'.format(value=v),
+                    filename='viz/{value}/wc{suffix}.png'.format(
+                        value=v,
+                        suffix=suffix
+                    ),
                     stopwords=stopwords
                 )
 
@@ -47,15 +53,23 @@ def explore(df, sent_cases=None, stopwords=[], target='full_text'):
                 sent_temp.vader_analysis()
                 sent_temp.plot_ts(
                     title='{value}'.format(value=v),
-                    filename='viz/{value}/sentiment.png'.format(value=v)
+                    filename='viz/{value}/sentiment{suffix}.png'.format(
+                        value=v,
+                        suffix=suffix
+                    )
                 )
 
-            word_cloud(df[target], filename='viz/wc_overall.png')
+            word_cloud(
+                df[target],
+                filename='viz/wc_overall{suffix}.png'.format(suffix=suffix)
+            )
             sent_overall = Sentiment(df, target)
             sent_overall.vader_analysis()
             sent_overall.plot_ts(
                 title='Overall Sentiment',
-                filename='viz/sentiment_overall.png'
+                filename='viz/sentiment_overall{suffix}.png'.format(
+                    suffix=suffix
+                )
             )
 
     else:
@@ -65,7 +79,7 @@ def explore(df, sent_cases=None, stopwords=[], target='full_text'):
         # create wordcloud
         word_cloud(
             df[target],
-            filename='viz/wc.png',
+            filename='viz/wc{suffix}.png'.format(suffix=suffix),
             stopwords=stopwords
         )
 
@@ -74,5 +88,5 @@ def explore(df, sent_cases=None, stopwords=[], target='full_text'):
         sent_temp.vader_analysis()
         sent_temp.plot_ts(
             title='Sentiment Analysis',
-            filename='viz/sentiment.png'
+            filename='viz/sentiment{suffix}.png'.format(suffix=suffix)
         )

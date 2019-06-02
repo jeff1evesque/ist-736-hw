@@ -25,7 +25,8 @@ def topic_model(
     flag_lda=True,
     flag_nmf=True,
     plot=True,
-    vectorize_stopwords='english'
+    vectorize_stopwords='english',
+    auto=False
 ):
     '''
 
@@ -43,18 +44,12 @@ def topic_model(
             learning_method=learning_method,
             learning_offset=learning_offset,
             random_state=random_state,
-            vectorize_stopwords=vectorize_stopwords
+            vectorize_stopwords=vectorize_stopwords,
+            auto=False
         )
         topic_words = lda.get_topic_words(
             feature_names=lda.get_feature_names(),
             num_words=num_words
-        )
-
-        print(
-            pd.DataFrame(
-                topic_words,
-                columns=['topics', 'words']
-            )
         )
 
         if plot:
@@ -77,7 +72,8 @@ def topic_model(
             alpha=alpha,
             l1_ratio=l1_ratio,
             init=init,
-            vectorize_stopwords=vectorize_stopwords
+            vectorize_stopwords=vectorize_stopwords,
+            auto=False
         )
         topic_words = nmf.get_topic_words(
             feature_names=nmf.get_feature_names(),

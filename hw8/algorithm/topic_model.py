@@ -8,7 +8,7 @@ from sklearn.decomposition import LatentDirichletAllocation as LDA
 class Model():
     '''
 
-    apply LDA topic selection.
+    apply topic modeling.
 
     '''
 
