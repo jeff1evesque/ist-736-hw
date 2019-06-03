@@ -133,7 +133,7 @@ class Model():
     def train(
         self,
         model_type=None,
-        num_components=20,
+        num_components=50,
         random_state=1,
         alpha=.1,
         l1_ratio=.5,
@@ -155,7 +155,7 @@ class Model():
             - nndsvd, better for sparseness
 
         LDA:
-        @n_components, number of topics
+        @n_topics, number of topics
         @max_iter, maximum number of iterations
         @learning_method, method used to update _component
             - online is much faster for bigger data
@@ -198,11 +198,14 @@ class Model():
 
         '''
 
+        H = self.model.components_
+        top_indices = topic.argsort()(H[topic_index,:])[::-1]
+
         return([(topic_idx,
             [feature_names[i]
-                for i in topic.argsort()[:-num_words - 1:-1]])
+                for i in top_indices[0:num_words]])
                     for topic_idx,
-                        topic in enumerate(self.model.components_)])
+                        topic in enumerate(H)])
 
     def predict(self, data):
         '''
