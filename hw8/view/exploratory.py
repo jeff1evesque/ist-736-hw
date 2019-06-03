@@ -19,9 +19,6 @@ def explore(df, sent_cases=None, stopwords=[], target='full_text', suffix=''):
 
     '''
 
-    if suffix:
-        suffix = '_{suffix}'.format(suffix=suffix)
-
     if sent_cases:
         for k,val in sent_cases.items():
             for v in val:

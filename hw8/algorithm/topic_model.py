@@ -191,7 +191,7 @@ class Model():
 
         return(self.model)
 
-    def get_topic_words(self, feature_names, num_words=10):
+    def get_topic_words(self, feature_names, num_words=20):
         '''
 
         return most frequent words for most frequent topics.

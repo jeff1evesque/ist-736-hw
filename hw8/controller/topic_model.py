@@ -68,7 +68,7 @@ def topic_model(
                     columns=['topics', 'words']
                 ),
                 target='words',
-                suffix=suffix,
+                suffix='_lda{suffix}'.format(suffix),
                 sent_cases={'topics': [x[0] for x in topic_words]}
             )
 
@@ -100,7 +100,6 @@ def topic_model(
                     columns=['topics', 'words']
                 ),
                 target='words',
-                suffix=suffix,
+                suffix='_nmf{suffix}'.format(suffix),
                 sent_cases={'topics': [x[0] for x in topic_words]}
             )
-
