@@ -4,7 +4,7 @@ import math
 from collections import OrderedDict
 from model.classifier import model as m_model
 from model.classifier import model_pos as mp_model
-from view.classifier import plot_cm, plot_bar
+from view.plot import plot_cm, plot_bar
 
 def classify(
     df,
