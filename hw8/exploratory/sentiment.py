@@ -53,8 +53,8 @@ class Sentiment():
         }
 
         # sentiment analysis
-        for i,s in enumerate(self.df[self.column_name]):
-            ss = sid.polarity_scores(s)
+        for sent in self.df[[self.column_name]].iterrows():
+            ss = sid.polarity_scores(sent[1][0])
 
             for k in sorted(ss):
                 if k == 'compound':
@@ -80,7 +80,12 @@ class Sentiment():
         # return scores
         return(self.df_adjusted)
 
-    def plot_ts(self, title='Sentiment Analysis', filename='sentiment.png', show=False):
+    def plot_ts(
+        self,
+        title='Sentiment Analysis',
+        filename='sentiment.png',
+        show=False
+    ):
         '''
 
         plot sentiment generated from 'vader_analysis'.

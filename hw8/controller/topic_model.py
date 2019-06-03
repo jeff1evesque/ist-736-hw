@@ -25,7 +25,9 @@ def topic_model(
     flag_nmf=True,
     plot=True,
     vectorize_stopwords='english',
-    auto=False
+    stopwords=[],
+    auto=False,
+    stopwords=None
 ):
     '''
 
@@ -45,6 +47,7 @@ def topic_model(
             learning_offset=learning_offset,
             random_state=random_state,
             vectorize_stopwords=vectorize_stopwords,
+            stopwords=stopwords,
             auto=False
         )
         topic_words = lda.get_topic_words(
@@ -74,6 +77,7 @@ def topic_model(
             alpha=alpha,
             l1_ratio=l1_ratio,
             init=init,
+            stopwords=stopwords,
             vectorize_stopwords=vectorize_stopwords,
             auto=False
         )

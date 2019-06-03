@@ -3,7 +3,8 @@
 from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer
 from sklearn.decomposition import NMF
 from sklearn.decomposition import LatentDirichletAllocation as LDA
-
+from nltk.corpus import stopwords as stp
+stop_english = stp.words('english')
 
 class Model():
     '''
@@ -12,7 +13,7 @@ class Model():
 
     '''
 
-    def __init__(self, df, key_text='text', auto=True):
+    def __init__(self, df, key_text='text', auto=True, stopwords=[]):
         '''
 
         define class variables.
@@ -21,6 +22,14 @@ class Model():
 
         self.df = df
         self.key_text = key_text
+        stopwords.extend(stop_english)
+        self.stopwords = stopwords
+
+        self.df[self.key_text] = self.df[self.key_text].apply(
+            lambda x: [' '.join(
+                [w for w in x.split(' ') if w not in self.stopwords]
+            )][0]
+        )
 
         if auto:
             self.vectorize()
@@ -58,6 +67,9 @@ class Model():
             of documents, while integer absolute counts.
 
         '''
+
+        if stop_words:
+            self.stopwords.extend(stop_words)
 
         # term frequency-inverse document frequency
         if model_type == 'nmf':

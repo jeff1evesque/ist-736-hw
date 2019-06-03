@@ -12,6 +12,7 @@ import math
 import pandas as pd
 from lxml import etree as et
 from pathlib import Path
+from utility.stopwords import stopwords
 from controller.topic_model import topic_model
 sys.path.append('..')
 
@@ -92,4 +93,4 @@ else:
 #
 # topic modeling
 #
-topic_model(df, rotation=0)
+topic_model(df, rotation=0, stopwords=stopwords)

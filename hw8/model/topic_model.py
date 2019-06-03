@@ -2,7 +2,7 @@
 
 import re
 from pathlib import Path
-from algorithm.topic_model import Model
+from algorithm.topic_model import Model as alg
 
 def model(
     df,
@@ -20,6 +20,7 @@ def model(
     learning_method='online',
     learning_offset=50.,
     vectorize_stopwords='english',
+    stopwords=[],
     auto=False
 ):
     '''
@@ -29,16 +30,21 @@ def model(
     '''
 
     if not auto:
-        model = Model(df=df, auto=False, key_text=key_text)
+        model = alg(
+            df=df,
+            auto=False,
+            key_text=key_text,
+            stop_words=stopwords
+        )
         model.vectorize(
             max_df=max_df,
             min_df=min_df,
             model_type=None,
-            stop_words=vectorize_stopwords
+            stopwords=vectorize_stopwords
         )
 
     else:
-        model = Model(df=df, key_text=key_text)
+        model = alg(df=df, key_text=key_text, stopwords=stopwords)
 
     if model_type == 'nmf':
         model.train(
