@@ -194,7 +194,7 @@ class Model():
     def vectorize(
         self,
         data=None,
-        stop_words='english',
+        stopwords='english',
         ngram=(1,1),
         topn=25
     ):
@@ -204,8 +204,8 @@ class Model():
 
         '''
 
-        if stop_words:
-            self.stopwords.extend(stop_words)
+        if stopwords:
+            self.stopwords.extend(stopwords)
 
         #
         # pos case: implemented internally by 'split' when 'pos_split=True'.
@@ -213,14 +213,14 @@ class Model():
         if data is not None:
             # bag of words: with 'english' stopwords
             count_vect = CountVectorizer(
-                stop_words=stop_words,
+                stop_words=stopwords,
                 ngram_range=ngram
             )
             bow = count_vect.fit_transform(data)
 
             # tfidf weighting
             tfidf_vectorizer = TfidfVectorizer(
-                stop_words=stop_words,
+                stop_words=stopwords,
                 ngram_range=ngram
             )
             tfidf = tfidf_vectorizer.fit_transform(data)
@@ -233,14 +233,14 @@ class Model():
         else:
             # bag of words: with 'english' stopwords
             self.count_vect = CountVectorizer(
-                stop_words=stop_words,
+                stop_words=stopwords,
                 ngram_range=ngram
             )
             self.bow = self.count_vect.fit_transform(self.df[self.key_text])
 
             # tfidf weighting
             self.tfidf_vectorizer = TfidfVectorizer(
-                stop_words=stop_words,
+                stop_words=stopwords,
                 ngram_range=ngram
             )
             self.tfidf = self.tfidf_vectorizer.fit_transform(self.df[self.key_text])

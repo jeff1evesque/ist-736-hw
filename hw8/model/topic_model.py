@@ -35,7 +35,7 @@ def model(
             df=df,
             auto=False,
             key_text=key_text,
-            stop_words=stopwords,
+            stopwords=stopwords,
             ngram=ngram
         )
         model.vectorize(

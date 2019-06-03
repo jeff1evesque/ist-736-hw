@@ -27,8 +27,7 @@ def topic_model(
     vectorize_stopwords='english',
     stopwords=[],
     auto=False,
-    stopwords=None,
-    ngram=ngram
+    ngram=(1,1)
 ):
     '''
 

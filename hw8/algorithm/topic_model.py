@@ -56,7 +56,7 @@ class Model():
         max_df=0.95,
         min_df=0.2,
         max_features=30,
-        stop_words='english',
+        stopwords='english',
         model_type=None,
         ngram=(1,1)
     ):
@@ -76,8 +76,8 @@ class Model():
 
         '''
 
-        if stop_words:
-            self.stopwords.extend(stop_words)
+        if stopwords:
+            self.stopwords.extend(stopwords)
 
         # term frequency-inverse document frequency
         if model_type == 'nmf':
@@ -85,7 +85,7 @@ class Model():
                 max_df=max_df,
                 min_df=min_df,
                 max_features=max_features,
-                stop_words=stop_words,
+                stop_words=stopwords,
                 ngram_range=ngram
             )
 
@@ -95,7 +95,7 @@ class Model():
                 max_df=max_df,
                 min_df=min_df,
                 max_features=max_features,
-                stop_words=stop_words,
+                stop_words=stopwords,
                 ngram_range=ngram
             )
 
