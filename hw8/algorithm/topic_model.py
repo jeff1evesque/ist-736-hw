@@ -1,5 +1,6 @@
 #!/usr/bin/python
 
+import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer
 from sklearn.decomposition import NMF
 from sklearn.decomposition import LatentDirichletAllocation as LDA
