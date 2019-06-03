@@ -21,7 +21,8 @@ def model(
     learning_offset=50.,
     vectorize_stopwords='english',
     stopwords=[],
-    auto=False
+    auto=False,
+    ngram=(1,1)
 ):
     '''
 
@@ -34,7 +35,8 @@ def model(
             df=df,
             auto=False,
             key_text=key_text,
-            stop_words=stopwords
+            stop_words=stopwords,
+            ngram=ngram
         )
         model.vectorize(
             max_df=max_df,
@@ -44,7 +46,12 @@ def model(
         )
 
     else:
-        model = alg(df=df, key_text=key_text, stopwords=stopwords)
+        model = alg(
+            df=df,
+            key_text=key_text,
+            stopwords=stopwords,
+            ngram=ngram
+        )
 
     if model_type == 'nmf':
         model.train(

@@ -94,3 +94,4 @@ else:
 # topic modeling
 #
 topic_model(df, rotation=0, stopwords=stopwords)
+topic_model(df, rotation=0, stopwords=stopwords, ngram=(2,3))

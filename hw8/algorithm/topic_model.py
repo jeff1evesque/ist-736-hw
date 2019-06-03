@@ -13,7 +13,14 @@ class Model():
 
     '''
 
-    def __init__(self, df, key_text='text', auto=True, stopwords=[]):
+    def __init__(
+        self,
+        df,
+        key_text='text',
+        auto=True,
+        stopwords=[],
+        ngram=(1,1)
+    ):
         '''
 
         define class variables.
@@ -32,7 +39,7 @@ class Model():
         )
 
         if auto:
-            self.vectorize()
+            self.vectorize(ngram=ngram)
             self.train(self.df)
 
     def get_df(self):
@@ -50,7 +57,8 @@ class Model():
         min_df=0.2,
         max_features=30,
         stop_words='english',
-        model_type=None
+        model_type=None,
+        ngram=(1,1)
     ):
         '''
 
@@ -77,7 +85,8 @@ class Model():
                 max_df=max_df,
                 min_df=min_df,
                 max_features=max_features,
-                stop_words=stop_words
+                stop_words=stop_words,
+                ngram_range=ngram
             )
 
         # term frequency
@@ -86,7 +95,8 @@ class Model():
                 max_df=max_df,
                 min_df=min_df,
                 max_features=max_features,
-                stop_words=stop_words
+                stop_words=stop_words,
+                ngram_range=ngram
             )
 
         self.fit = self.vectorizer.fit_transform(self.df[self.key_text])

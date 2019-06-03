@@ -27,13 +27,19 @@ def topic_model(
     vectorize_stopwords='english',
     stopwords=[],
     auto=False,
-    stopwords=None
+    stopwords=None,
+    ngram=ngram
 ):
     '''
 
     implement topic model.
 
     '''
+
+    if ngram == (1,1):
+        suffix = ''
+    else:
+        suffix = '_ngram'
 
     if flag_lda:
         lda = model(
@@ -48,7 +54,8 @@ def topic_model(
             random_state=random_state,
             vectorize_stopwords=vectorize_stopwords,
             stopwords=stopwords,
-            auto=False
+            auto=False,
+            ngram=ngram
         )
         topic_words = lda.get_topic_words(
             feature_names=lda.get_feature_names(),
@@ -62,7 +69,7 @@ def topic_model(
                     columns=['topics', 'words']
                 ),
                 target='words',
-                suffix='lda',
+                suffix=suffix,
                 sent_cases={'topics': [x[0] for x in topic_words]}
             )
 
@@ -79,7 +86,8 @@ def topic_model(
             init=init,
             stopwords=stopwords,
             vectorize_stopwords=vectorize_stopwords,
-            auto=False
+            auto=False,
+            ngram=ngram
         )
         topic_words = nmf.get_topic_words(
             feature_names=nmf.get_feature_names(),
@@ -93,7 +101,7 @@ def topic_model(
                     columns=['topics', 'words']
                 ),
                 target='words',
-                suffix='nmf',
+                suffix=suffix,
                 sent_cases={'topics': [x[0] for x in topic_words]}
             )
 
