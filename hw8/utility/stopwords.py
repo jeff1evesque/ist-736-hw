@@ -31,7 +31,6 @@ stopwords=[
     'thank',
     'make',
     'people',
-    'speaker',
     'going',
     'say',
     'like',
@@ -54,5 +53,16 @@ stopwords=[
     'want',
     'support',
     'state',
-    'support'
+    'support',
+    'yield',
+    'time',
+    'good',
+    'right',
+    'urge',
+    'important',
+    'come',
+    'rise',
+    'dont',
+    'members',
+    'help'
 ]

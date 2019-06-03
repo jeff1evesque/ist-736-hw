@@ -4,6 +4,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer
 from sklearn.decomposition import NMF
 from sklearn.decomposition import LatentDirichletAllocation as LDA
 from nltk.corpus import stopwords as stp
+from utility.dataframe import cleanse
 stop_english = stp.words('english')
 
 class Model():
@@ -19,7 +20,9 @@ class Model():
         key_text='text',
         auto=True,
         stopwords=[],
-        ngram=(1,1)
+        ngram=(1,1),
+        lowercase=True,
+        cleanse_data=True
     ):
         '''
 
@@ -32,9 +35,17 @@ class Model():
         stopwords.extend(stop_english)
         self.stopwords = stopwords
 
+        # clean text
+        if cleanse_data:
+            self.df[self.key_text] = cleanse(self.df, self.key_text)
+
+        if lowercase:
+            self.df[self.key_text] = [w.lower()
+                for w in self.df[self.key_text]]
+
         self.df[self.key_text] = self.df[self.key_text].apply(
             lambda x: [' '.join(
-                [w for w in x.split(' ') if w not in self.stopwords]
+                [w for w in x.split(' ') if w.strip() not in self.stopwords]
             )][0]
         )
 
