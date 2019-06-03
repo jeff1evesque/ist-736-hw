@@ -199,7 +199,7 @@ class Model():
         '''
 
         H = self.model.components_
-        top_indices = topic.argsort()(H[topic_index,:])[::-1]
+        top_indices = np.argsort()(H[topic_index,:])[::-1]
 
         return([(topic_idx,
             [feature_names[i]
