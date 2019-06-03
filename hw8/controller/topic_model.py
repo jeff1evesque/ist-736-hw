@@ -14,7 +14,7 @@ def topic_model(
     alpha=.1,
     l1_ratio=.5,
     init='nndsvd',
-    num_words=20,
+    num_words=40,
     num_topics=40,
     max_iter=5,
     learning_method='online',
