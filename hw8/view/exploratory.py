@@ -35,8 +35,8 @@ def explore(
         for k,val in sent_cases.items():
             for v in val:
                 if plot_wc:
+                    wc_temp = df.loc[df[k] == v]
                     if cleanse:
-                        wc_temp = df.loc[df[k] == v]
                         wc_temp[target] = cleanse(wc_temp, target, ascii=True)
 
                     # create wordcloud
