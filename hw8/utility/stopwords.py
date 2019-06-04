@@ -53,7 +53,6 @@ stopwords=[
     'want',
     'support',
     'state',
-    'support',
     'yield',
     'time',
     'good',
@@ -67,10 +66,16 @@ stopwords=[
     'help',
     'list',
     'country',
-    'national',
     'american',
     'legislation',
     'president',
     'united',
-    'states'
+    'states',
+    'mr',
+    'hr',
+    'thats',
+    'things',
+    'day',
+    'use',
+    'ensure'
 ]
