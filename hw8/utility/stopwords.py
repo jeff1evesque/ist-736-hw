@@ -83,5 +83,21 @@ stopwords=[
     'fact',
     'really',
     'thing',
-    'percent'
+    'percent',
+    'trying',
+    'tell',
+    'im',
+    "im'",
+    'sure',
+    'saying',
+    'understand',
+    'floor',
+    'actually',
+    'came',
+    'says',
+    'talking',
+    'believe',
+    'didnt',
+    'congressman',
+    'great'
 ]
