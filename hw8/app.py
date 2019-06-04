@@ -21,6 +21,7 @@ sys.path.append('..')
 #
 df = None
 dir = '../data/110'
+num_topics = 20
 
 #
 # create directories
@@ -93,11 +94,17 @@ else:
 #
 # topic modeling
 #
-topic_model(df, rotation=0, stopwords=list(set(stopwords)))
 topic_model(
     df,
     rotation=0,
     stopwords=list(set(stopwords)),
+    num_topics=num_topics
+)
+topic_model(
+    df,
+    rotation=0,
+    stopwords=list(set(stopwords)),
+    num_topics=num_topics,
     ngram=2,
     plot_sentiment_overall=False
 )
