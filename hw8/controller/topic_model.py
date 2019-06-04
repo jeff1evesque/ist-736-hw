@@ -64,23 +64,14 @@ def topic_model(
         )
 
         if plot:
-            df_t = pd.DataFrame(
-                topic_words,
-                columns=['topics', 'words']
-            )
-
-            # individual plots
-            [explore(
-                df_t.iloc[i],
-                target='words',
-                suffix='_lda{suffix}'.format(suffix=suffix)
-            ) for i,x in df_t.iterrows()]
-
-            # overall plot
             explore(
-                df_t,
+                pd.DataFrame(
+                    topic_words,
+                    columns=['topics', 'words']
+                ),
                 target='words',
-                suffix='_lda{suffix}_overall'.format(suffix=suffix)
+                suffix='_lda{suffix}'.format(suffix=suffix),
+                sent_cases={'topics': [x[0] for x in topic_words]}
             )
 
     if flag_nmf:
@@ -107,21 +98,12 @@ def topic_model(
         )
 
         if plot:
-            df_t = pd.DataFrame(
-                topic_words,
-                columns=['topics', 'words']
-            )
-
-            # individual plots
-            [explore(
-                df_t.iloc[i],
-                target='words',
-                suffix='_lda{suffix}'.format(suffix=suffix)
-            ) for i,x in df_t.iterrows()]
-
-            # overall plot
             explore(
-                df_t,
+                pd.DataFrame(
+                    topic_words,
+                    columns=['topics', 'words']
+                ),
                 target='words',
-                suffix='_lda{suffix}_overall'.format(suffix=suffix)
+                suffix='_nmf{suffix}'.format(suffix=suffix),
+                sent_cases={'topics': [x[0] for x in topic_words]}
             )
