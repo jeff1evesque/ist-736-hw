@@ -45,7 +45,8 @@ def explore(
                         value=v,
                         suffix=suffix
                     ),
-                    stopwords=stopwords
+                    stopwords=stopwords,
+                    background_color=background_color
                 )
 
                 # create sentiment plot
@@ -79,7 +80,8 @@ def explore(
         word_cloud(
             wc_temp,
             filename='viz/wc{suffix}.png'.format(suffix=suffix),
-            stopwords=stopwords
+            stopwords=stopwords,
+            background_color=background_color
         )
 
         # create sentiment plot
