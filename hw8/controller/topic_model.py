@@ -80,7 +80,7 @@ def topic_model(
             key_text='text',
             max_df=max_df,
             min_df=min_df,
-            num_components=num_topics,
+            num_topics=num_topics,
             random_state=random_state,
             max_features=max_features,
             alpha=alpha,
