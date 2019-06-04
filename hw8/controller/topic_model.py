@@ -13,7 +13,7 @@ def topic_model(
     alpha=.1,
     l1_ratio=.5,
     init='nndsvd',
-    num_words=30,
+    num_words=40,
     num_topics=10,
     max_iter=5,
     max_features=500,
