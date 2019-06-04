@@ -74,7 +74,8 @@ def topic_model(
                 suffix='_lda{suffix}'.format(suffix=suffix),
                 sent_cases={'topics': [x[0] for x in topic_words]},
                 plot_sentiment=False,
-                plot_sentiment_overall=plot_sentiment_overall
+                plot_sentiment_overall=plot_sentiment_overall,
+                cleanse=False
             )
 
     if flag_nmf:
@@ -110,5 +111,6 @@ def topic_model(
                 suffix='_nmf{suffix}'.format(suffix=suffix),
                 sent_cases={'topics': [x[0] for x in topic_words]},
                 plot_sentiment=False,
-                plot_sentiment_overall=plot_sentiment_overall
+                plot_sentiment_overall=plot_sentiment_overall,
+                cleanse=False
             )

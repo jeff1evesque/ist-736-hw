@@ -18,7 +18,8 @@ def explore(
     plot_wc=True,
     plot_sentiment=True,
     plot_wc_overall=True,
-    plot_sentiment_overall=True
+    plot_sentiment_overall=True,
+    cleanse=True
 ):
     '''
 
@@ -34,11 +35,9 @@ def explore(
         for k,val in sent_cases.items():
             for v in val:
                 if plot_wc:
-                    # load select data
-                    wc_temp = df.loc[df[k] == v]
-
-                    # clean text
-                    wc_temp[target] = cleanse(wc_temp, target, ascii=True)
+                    if cleanse:
+                        wc_temp = df.loc[df[k] == v]
+                        wc_temp[target] = cleanse(wc_temp, target, ascii=True)
 
                     # create wordcloud
                     word_cloud(
