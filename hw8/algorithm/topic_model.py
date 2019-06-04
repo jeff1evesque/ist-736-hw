@@ -160,14 +160,14 @@ class Model():
         train topic model.
 
         NMF:
-        @n_components, number of features (defaults to all)
+        @n_components, number of topics (defaults to all)
         @alpha, regularization items
         @l1_ratio, regularization mixing parameters
         @init, used to initialize the procedure
             - nndsvd, better for sparseness
 
         LDA:
-        @n_topics, number of topics
+        @n_components, number of topics (defaults to all)
         @max_iter, maximum number of iterations
         @learning_method, method used to update _component
             - online is much faster for bigger data
