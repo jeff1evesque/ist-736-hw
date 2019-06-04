@@ -29,6 +29,9 @@ def explore(
     if sent_cases:
         for k,val in sent_cases.items():
             for v in val:
+                if not os.path.exists('viz/{value}'.format(value=v)):
+                    os.makedirs('viz/{value}'.format(value=v))
+
                 # load select data
                 wc_temp = df.loc[df[k] == v]
 
@@ -38,7 +41,7 @@ def explore(
                 # create wordcloud
                 word_cloud(
                     wc_temp,
-                    filename='viz/wc_{value}{suffix}.png'.format(
+                    filename='viz/{value}/wc{suffix}.png'.format(
                         value=v,
                         suffix=suffix
                     ),
