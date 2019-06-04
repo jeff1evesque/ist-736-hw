@@ -8,7 +8,14 @@ from exploratory.sentiment import Sentiment
 from exploratory.word_cloud import word_cloud
 from utility.dataframe import cleanse
 
-def explore(df, sent_cases=None, stopwords=[], target='full_text', suffix=''):
+def explore(
+    df,
+    sent_cases=None,
+    stopwords=[],
+    target='full_text',
+    background_color='white',
+    suffix=''
+):
     '''
 
     generate wordclouds and sentiment series plot.
@@ -36,6 +43,14 @@ def explore(df, sent_cases=None, stopwords=[], target='full_text', suffix=''):
                         suffix=suffix
                     ),
                     stopwords=stopwords
+                )
+
+                # create sentiment plot
+                sent_temp = Sentiment(wc_temp, target)
+                sent_temp.vader_analysis()
+                sent_temp.plot_ts(
+                    title='{value}'.format(value=v),
+                    filename='viz/{value}/sentiment.png'.format(value=v, key=k)
                 )
 
             word_cloud(
