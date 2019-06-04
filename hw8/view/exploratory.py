@@ -14,7 +14,11 @@ def explore(
     stopwords=[],
     target='full_text',
     background_color='white',
-    suffix=''
+    suffix='',
+    plot_wc=True,
+    plot_sentiment=True,
+    plot_wc_overall=True,
+    plot_sentiment_overall=True
 ):
     '''
 
@@ -29,38 +33,43 @@ def explore(
     if sent_cases:
         for k,val in sent_cases.items():
             for v in val:
-                # load select data
-                wc_temp = df.loc[df[k] == v]
+                if plot_wc:
+                    # load select data
+                    wc_temp = df.loc[df[k] == v]
 
-                # clean text
-                wc_temp[target] = cleanse(wc_temp, target, ascii=True)
+                    # clean text
+                    wc_temp[target] = cleanse(wc_temp, target, ascii=True)
 
-                # create wordcloud
-                word_cloud(
-                    wc_temp,
-                    filename='viz/wc_{value}{suffix}.png'.format(
-                        value=v,
-                        suffix=suffix
-                    ),
-                    stopwords=stopwords,
-                    background_color=background_color
-                )
-
-                # create sentiment plot
-                sent_temp = Sentiment(wc_temp, target)
-                sent_temp.vader_analysis()
-                sent_temp.plot_ts(
-                    title='{value}'.format(value=v),
-                    filename='viz/sentiment_{value}{suffix}.png'.format(
-                        value=v,
-                        suffix=suffix
+                    # create wordcloud
+                    word_cloud(
+                        wc_temp,
+                        filename='viz/wc_{value}{suffix}.png'.format(
+                            value=v,
+                            suffix=suffix
+                        ),
+                        stopwords=stopwords,
+                        background_color=background_color
                     )
-                )
 
+                if plot_sentiment:
+                    # create sentiment plot
+                    sent_temp = Sentiment(wc_temp, target)
+                    sent_temp.vader_analysis()
+                    sent_temp.plot_ts(
+                        title='{value}'.format(value=v),
+                        filename='viz/sentiment_{value}{suffix}.png'.format(
+                            value=v,
+                            suffix=suffix
+                        )
+                    )
+
+        if plot_wc_overall:
             word_cloud(
                 df[target],
                 filename='viz/wc_overall{suffix}.png'.format(suffix=suffix)
             )
+
+        if plot_sentiment_overall:
             sent_overall = Sentiment(df, target)
             sent_overall.vader_analysis()
             sent_overall.plot_ts(
@@ -71,23 +80,25 @@ def explore(
             )
 
     else:
-        # clean text
-        wc_temp = df
-        wc_temp[target] = [' '.join(x) for x in wc_temp[target]]
-        wc_temp[target] = cleanse(df, target, ascii=True)
+        if plot_wc:
+            # clean text
+            wc_temp = df
+            wc_temp[target] = [' '.join(x) for x in wc_temp[target]]
+            wc_temp[target] = cleanse(df, target, ascii=True)
 
-        # create wordcloud
-        word_cloud(
-            wc_temp,
-            filename='viz/wc{suffix}.png'.format(suffix=suffix),
-            stopwords=stopwords,
-            background_color=background_color
-        )
+            # create wordcloud
+            word_cloud(
+                wc_temp,
+                filename='viz/wc{suffix}.png'.format(suffix=suffix),
+                stopwords=stopwords,
+                background_color=background_color
+            )
 
-        # create sentiment plot
-        sent_temp = Sentiment(wc_temp, target)
-        sent_temp.vader_analysis()
-        sent_temp.plot_ts(
-            title='Sentiment Analysis',
-            filename='viz/sentiment{suffix}.png'.format(suffix=suffix)
-        )
+        if plot_sentiment:
+            # create sentiment plot
+            sent_temp = Sentiment(wc_temp, target)
+            sent_temp.vader_analysis()
+            sent_temp.plot_ts(
+                title='Sentiment Analysis',
+                filename='viz/sentiment{suffix}.png'.format(suffix=suffix)
+            )
