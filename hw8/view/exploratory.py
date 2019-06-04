@@ -32,13 +32,13 @@ def explore(
     '''
 
     if cleanse:
-        df[target] = cleanse(wc_temp, target, ascii=True)
+        df[target] = cleanse(df, target, ascii=True)
     else:
         df[target] = [re.sub(
             "'",
             '',
             str(s)
-        ) for s in wc_temp[target]]
+        ) for s in df[target]]
 
     if sent_cases:
         for k,val in sent_cases.items():
