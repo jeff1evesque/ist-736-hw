@@ -47,15 +47,13 @@ class Model():
 
         self.df[self.key_text] = self.df[self.key_text].apply(
             lambda x: [' '.join(
-                [w for w in x.split(' ') if w.strip() not in self.stopwords]
+                [w for w in x.split(' ') if str(w) not in self.stopwords]
             )][0]
         )
 
         if ngram > 1:
             self.df[self.key_text] = [self.create_ngram(s, n=ngram)
                 for s in self.df[self.key_text]]
-            self.df[self.key_text] = [' '.join(x)
-                for x in self.df[self.key_text]]
 
         if auto:
             self.vectorize()
@@ -79,7 +77,8 @@ class Model():
 
         tokens = [token for token in sentence.split(' ') if token != '']
         ng = zip(*[tokens[i:] for i in range(n)])
-        return(['_'.join(ngram) for ngram in ng])
+        ngram = ['_'.join(ngram) for ngram in ng]
+        return([' '.join(x) for x in ngram])
 
     def vectorize(
         self,
