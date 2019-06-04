@@ -7,16 +7,16 @@ from view.exploratory import explore
 
 def topic_model(
     df,
-    max_df=0.95,
-    min_df=0.2,
-    num_components=20,
+    max_df=1.0,
+    min_df=1,
     random_state=1,
     alpha=.1,
     l1_ratio=.5,
     init='nndsvd',
-    num_words=20,
+    num_words=30,
     num_topics=10,
     max_iter=5,
+    max_features=500,
     learning_method='online',
     learning_offset=50.,
     directory='viz',
@@ -48,6 +48,7 @@ def topic_model(
             min_df=min_df,
             num_topics=num_topics,
             max_iter=max_iter,
+            max_features=max_features,
             learning_method=learning_method,
             learning_offset=learning_offset,
             random_state=random_state,
@@ -63,14 +64,23 @@ def topic_model(
         )
 
         if plot:
-            explore(
-                pd.DataFrame(
-                    topic_words,
-                    columns=['topics', 'words']
-                ),
+            df_t = pd.DataFrame(
+                topic_words,
+                columns=['topics', 'words']
+            )
+
+            # individual plots
+            [explore(
+                df_t.iloc[i],
                 target='words',
-                suffix='_lda{suffix}'.format(suffix=suffix),
-                sent_cases={'topics': [x[0] for x in topic_words]}
+                suffix='_lda{suffix}'.format(suffix=suffix)
+            ) for i,x in df_t.iterrows()]
+
+            # overall plot
+            explore(
+                df_t,
+                target='words',
+                suffix='_lda{suffix}_overall'.format(suffix=suffix)
             )
 
     if flag_nmf:
@@ -79,8 +89,9 @@ def topic_model(
             key_text='text',
             max_df=max_df,
             min_df=min_df,
-            num_components=num_components,
+            num_components=num_topics,
             random_state=random_state,
+            max_features=max_features,
             alpha=alpha,
             l1_ratio=l1_ratio,
             init=init,
@@ -96,12 +107,21 @@ def topic_model(
         )
 
         if plot:
-            explore(
-                pd.DataFrame(
-                    topic_words,
-                    columns=['topics', 'words']
-                ),
+            df_t = pd.DataFrame(
+                topic_words,
+                columns=['topics', 'words']
+            )
+
+            # individual plots
+            [explore(
+                df_t.iloc[i],
                 target='words',
-                suffix='_nmf{suffix}'.format(suffix=suffix),
-                sent_cases={'topics': [x[0] for x in topic_words]}
+                suffix='_lda{suffix}'.format(suffix=suffix)
+            ) for i,x in df_t.iterrows()]
+
+            # overall plot
+            explore(
+                df_t,
+                target='words',
+                suffix='_lda{suffix}_overall'.format(suffix=suffix)
             )

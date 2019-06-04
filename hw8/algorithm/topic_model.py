@@ -81,9 +81,9 @@ class Model():
 
     def vectorize(
         self,
-        max_df=0.95,
-        min_df=0.2,
-        max_features=30,
+        max_df=1.0,
+        min_df=1,
+        max_features=None,
         stopwords='english',
         model_type=None
     ):
@@ -102,9 +102,6 @@ class Model():
             of documents, while integer absolute counts.
 
         '''
-
-        if stopwords:
-            self.stopwords.extend(stopwords)
 
         # term frequency-inverse document frequency
         if model_type == 'nmf':
@@ -147,12 +144,11 @@ class Model():
     def train(
         self,
         model_type=None,
-        num_components=50,
         random_state=1,
         alpha=.1,
         l1_ratio=.5,
         init='nndsvd',
-        num_topics=40,
+        num_topics=20,
         max_iter=5,
         learning_method='online',
         learning_offset=50.
@@ -180,7 +176,7 @@ class Model():
 
         if model_type == 'nmf':
             self.model = NMF(
-                n_components=num_components,
+                n_components=num_topics,
                 random_state=random_state,
                 alpha=alpha,
                 l1_ratio=l1_ratio,
@@ -190,7 +186,6 @@ class Model():
         else:
             self.model = LDA(
                 n_topics=num_topics,
-                n_components=num_components,
                 max_iter=max_iter,
                 learning_method=learning_method,
                 learning_offset=learning_offset,

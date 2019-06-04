@@ -64,5 +64,13 @@ stopwords=[
     'rise',
     'dont',
     'members',
-    'help'
+    'help',
+    'list',
+    'country',
+    'national',
+    'american',
+    'legislation',
+    'president',
+    'united',
+    'states'
 ]
