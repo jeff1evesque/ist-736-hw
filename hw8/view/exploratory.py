@@ -32,9 +32,9 @@ def explore(
     '''
 
     if cleanse:
-        wc_temp[target] = cleanse(wc_temp, target, ascii=True)
+        df[target] = cleanse(wc_temp, target, ascii=True)
     else:
-        wc_temp[target] = [re.sub(
+        df[target] = [re.sub(
             "'",
             '',
             str(s)
