@@ -93,5 +93,11 @@ else:
 #
 # topic modeling
 #
-topic_model(df, rotation=0, stopwords=list(set(stopwords)))
-topic_model(df, rotation=0, stopwords=list(set(stopwords)), ngram=2)
+#topic_model(df, rotation=0, stopwords=list(set(stopwords)))
+topic_model(
+    df,
+    rotation=0,
+    stopwords=list(set(stopwords)),
+    ngram=2,
+    plot_sentiment_overall=False
+)

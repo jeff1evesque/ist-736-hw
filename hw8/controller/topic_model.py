@@ -24,6 +24,7 @@ def topic_model(
     flag_lda=True,
     flag_nmf=True,
     plot=True,
+    plot_sentiment_overall=True,
     vectorize_stopwords='english',
     stopwords=[],
     auto=False,
@@ -72,7 +73,8 @@ def topic_model(
                 target='words',
                 suffix='_lda{suffix}'.format(suffix=suffix),
                 sent_cases={'topics': [x[0] for x in topic_words]},
-                plot_sentiment=False
+                plot_sentiment=False,
+                plot_sentiment_overall=plot_sentiment_overall
             )
 
     if flag_nmf:
@@ -107,5 +109,6 @@ def topic_model(
                 target='words',
                 suffix='_nmf{suffix}'.format(suffix=suffix),
                 sent_cases={'topics': [x[0] for x in topic_words]},
-                plot_sentiment=False
+                plot_sentiment=False,
+                plot_sentiment_overall=plot_sentiment_overall
             )
