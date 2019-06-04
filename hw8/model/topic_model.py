@@ -15,14 +15,14 @@ def model(
     alpha=.1,
     l1_ratio=.5,
     init='nndsvd',
-    num_topics=40,
+    num_topics=10,
     max_iter=5,
     learning_method='online',
     learning_offset=50.,
     vectorize_stopwords='english',
     stopwords=[],
     auto=False,
-    ngram=(1,1)
+    ngram=1
 ):
     '''
 

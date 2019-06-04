@@ -1,6 +1,7 @@
 #!/usr/bin/python
 
 import numpy as np
+from nltk.util import ngrams
 from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer
 from sklearn.decomposition import NMF
 from sklearn.decomposition import LatentDirichletAllocation as LDA
@@ -21,7 +22,7 @@ class Model():
         key_text='text',
         auto=True,
         stopwords=[],
-        ngram=(1,1),
+        ngram=1,
         lowercase=True,
         cleanse_data=True
     ):
@@ -50,8 +51,12 @@ class Model():
             )][0]
         )
 
+        if ngram > 1:
+            self.df[self.key_text] = [self.create_ngram(s, n=ngram)
+                for s in self.df[self.key_text]]
+
         if auto:
-            self.vectorize(ngram=ngram)
+            self.vectorize()
             self.train(self.df)
 
     def get_df(self):
@@ -63,14 +68,24 @@ class Model():
 
         return(self.df)
 
+    def create_ngram(self, sentence, n=2):
+        '''
+
+        generate ngram on supplied sentence.
+
+        '''
+
+        tokens = [token for token in sentence.split(' ') if token != '']
+        ng = zip(*[tokens[i:] for i in range(n)])
+        return(['_'.join(ngram) for ngram in ng])
+
     def vectorize(
         self,
         max_df=0.95,
         min_df=0.2,
         max_features=30,
         stopwords='english',
-        model_type=None,
-        ngram=(1,1)
+        model_type=None
     ):
         '''
 
@@ -97,8 +112,7 @@ class Model():
                 max_df=max_df,
                 min_df=min_df,
                 max_features=max_features,
-                stop_words=stopwords,
-                ngram_range=ngram
+                stop_words=stopwords
             )
 
         # term frequency
@@ -107,8 +121,7 @@ class Model():
                 max_df=max_df,
                 min_df=min_df,
                 max_features=max_features,
-                stop_words=stopwords,
-                ngram_range=ngram
+                stop_words=stopwords
             )
 
         self.fit = self.vectorizer.fit_transform(self.df[self.key_text])
