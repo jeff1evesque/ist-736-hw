@@ -187,7 +187,7 @@ class Model():
 
         else:
             self.model = LDA(
-                n_topics=num_topics,
+                n_components=num_topics,
                 max_iter=max_iter,
                 learning_method=learning_method,
                 learning_offset=learning_offset,
