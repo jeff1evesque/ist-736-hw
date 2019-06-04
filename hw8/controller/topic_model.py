@@ -14,8 +14,8 @@ def topic_model(
     alpha=.1,
     l1_ratio=.5,
     init='nndsvd',
-    num_words=40,
-    num_topics=40,
+    num_words=0,
+    num_topics=10,
     max_iter=5,
     learning_method='online',
     learning_offset=50.,
@@ -27,7 +27,7 @@ def topic_model(
     vectorize_stopwords='english',
     stopwords=[],
     auto=False,
-    ngram=(1,1)
+    ngram=1
 ):
     '''
 
@@ -35,7 +35,7 @@ def topic_model(
 
     '''
 
-    if ngram == (1,1):
+    if ngram == 1:
         suffix = ''
     else:
         suffix = '_ngram'
