@@ -31,13 +31,20 @@ def explore(
 
     '''
 
+    if cleanse:
+        wc_temp[target] = cleanse(wc_temp, target, ascii=True)
+    else:
+        wc_temp[target] = [re.sub(
+            "'",
+            '',
+            str(s)
+        ) for s in wc_temp[target]]
+
     if sent_cases:
         for k,val in sent_cases.items():
             for v in val:
                 if plot_wc:
                     wc_temp = df.loc[df[k] == v]
-                    if cleanse:
-                        wc_temp[target] = cleanse(wc_temp, target, ascii=True)
 
                     # create wordcloud
                     word_cloud(
