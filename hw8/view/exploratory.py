@@ -66,7 +66,9 @@ def explore(
         if plot_wc_overall:
             word_cloud(
                 df[target],
-                filename='viz/wc_overall{suffix}.png'.format(suffix=suffix)
+                filename='viz/wc_overall{suffix}.png'.format(suffix=suffix),
+                stopwords=stopwords,
+                background_color=background_color
             )
 
         if plot_sentiment_overall:
