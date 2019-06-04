@@ -54,6 +54,8 @@ class Model():
         if ngram > 1:
             self.df[self.key_text] = [self.create_ngram(s, n=ngram)
                 for s in self.df[self.key_text]]
+            self.df[self.key_text] = [' '.join(x)
+                for x in self.df[self.key_text]]
 
         if auto:
             self.vectorize()
@@ -77,8 +79,7 @@ class Model():
 
         tokens = [token for token in sentence.split(' ') if token != '']
         ng = zip(*[tokens[i:] for i in range(n)])
-        ngram = ['_'.join(ngram) for ngram in ng]
-        return([' '.join(x) for x in ngram])
+        return(['_'.join(ngram) for ngram in ng])
 
     def vectorize(
         self,
