@@ -77,5 +77,11 @@ stopwords=[
     'things',
     'day',
     'use',
-    'ensure'
+    'ensure',
+    'look',
+    'got',
+    'fact',
+    'really',
+    'thing',
+    'percent'
 ]
