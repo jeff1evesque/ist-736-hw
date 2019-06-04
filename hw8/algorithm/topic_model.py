@@ -52,8 +52,10 @@ class Model():
         )
 
         if ngram > 1:
-            self.df[self.key_text] = [' '.join(self.create_ngram(s, n=ngram))
+            self.df[self.key_text] = [self.create_ngram(s, n=ngram)
                 for s in self.df[self.key_text]]
+            self.df[self.key_text] = [' '.join(x)
+                for x in self.df[self.key_text]]
 
         if auto:
             self.vectorize()
