@@ -83,7 +83,7 @@ class Model():
         self,
         max_df=0.95,
         min_df=0.2,
-        max_features=30,
+        max_features=500,
         stopwords='english',
         model_type=None
     ):
@@ -102,9 +102,6 @@ class Model():
             of documents, while integer absolute counts.
 
         '''
-
-        if stopwords:
-            self.stopwords.extend(stopwords)
 
         # term frequency-inverse document frequency
         if model_type == 'nmf':
