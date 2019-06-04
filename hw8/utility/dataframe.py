@@ -55,7 +55,7 @@ def cleanse(df, column, ascii=False):
     pattern_twitter_act = '@[a-zA-Z0-9_]{0,15}'
     pattern_url = 'https?://[A-Za-z0-9./]+'
     pattern_newline=r'(\\n|\\r\\n)'
-    pattern_punctuation = '[{p}]'.format(p=string.punctuation)
+    pattern_punctuation = '[{p}\']'.format(p=string.punctuation)
     pattern = '|'.join((
         pattern_twitter_act,
         pattern_url,
