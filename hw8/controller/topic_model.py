@@ -7,9 +7,8 @@ from view.exploratory import explore
 
 def topic_model(
     df,
-    max_df=0.95,
-    min_df=0.2,
-    num_components=20,
+    max_df=1.0,
+    min_df=1,
     random_state=1,
     alpha=.1,
     l1_ratio=.5,
@@ -90,7 +89,7 @@ def topic_model(
             key_text='text',
             max_df=max_df,
             min_df=min_df,
-            num_components=num_components,
+            num_components=num_topics,
             random_state=random_state,
             max_features=max_features,
             alpha=alpha,

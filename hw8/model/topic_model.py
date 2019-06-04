@@ -7,15 +7,15 @@ from algorithm.topic_model import Model as alg
 def model(
     df,
     key_text='text',
-    max_df=0.95,
-    min_df=0.2,
+    max_df=1.0,
+    min_df=1,
     model_type=None,
-    num_components=20,
     random_state=1,
     alpha=.1,
     l1_ratio=.5,
     init='nndsvd',
     num_topics=10,
+    max_features=500,
     max_iter=5,
     learning_method='online',
     learning_offset=50.,
@@ -41,6 +41,7 @@ def model(
         model.vectorize(
             max_df=max_df,
             min_df=min_df,
+            max_features=max_features,
             model_type=None,
             stopwords=vectorize_stopwords
         )
@@ -55,7 +56,7 @@ def model(
 
     if model_type == 'nmf':
         model.train(
-            num_components=num_components,
+            num_topics=num_topics,
             random_state=random_state,
             alpha=alpha,
             l1_ratio=l1_ratio,
