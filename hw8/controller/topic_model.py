@@ -53,6 +53,7 @@ def topic_model(
             random_state=random_state,
             vectorize_stopwords=vectorize_stopwords,
             stopwords=stopwords,
+            model_type = 'lda',
             auto=False,
             ngram=ngram
         )
@@ -85,6 +86,7 @@ def topic_model(
             init=init,
             stopwords=stopwords,
             vectorize_stopwords=vectorize_stopwords,
+            model_type = 'nmf',
             auto=False,
             ngram=ngram
         )

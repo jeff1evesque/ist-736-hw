@@ -177,6 +177,7 @@ class Model():
         else:
             self.model = LDA(
                 n_topics=num_topics,
+                n_components=num_components,
                 max_iter=max_iter,
                 learning_method=learning_method,
                 learning_offset=learning_offset,
@@ -199,14 +200,11 @@ class Model():
 
         '''
 
-        H = self.model.components_
-        top_indices = np.argsort()(H[topic_index,:])[::-1]
-
         return([(topic_idx,
             [feature_names[i]
-                for i in top_indices[0:num_words]])
+                for i in topic.argsort()[:-num_words - 1:-1]])
                     for topic_idx,
-                        topic in enumerate(H)])
+                        topic in enumerate(self.model.components_)])
 
     def predict(self, data):
         '''
