@@ -59,7 +59,7 @@ def topic_model(
             auto=False,
             ngram=ngram
         )
-        topic_words = lda.get_topic_words(
+        lda_words = lda.get_topic_words(
             feature_names=lda.get_feature_names(),
             num_words=num_words
         )
@@ -67,12 +67,12 @@ def topic_model(
         if plot:
             explore(
                 pd.DataFrame(
-                    topic_words,
+                    lda_words,
                     columns=['topics', 'words']
                 ),
                 target='words',
                 suffix='_lda{suffix}'.format(suffix=suffix),
-                sent_cases={'topics': [x[0] for x in topic_words]},
+                sent_cases={'topics': [x[0] for x in lda_words]},
                 plot_sentiment=False,
                 plot_sentiment_overall=plot_sentiment_overall,
                 cleanse=False
@@ -96,7 +96,7 @@ def topic_model(
             auto=False,
             ngram=ngram
         )
-        topic_words = nmf.get_topic_words(
+        nmf_words = nmf.get_topic_words(
             feature_names=nmf.get_feature_names(),
             num_words=num_words
         )
@@ -104,12 +104,12 @@ def topic_model(
         if plot:
             explore(
                 pd.DataFrame(
-                    topic_words,
+                    nmf_words,
                     columns=['topics', 'words']
                 ),
                 target='words',
                 suffix='_nmf{suffix}'.format(suffix=suffix),
-                sent_cases={'topics': [x[0] for x in topic_words]},
+                sent_cases={'topics': [x[0] for x in nmf_words]},
                 plot_sentiment=False,
                 plot_sentiment_overall=plot_sentiment_overall,
                 cleanse=False

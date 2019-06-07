@@ -42,6 +42,7 @@ if (
     df = pd.concat([
         pd.read_csv('data/topic_model_1.csv'),
         pd.read_csv('data/topic_model_2.csv')
+
     ])
 
 else:
