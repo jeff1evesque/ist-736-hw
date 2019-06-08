@@ -38,7 +38,7 @@ def standardize_df(fp, delimiter=','):
     df = pd.read_csv(fp, header=None, delimiter=delimiter, names=column_names)
     return(df.iloc[1:])
 
-def cleanse(df, column, ascii=False):
+def cleanse(d, column=None, ascii=False):
     '''
 
     remove twitter account, punctuations, urls, lowercase.
@@ -65,4 +65,6 @@ def cleanse(df, column, ascii=False):
     ))
     r = re.compile(pattern)
 
-    return([re.sub(r, '', str(w)) for w in df[column]])
+    if column:
+        return([re.sub(r, '', str(w)) for w in d[column]])
+    return([re.sub(r, '', str(w)) for w in d])
