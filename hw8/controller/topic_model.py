@@ -2,14 +2,14 @@
 
 import numpy as np
 import pandas as pd
-from model.topic_model import model
+from model.topic_model import model_lda, model_nmf
 from view.exploratory import explore
 
 def topic_model(
     df,
     max_df=1.0,
     min_df=1,
-    random_state=1,
+    random_state=None,
     alpha=.1,
     l1_ratio=.5,
     init='nndsvd',
@@ -36,14 +36,14 @@ def topic_model(
 
     '''
 
-    if ngram == 1:
-        suffix = ''
-    else:
+    if ngram > 1:
         suffix = '_ngram'
+    else:
+        suffix = ''
 
     if flag_lda:
-        lda = model(
-            df=df,
+        lda = model_lda(
+            df,
             key_text='text',
             max_df=max_df,
             min_df=min_df,
@@ -55,8 +55,7 @@ def topic_model(
             random_state=random_state,
             vectorize_stopwords=vectorize_stopwords,
             stopwords=stopwords,
-            model_type = 'lda',
-            auto=False,
+            auto=auto,
             ngram=ngram
         )
         lda_words = lda.get_topic_words(
@@ -66,7 +65,7 @@ def topic_model(
 
         if plot:
             explore(
-                pd.DataFrame(
+                df=pd.DataFrame(
                     lda_words,
                     columns=['topics', 'words']
                 ),
@@ -79,8 +78,8 @@ def topic_model(
             )
 
     if flag_nmf:
-        nmf = model(
-            df=df,
+        nmf = model_nmf(
+            df,
             key_text='text',
             max_df=max_df,
             min_df=min_df,
@@ -92,8 +91,7 @@ def topic_model(
             init=init,
             stopwords=stopwords,
             vectorize_stopwords=vectorize_stopwords,
-            model_type = 'nmf',
-            auto=False,
+            auto=auto,
             ngram=ngram
         )
         nmf_words = nmf.get_topic_words(
@@ -103,7 +101,7 @@ def topic_model(
 
         if plot:
             explore(
-                pd.DataFrame(
+                df=pd.DataFrame(
                     nmf_words,
                     columns=['topics', 'words']
                 ),
