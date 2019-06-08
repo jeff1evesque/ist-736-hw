@@ -99,7 +99,8 @@ topic_model(
     df,
     rotation=0,
     stopwords=list(set(stopwords)),
-    num_topics=num_topics
+    num_topics=num_topics,
+    random_state=1
 )
 topic_model(
     df,
@@ -107,5 +108,6 @@ topic_model(
     stopwords=list(set(stopwords)),
     num_topics=num_topics,
     ngram=2,
-    plot_sentiment_overall=False
+    plot_sentiment_overall=False,
+    random_state=1
 )
