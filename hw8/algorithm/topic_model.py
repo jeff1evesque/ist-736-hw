@@ -18,8 +18,7 @@ class Model():
 
     def __init__(
         self,
-        df,
-        key_text='text',
+        data,
         auto=True,
         stopwords=[],
         ngram=1,
@@ -32,43 +31,37 @@ class Model():
 
         '''
 
-        self.df = df
-        self.key_text = key_text
         stopwords.extend(stop_english)
         self.stopwords = stopwords
 
         # clean text
         if cleanse_data:
-            self.df[self.key_text] = cleanse(self.df, self.key_text)
+            data = cleanse(data)
 
         if lowercase:
-            self.df[self.key_text] = [w.lower()
-                for w in self.df[self.key_text]]
+            data = [w.lower().split(' ') for w in data]
 
-        self.df[self.key_text] = self.df[self.key_text].apply(
-            lambda x: [' '.join(
-                [w for w in x.split(' ') if str(w) not in self.stopwords]
-            )][0]
-        )
+        self.clean = []
+        for sents in data:
+            sent = [w for w in sents if str(w) not in self.stopwords]
 
-        if ngram > 1:
-            self.df[self.key_text] = [self.create_ngram(s, n=ngram)
-                for s in self.df[self.key_text]]
-            self.df[self.key_text] = [' '.join(x)
-                for x in self.df[self.key_text]]
+            if ngram > 1:
+                sent = self.create_ngram(sent,n=ngram)
+            sent = ' '.join(sent)
+            self.clean.append(sent)
 
         if auto:
             self.vectorize()
-            self.train(self.df)
+            self.train(self.clean)
 
-    def get_df(self):
+    def get_data(self):
         '''
 
         return current dataframe.
 
         '''
 
-        return(self.df)
+        return(self.clean)
 
     def create_ngram(self, sentence, n=2):
         '''
@@ -77,7 +70,7 @@ class Model():
 
         '''
 
-        tokens = [token for token in sentence.split(' ') if token != '']
+        tokens = [token for token in sentence if token != '']
         ng = zip(*[tokens[i:] for i in range(n)])
         return(['_'.join(ngram) for ngram in ng])
 
@@ -123,7 +116,7 @@ class Model():
                 stop_words=stopwords
             )
 
-        self.fit = self.vectorizer.fit_transform(self.df[self.key_text])
+        self.fit = self.vectorizer.fit_transform(self.clean)
 
     def get_fit(self):
         '''
@@ -146,7 +139,7 @@ class Model():
     def train(
         self,
         model_type=None,
-        random_state=1,
+        random_state=None,
         alpha=.1,
         l1_ratio=.5,
         init='nndsvd',

@@ -42,6 +42,7 @@ if (
     df = pd.concat([
         pd.read_csv('data/topic_model_1.csv'),
         pd.read_csv('data/topic_model_2.csv')
+
     ])
 
 else:
@@ -98,7 +99,8 @@ topic_model(
     df,
     rotation=0,
     stopwords=list(set(stopwords)),
-    num_topics=num_topics
+    num_topics=num_topics,
+    random_state=1
 )
 topic_model(
     df,
@@ -106,5 +108,6 @@ topic_model(
     stopwords=list(set(stopwords)),
     num_topics=num_topics,
     ngram=2,
-    plot_sentiment_overall=False
+    plot_sentiment_overall=False,
+    random_state=1
 )
